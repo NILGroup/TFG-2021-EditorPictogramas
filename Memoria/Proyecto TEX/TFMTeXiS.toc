@@ -11,25 +11,23 @@
 \contentsline {chapter}{\numberline {2}Estado del Arte}{9}{chapter.14}%
 \contentsline {section}{\numberline {2.1}Sistemas Aumentativos y Alternativos de Comunicación}{9}{section.15}%
 \contentsline {section}{\numberline {2.2}Pictogramas}{10}{section.16}%
-\contentsline {subsection}{\numberline {2.2.1}Sistemas pictográficos}{10}{subsection.22}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}Sistema pictográfico de comunicación - SPC}{10}{subsubsection.23}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}Blissymbolics}{11}{subsubsection.25}%
-\contentsline {subsubsection}{\numberline {2.2.1.3}Sclera}{12}{subsubsection.27}%
-\contentsline {subsubsection}{\numberline {2.2.1.4}Mulberry}{12}{subsubsection.29}%
-\contentsline {subsubsection}{\numberline {2.2.1.5}Minspeak}{13}{subsubsection.31}%
-\contentsline {subsubsection}{\numberline {2.2.1.6}ARASAAC}{14}{subsubsection.33}%
-\contentsline {section}{\numberline {2.3}Editores de Tableros basados en Pictogramas}{14}{section.37}%
-\contentsline {subsection}{\numberline {2.3.1}Pictoselector}{15}{subsection.38}%
-\contentsline {subsection}{\numberline {2.3.2}Editor ARASAAC}{16}{subsection.42}%
-\contentsline {subsection}{\numberline {2.3.3}Piktoplus}{18}{subsection.45}%
-\contentsline {subsection}{\numberline {2.3.4}BoardMaker}{19}{subsection.48}%
-\contentsline {subsection}{\numberline {2.3.5}Pictar}{19}{subsection.49}%
-\contentsline {subsection}{\numberline {2.3.6}Pictableros}{19}{subsection.50}%
-\contentsline {subsection}{\numberline {2.3.7}Symbo Talk}{19}{subsection.51}%
-\contentsline {subsection}{\numberline {2.3.8}LetMe Talk}{19}{subsection.52}%
-\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{21}{chapter.53}%
-\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{23}{chapter.54}%
+\contentsline {subsection}{\numberline {2.2.1}Sistema pictográfico de comunicación - SPC}{10}{subsection.22}%
+\contentsline {subsection}{\numberline {2.2.2}Blissymbolics}{11}{subsection.24}%
+\contentsline {subsection}{\numberline {2.2.3}Sclera}{12}{subsection.26}%
+\contentsline {subsection}{\numberline {2.2.4}Mulberry}{13}{subsection.28}%
+\contentsline {subsection}{\numberline {2.2.5}Minspeak}{13}{subsection.30}%
+\contentsline {subsection}{\numberline {2.2.6}ARASAAC}{14}{subsection.32}%
+\contentsline {section}{\numberline {2.3}Editores de Tableros basados en Pictogramas}{14}{section.36}%
+\contentsline {subsection}{\numberline {2.3.1}Pictoselector}{15}{subsection.37}%
+\contentsline {subsection}{\numberline {2.3.2}Editor ARASAAC}{16}{subsection.41}%
+\contentsline {subsection}{\numberline {2.3.3}Piktoplus}{18}{subsection.44}%
+\contentsline {subsection}{\numberline {2.3.4}Pictar}{19}{subsection.47}%
+\contentsline {subsection}{\numberline {2.3.5}Pictableros}{20}{subsection.49}%
+\contentsline {subsection}{\numberline {2.3.6}Symbo Talk}{21}{subsection.53}%
+\contentsline {subsection}{\numberline {2.3.7}LetMe Talk}{22}{subsection.55}%
+\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{23}{chapter.57}%
+\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{25}{chapter.58}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{25}{appendix.55}%
+\contentsline {chapter}{\numberline {A}Título}{27}{appendix.59}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{27}{appendix.56}%
+\contentsline {chapter}{\numberline {B}Título}{29}{appendix.60}%
