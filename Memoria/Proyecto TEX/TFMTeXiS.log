@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.1)  21 OCT 2020 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.1)  21 OCT 2020 17:55
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -1080,20 +1080,31 @@ File: Imagenes/Bitmap/LetMeTalk.png Graphic file (type png)
 Package pdftex.def Info: Imagenes/Bitmap/LetMeTalk.png  used on input line 341.
 
 (pdftex.def)             Requested size: 251.9989pt x 376.09978pt.
+LaTeX Info: Redefining \. on input line 346.
+LaTeX Info: Redefining \% on input line 346.
+ [23 <./Imagenes/Bitmap/LetMeTalk.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 347.
+
+
+Overfull \hbox (38.33963pt too wide) in paragraph at lines 349--365
+ [][] 
+ []
+
 )
 LaTeX Info: Redefining \. on input line 149.
 LaTeX Info: Redefining \% on input line 149.
- [23 <./Imagenes/Bitmap/LetMeTalk.png>]
+ [24]
 \openout2 = `Capitulos/ConclusionesTrabajoFuturo.aux'.
 
-
-(Capitulos/ConclusionesTrabajoFuturo.tex [24
+ (Capitulos/ConclusionesTrabajoFuturo.tex
+Cap\'itulo 3.
+) [25
 
 
 
 ]
-Cap\'itulo 3.
-) [25]
 \openout2 = `Capitulos/ConclusionsFutureWork.aux'.
 
  (Capitulos/ConclusionsFutureWork.tex [26
@@ -1161,39 +1172,41 @@ LaTeX Info: Redefining \% on input line 45.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
 Package rerunfilecheck Info: File `TFMTeXiS.out' has not changed.
-(rerunfilecheck)             Checksum: 11E245C9F8CF80B455051A35C338637E;1927.
+(rerunfilecheck)             Checksum: 1DC5E0700D81A03D5DCA817718F944D4;1927.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 216.
  ) 
 Here is how much of TeX's memory you used:
- 14092 strings out of 481199
- 226974 string characters out of 2915349
- 784179 words of memory out of 3000000
- 28910 multiletter control sequences out of 15000+200000
- 554180 words of font info for 60 fonts, out of 3000000 for 9000
+ 14097 strings out of 481199
+ 227043 string characters out of 2915349
+ 787179 words of memory out of 3000000
+ 28913 multiletter control sequences out of 15000+200000
+ 554521 words of font info for 61 fonts, out of 3000000 for 9000
  1379 hyphenation exceptions out of 8191
- 61i,12n,57p,972b,761s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,15n,57p,972b,761s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti
 1000.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecbi1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecrm0800.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ectt1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecti1095.pk>{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8
-r.enc} <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecbx1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\eccc1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
-n/ec/dpi600\ecrm1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecrm1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/lj
-four/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\jorge\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\jorge\AppData\Local\
-MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\jorge\AppData\
-Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Program Files/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/hel
-vetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on TFMTeXiS.pdf (54 pages, 2262275 bytes).
+0\tcrm1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecbi1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecrm0800.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecti1095.pk>{C:/Program Files/MiKTeX/fonts/enc/dvips/
+base/8r.enc} <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecbx1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
+n/ec/dpi600\eccc1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecrm1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/lj
+four/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\jorge\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\jorge\AppData\
+Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\jorge\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Program F
+iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/u
+rw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pf
+b>
+Output written on TFMTeXiS.pdf (54 pages, 2264698 bytes).
 PDF statistics:
- 993 PDF objects out of 1000 (max. 8388607)
- 121 named destinations out of 1000 (max. 500000)
+ 999 PDF objects out of 1000 (max. 8388607)
+ 122 named destinations out of 1000 (max. 500000)
  359 words of extra memory for PDF output out of 10000 (max. 10000000)
 

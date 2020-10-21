@@ -25,9 +25,9 @@
 \contentsline {subsection}{\numberline {2.3.5}Pictableros}{20}{subsection.49}%
 \contentsline {subsection}{\numberline {2.3.6}Symbo Talk}{21}{subsection.53}%
 \contentsline {subsection}{\numberline {2.3.7}LetMe Talk}{23}{subsection.55}%
-\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{25}{chapter.57}%
-\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{27}{chapter.58}%
+\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{25}{chapter.58}%
+\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{27}{chapter.59}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{29}{appendix.59}%
+\contentsline {chapter}{\numberline {A}Título}{29}{appendix.60}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{31}{appendix.60}%
+\contentsline {chapter}{\numberline {B}Título}{31}{appendix.61}%
