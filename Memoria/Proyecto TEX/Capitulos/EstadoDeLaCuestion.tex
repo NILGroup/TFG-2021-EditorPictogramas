@@ -2,6 +2,12 @@
 \label{cap:estadoDeLaCuestion}
 
 
+
+\begin{resumen} En este capítulo se dará una idea general sobre los Sistemas aumentativos y alternativos de comunicación \ref{cap3:sec:saac}, las características de los pictogramas y los distintos sistemas pictográficos que existen \ref{cap3:sec:pictogramas}. Finalmente, se verán las distintos herramientas con las que se construyen tableros de pictogramas \ref{cap3:sec:editor-tableros}.
+
+\end{resumen}
+
+
 Los humanos siempre  han tenido la necesidad inherente de comunicarse y quien no es capaz de hacerlo generalmente acaba excluido. A día de hoy este problema sigue afectando a parte de la población como es el caso de las personas con Trastorno del Espectro Autista (\textit{TEA}).
 \\
 
@@ -9,6 +15,7 @@ Sin entrar en gran detalle, podemos encontrar que la gente con \textit{TEA} tien
 
 
 \section{Sistemas Aumentativos y Alternativos de Comunicación}
+\label{cap3:sec:saac}
 Los Sistemas Aumentativos y Alternativos de Comunicación (\textit{SAAC}) son las distintas formas de expresión sin tener en cuenta el lenguaje hablado que tiene como finalidad aumentar y/o compensar los problemas de comunicación de personas con discapacidad como por ejemplo trastornos del espectro autista, discapacidad intelectual, deficiencia auditiva, parálisis cerebral entre otros.
 
 En ocasiones puede hacer falta el uso de recursos para poder comunicarse, es por ello que podemos distinguir dos tipos de \textit{SAAC}, los sistemas sin ayuda y los sistemas con ayuda.
@@ -21,6 +28,7 @@ En ocasiones puede hacer falta el uso de recursos para poder comunicarse, es por
 Las \textit{SAAC} utilizan múltiples recursos para poder comunicarse con personas con discapacidades cognitivas y entre todos ellos destacan los sistemas pictográficos. Se trata de uno de los sistemas más utilizados y esto es debido a su fácil comprensión ya que representan gráficamente lo que se desea transmitir como palabras o conceptos. 
 
 \section{Pictogramas}
+\label{cap3:sec:pictogramas}
 Los pictogramas son imágenes o símbolos de rápida comprensión que expresan acciones, objetos, emociones, etc. Un conjunto de pictogramas en un cierto orden, pueden generar una oración. Todos ellos deben cumplir las siguientes características:
 \begin{enumerate}
 	\item \textbf{Referencialidad}: relación del pictograma con el referente.
@@ -58,17 +66,16 @@ El Sistema Pictográfico de Comunicación\footnote{\url{https://www.uv.es/belloc
 
 \subsection{Blissymbolics}
 Byssimbolics\footnote{\url{https://www.blissymbolics.org/index.php/about-blissymbolics}}
-es un sistema de comunicación que fue usado por primera vez en 1971 para facilitar la comunicación con niños que padecían alguna discapacidad. Actualmente está compuesto por más de 5000 símbolos o  \textit{Bliss-Word} los cuales a su vez están compuestos por uno o más Caracteres-Bliss o  \textit{Bliss-Character}. A pesar de que los 150 \textit{Bliss-Characters} que hay son sencillos de dibujar, requieren un periodo de aprendizaje para comprender su significado y así el de las \textit{Bliss-Words}. En la Figura \ref{fig:blisscharacters} vemos algunos \textit{Bliss-Characters} con su significado, en la Figura \ref{fig:blissword} vemos cómo se han combinado para generar \textit{Bliss-Words}. Destacar que el orden, el tamaño o la posición de los los Bliss-Characters, puede alterar su significado. Adicionalmente pueden estar agrupados de los mismos colores vistos en SPC.
-
-
+es un sistema de comunicación que fue usado por primera vez en 1971 para facilitar la comunicación con niños que padecían alguna discapacidad. Actualmente está compuesto por más de 5000 símbolos o  \textit{Bliss-Words} los cuales a su vez están compuestos por uno o más Caracteres-Bliss o  \textit{Bliss-Characters}. A pesar de que los 150 \textit{Bliss-Characters} que hay son sencillos de dibujar, requieren un periodo de aprendizaje para comprender su significado y así el de las \textit{Bliss-Words}. En la Figura \ref{fig:blisscharacters} vemos algunos \textit{Bliss-Characters} con su significado. \\
 % TODO: \usepackage{graphicx} required
-% TODO: \usepackage{graphicx} required
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{Imagenes/Bitmap/BlissCharacters}
 	\caption[Ejemplo de Bliss-Characters]{Ejemplo de Bliss-Characters.}
 	\label{fig:blisscharacters}
 \end{figure}
+Una vez comprendido, en la Figura \ref{fig:blissword} vemos cómo se han combinado para generar \textit{Bliss-Words}. Destacar que el orden, el tamaño o la posición de los los Bliss-Characters, puede alterar su significado. Adicionalmente pueden estar agrupados de los mismos colores vistos en SPC.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -113,11 +120,8 @@ Los pictogramas de Mulbery Symbols cuentan con 118 categorías incluyendo sustan
 
 \newpage
 \subsection{Minspeak}
-Es un sistema de comunicación alternativo creado por Bruce Baker en 1982. Difiere con los vistos anteriormente en que el significado de los iconos no viene preestablecido sino que es acordado entre usuario y logopeda. Es por ello que cada icono acordado tenga un significado distinto según la secuenciación de iconos.
+Minspeak\footnote{\url{http://ares.cnice.mec.es/informes/18/contenidos/94.htm}}. es un sistema de comunicación alternativo creado por Bruce Baker en 1982. Difiere con los vistos anteriormente en que el significado de los iconos no viene preestablecido sino que es acordado entre usuario y logopeda. Es por ello que cada icono acordado tenga un significado distinto según la secuenciación de iconos. Por ejemplo en el caso de la Figura \ref{fig:minspeak} la asociación del icono casa junto a la cama, en ese orden podría ser interpretado como dormitorio. 
 
-Para generar la relación entre icono se hacía uso de Programas de Aplicación Minspeak (\textit{PAM}) que es un tablero en el cual están todos los iconos y según el presionado, se iluminarán los otros iconos que permitan formar una secuencia por estar vinculados.
-
-\footnote{\url{http://ares.cnice.mec.es/informes/18/contenidos/94.htm}}
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
@@ -125,6 +129,17 @@ Para generar la relación entre icono se hacía uso de Programas de Aplicación 
 	\caption{Ejemplo de Minspeak.}
 	\label{fig:minspeak}
 \end{figure}
+
+Como cada pictograma puede tener un significado distinto según su orden, se crearon Programas de Comunicación Minspeak (\textit{PAM}). Éstos se usan para cuando una casilla o icono haya sido seleccionada, se activen los posibles iconos con los que pueda tener algún tipo de relación. Inicialmente se creó hardware específico como aparece en la Figura \ref{fig:chatbox} con 16 celdas las cuales podía generar hasta 1024 mensajes, los teclados evolucionaron con más celdas y combinaciones, hasta pasar a teclados digitales implementados por software como PortaVoz\footnote{\url{http://www.terapia-ocupacional.com/articulos/Portavoz_JMLedesma.shtml}}.
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Imagenes/Bitmap/ChatBox}
+	\caption[ChatBox]{Panel de ChatBox}
+	\label{fig:chatbox}
+\end{figure}
+
 
 
 \subsection{ARASAAC}
@@ -179,6 +194,7 @@ En la Figura \ref{fig:arasaacpictos} podemos ver algunos ejemplos de pictogramas
 La licencia de \textbf{ARASAAC} es de tipo \textit{Creative Commons (BY-NC-SA)} por lo que se podrá utilizar el material elaborado por ellos de cara a la implementación del Trabajo Fin de Grado. Utilizaremos sus pictogramas publicados en su página web y la API que han desarrollado para acceder a pictogramas de su base de datos.
 
 \section{Editores de Tableros basados en Pictogramas}
+\label{cap3:sec:editor-tableros}
 
 A menudo estos tableros se realizan mediante piezas de papel recortadas y trabajar con ellas puede resultar engorroso, poco eficiente y apenas permiten modificaciones. Es por ello que la evolución lógica de los tableros pictográficos ha sido la digitalización. Para crear y editar tableros se han creado multitud de aplicaciones, a continuación estudiaremos sus características.
 
