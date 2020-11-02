@@ -23,13 +23,13 @@
 \contentsline {subsection}{\numberline {2.3.3}Piktoplus}{23}{subsection.67}%
 \contentsline {subsection}{\numberline {2.3.4}BoardMaker}{24}{subsection.72}%
 \contentsline {subsection}{\numberline {2.3.5}Pictar}{24}{subsection.73}%
-\contentsline {subsection}{\numberline {2.3.6}Pictableros}{26}{subsection.78}%
-\contentsline {subsection}{\numberline {2.3.7}Symbo Talk}{27}{subsection.83}%
-\contentsline {subsection}{\numberline {2.3.8}LetMe Talk}{28}{subsection.86}%
-\contentsline {subsection}{\numberline {2.3.9}Jocomunico}{29}{subsection.89}%
-\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{33}{chapter.93}%
-\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{35}{chapter.94}%
+\contentsline {subsection}{\numberline {2.3.6}PicTableros}{26}{subsection.78}%
+\contentsline {subsection}{\numberline {2.3.7}Symbo Talk}{27}{subsection.82}%
+\contentsline {subsection}{\numberline {2.3.8}LetMe Talk}{28}{subsection.85}%
+\contentsline {subsection}{\numberline {2.3.9}Jocomunico}{29}{subsection.88}%
+\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{33}{chapter.92}%
+\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{35}{chapter.93}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{37}{appendix.95}%
+\contentsline {chapter}{\numberline {A}Título}{37}{appendix.94}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{39}{appendix.96}%
+\contentsline {chapter}{\numberline {B}Título}{39}{appendix.95}%

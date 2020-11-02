@@ -392,48 +392,38 @@ Pictar ofrece tres herramientas en su página web:
 
 
 \newpage
-\subsection{Pictableros}
-\footnote{\url{ https://holstein.fdi.ucm.es/picto-tableros/  }}
-Pictableros es una aplicación web de edición y creación de tableros y plantillas para pictogramas. Tiene dos partes diferenciadas:
+\subsection{PicTableros}
 
+PicTableros\footnote{\url{https://holstein.fdi.ucm.es/picto-tableros/}} es una aplicación web desarrollada por Carmen López Gonzalo de la Universidad Complutense de Madrid en el Grado de Ingeniería Informática como Trabajo de Fin de Grado. PicTableros tiene como objetivo ayudar a la comunicación de personas con discapacidades cognitivas y poder realizar de una forma ágil plantillas y tableros. 
+La aplicación tiene dos partes diferenciadas:
 \begin{itemize}
-	\item Las plantillas sirven para que otros usuarios que quieran crear un tablero similar puedan sustituir con facilidad los pictogramas. Por ejemplo en la Figura \ref{fig:pictableros1} existe una plantilla de tablero para elegir un deporte, dicha plantilla puede ser modificada para sustituir el pictograma de balonmano por tenis. Estas plantillas pueden ser públicas o privadas.
+	\item \textbf{Plantillas}: en la sección de plantillas permite seleccionar tres modalidades: públicas, crear nuevas y privadas. En el apartado de públicas permite elegir diferentes plantillas ya creadas que las podremos usar como tableros, ver Figura \ref{fig:pictablerosplantilla}. 
+	En el apartado de crear nuevas nos permitirá añadir en el tablero áreas para insertar pictogramas, texto y formas como triángulos, estrellas, flechas, etc. Y por último en la sección  de privadas podremos exportar o importar plantillas que tengamos creadas en nuestro equipo.
 	
-	\item Los tableros públicos no pueden ser modificados, aunque  se puede crear una copia de ellos y modificarse para superponer símbolos (Bien, mal, amarillo, azul)
+	% TODO: \usepackage{graphicx} required
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/PictablerosPlantilla}
+		\caption{Menú de Pictableros para utilizar una plantilla pública.}
+		\label{fig:pictablerosplantilla}
+	\end{figure}
 	
-
+	
+	\item Tableros: al igual que en el apartado anterior la sección de tableros consta de tres secciones: públicos, crear nuevos y privados. En el apartado de público aparecen dos tableros ya creados que podremos crear una copia privada y modificarlo o ver el tablero. En crear nuevo ofrece la posibilidad de insertar en el tablero áreas para añadir pictogramas, insertar texto y formas geométricas, ejemplo de creación de un tablero en la Figura \ref{fig:tableropictableros}. Por último en la sección de tableros privados podremos importar o exportar tableros que tengamos en nuestro equipo.
+	
+	% TODO: \usepackage{graphicx} required
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/tableroPicTableros}
+		\caption{Ejemplo de creación de un tablero con un campo de texto y pictogramas.}
+		\label{fig:tableropictableros}
+	\end{figure}
+	
+	
 \end{itemize}
 
-	% TODO: \usepackage{graphicx} required
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/pictableros1}
-		\caption{Plantilla de elección de deporte.}
-		\label{fig:pictableros1}
-	\end{figure}
-	
-	
-	% TODO: \usepackage{graphicx} required
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/pictableros2}
-		\caption[Edición de plantilla en Pictableros]{Edición de plantilla de selección de deporte, sustituimos balonmano por tenis, haciendo uso del buscador de pictogrmas.}
-		\label{fig:pictableros2}
-	\end{figure}
-	
-	% TODO: \usepackage{graphicx} required
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/pictableros3}
-		\caption[Edición plantilla en Pictableros]{Edición de tableros, permite superponer un signo al pictograma.}
-		\label{fig:pictableros3}
-	\end{figure}
-	
 
 	
-
-
-\newpage	
 \subsection{Symbo Talk}
 
 Symbo Talk\footnote{\url{  https://civat.es/app/symbo-talk/ }} permite la creación de tableros de comunicación aumentativa y locución de tableros y pictogramas mediante su aplicación web o dispositivos móviles como Android e iOS.
@@ -443,7 +433,9 @@ SymboTalk ofrece dos modos de usuario:
 \begin{itemize}
 	\item \textbf{Modo edición}: permite la creación de pictogramas, construir tableros, buscar pictogramas en un buscador. También ofrece la opción de crear un perfil y poder guardar todos los tableros que hayamos realizado.
 	
-	\item \textbf{Modo usuario}: pensado para que el usuario pueda comunicarse de una forma más fácil e intuitiva.
+	
+	\item \textbf{Modo usuario}: pensado para que el usuario pueda comunicarse de una forma más fácil e intuitiva. Permite usar los pictogramas de la biblioteca o los que hayamos creado y reproducir por voz la secuencia de pictogramas seleccionada, en la Figura \ref{fig:symbotalk} podemos ver la pantalla principal de este modo. En el modo usuario permite editar el perfil para hacerlo lo más afín al usuario que lo utilice y que éste se siente más cómodo a la hora de usar la aplicación.
+	
 	
 \end{itemize}
 
@@ -458,9 +450,10 @@ SymboTalk ofrece dos modos de usuario:
 \newpage
 \subsection{LetMe Talk}
 
-LetMe Talk es una aplicación para dispositivos Android e iOS que permite generar frases a partir de pictogramas seleccionados. Tiene un total de 9.000 pictogramas de \textit{ARASAAC} y ofrece la posibilidad de añadir imágenes con un texto descriptivo con la cámara del dispositivo.
+LetMe Talk\footnote{\url{ https://www.letmetalk.info/es}} es una aplicación para dispositivos Android e iOS que permite generar frases a partir de pictogramas seleccionados. Al ser descargada contiene una pequeña selección de pictogramas separadas por categorías como vemos en la Figura \ref{fig:letmetalk} como “General”, “Comida” o “Juguetes”. Al pulsar en cualquiera de estos pictogramas, se desplegará otro tablero donde aparecen pictogramas con juguetes como “muñeca” o “pelota”. 
+Ofrece un total de 9.000 pictogramas de \textit{ARASAAC} y la posibilidad de añadir imágenes del móvil para ser incluidas como pictogramas con texto personalizado. 
 
-\footnote{\url{ https://www.letmetalk.info/es}}
+
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
