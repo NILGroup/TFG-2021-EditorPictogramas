@@ -5,31 +5,31 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}Introducción}{3}{chapter.10}%
 \contentsline {section}{\numberline {1.1}Motivación}{3}{section.11}%
-\contentsline {subsection}{\numberline {1.1.1}Explicaciones adicionales}{3}{subsection.12}%
-\contentsline {subsubsection}{\numberline {1.1.1.1}Texto de prueba}{3}{subsubsection.13}%
+\contentsline {section}{\numberline {1.2}Objetivos}{4}{section.13}%
+\contentsline {section}{\numberline {1.3}Estructura de la memoria}{5}{section.14}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {2}Estado de la Cuestión}{9}{chapter.14}%
-\contentsline {section}{\numberline {2.1}Sistemas Aumentativos y Alternativos de Comunicación}{9}{section.15}%
-\contentsline {section}{\numberline {2.2}Pictogramas}{10}{section.16}%
-\contentsline {subsection}{\numberline {2.2.1}Sistema Pictográfico de Comunicación - SPC}{11}{subsection.23}%
-\contentsline {subsection}{\numberline {2.2.2}Blissymbolics}{11}{subsection.26}%
-\contentsline {subsection}{\numberline {2.2.3}Sclera}{12}{subsection.30}%
-\contentsline {subsection}{\numberline {2.2.4}Mulberry Symbols}{13}{subsection.33}%
-\contentsline {subsection}{\numberline {2.2.5}Minspeak}{14}{subsection.40}%
-\contentsline {subsection}{\numberline {2.2.6}ARASAAC}{15}{subsection.45}%
-\contentsline {section}{\numberline {2.3}Editores de Tableros basados en Pictogramas}{17}{section.51}%
-\contentsline {subsection}{\numberline {2.3.1}Pictoselector}{19}{subsection.56}%
-\contentsline {subsection}{\numberline {2.3.2}Editor ARASAAC}{20}{subsection.61}%
-\contentsline {subsection}{\numberline {2.3.3}Piktoplus}{23}{subsection.67}%
-\contentsline {subsection}{\numberline {2.3.4}BoardMaker}{24}{subsection.72}%
-\contentsline {subsection}{\numberline {2.3.5}Pictar}{24}{subsection.73}%
-\contentsline {subsection}{\numberline {2.3.6}PicTableros}{26}{subsection.78}%
-\contentsline {subsection}{\numberline {2.3.7}Symbo Talk}{27}{subsection.82}%
-\contentsline {subsection}{\numberline {2.3.8}LetMe Talk}{28}{subsection.85}%
-\contentsline {subsection}{\numberline {2.3.9}Jocomunico}{29}{subsection.88}%
-\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{33}{chapter.92}%
-\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{35}{chapter.93}%
+\contentsline {chapter}{\numberline {2}Estado de la Cuestión}{7}{chapter.15}%
+\contentsline {section}{\numberline {2.1}Sistemas Aumentativos y Alternativos de Comunicación}{7}{section.16}%
+\contentsline {section}{\numberline {2.2}Pictogramas}{8}{section.17}%
+\contentsline {subsection}{\numberline {2.2.1}Sistema Pictográfico de Comunicación - SPC}{9}{subsection.24}%
+\contentsline {subsection}{\numberline {2.2.2}Blissymbolics}{9}{subsection.27}%
+\contentsline {subsection}{\numberline {2.2.3}Sclera}{10}{subsection.31}%
+\contentsline {subsection}{\numberline {2.2.4}Mulberry Symbols}{11}{subsection.34}%
+\contentsline {subsection}{\numberline {2.2.5}Minspeak}{12}{subsection.41}%
+\contentsline {subsection}{\numberline {2.2.6}ARASAAC}{13}{subsection.46}%
+\contentsline {section}{\numberline {2.3}Aplicaciones basadas en Pictogramas}{15}{section.52}%
+\contentsline {subsection}{\numberline {2.3.1}Pictoselector}{17}{subsection.57}%
+\contentsline {subsection}{\numberline {2.3.2}Editor ARASAAC}{18}{subsection.62}%
+\contentsline {subsection}{\numberline {2.3.3}Piktoplus}{21}{subsection.68}%
+\contentsline {subsection}{\numberline {2.3.4}BoardMaker}{22}{subsection.73}%
+\contentsline {subsection}{\numberline {2.3.5}Pictar}{22}{subsection.74}%
+\contentsline {subsection}{\numberline {2.3.6}PicTableros}{24}{subsection.79}%
+\contentsline {subsection}{\numberline {2.3.7}Symbo Talk}{25}{subsection.83}%
+\contentsline {subsection}{\numberline {2.3.8}LetMe Talk}{26}{subsection.86}%
+\contentsline {subsection}{\numberline {2.3.9}Jocomunico}{27}{subsection.89}%
+\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{31}{chapter.93}%
+\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{33}{chapter.94}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{37}{appendix.94}%
+\contentsline {chapter}{\numberline {A}Título}{35}{appendix.95}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{39}{appendix.95}%
+\contentsline {chapter}{\numberline {B}Título}{37}{appendix.96}%
