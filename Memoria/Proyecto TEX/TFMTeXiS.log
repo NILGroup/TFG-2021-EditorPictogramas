@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.1)  16 NOV 2020 13:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.1)  15 DEC 2020 13:42
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -840,35 +840,27 @@ LaTeX Info: Redefining \% on input line 144.
 
 ]
 Cap\'itulo 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
 [3]
 <Imagenes/Bitmap/tablerofisico.png, id=365, 441.90094pt x 323.70938pt>
 File: Imagenes/Bitmap/tablerofisico.png Graphic file (type png)
 <use Imagenes/Bitmap/tablerofisico.png>
 Package pdftex.def Info: Imagenes/Bitmap/tablerofisico.png  used on input line 
-21.
+29.
 (pdftex.def)             Requested size: 251.9989pt x 184.60023pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 43.
-LaTeX Info: Redefining \% on input line 43.
- [4 <./Imagenes/Bitmap/tablerofisico.png>])
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
+[4])
 LaTeX Info: Redefining \. on input line 148.
 LaTeX Info: Redefining \% on input line 148.
- [5]
+ [5 <./Imagenes/Bitmap/tablerofisico.png>]
 \openout2 = `Capitulos/EstadoDeLaCuestion.aux'.
 
- (Capitulos/EstadoDeLaCuestion.tex [6
+
+(Capitulos/EstadoDeLaCuestion.tex [6
 
 
 
@@ -1327,9 +1319,9 @@ ers\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk>
 <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx207
 4.pk><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
 iles/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on TFMTeXiS.pdf (61 pages, 4181270 bytes).
+Output written on TFMTeXiS.pdf (61 pages, 4182226 bytes).
 PDF statistics:
- 1352 PDF objects out of 1440 (max. 8388607)
+ 1353 PDF objects out of 1440 (max. 8388607)
  168 named destinations out of 1000 (max. 500000)
  441 words of extra memory for PDF output out of 10000 (max. 10000000)
 
