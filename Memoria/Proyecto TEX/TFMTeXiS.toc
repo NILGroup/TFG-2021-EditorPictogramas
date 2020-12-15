@@ -5,7 +5,7 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}Introducción}{3}{chapter.10}%
 \contentsline {section}{\numberline {1.1}Motivación}{3}{section.11}%
-\contentsline {section}{\numberline {1.2}Objetivos}{4}{section.13}%
+\contentsline {section}{\numberline {1.2}Objetivos}{5}{section.13}%
 \contentsline {section}{\numberline {1.3}Estructura de la memoria}{5}{section.14}%
 \babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {2}Estado de la Cuestión}{7}{chapter.15}%
@@ -21,16 +21,15 @@
 \contentsline {subsection}{\numberline {2.3.1}Pictoselector}{17}{subsection.58}%
 \contentsline {subsection}{\numberline {2.3.2}Editor ARASAAC}{19}{subsection.63}%
 \contentsline {subsection}{\numberline {2.3.3}Piktoplus}{21}{subsection.69}%
-\contentsline {subsection}{\numberline {2.3.4}BoardMaker}{22}{subsection.74}%
-\contentsline {subsection}{\numberline {2.3.5}Pictar}{22}{subsection.75}%
-\contentsline {subsection}{\numberline {2.3.6}PicTableros}{25}{subsection.80}%
-\contentsline {subsection}{\numberline {2.3.7}Symbo Talk}{26}{subsection.84}%
-\contentsline {subsection}{\numberline {2.3.8}LetMe Talk}{27}{subsection.87}%
-\contentsline {subsection}{\numberline {2.3.9}Jocomunico}{28}{subsection.90}%
-\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{31}{chapter.94}%
-\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{33}{chapter.95}%
+\contentsline {subsection}{\numberline {2.3.4}Pictar}{22}{subsection.74}%
+\contentsline {subsection}{\numberline {2.3.5}PicTableros}{25}{subsection.79}%
+\contentsline {subsection}{\numberline {2.3.6}Symbo Talk}{26}{subsection.83}%
+\contentsline {subsection}{\numberline {2.3.7}LetMe Talk}{27}{subsection.86}%
+\contentsline {subsection}{\numberline {2.3.8}Jocomunico}{28}{subsection.89}%
+\contentsline {chapter}{\numberline {3}Conclusiones y Trabajo Futuro}{31}{chapter.93}%
+\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{33}{chapter.94}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{35}{appendix.96}%
+\contentsline {chapter}{\numberline {A}Título}{35}{appendix.95}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{37}{appendix.97}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{39}{appendix*.98}%
+\contentsline {chapter}{\numberline {B}Título}{37}{appendix.96}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{39}{appendix*.97}%
