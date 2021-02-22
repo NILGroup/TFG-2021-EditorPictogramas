@@ -4,13 +4,30 @@
 %\chapterquote{}{}
 
 \begin{resumen}
-	El nombre es provisional
+	[En desarrollo, está todo desordenado y el nombre es provisional]
+	
+	En este capítulo se explicará el proceso de creación de la aplicación PictUp. Ésta se trata de una aplicación web de creación y edición de tableros pictográficos interactivos. El capítulo se dividirá en las distintas fases del desarrollo: 1. Estudio de requisitos 
+	
 \end{resumen}
 
 \label{cap1:sec:Motivacion}
 
 
 \section{Introducción}
+
+El propósito de la aplicación es la de solventar los problemas que otras aplicaciones traían y aunar las herramientas necesarias para facilitar la creación de tableros pictográficos. Otro objetivo es la de ofrecer interacción a los tableros, al estar éstos en un medio digital. 
+
+PictUp está ideada para que sea útil tanto para padres o profesores que son los que crearán contenido pictográfico, como para las personas que puedan beneficiarse del uso de los tableros creados. Es por ello, que se pueden distinguir dos tipos de usuarios, el editor y el alumno. 
+
+Las características que de estos han sido obtenidas del trabajo futuro de otros TFG, comentarios de los usuarios que utilizaban estas aplicaciones y sugerencias de los tutores.
+
+Crear tableros con precisión
+Utilizar fotografías como material
+Agilizar el proceso buscar pictogramas que sean usados de manera recurrente
+Añadir interacción a los tableros:
+Como hemos visto, muchas aplicaciones son rígidas, por lo que una vez creado el tablero no se puede hacer nada más, al añadir alguna clase de componente que permita no solo interactuar al alumno, sino que además el editor pueda dar distintos usos al componente para poder crear distintas actividades con el mismo elemento.
+[COMPLETAR CON LA TABLA DE EL ESTADO DE LA CUESTIÓN]
+
 
 \section{Prototipado de la interfaz}
 
@@ -24,18 +41,37 @@ Un componente es \textbf{un elemento que puede ser añadido al tablero} e inclus
 \begin{itemize}
 	
 	
-\item Picto: El elemento picto representa un pictograma junto a su nombre asociado. Cuenta con la opción de poder modificar algunas características del pictograma, como indicar un tiempo verbal, el plural. Si el pictograma muestra a una persona, también se puede cambiar el color de pelo y tono de piel.
+\item \textbf{Picto}: El elemento picto representa un pictograma junto a su nombre asociado. Cuenta con la opción de poder modificar algunas características del pictograma, como indicar un tiempo verbal, el plural. Si el pictograma muestra a una persona, también se puede cambiar el color de pelo y tono de piel.
 
-\item Foto: El elemento foto, permite añadir imágenes tanto a partir de una URL como las que suba el propio usuario. Esta ha sido una de las características más demandadas por los usuarios. Al permitir añadir fotos abre multitud de posibilidades, como la de poner fotos de la familia, mostrar localizaciones habituales como la cocina e identificar objetos personales que no se representan tan fielmente mediante un pictograma (Por ejemplo, un juguete específico o la portada de su  libro favorito). Esto facilita al usuario final relacionar conceptos al mostrar figuras que le sean familiares.
+\item \textbf{Foto}: El elemento foto, permite añadir imágenes tanto a partir de una URL como las que suba el propio usuario. Esta ha sido una de las características más demandadas por los usuarios. Al permitir añadir fotos abre multitud de posibilidades, como la de poner fotos de la familia, mostrar localizaciones habituales como la cocina e identificar objetos personales que no se representan tan fielmente mediante un pictograma (Por ejemplo, un juguete específico o la portada de su  libro favorito). Esto facilita al usuario final relacionar conceptos al mostrar figuras que le sean familiares.
 
-\item Figuras: Las figuras, sirven para ordenar, enfatizar o decorar el tablero. Un ejemplo, sería una línea que puede ser usada para dividir el espacio de trabajo en secciones, relacionar dos pictogramas o incluso marcar un espacio donde escribir una respuesta si se va a imprimir el tablero. Pese a la simplicidad de las figuras, sus posibilidades son muy amplias, según  la creatividad de quien cree el tablero.
-
-
-\item Colecciones: Las colecciones son conjuntos de pictogramas creadas por el usuario. La finalidad de las colecciones son las de poder acceder con rapidez a pictogramas recurrentes que pueda necesitar el usuario. Las colecciones pueden ser de utilidad por ejemplo, si un profesor tiene que realizar varios materiales sobre un tema en concreto. Evitando así tener que buscar repetidamente el mismo pictograma. 
+\item \textbf{Figuras}: Las figuras, sirven para ordenar, enfatizar o decorar el tablero. Un ejemplo, sería una línea que puede ser usada para dividir el espacio de trabajo en secciones, relacionar dos pictogramas o incluso marcar un espacio donde escribir una respuesta si se va a imprimir el tablero. Pese a la simplicidad de las figuras, sus posibilidades son muy amplias, según  la creatividad de quien cree el tablero.
 
 
+\item \textbf{Colecciones}: Las colecciones son conjuntos de pictogramas creadas por el usuario. La finalidad de las colecciones son las de poder acceder con rapidez a pictogramas recurrentes que pueda necesitar el usuario. Las colecciones pueden ser de utilidad por ejemplo, si un profesor tiene que realizar varios materiales sobre un tema en concreto. Evitando así tener que buscar repetidamente el mismo pictograma. 
 
-\item Cajón de Pictogramas: El cajón de pictos es un apartado al margen del tablero donde aparecen un conjunto de pictogramas que el usuario debe mover a alguna posición. En el hueco donde vayan los pictogramas que se encuentren en el cajón de pictogramas puede ser modificado y aceptar unos u otros. Esto puede ser utilizado como test sencillo de hacer y usar.
 
-\item Subtablero: El Subtablero es un componente que a simple vista parece un pictograma pero al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto la ha sido rescatada de Piktoplus, la cual actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
+
+\item \textbf{Cajón de Pictogramas}: El cajón de pictos es un apartado al margen del tablero donde aparecen un conjunto de pictogramas que el usuario debe mover a alguna posición. En el hueco donde vayan los pictogramas que se encuentren en el cajón de pictogramas puede ser modificado y aceptar unos u otros. Esto puede ser utilizado como test sencillo de hacer y usar.
+
+\item \textbf{Subtablero}: El Subtablero es un componente que a simple vista parece un pictograma pero al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto la ha sido rescatada de Piktoplus, la cual actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
 \end{itemize}
+
+\section{Prototipos Tecnológicos}
+\textcolor{blue}{¿Esto iría aquí o complementa el capítulo de Tecnologías?}
+
+Durante las primeras etapas del desarrollo, creamos algunos prototipos para familiarizarnos con las tecnologías imprescindibles para crear la aplicación. Estas fueron el acceso a la API de ARASAAC \footnote{\url{https://arasaac.org/developers/api}} y desplazar elementos en una aplicación web.
+
+\subsection{API ARASAAC}
+
+Para probar el acceso a la API se creó un buscador de pictogramas independiente para comprender el funcionamiento de la API y las posibilidades que ésta ofrece. Aunque inicialmente simplemente muestra el pictograma de una palabra introducida. Pero más adelante en el desarrollo, explotamos la posibilidad de cambiar el color de pelo y tono de piel de los pictogramas que lo permiten.
+
+
+\subsection{React Drag and Drop:}
+
+Otro objetivo es el de la interacción de los componentes en una superficie cuadriculada. Tras experimentar con distintas bibliotecas de JavaScript como Interact JS \footnote{\url{https://interactjs.io/}} no obtuvimos el resultado esperado pues el desplazamiento de los objetos no era lo suficientemente preciso.
+
+React tenía la biblioteca Drag and Drop que permite desplazar los componentes. La principal diferencia entre Drag and Drop y Interact JS, es que al mover un elemento, “Interact JS”  deja unos píxeles de diferencia y “Drag and Drop.” permite mover objetos en intervalos definidos, como poder mover un objeto de 10 píxeles en 10 píxeles.
+
+
+
