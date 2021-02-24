@@ -13,8 +13,25 @@
 \section{Introducción}
 
 \section{API Arasaac}
+ARASAAC facilita la obtención de recursos pictográficos mediante su API. Dicha API está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
+Mediante los métodos de la API, podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas hechas con pictogramas. Respecto a los pictogramas, los métodos que hemos utilizado son.
+\begin{itemize}
+	\item \textbf{BestSearch}: A partir de una palabra dada retorna el identificador y otros datos como el significado o la categoría del pictograma que más se asemeje al término buscado. Además, permite buscar palabras en multitud de idiomas.
+	
+	\item \textbf{idPictogram}: A partir del identificador obtenido anteriormente, retorna la dirección de la imagen del pictograma asociado al identificador. Junto al identificador del pictograma, pueden añadirse algunos parámetros más para modificar la imagen del pictograma. Por ejemplo, puede añadirse el símbolo de plural, cambiar el color de fondo, la resolución, el tono de piel o color de pelo si el pictograma incluye a personas.
+		
+\end{itemize}
+
+La API de ARASAAC está pensada para ser utilizada por múltiples aplicaciones en distintos idiomas por lo que ofrece la posibilidad, tanto en los métodos de búsqueda como los pictogramas en sí, de seleccionar qué idioma queremos usar por defecto.
+Otro característica a destacar es que todos aquellos métodos en los que se retornen pictogramas podrán ser modificados desde la propia llamada a la API. Podremos modificar desde el color de fondo, rasgos físicos o tiempos verbales entre otras muchas opciones.
 
 \section{React}
+
+React es una librería de Javascript pensada para desarrollar interfaces de usuario. Esta librería fue desarrollada por Facebook buscando la creación de interfaces de una manera sencilla y con un alto rendimiento. 
+React permite desarrollar tanto aplicaciones web como aplicaciones móviles de una manera ordenada y con menos líneas de código respecto a otros lenguajes como Javascript puro. El hecho de que React permita estructurar los distintos componentes de una aplicación ayuda tanto al desarrollo como mantenimiento de esta.
+Otra característica importante de React es que ya tiene implementado muchas funcionalidades por lo que puede ayudar a reducir el tiempo de desarrollo de la aplicación, un ejemplo de esto es el hecho de tener las vistas asociadas a los datos. Esto permite que los datos mostrados se actualicen automáticamente sin necesidad de escribir nuevos fragmentos de código.
+
+Respecto a otros Frameworks como Angular, vemos que React no ofrece todas las funcionalidades de un framework completo. Esto no supone ningún impedimento para desarrollar la aplicación con React pero habrá que adaptar nuestro código al ecosistema que ofrece.
 
 \section{Drag and Drop}
 

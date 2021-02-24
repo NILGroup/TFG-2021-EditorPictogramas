@@ -29,20 +29,19 @@
 \contentsline {chapter}{\numberline {3}Tecnologías}{29}{chapter.93}%
 \contentsline {section}{\numberline {3.1}Introducción}{29}{section.94}%
 \contentsline {section}{\numberline {3.2}API Arasaac}{29}{section.95}%
-\contentsline {section}{\numberline {3.3}React}{29}{section.96}%
-\contentsline {section}{\numberline {3.4}Drag and Drop}{29}{section.97}%
-\contentsline {section}{\numberline {3.5}JSZip}{29}{section.99}%
-\contentsline {chapter}{\numberline {4}PictUp}{31}{chapter.101}%
-\contentsline {section}{\numberline {4.1}Introducción}{31}{section.102}%
-\contentsline {section}{\numberline {4.2}Prototipado de la interfaz}{32}{section.103}%
-\contentsline {section}{\numberline {4.3}Componentes}{32}{section.104}%
-\contentsline {section}{\numberline {4.4}Prototipos Tecnológicos}{33}{section.105}%
-\contentsline {subsection}{\numberline {4.4.1}API ARASAAC}{33}{subsection.107}%
-\contentsline {subsection}{\numberline {4.4.2}React Drag and Drop:}{33}{subsection.108}%
-\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{35}{chapter.110}%
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{37}{chapter.111}%
+\contentsline {section}{\numberline {3.3}React}{30}{section.96}%
+\contentsline {section}{\numberline {3.4}Drag and Drop}{30}{section.97}%
+\contentsline {section}{\numberline {3.5}JSZip}{30}{section.99}%
+\contentsline {chapter}{\numberline {4}PictUp}{33}{chapter.101}%
+\contentsline {section}{\numberline {4.1}Introducción}{33}{section.102}%
+\contentsline {section}{\numberline {4.2}Prototipado de la interfaz}{34}{section.103}%
+\contentsline {section}{\numberline {4.3}Componentes}{34}{section.104}%
+\contentsline {section}{\numberline {4.4}Prototipos Tecnológicos}{35}{section.105}%
+\contentsline {subsection}{\numberline {4.4.1}API ARASAAC}{35}{subsection.107}%
+\contentsline {subsection}{\numberline {4.4.2}React Drag and Drop:}{35}{subsection.108}%
+\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{37}{chapter.110}%
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{39}{chapter.111}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{39}{appendix.112}%
+\contentsline {chapter}{\numberline {A}Título}{41}{appendix.112}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{41}{appendix.113}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{43}{appendix*.114}%
+\contentsline {chapter}{\numberline {B}Título}{43}{appendix.113}%
