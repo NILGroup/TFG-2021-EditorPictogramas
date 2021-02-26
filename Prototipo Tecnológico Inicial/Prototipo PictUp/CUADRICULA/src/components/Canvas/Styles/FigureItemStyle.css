@@ -1,0 +1,35 @@
+/* Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+   Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license */
+
+.dnd-canvas__object_Box {
+    border-radius: 0.25rem;
+    border: 1px solid #00456d77;
+    text-align: center;
+    position: absolute;
+}
+
+.dnd-canvas__object.dnd-canvas__object--moving {
+  background-color: transparent;
+  border-color: #969492 !important;
+  border-style: dashed !important;
+}
+
+.dnd-canvas__object.dnd-canvas__object--resizing {
+  border-color: #1589ee;
+  box-shadow: 0 0 3px #0070D2;
+}
+
+.dnd-canvas__object-buttons {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.slds-button.dnd-canvas__object-button--resize {
+  position: absolute;
+  right: 0;
+}
+
+img {
+  pointer-events: none;
+}

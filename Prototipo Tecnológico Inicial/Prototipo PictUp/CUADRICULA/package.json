@@ -1,0 +1,36 @@
+{
+  "name": "dnd-a11y-patterns",
+  "version": "0.1.1",
+  "private": true,
+  "homepage": "https://salesforce-ux.github.io/dnd-a11y-patterns",
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.4.1",
+    "classnames": "^2.2.5",
+    "decompress": "^4.2.1",
+    "file-saver": "^2.0.5",
+    "gh-pages": "^1.0.0",
+    "jszip": "^3.6.0",
+    "react": "^15.6.1",
+    "react-dnd": "^2.1.4",
+    "react-dnd-html5-backend": "^2.1.2",
+    "react-dom": "^15.6.1",
+    "react-draggable": "^3.0.3",
+    "react-dropzone-uploader": "^2.11.0",
+    "react-file-drop": "^3.1.2",
+    "react-modal": "^3.12.1",
+    "react-rnd": "^5.1.0",
+    "react-router": "^2.7.0",
+    "react-scripts": "1.0.13"
+  },
+  "devDependencies": {
+    "mime": "1.4.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,22 @@
+/* Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+   Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license */
+
+.slds-dropdown__item {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  color: #16325c;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.slds-dropdown__item:focus,
+.slds-dropdown__item:hover {
+  outline: 0;
+  
+  text-decoration: none;
+  background-color: #f4f6f9;
+}
