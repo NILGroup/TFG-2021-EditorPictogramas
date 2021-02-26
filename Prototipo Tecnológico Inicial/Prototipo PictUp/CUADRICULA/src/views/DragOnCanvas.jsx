@@ -247,11 +247,11 @@ export class DragOnCanvasExample extends React.Component {
         </div>
 
         <div>
-          <button onClick={this.setLocalStorage}>Guardar</button>
+          <button onClick={this.setLocalStorage}>Save</button>
         </div>
 
         <div>
-          <button onClick={this.getLocalStorage}>Cargar</button>
+          <button onClick={this.getLocalStorage}>Load</button>
         </div>
 
         {/* Pintar Canvas  */}
