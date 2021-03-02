@@ -1,10 +1,15 @@
-\chapter{PictUp}
+\chapter{PictUp!}
 \label{cap:introduccion}
 
 %\chapterquote{}{}
 
+\textcolor{red}{EN DESARROLLO: Éstá bastante desordenado, podríais indicarnos si está en el orden correcto, o qué podemos hacer para cohesionarlo. \\ El nombre es provisional, aunque suena bastante bien y ayuda a que no nos refiramos al proyecto como \textit{El proyecto} o \textit{Lo de los pictos}}
+
+
+
 \begin{resumen}
-	[En desarrollo, está todo desordenado y el nombre es provisional]
+
+	
 	
 	En este capítulo se explicará el proceso de creación de la aplicación PictUp. Ésta se trata de una aplicación web de creación y edición de tableros pictográficos interactivos. El capítulo se dividirá en las distintas fases del desarrollo: 1. Estudio de requisitos 
 	
@@ -29,55 +34,7 @@ Como hemos visto, muchas aplicaciones son rígidas, por lo que una vez creado el
 [COMPLETAR CON LA TABLA DE EL ESTADO DE LA CUESTIÓN]
 
 
-\section{Prototipado de la interfaz}
 
-\section{Herramientas}
-
-En este apartado se incluirán todas aquellas funcionalidades que ayuden a la edición del tablero. Una de estas herramientas es la \textbf{búsqueda de pictogramas}, esta herramienta permitirá al usuario realizar una búsqueda a partir de una palabra e incluir el pictograma deseado en el tablero. También estará disponible la \textbf{herramienta de traducción de una frase} para facilitar al usuario la elaboración del tablero.
-
-\begin{itemize}
-	\item \textbf{Colecciones}: la herramienta colecciones ofrecen al usuario la opción de poder tener varias agrupaciones de los pictogramas que desee, según su conveniencia. Éstas están compuestas por un nombre que lo identifique y uno o varios pictogramas que el usuario elija según su criterio.
-	
-	\item \textbf{Importar y exportar}: estas herramientas ayudarán al usuario a poder guardar el estado de la página y poder editarlo posteriormente. 
-\end{itemize}
-
-
-\section{Componentes}
-
-
-En esta sección desarrollaremos los principales componentes que pueden colocarse sobre el tablero. 
-
-Un componente es \textbf{un elemento que puede ser añadido al tablero} e incluso añadir interacción para al usuario final. Distinguiremos dos tipos de componentes, los \textbf{básicos} que no añaden ninguna interacción y los \textbf{componentes interactivos}, que pueden ser modificados y añadir comportamientos específicos al usuario final.
-
-\begin{itemize}
-	
-	
-\item \textbf{Picto}: El elemento picto representa un pictograma junto a su nombre asociado. Cuenta con la opción de poder modificar algunas características del pictograma, como indicar un tiempo verbal, el plural. Si el pictograma muestra a una persona, también se puede cambiar el color de pelo y tono de piel.
-
-\item \textbf{Foto}: El elemento foto, permite añadir imágenes tanto a partir de una URL como las que suba el propio usuario. Esta ha sido una de las características más demandadas por los usuarios. Al permitir añadir fotos abre multitud de posibilidades, como la de poner fotos de la familia, mostrar localizaciones habituales como la cocina e identificar objetos personales que no se representan tan fielmente mediante un pictograma (Por ejemplo, un juguete específico o la portada de su  libro favorito). Esto facilita al usuario final relacionar conceptos al mostrar figuras que le sean familiares.
-
-\item \textbf{Figuras}: Las figuras, sirven para ordenar, enfatizar o decorar el tablero. Un ejemplo, sería una línea que puede ser usada para dividir el espacio de trabajo en secciones, relacionar dos pictogramas o incluso marcar un espacio donde escribir una respuesta si se va a imprimir el tablero. Pese a la simplicidad de las figuras, sus posibilidades son muy amplias, según  la creatividad de quien cree el tablero.
-
-\item \textbf{Campos de texto}: Los campos de texto podrán ser insertados en el tablero de la aplicación. Estos campos de texto podrán ser editados permitiendo cambiar el color del texto y aumentar la fuente.
-
-\item \textbf{Cajón de Pictogramas}: El cajón de pictos es un apartado al margen del tablero donde aparecen un conjunto de pictogramas que el usuario debe mover a alguna posición. En el hueco donde vayan los pictogramas que se encuentren en el cajón de pictogramas puede ser modificado y aceptar unos u otros. Esto puede ser utilizado como test sencillo de hacer y usar.
-
-\item \textbf{Subtablero}: El Subtablero es un componente que a simple vista parece un pictograma pero al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto la ha sido rescatada de Piktoplus, la cual actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
-\end{itemize}
-
-Respecto a los elementos \textbf{descartados}, a continuación se detallarán los elementos que fueron descartados y sus motivos:
-
-\begin{itemize}
-	\item\textbf{Pantallas de normas y cuentos predefinidos}: El principal motivo es su falta de flexibilidad, es decir que si la aplicación no permite crear un cuento o un listado de reglas con sus propias herramientas, tampoco permitirá crear otro tipo de material. Por ello se ha decantado por herramientas que ofrecieran más posibilidades al usuario. Otro motivo era que no todos los usuarios querrían por ejemplo que las normas aparecen de una misma manera, como si fuese un listado. Por lo que es imprescindible ofrecer la mayor libertad posible al usuario.
-	
-	\item \textbf{Plantillas}: Tras comentarlo en las reuniones, no se centró mucha atención en este apartado, pues ya estaba muy explorado por la aplicación Pictableros.
-	
-	\item \textbf{Log In}: El principal motivo de su descarte, fue el no poder garantizar en un primer momento la total seguridad de los tableros creados.
-	Otra de las características del proyecto es la inclusión de imágenes que pudiera subir el usuario, con la responsabilidad añadida de haber imágenes de menores de edad por medio. Estos fueron los motivos por los que optamos por una modalidad sin necesidad de servidor, donde los documentos generados se guardan en el ordenador.
-	
-	\item \textbf{Selección de idioma}: Fue una idea descartada al principio del desarrollo, en vista a que la gran mayoría de las aplicaciones existentes ofrecían soporte en multitud de idiomas. Pero no se llevó a cabo para centrarnos en otros aspectos con mayor relevancia.
-	
-\end{itemize}
 
 \section{Prototipos Tecnológicos}
 \textcolor{blue}{¿Esto iría aquí o complementa el capítulo de Tecnologías?}
@@ -98,6 +55,10 @@ React tenía la biblioteca Drag and Drop que permite desplazar los componentes. 
 
 \section{Prototipo de papel interactivo}
 
+Después de probar distintas tecnologías y estudiar la situación actual de los tablero pictográficos, se procedió a bocetar la idea de la aplicación y el formato de la interfaz. Al ser dos personas, se realizaron dos bocetos diferentes, de los cuales se obtuvieron los primeros componentes y asentaron las bases del proyecto.
+
+\textcolor{blue}{Habría que poner mejor Prototipo A y Prototipo B? No estamos  seguros si es correcto poner nuestros nombres}
+\textcolor{blue}{¿Deberíamos editar las imágnes? Para facilitar su lectura}
 \section*{Prototipo realizado por Alfonso}
 
 Teniendo en cuenta, los requisitos de los usuarios, las aplicaciones existentes y el trabajo futuro de Pictableros empezamos a bocetar una primera idea del proyecto.
@@ -109,7 +70,7 @@ En la Figura \ref{fig:loginalfonso} podemos ver el boceto de la pantalla de  ini
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/logInAlfonso}
-	\caption{}
+	\caption{Boceto de pantalla inicial}
 	\label{fig:loginalfonso}
 \end{figure}
 
@@ -121,7 +82,7 @@ Un ejemplo de ello es la creación de un horario, donde pueden haber decenas de 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/inicioAlfonso}
-	\caption{}
+	\caption{Boceto pantalla de plantillas}
 	\label{fig:inicioalfonso}
 \end{figure}
 
@@ -132,7 +93,7 @@ Por último, existe un inicio de sesión opcional para mantener el progreso entr
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/DibujoLibreAlfon}
-	\caption{}
+	\caption{Boceto pantalla de edición de tableros }
 	\label{fig:dibujolibrealfon}
 \end{figure}
 
@@ -158,7 +119,7 @@ Retomando el ejemplo de la granja, podríamos construir un ejercicio que permita
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/cajonPictosGranja}
-	\caption{}
+	\caption{Boceto de actividad con cajón de pictos y hueco picto}
 	\label{fig:cajonpictosgranja}
 \end{figure}
 
@@ -167,25 +128,25 @@ El componente \textbf{subtablero} permite desplegar un tablero de pictogramas. L
 
 Por último el componente \textbf{enlace} que permite ligar dos pictogramas diferentes. Está compuesto por dos “piezas” las cuales se asignan a dos pictogramas para ser enlazados. Su finalidad es la de crear actividades como “hacer parejas”.
 
-En la Figura \ref{fig:componenteenla} podemos ver el ejemplo del pictograma hueso y perro, a los cuales se les asignan la misma pieza identificada por un símbolo de pica con fondo verde. El motivo por el que  las piezas tienen una forma y color asociado sirve para que el usuario que construya la aplicación le sea sencillo identificar las piezas ya  ligadas. El usuario final, tendrá que pulsar sobre los pictos haciendo parejas para completar la actividad.
+En la Figura \ref{fig:componenteenla} podemos ver el ejemplo del pictograma hueso y perro, a los cuales se les asignan la misma pieza identificada por un símbolo de pica con fondo verde. El motivo por el que  las piezas tienen una forma y color asociado facilita al usuario que cree la actividad identificar las piezas ya  ligadas. El usuario final al pulsar sobre los pictos permitirá hacer parejas ,y completar la actividad.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/componenteEnla}
-	\caption{}
+	\caption{Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura}
 	\label{fig:componenteenla}
 \end{figure}
 
 
 
-Con todos los tableros creados también es posible crear una actividad de mayor tamaño secuenciando los tableros. Se podría pasar de uno a las siguientes escenas mediante flechas, como se puede ver en la Figura \ref{fig:cuento} que está compuesta por una fotografía y algunos pictogramas que la describen. Pero también se podrían intercalar estos tableros con otros que aporten interacción, por ejemplo podría añadirse un test mediante el cajón de pictos para comprobar si se está comprendiendo la lectura.
+Con todos los tableros creados también es posible crear una actividad de mayor tamaño secuenciando los tableros. Se podría pasar de uno a las siguientes escenas mediante flechas, como se puede ver en la Figura \ref{fig:cuento}, que está compuesta por una fotografía y algunos pictogramas que la describen. Pero también se podrían intercalar estos tableros con otros que aporten interacción, por ejemplo podría añadirse un test mediante el cajón de pictos para comprobar si se está comprendiendo la lectura.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/Cuento}
-	\caption{}
+	\caption{Boceto de una escena de un cuanto, con pictogramas en la zona inferior y botones en los laterales para pasar o retroceder la escena o tablero}
 	\label{fig:cuento}
 \end{figure}
 
@@ -196,7 +157,7 @@ En la Figura \ref{fig:presentaciontableros} podemos ver cómo se compondrían es
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/presentacionTableros}
-	\caption{}
+	\caption{Boceto del compositor de actividades}
 	\label{fig:presentaciontableros}
 \end{figure}
 
@@ -338,6 +299,56 @@ En el segundo recuadro tendríamos las siguientes opciones:
 		\end{figure}
 		
 	\end{itemize}
+	
+\end{itemize}
+
+\section{Prototipado de la interfaz}
+
+\section{Herramientas}
+
+En este apartado se incluirán todas aquellas funcionalidades que ayuden a la edición del tablero. Una de estas herramientas es la \textbf{búsqueda de pictogramas}, esta herramienta permitirá al usuario realizar una búsqueda a partir de una palabra e incluir el pictograma deseado en el tablero. También estará disponible la \textbf{herramienta de traducción de una frase} para facilitar al usuario la elaboración del tablero.
+
+\begin{itemize}
+	\item \textbf{Colecciones}: la herramienta colecciones ofrecen al usuario la opción de poder tener varias agrupaciones de los pictogramas que desee, según su conveniencia. Éstas están compuestas por un nombre que lo identifique y uno o varios pictogramas que el usuario elija según su criterio.
+	
+	\item \textbf{Importar y exportar}: estas herramientas ayudarán al usuario a poder guardar el estado de la página y poder editarlo posteriormente. 
+\end{itemize}
+
+
+\section{Componentes}
+
+
+En esta sección desarrollaremos los principales componentes que pueden colocarse sobre el tablero. 
+
+Un componente es \textbf{un elemento que puede ser añadido al tablero} e incluso añadir interacción para al usuario final. Distinguiremos dos tipos de componentes, los \textbf{básicos} que no añaden ninguna interacción y los \textbf{componentes interactivos}, que pueden ser modificados y añadir comportamientos específicos al usuario final.
+
+\begin{itemize}
+	
+	
+	\item \textbf{Picto}: El elemento picto representa un pictograma junto a su nombre asociado. Cuenta con la opción de poder modificar algunas características del pictograma, como indicar un tiempo verbal, el plural. Si el pictograma muestra a una persona, también se puede cambiar el color de pelo y tono de piel.
+	
+	\item \textbf{Foto}: El elemento foto, permite añadir imágenes tanto a partir de una URL como las que suba el propio usuario. Esta ha sido una de las características más demandadas por los usuarios. Al permitir añadir fotos abre multitud de posibilidades, como la de poner fotos de la familia, mostrar localizaciones habituales como la cocina e identificar objetos personales que no se representan tan fielmente mediante un pictograma (Por ejemplo, un juguete específico o la portada de su  libro favorito). Esto facilita al usuario final relacionar conceptos al mostrar figuras que le sean familiares.
+	
+	\item \textbf{Figuras}: Las figuras, sirven para ordenar, enfatizar o decorar el tablero. Un ejemplo, sería una línea que puede ser usada para dividir el espacio de trabajo en secciones, relacionar dos pictogramas o incluso marcar un espacio donde escribir una respuesta si se va a imprimir el tablero. Pese a la simplicidad de las figuras, sus posibilidades son muy amplias, según  la creatividad de quien cree el tablero.
+	
+	\item \textbf{Campos de texto}: Los campos de texto podrán ser insertados en el tablero de la aplicación. Estos campos de texto podrán ser editados permitiendo cambiar el color del texto y aumentar la fuente.
+	
+	\item \textbf{Cajón de Pictogramas}: El cajón de pictos es un apartado al margen del tablero donde aparecen un conjunto de pictogramas que el usuario debe mover a alguna posición. En el hueco donde vayan los pictogramas que se encuentren en el cajón de pictogramas puede ser modificado y aceptar unos u otros. Esto puede ser utilizado como test sencillo de hacer y usar.
+	
+	\item \textbf{Subtablero}: El Subtablero es un componente que a simple vista parece un pictograma pero al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto la ha sido rescatada de Piktoplus, la cual actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
+\end{itemize}
+
+Respecto a los elementos \textbf{descartados}, a continuación se detallarán los elementos que fueron descartados y sus motivos:
+
+\begin{itemize}
+	\item\textbf{Pantallas de normas y cuentos predefinidos}: El principal motivo es su falta de flexibilidad, es decir que si la aplicación no permite crear un cuento o un listado de reglas con sus propias herramientas, tampoco permitirá crear otro tipo de material. Por ello se ha decantado por herramientas que ofrecieran más posibilidades al usuario. Otro motivo era que no todos los usuarios querrían por ejemplo que las normas aparecen de una misma manera, como si fuese un listado. Por lo que es imprescindible ofrecer la mayor libertad posible al usuario.
+	
+	\item \textbf{Plantillas}: Tras comentarlo en las reuniones, no se centró mucha atención en este apartado, pues ya estaba muy explorado por la aplicación Pictableros.
+	
+	\item \textbf{Log In}: El principal motivo de su descarte, fue el no poder garantizar en un primer momento la total seguridad de los tableros creados.
+	Otra de las características del proyecto es la inclusión de imágenes que pudiera subir el usuario, con la responsabilidad añadida de haber imágenes de menores de edad por medio. Estos fueron los motivos por los que optamos por una modalidad sin necesidad de servidor, donde los documentos generados se guardan en el ordenador.
+	
+	\item \textbf{Selección de idioma}: Fue una idea descartada al principio del desarrollo, en vista a que la gran mayoría de las aplicaciones existentes ofrecían soporte en multitud de idiomas. Pero no se llevó a cabo para centrarnos en otros aspectos con mayor relevancia.
 	
 \end{itemize}
 

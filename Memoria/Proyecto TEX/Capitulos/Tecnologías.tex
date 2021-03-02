@@ -4,26 +4,39 @@
 %\chapterquote{}{}
 
 \begin{resumen}
-	
+	En este capítulo se enumerarán las tecnologías utilizadas y su utilidad en el proyecto.
 \end{resumen}
 
 \label{cap1:sec:Motivacion}
 
 
 \section{Introducción}
-
+Para llevar a cabo el proyecto, fue necesario investigar sobre tecnologías existentes que faciliten el desarrollo del mismo [COMPLETAR]
 \section{API Arasaac}
-ARASAAC facilita la obtención de recursos pictográficos mediante su API. Dicha API está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
-Mediante los métodos de la API, podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas hechas con pictogramas. Respecto a los pictogramas, los métodos que hemos utilizado son.
+ARASAAC facilita la obtención de recursos pictográficos mediante su API\footnote{\url{https://arasaac.org/developers/api}}. Dicha API está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
+Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas hechas con pictogramas. Respecto a los pictogramas, los métodos que hemos utilizado son.
 \begin{itemize}
 	\item \textbf{BestSearch}: A partir de una palabra dada retorna el identificador y otros datos como el significado o la categoría del pictograma que más se asemeje al término buscado. Además, permite buscar palabras en multitud de idiomas.
 	
-	\item \textbf{idPictogram}: A partir del identificador obtenido anteriormente, retorna la dirección de la imagen del pictograma asociado al identificador. Junto al identificador del pictograma, pueden añadirse algunos parámetros más para modificar la imagen del pictograma. Por ejemplo, puede añadirse el símbolo de plural, cambiar el color de fondo, la resolución, el tono de piel o color de pelo si el pictograma incluye a personas.
+	\item \textbf{searchText}: Igual que \textit{BestSearch}, diferenciándose en que retorna todos los pictogramas en vez de uno solo.
+	
+	\item \textbf{idPictogram}: A partir del identificador obtenido anteriormente, retorna la dirección de la imagen del pictograma asociado al identificador. 
+	
+
+	
 		
 \end{itemize}
 
 La API de ARASAAC está pensada para ser utilizada por múltiples aplicaciones en distintos idiomas por lo que ofrece la posibilidad, tanto en los métodos de búsqueda como los pictogramas en sí, de seleccionar qué idioma queremos usar por defecto.
-Otro característica a destacar es que todos aquellos métodos en los que se retornen pictogramas podrán ser modificados desde la propia llamada a la API. Podremos modificar desde el color de fondo, rasgos físicos o tiempos verbales entre otras muchas opciones.
+Otro característica a destacar, es que todos aquellos métodos en los que se retornen pictogramas podrán ser modificados desde la propia llamada a la API. Podremos modificar desde el color de fondo, rasgos físicos o tiempos verbales entre otras muchas opciones. Podemos ver un ejemplo de ello en la Figura  \ref{fig:colorespicto} que muestra la edición del pictograma "Niño" dentro de la web de ARASAAC \footnote{\url{https://arasaac.org/pictograms/es/7176/niño}}
+
+	% TODO: \usepackage{graphicx} required
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/coloresPicto}
+	\caption{Ejemplo de cómo se puede modificar el color de pelo y tono de piel de un pictograma entre otras opciones, en la web de ARASAAC}
+	\label{fig:colorespicto}
+\end{figure}
 
 \section{React}
 
