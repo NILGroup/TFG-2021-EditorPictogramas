@@ -25,19 +25,22 @@ El propósito de la aplicación es la de solventar los problemas que otras aplic
 PictUp está ideada para que sea útil tanto para padres o profesores que son los que crearán contenido pictográfico, como para las personas que puedan beneficiarse del uso de los tableros creados. Es por ello, que se pueden distinguir dos tipos de usuarios, el editor y el alumno. 
 
 Las características que de estos han sido obtenidas del trabajo futuro de otros TFG, comentarios de los usuarios que utilizaban estas aplicaciones y sugerencias de los tutores.
+\begin{itemize}
+	\item \textbf{Crear tableros con precisión}.
+	\item \textbf{Utilizar fotografías como material}.
+	\item \textbf{Agilizar el proceso buscar pictogramas que sean usados de manera recurrente}.
+	\item \textbf{Añadir interacción a los tableros}: Como hemos visto, muchas aplicaciones son rígidas, por lo que una vez creado el tablero no se puede hacer nada más, al añadir alguna clase de componente que permita no solo interactuar al alumno, sino que además el editor pueda dar distintos usos al componente para poder crear distintas actividades con el mismo elemento.
+\end{itemize}
 
-Crear tableros con precisión
-Utilizar fotografías como material
-Agilizar el proceso buscar pictogramas que sean usados de manera recurrente
-Añadir interacción a los tableros:
-Como hemos visto, muchas aplicaciones son rígidas, por lo que una vez creado el tablero no se puede hacer nada más, al añadir alguna clase de componente que permita no solo interactuar al alumno, sino que además el editor pueda dar distintos usos al componente para poder crear distintas actividades con el mismo elemento.
-[COMPLETAR CON LA TABLA DE EL ESTADO DE LA CUESTIÓN]
+
+
+\textcolor{red}{[COMPLETAR CON LA TABLA DE EL ESTADO DE LA CUESTIÓN]}
 
 
 
 
 \section{Prototipos Tecnológicos}
-\textcolor{blue}{¿Esto iría aquí o complementa el capítulo de Tecnologías?}
+\textcolor{red}{¿Esto iría aquí o complementa el capítulo de Tecnologías?}
 
 Durante las primeras etapas del desarrollo, creamos algunos prototipos para familiarizarnos con las tecnologías imprescindibles para crear la aplicación. Estas fueron el acceso a la API de ARASAAC \footnote{\url{https://arasaac.org/developers/api}} y desplazar elementos en una aplicación web.
 
@@ -57,8 +60,10 @@ React tenía la biblioteca Drag and Drop que permite desplazar los componentes. 
 
 Después de probar distintas tecnologías y estudiar la situación actual de los tablero pictográficos, se procedió a bocetar la idea de la aplicación y el formato de la interfaz. Al ser dos personas, se realizaron dos bocetos diferentes, de los cuales se obtuvieron los primeros componentes y asentaron las bases del proyecto.
 
-\textcolor{blue}{Habría que poner mejor Prototipo A y Prototipo B? No estamos  seguros si es correcto poner nuestros nombres}
-\textcolor{blue}{¿Deberíamos editar las imágnes? Para facilitar su lectura}
+\textcolor{red}{Habría que poner mejor Prototipo A y Prototipo B? No estamos  seguros si es correcto poner nuestros nombres}
+\textcolor{red}{¿Deberíamos editar las imágnes? Para facilitar su lectura}
+\textcolor{red}{A la hora de redactarlo ¿sería mejor estructurarlo como en la parte de Jorge (por las distintas pantallas) o mejor como esta puesto en la parte de Alfonso?}
+
 \section*{Prototipo realizado por Alfonso}
 
 Teniendo en cuenta, los requisitos de los usuarios, las aplicaciones existentes y el trabajo futuro de Pictableros empezamos a bocetar una primera idea del proyecto.
@@ -106,14 +111,14 @@ El apartado de  creación de actividad no deja de ser una extensión de creació
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/componenteCajon}
-	\caption{}
+	\caption{Boceto de las componentes canjón de picto y espacio picto.}
 	\label{fig:componentecajon}
 \end{figure}
 
 
 
 
-Retomando el ejemplo de la granja, podríamos construir un ejercicio que permita al usuario mover los pictogramas según al espacio al que pertenezca un animal, como vemos en la Figura \ref{fig:cajonpictosgranja}. En el tablero, aparecen representados algunos espacios picto en azul, que solo aceptan animales de la colección “Granja” y otro espacio para la colección “Selva”, dejando abajo el cajón de pictos con todos los animales mezclados. El objetivo, es dar la máxima flexibilidad al usuario que cree una actividad.
+Retomando el ejemplo de la granja, podríamos construir un ejercicio que permita al usuario mover los pictogramas según al espacio al que pertenezca un animal, como vemos en la Figura \ref{fig:cajonpictosgranja}. En el tablero, aparecen representados algunos espacios picto en azul, que solo aceptan animales de la colección “\textit{Granja}” y otro espacio para la colección “\textit{Selva}”, dejando abajo el cajón de pictos con todos los animales mezclados. El objetivo, es dar la máxima flexibilidad al usuario que cree una actividad.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -249,7 +254,7 @@ En el segundo recuadro tendríamos las siguientes opciones:
 	También tenemos la posibilidad de guardar como pdf lo que tenemos en el tablero.
 	
 	
-	La parte de la derecha sería distinta respecto a la pantalla de tableros ya que aquí el tablero no está cuadriculado. Para añadir una norma o una nueva sección en nuestro tablero tendríamos que pulsar sobre el botón “Nueva norma” o “Nueva sección” y se añadirían dos campos. El primero de ellos estaría numerado y en él se insertaría el texto correspondiente a la norma o a la sección del cuento. El segundo sería un campo en donde poder insertar los pictogramas que queramos que hicieran alusión al campo de texto superior. Además hay  un botón para añadir un nuevo tablero y seguir trabajando.
+	La parte de la derecha sería distinta respecto a la pantalla de tableros ya que aquí el tablero no está cuadriculado. Para añadir una norma o una nueva sección en nuestro tablero tendríamos que pulsar sobre el botón “\textit{Nueva norma}” o “\textit{Nueva sección}” y se añadirían dos campos. El primero de ellos estaría numerado y en él se insertaría el texto correspondiente a la norma o a la sección del cuento. El segundo sería un campo en donde poder insertar los pictogramas que queramos que hicieran alusión al campo de texto superior. Además hay  un botón para añadir un nuevo tablero y seguir trabajando.
 	
 	
 	\item \textbf{Pantalla de juegos}

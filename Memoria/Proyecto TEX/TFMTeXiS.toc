@@ -37,10 +37,10 @@
 \contentsline {section}{\numberline {4.2}Prototipos Tecnológicos}{34}{section.106}%
 \contentsline {subsection}{\numberline {4.2.1}API ARASAAC}{34}{subsection.108}%
 \contentsline {subsection}{\numberline {4.2.2}React Drag and Drop:}{34}{subsection.109}%
-\contentsline {section}{\numberline {4.3}Prototipo de papel interactivo}{34}{section.111}%
+\contentsline {section}{\numberline {4.3}Prototipo de papel interactivo}{35}{section.111}%
 \contentsline {section}{\numberline {4.4}Prototipado de la interfaz}{44}{section.125}%
 \contentsline {section}{\numberline {4.5}Herramientas}{44}{section.126}%
-\contentsline {section}{\numberline {4.6}Componentes}{44}{section.127}%
+\contentsline {section}{\numberline {4.6}Componentes}{45}{section.127}%
 \contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{47}{chapter.128}%
 \contentsline {chapter}{\numberline {5}Conclusions and Future Work}{49}{chapter.129}%
 \babel@toc {english}{}
