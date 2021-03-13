@@ -18,6 +18,7 @@ ReactDOM.render(
       <IndexRoute component={AllViews} />
     </Route>
     <Route path="/demo" component={DemoView} />
+    
     <Route path="/canvas" component={MainLayout}>
       <IndexRoute component={DragOnCanvasView} />
     </Route>

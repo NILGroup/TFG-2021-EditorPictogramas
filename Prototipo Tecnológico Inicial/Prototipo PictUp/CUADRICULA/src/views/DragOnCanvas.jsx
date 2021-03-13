@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
+import ReactModal from 'react-modal';
 import PropTypes from 'prop-types';
 import { saveAs } from 'file-saver';
 
@@ -14,6 +15,7 @@ import CanvasImage from '../components/Canvas/CanvasImage';
 import TextItem from '../components/Canvas/TextItem'
 import ARASAAC from './API/arasaac'
 import UploadPhoto from './UploadPhoto/newUploadPhoto'
+import "bootstrap/dist/css/bootstrap.min.css"
 //import UploadState from './Downloader/UploadState'
 //import ZipMaker from './Downloader/ZipMaker'
 
@@ -41,7 +43,7 @@ export class DragOnCanvasExample extends React.Component {
     this.Body = ""
 
     this.zipUtils = new zipUtils
-    this.collection = new Collection()
+    this.collect = new Collection()
 
     this.state = {
       pictoArray: [],
@@ -52,6 +54,25 @@ export class DragOnCanvasExample extends React.Component {
       idPhoto: "",
       idPicto: ""
     }
+
+
+
+    //Para el modal
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+
+
+
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+
+  }
+
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+
   }
 
   deleteEvent = (index) => {
@@ -113,9 +134,12 @@ export class DragOnCanvasExample extends React.Component {
     console.log(JSON.parse(window.localStorage.getItem('Alfon')))
   }
 
-  cuantosHay = (picto) =>{
-    //console.log(picto._id);
-    this.collection.openModal(picto._id);
+  cuantosHay = (picto) => {
+    console.log(picto);
+    // console.log(this.collection.state);
+    // this.collection.show();
+    console.log(this.collect.state.colection);
+    this.handleOpenModal();
   }
 
   /*Cuando se pulsa el boton + de La APi, lo añadimos al canvas */
@@ -217,10 +241,38 @@ export class DragOnCanvasExample extends React.Component {
 
   }
 
+  handleChange(e) {
+    console.log(e.target.value);
+    //here you will see the current selected value of the select input
+  }
+
+  addToCollection = () => {
+
+  }
+
+
   render() {
+
+    let optionColection = this.collect.state.colection.map(c => (
+      <option value={c.name}>{c.name}</option>
+    ));
+
     return (
+      
       <div>
-        <button onClick={this.createFile}>
+        <nav className="NavbarItems ">
+          <h1 className="navbar-logo">React</h1>
+          <div className="menu-icon">
+
+          </div>
+          <ul>
+            <li></li>
+          </ul>
+
+        </nav>
+
+
+        <button className="btn btn-primary" onClick={this.createFile}>
           Zip
       </button>
         <input type="file" onChange={this.importFile} />
@@ -231,7 +283,55 @@ export class DragOnCanvasExample extends React.Component {
         {/* API ARASAAC */}
         <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} />
 
-        <Collection/>
+        <Collection />
+
+        <ReactModal
+          isOpen={this.state.showModal}
+          contentLabel="onRequestClose Example"
+          onRequestClose={this.handleCloseModal}
+          className="Modal"
+          ariaHideApp={false}
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">Añadir a colección:</h5>
+              </div>
+              <div className="modal-body">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm">
+                      <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                        {optionColection}
+                      </select>
+                    </div>
+
+                    <div className="col-sm">
+                      <button type="button" className="btn btn-outline-primary ml-2" onClick={this.addToCollection}>Añadir a colección</button>
+                    </div>
+                  </div>
+                </div>
+                <pre></pre>
+
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm">
+                      <input type="text" onBlur={this.setCollection} />
+                    </div>
+                    <div className="col-sm">
+                    <button type="button" className="btn btn-outline-primary ml-2" onClick={this.addToCollection}>Nueva colección</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={this.handleCloseModal}>Close</button>
+              </div>
+            </div>
+          </div>
+
+        </ReactModal>
 
         {/* Crear Objeto */}
         <div>

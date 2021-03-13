@@ -51,6 +51,7 @@ class ARASAAC extends Component {
 		this.props.sendData(picto); 
 	}
 	sendSelectedCollection = (picto) => {
+		console.log(picto);
         this.props.sendC(picto);
     }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
 import PropTypes from 'prop-types';
+import { forEach } from 'jszip';
 
 
 export class Collection extends React.Component {
@@ -37,12 +38,14 @@ export class Collection extends React.Component {
     this.openFile = this.openFile.bind(this);
   }
 
-  handleOpenModal() {
+  handleOpenModal = () => {
     this.setState({ showModal: true });
+    
   }
 
-  handleCloseModal() {
+  handleCloseModal = () => {
     this.setState({ showModal: false });
+   
   }
 
   setCollection = (event) => {
@@ -89,6 +92,7 @@ export class Collection extends React.Component {
   }
 
   show = () => {
+
     for (var i = 0; i < this.contador; ++i) {
       console.log(this.state.colection[i].name);
     }
@@ -101,10 +105,10 @@ export class Collection extends React.Component {
 
   download(event) {
     event.preventDefault();
-
+    var colection = this.state.colection;
     var output;
     if (this.state.fileType === "json") {
-      output = JSON.stringify({ states: this.state.colection },
+      output = JSON.stringify({ colection },
         null, 4);
     }
     // Download it
@@ -124,17 +128,20 @@ export class Collection extends React.Component {
   }
 
   openFile(evt) {
-    let sta = [];
     const fileObj = evt.target.files[0];
     const reader = new FileReader();
 
     let fileloaded = e => {
       const fileContents = e.target.result;
-      sta.push(`File name: "${fileObj.name}". Length: ${fileContents.length} bytes.`);
-      const firstchar = fileContents.substring(0, 1000);
-      sta.push(`${firstchar}`)
-      this.setState({ status: fileContents })
+      var collections = JSON.parse(fileContents);
+      console.log(collections.colection[0].name);
+      for (var i = 0; i < collections.colection.length; i++) {
+        this.state.colection[i] = collections.colection[i];
+      }
+      this.contador = collections.colection.length;
+      console.log(this.state.colection);
     }
+    
 
     // Mainline of the method
     fileloaded = fileloaded.bind(this);
@@ -142,14 +149,20 @@ export class Collection extends React.Component {
     reader.readAsText(fileObj);
   }
 
+  handleChange(e) {
+    console.log(e.target.value);
+    //here you will see the current selected value of the select input
+  }
 
   render() {
+
+    let optionColection = this.state.colection.map(c => (
+      <option value={c.name}>{c.name}</option>
+    ));
+
     return (
       <div>
-
-
         <form>
-
           <button onClick={this.download}>
             Exportar
               </button>
@@ -183,6 +196,14 @@ export class Collection extends React.Component {
           className="Modal"
           ariaHideApp={false}
         >
+
+          <label>
+            Selecciona la coleccion:
+            <select value={this.state.value} onChange={this.handleChange}>
+              {optionColection}
+            </select>
+          </label>
+
           <input type="text" onBlur={this.setCollection} />
           <button onClick={this.create}>New Collection</button>
           <pre></pre>
