@@ -17,6 +17,5 @@
   #div1 {
     overflow:scroll;
     overflow-x: hidden;
-    height:150px;
-    width:700px;
+    height:300px;
 }
