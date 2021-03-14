@@ -48,8 +48,24 @@ class ARASAAC extends Component {
 
 	//Envia información del pictograma seleccionado a la capa superior
 	sendSelectedPicto = (picto) => {
+
+		var recentPictos = JSON.parse(localStorage.getItem("recentPictos"));
+		if (recentPictos == null) recentPictos = [];
+		recentPictos.push(picto);
+		localStorage.setItem("recentPictos", JSON.stringify(recentPictos));
+
 		this.props.sendData(picto);
 	}
+
+	recentPictos = () => {
+		this.setState({
+			items: JSON.parse(localStorage.getItem("recentPictos"))
+		})
+
+		console.log("hola")
+
+	}
+
 	sendSelectedCollection = (picto) => {
 		console.log(picto);
 		this.props.sendC(picto);
@@ -59,17 +75,17 @@ class ARASAAC extends Component {
 
 	render() {
 
-		var { items } = this.state;
-
-
 		return (
 			<div class="cajon">
 
 
 				<div className="input-group mb-3">
 					<div className="input-group-prepend">
-						<button type="button" className="btn btn-outline-secondary">
+						<button className="btn btn-outline-primary" title="Buscar Picto">
 							<span className="fas fa-search"></span>
+						</button>
+						<button className="btn btn-outline-secondary" title="Pictos recientes" onClick={this.recentPictos}>
+							<span className="fas fa-history"></span>
 						</button>
 					</div>
 					<input type="text" className="form-control" placeholder='Busca a Picto' onBlur={this.fetchInputQuery} onKeyDown={this.keyPress} />
@@ -77,7 +93,7 @@ class ARASAAC extends Component {
 				<div id="div1" className="row">
 					<div className="row row-cols-3 row-cols-md-6 g-4">
 
-						{items && !!items.length && items.map(item => (
+						{this.state.items && !!this.state.items.length && this.state.items.map(item => (
 							<div key={item._id} className="card">
 								<img className="card-img-top"
 									src={'https://api.arasaac.org/api/pictograms/' + item._id}
