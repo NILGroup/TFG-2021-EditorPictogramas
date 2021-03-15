@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Rnd from 'react-rnd';
 import IconButton from '../Icon/IconButton';
 import './CanvasItem.css';
-import {FormPicto} from './Form/formPicto'
+import { FormPicto } from './Form/formPicto'
 
 import Modal from 'react-modal';
 
@@ -43,6 +43,8 @@ class PictoItem extends Component {
     this.handleModifyClik = this.handleModifyClik.bind(this)
     this.handleEditKeyDown = this.handleEditKeyDown.bind(this);
 
+    this.handlePlaySound = this.handlePlaySound.bind(this);
+
     this.increaseZIndex = this.increaseZIndex.bind(this);
     this.handleDragStop = this.handleDragStop.bind(this);
     this.handleResizeStop = this.handleResizeStop.bind(this);
@@ -72,7 +74,7 @@ class PictoItem extends Component {
 
     }
 
-   
+
     this.lockAspectRatio = true;
 
     // Only allow drag-resize from bottomRight
@@ -340,7 +342,7 @@ class PictoItem extends Component {
   }
 
   handleModifyClik(event) {
-    
+
     var api = this.props.apiObject
     console.log(api)
     console.log(event.target.myColor.value)
@@ -350,37 +352,55 @@ class PictoItem extends Component {
     var skin = event.target.skin.value
     var time = event.target.time.value
 
-    if(time != "present"){
+    if (time !== "present") {
       query += "_action-" + time
     }
 
-    if(api.hair && hair!= ""){
+    if (api.hair && hair !== "") {
       query += "_hair-" + event.target.hair.value
     }
 
-    if(api.skin && skin!=""){
+    if (api.skin && skin !== "") {
       query += "_skin-" + event.target.skin.value
     }
 
-    if(event.target.label.value != ""){
-      this.setState({  
+    if (event.target.label.value !== "") {
+      this.setState({
         label: event.target.label.value,
-        
+
       })
     }
 
-    if(event.target.myColor.value != "#000000"){
+    if (event.target.myColor.value !== "#000000") {
       console.log("Not Black")
-      this.setState({  
+      this.setState({
         backColor: event.target.myColor.value
       })
     }
 
-    this.setState({  
+    this.setState({
       url: "https://static.arasaac.org/pictograms/" + id + "/" + id + query + "_500.png",
     })
 
     event.preventDefault();
+  }
+
+  handlePlaySound(){
+
+    var api = this.props.apiObject
+
+    if(api.keywords[0].hasLocution){
+      var audio = new Audio("https://privateapi.arasaac.org/api/locutions/es/" + api.keywords[0].keyword);  
+      audio.play();
+    }
+    else{
+      var msg = new SpeechSynthesisUtterance();
+      msg.lang = "es-ES";
+      msg.continuous = false;
+      msg.interimResults = true;
+      msg.text = api.keywords[0].keyword;
+      window.speechSynthesis.speak(msg);
+    }
   }
 
 
@@ -409,11 +429,11 @@ class PictoItem extends Component {
     const itemClasses = classNames(
       'dnd-canvas__object'
       , {
-      'dnd-canvas__object--moving': this.state.isMoving,
-      'dnd-canvas__object--resizing': this.state.isResizing,
-      'dnd-canvas__object--editing': this.state.isEditing,
-      'background-color' : "#8fef74"
-    });
+        'dnd-canvas__object--moving': this.state.isMoving,
+        'dnd-canvas__object--resizing': this.state.isResizing,
+        'dnd-canvas__object--editing': this.state.isEditing,
+        'background-color': "#8fef74"
+      });
 
     return (
       <Rnd
@@ -438,7 +458,7 @@ class PictoItem extends Component {
         <div>
           <div className="slds-p-vertical_medium slds-text-heading_small">
 
-            <img src={this.state.url} />
+            <img src={this.state.url} alt={this.state.label} />
             {this.state.label}
           </div>
 
@@ -479,11 +499,18 @@ class PictoItem extends Component {
               onClick={this.openModal}
             />
 
+            <IconButton
+              className="dnd-canvas__object-button dnd-canvas__object-button--edit"
+              sprite="utility"
+              symbol="home"
+              onClick={this.handlePlaySound}
+            />
+
             <div>
-              <Modal 
+              <Modal
                 isOpen={this.state.modalIsOpen}
                 ariaHideApp={false}
-                contentLabel="Selected Option" 
+                contentLabel="Selected Option"
                 onRequestClose={this.closeModal}>
                 <button onClick={this.closeModal}>X</button>
                 <div>Editar Pictograma</div>
