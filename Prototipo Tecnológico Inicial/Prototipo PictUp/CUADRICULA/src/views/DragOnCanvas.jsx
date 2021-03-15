@@ -21,6 +21,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import zipUtils from './Utilities/zipUtils'
 import Collection from './Utilities/Collection'
+import Navbar from './Utilities/Navbar';
 
 
 
@@ -258,166 +259,175 @@ export class DragOnCanvasExample extends React.Component {
     ));
 
     return (
-      
+
       <div>
-        <nav className="NavbarItems ">
-          <h1 className="navbar-logo">React</h1>
-          <div className="menu-icon">
+        <Navbar />
 
-          </div>
-          <ul>
-            <li></li>
-          </ul>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col">
+              <button className="btn btn-primary" onClick={this.createFile}>
+                Zip
+          </button>
+              <input type="file" onChange={this.importFile} />
 
-        </nav>
+              {/* <UploadState/> */}
+              <UploadPhoto sendData={this.addPictoFromPhoto} />
 
+              {/* API ARASAAC */}
+              <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} />
 
-        <button className="btn btn-primary" onClick={this.createFile}>
-          Zip
-      </button>
-        <input type="file" onChange={this.importFile} />
+              <Collection />
 
-        {/* <UploadState/> */}
-        <UploadPhoto sendData={this.addPictoFromPhoto} />
-
-        {/* API ARASAAC */}
-        <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} />
-
-        <Collection />
-
-        <ReactModal
-          isOpen={this.state.showModal}
-          contentLabel="onRequestClose Example"
-          onRequestClose={this.handleCloseModal}
-          className="Modal"
-          ariaHideApp={false}
-        >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">Añadir a colección:</h5>
-              </div>
-              <div className="modal-body">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-sm">
-                      <select className="form-control" value={this.state.value} onChange={this.handleChange}>
-                        {optionColection}
-                      </select>
+              <ReactModal
+                isOpen={this.state.showModal}
+                contentLabel="onRequestClose Example"
+                onRequestClose={this.handleCloseModal}
+                className="Modal"
+                ariaHideApp={false}
+              >
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h5 className="modal-title" id="exampleModalLabel">Añadir a colección:</h5>
                     </div>
+                    <div className="modal-body">
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-sm">
+                            <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                              {optionColection}
+                            </select>
+                          </div>
 
-                    <div className="col-sm">
-                      <button type="button" className="btn btn-outline-primary ml-2" onClick={this.addToCollection}>Añadir a colección</button>
+                          <div className="col-sm">
+                            <button type="button" className="btn btn-outline-primary ml-2" onClick={this.addToCollection}>Añadir a colección</button>
+                          </div>
+                        </div>
+                      </div>
+                      <pre></pre>
+
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-sm">
+                            <input type="text" onBlur={this.setCollection} />
+                          </div>
+                          <div className="col-sm">
+                            <button type="button" className="btn btn-outline-primary ml-2" onClick={this.addToCollection}>Nueva colección</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div className="modal-footer">
+                      <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={this.handleCloseModal}>Close</button>
                     </div>
                   </div>
                 </div>
-                <pre></pre>
 
-                <div className="container">
-                  <div className="row">
-                    <div className="col-sm">
-                      <input type="text" onBlur={this.setCollection} />
-                    </div>
-                    <div className="col-sm">
-                    <button type="button" className="btn btn-outline-primary ml-2" onClick={this.addToCollection}>Nueva colección</button>
+              </ReactModal>
+
+              {/* Crear Objeto */}
+              {/* <div>
+                <input type="text" onBlur={this.setPicto} />
+                <button onClick={this.addText}>Añadir texto</button>
+              </div> */}
+
+              <div className="container-fluid">
+                <div className="row">
+
+                  <div className="input-group ">
+                    <input type="text" onBlur={this.setPicto} onKeyDown={this.keyPress} />
+                    <div className="input-group-prepend">
+                      <button className="btn btn-outline-primary" title="Pictos recientes" onClick={this.addText}>
+                        Añadir texto
+                  </button>
                     </div>
                   </div>
                 </div>
+                <div className="row mt-2">
+                  <button onClick={this.addLine}>Añadir linea</button>
+                
+                  <button onClick={this.addFigure}>Añadir figura</button>
+                </div>
+              </div>
+              {/* <div>
+                <button onClick={this.setLocalStorage}>Save</button>
+              </div>
 
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={this.handleCloseModal}>Close</button>
-              </div>
+              <div>
+                <button onClick={this.getLocalStorage}>Load</button>
+              </div> */}
+
             </div>
-          </div>
+            <div className="col">
+              {/* Pintar Canvas  */}
+              <Canvas hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
+                {
+                  this.state.pictoArray.map((picto, index) => {
+                    return (
 
-        </ReactModal>
+                      <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={7} height={10} minWidth={3} minHeight={3} key={picto.id}
+                        imageURL={'https://api.arasaac.org/api/pictograms/' + picto.picto_id}
+                        sendData={this.handleData}
+                      />
+                    )
+                  })
+                }
 
-        {/* Crear Objeto */}
-        <div>
-          <input type="text" onBlur={this.setPicto} />
-          <button onClick={this.addText}>Add Text</button>
-        </div>
+                {
+                  this.state.photoArray.map((photo, index) => {
+                    return (
 
-        <div>
-          <button onClick={this.addLine}>Add Line</button>
-        </div>
-        <div>
-          <button onClick={this.addFigure}>Add Figure</button>
-        </div>
-
-        <div>
-          <button onClick={this.setLocalStorage}>Save</button>
-        </div>
-
-        <div>
-          <button onClick={this.getLocalStorage}>Load</button>
-        </div>
-
-        {/* Pintar Canvas  */}
-        <Canvas hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
-          {
-            this.state.pictoArray.map((picto, index) => {
-              return (
-
-                <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={7} height={10} minWidth={3} minHeight={3} key={picto.id}
-                  imageURL={'https://api.arasaac.org/api/pictograms/' + picto.picto_id}
-                  sendData={this.handleData}
-                />
-              )
-            })
-          }
-
-          {
-            this.state.photoArray.map((photo, index) => {
-              return (
-
-                <CanvasImage label={photo.body} idPicto={photo.id} x={2} y={2} width={10} height={11} minWidth={3} minHeight={3} key={photo.id}
-                  imageURL={photo.url}
-                  sendData={this.handleData}
-                />
-              )
-            })
-          }
+                      <CanvasImage label={photo.body} idPicto={photo.id} x={2} y={2} width={10} height={11} minWidth={3} minHeight={3} key={photo.id}
+                        imageURL={photo.url}
+                        sendData={this.handleData}
+                      />
+                    )
+                  })
+                }
 
 
-          {
-            this.state.textArray.map((photo, index) => {
-              return (
+                {
+                  this.state.textArray.map((photo, index) => {
+                    return (
 
-                <TextItem label={photo.body} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={photo.id}
-                  sendData={this.handleData}
-                />
-              )
-            })
-          }
+                      <TextItem label={photo.body} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={photo.id}
+                        sendData={this.handleData}
+                      />
+                    )
+                  })
+                }
 
-          {
-            this.state.lineArray.map((photo, index) => {
-              return (
+                {
+                  this.state.lineArray.map((photo, index) => {
+                    return (
 
-                <LineItem x={5} y={5} width={1} height={9} minWidth={1} minHeight={1}
-                  sendData={this.handleData}
-                />
-              )
-            })
-          }
+                      <LineItem x={5} y={5} width={1} height={9} minWidth={1} minHeight={1}
+                        sendData={this.handleData}
+                      />
+                    )
+                  })
+                }
 
-          {
-            this.state.figureArray.map((photo, index) => {
-              return (
+                {
+                  this.state.figureArray.map((photo, index) => {
+                    return (
 
-                <FigureItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4}
-                  sendData={this.handleData}
-                />
-              )
-            })
-          }
+                      <FigureItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4}
+                        sendData={this.handleData}
+                      />
+                    )
+                  })
+                }
 
-          {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
+                {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
           <CanvasItem label="NIÑO" x={6} y={12} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"niño.png"} /> */}
 
-        </Canvas>
+              </Canvas>
+            </div>
+          </div>
+        </div>
       </div>
 
 

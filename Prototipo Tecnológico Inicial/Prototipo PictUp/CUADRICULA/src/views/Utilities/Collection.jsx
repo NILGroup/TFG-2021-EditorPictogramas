@@ -40,12 +40,12 @@ export class Collection extends React.Component {
 
   handleOpenModal = () => {
     this.setState({ showModal: true });
-    
+
   }
 
   handleCloseModal = () => {
     this.setState({ showModal: false });
-   
+
   }
 
   setCollection = (event) => {
@@ -141,7 +141,7 @@ export class Collection extends React.Component {
       this.contador = collections.colection.length;
       console.log(this.state.colection);
     }
-    
+
 
     // Mainline of the method
     fileloaded = fileloaded.bind(this);
@@ -162,59 +162,34 @@ export class Collection extends React.Component {
 
     return (
       <div>
-        <form>
-          <button onClick={this.download}>
-            Exportar
-              </button>
 
-          <a className="hidden"
-            download={this.fileNames[this.state.fileType]}
-            href={this.state.fileDownloadUrl}
-            ref={e => this.dofileDownload = e}
-          ></a>
+        <div className="container">
+          <div className="row mb-2 mt-2">
+            <button className="btn btn-outline-info btn-sm" onClick={this.download}><i className="fas fa-file-download"></i> 
+              &nbsp; Exportar colecciones
+            </button>
 
-          <p><button onClick={this.upload}>
-            Importar
+            <a className="hidden"
+              download={this.fileNames[this.state.fileType]}
+              href={this.state.fileDownloadUrl}
+              ref={e => this.dofileDownload = e}
+            ></a>
+
+            <p><button className="btn btn-outline-info btn-sm ml-2" onClick={this.upload}><i className="fas fa-file-upload"></i> 
+              &nbsp; Importar colecciones
             </button></p>
 
-          <input type="file" className="hidden"
-            multiple={false}
-            accept=".json,.csv,.txt,.text,application/json,text/csv,text/plain"
-            onChange={evt => this.openFile(evt)}
-            ref={e => this.dofileUpload = e}
-          />
+            <input type="file" className="hidden"
+              multiple={false}
+              accept=".json,.csv,.txt,.text,application/json,text/csv,text/plain"
+              onChange={evt => this.openFile(evt)}
+              ref={e => this.dofileUpload = e}
+            />
 
-          <button onClick={this.show}>Ver Colecciones</button>
+            {/* <button onClick={this.show}>Ver Colecciones</button> */}
 
-        </form>
-        <pre></pre>
-        <button onClick={this.handleOpenModal}>Modal</button>
-        <ReactModal
-          isOpen={this.state.showModal}
-          contentLabel="onRequestClose Example"
-          onRequestClose={this.handleCloseModal}
-          className="Modal"
-          ariaHideApp={false}
-        >
-
-          <label>
-            Selecciona la coleccion:
-            <select value={this.state.value} onChange={this.handleChange}>
-              {optionColection}
-            </select>
-          </label>
-
-          <input type="text" onBlur={this.setCollection} />
-          <button onClick={this.create}>New Collection</button>
-          <pre></pre>
-
-          <input type="number" onBlur={this.setId} />
-          <input type="text" onBlur={this.setCollection} />
-          <button onClick={this.addPictoToCollection}>Añadir el Picto a la Colección</button>
-          <pre></pre>
-          <button onClick={this.handleCloseModal}>Close Modal</button>
-        </ReactModal>
-        <pre className="status">{this.state.status}</pre>
+          </div>
+        </div>
       </div>
 
     )

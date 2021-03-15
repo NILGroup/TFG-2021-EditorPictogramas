@@ -90,8 +90,8 @@ class ARASAAC extends Component {
 					</div>
 					<input type="text" className="form-control" placeholder='Busca a Picto' onBlur={this.fetchInputQuery} onKeyDown={this.keyPress} />
 				</div>
-				<div id="div1" className="row">
-					<div className="row row-cols-3 row-cols-md-6 g-4">
+				<div id="div1" className="row pl-4">
+					<div className="row row-cols-3 row-cols-md-5 g-4">
 
 						{this.state.items && !!this.state.items.length && this.state.items.map(item => (
 							<div key={item._id} className="card">

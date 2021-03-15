@@ -8,15 +8,15 @@ import NavLayout from './Nav';
 class MainLayout extends Component {
   render() {
      return ( 
-      <div className="slds-grid slds-wrap">
-        <div className="slds-nav-vertical slds-p-vertical_medium slds-p-right_x-large">
+      <div className="">
+        <div className="">
           {/* <h1 className="slds-nav-vertical__title slds-text-title_caps">
               ABER EL INDEX¿
           </h1> */}
           {/* <NavLayout currentPath={this.props.location.pathname} /> */}
         </div>
         <div>
-          <main className="slds-container--medium slds-container--center">
+          <main className="">
               {React.cloneElement(this.props.children, {})}
           </main>
         </div>
