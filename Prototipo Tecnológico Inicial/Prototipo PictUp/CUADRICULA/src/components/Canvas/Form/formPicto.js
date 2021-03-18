@@ -9,7 +9,7 @@ export const FormPicto = ({ onSubmit }) => {
         <div className="modal-dialog">
             <div className="modal-content">
                 <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLabel">Añadir a colección:</h5>
+                    <h5 className="modal-title" id="exampleModalLabel">Modificar pictograma:</h5>
                 </div>
                 <div className="modal-body">
                     <form onSubmit={onSubmit}>
@@ -49,8 +49,14 @@ export const FormPicto = ({ onSubmit }) => {
                                 </tr>
                             </tbody>
                         </table>
+
+                        
                         <input name="label" type="text" />  <br />
                         <input type="color" id="myColor" />
+                        <br/><br/>
+                        <input type="checkbox" id="noColor"/> Sin Color <br/>
+                        <input type="checkbox" id="plural"/> Plural <br/>
+
                         <div>
                             <button className="form-control btn btn-primary" type="submit">
                                 Modificar

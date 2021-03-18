@@ -352,6 +352,10 @@ class PictoItem extends Component {
     var skin = event.target.skin.value
     var time = event.target.time.value
 
+    var noColor = event.target.noColor.checked
+    var plural = event.target.plural.checked
+    console.log(noColor)
+
     if (time !== "present") {
       query += "_action-" + time
     }
@@ -363,6 +367,16 @@ class PictoItem extends Component {
     if (api.skin && skin !== "") {
       query += "_skin-" + event.target.skin.value
     }
+    
+    if(plural){
+      query = "_plural"
+    }
+
+    if(noColor){
+      query += "_nocolor"
+    }
+
+
 
     if (event.target.label.value !== "") {
       this.setState({
