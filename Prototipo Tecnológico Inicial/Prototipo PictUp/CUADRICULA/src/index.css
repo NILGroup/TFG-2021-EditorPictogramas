@@ -7,6 +7,42 @@
   font-family: 'Nunito', sans-serif;
 }
 
+@font-face {
+  font-family: "Massallera";
+  src: local("Massallera"),
+    url("./fonts/massallera.TTF") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CurPunt";
+  src: local("CurPunt"),
+    url("./fonts/fuente-punteada.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CurCuad";
+  src: local("CurCuad"),
+    url("./fonts/MorasoftCuadricula.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CurCuadPunt";
+  src: local("CurCuadPunt"),
+    url("./fonts/MorasoftPunteada.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Tommy";
+  src: local("Tommy"),
+    url("./fonts/tommys.ttf") format("truetype");
+  font-weight: normal;
+}
+
+
 .slds-is-draggable {
   cursor: grab;
 }

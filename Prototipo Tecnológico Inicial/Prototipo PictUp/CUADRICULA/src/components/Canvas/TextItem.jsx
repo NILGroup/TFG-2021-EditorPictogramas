@@ -25,7 +25,8 @@ const proptypes = {
   idPicto: PropTypes.number,
   imageSRC: PropTypes.string,
   imageURL: PropTypes.string,
-  apiObject: PropTypes.object
+  apiObject: PropTypes.object,
+  fontFamily: PropTypes.string
 };
 
 class TextIcon extends Component {
@@ -67,6 +68,7 @@ class TextIcon extends Component {
 
       label: this.props.label,
       url: this.props.imageURL,
+      fontFamily: this.props.fontFamily,
       fontSize: 0.3,
       defaultFontSize: 1,
       isBold: false,
@@ -428,6 +430,7 @@ class TextIcon extends Component {
           <text style={{ 
             fontSize: (this.state.width * this.state.fontSize),
             color: (this.state.fontColor),
+            fontFamily: this.state.fontFamily
 
             }}> 
             {this.state.label}
