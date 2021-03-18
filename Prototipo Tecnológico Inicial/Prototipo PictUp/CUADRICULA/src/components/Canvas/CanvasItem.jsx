@@ -80,7 +80,7 @@ class CanvasItem extends Component {
   }
 
   increaseZIndex() {
-    this.setState({zIndex: this.state.zIndex+1});
+    //this.setState({zIndex: this.state.zIndex+1});
   }
 
   /** ---- Moving element START ---- **/
@@ -368,8 +368,7 @@ class CanvasItem extends Component {
         minWidth={this.props.minWidth * this.props.gridInterval}
         minHeight={this.props.minHeight * this.props.gridInterval}
         bounds="parent"
-        z={this.state.zIndex}
-        onDragStart={this.increaseZIndex}
+        z="1"
         onDragStop={this.handleDragStop}
         onResizeStop={this.handleResizeStop}
         enableResizing={this.resizeHandles}

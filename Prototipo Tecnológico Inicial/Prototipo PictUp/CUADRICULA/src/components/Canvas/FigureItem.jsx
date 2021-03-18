@@ -9,7 +9,7 @@ import IconButton from '../Icon/IconButton';
 import { FormFigure } from './Form/formFigure'
 import './Styles/FigureItemStyle.css';
 
-import Modal from 'react-modal';
+import ReactModal from 'react-modal';
 
 const proptypes = {
     label: PropTypes.string.isRequired,
@@ -410,8 +410,8 @@ class FigureItem extends Component {
                 minWidth={this.props.minWidth * this.props.gridInterval}
                 minHeight={this.props.minHeight * this.props.gridInterval}
                 bounds="parent"
-                z={this.state.zIndex}
-                onDragStart={this.increaseZIndex}
+                z="1"
+
                 onDragStop={this.handleDragStop}
                 onResizeStop={this.handleResizeStop}
                 enableResizing={this.resizeHandles}
@@ -439,14 +439,15 @@ class FigureItem extends Component {
                         />
 
                         <div>
-                            <Modal
+                            <ReactModal
                                 isOpen={this.state.modalIsOpen}
                                 ariaHideApp={false}
                                 contentLabel="Selected Option"
                                 onRequestClose={this.closeModal}>
-                                <button onClick={this.closeModal}>X</button>
-                                <FormFigure onSubmit={this.handleModifyClik} />
-                            </Modal>
+
+                                <FormFigure onSubmit={this.handleModifyClik} />        
+                                
+                            </ReactModal>
                         </div>
 
                     </div>
