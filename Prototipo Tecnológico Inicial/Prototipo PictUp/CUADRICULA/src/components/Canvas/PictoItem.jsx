@@ -354,7 +354,9 @@ class PictoItem extends Component {
 
     var noColor = event.target.noColor.checked
     var plural = event.target.plural.checked
-    console.log(noColor)
+
+    var borderCol = document.getElementById("borderColor").value;
+    console.log(borderCol)
 
     if (time !== "present") {
       query += "_action-" + time
@@ -386,7 +388,6 @@ class PictoItem extends Component {
     }
 
     if (event.target.myColor.value !== "#000000") {
-      console.log("Not Black")
       this.setState({
         backColor: event.target.myColor.value
       })
@@ -394,6 +395,7 @@ class PictoItem extends Component {
 
     this.setState({
       url: "https://static.arasaac.org/pictograms/" + id + "/" + id + query + "_500.png",
+      backColor: borderCol
     })
 
     event.preventDefault();
@@ -464,14 +466,14 @@ class PictoItem extends Component {
         onResizeStop={this.handleResizeStop}
         enableResizing={this.resizeHandles}
         lockAspectRatio={this.lockAspectRatio}
-        style={{
-          backgroundColor: this.state.backColor
-        }}
+
       >
         <div>
           <div className="slds-p-vertical_medium slds-text-heading_small">
 
-            <img src={this.state.url} alt={this.state.label} />
+            <img style={{
+              border: "10px solid" + this.state.backColor
+            }} src={this.state.url} alt={this.state.label} />
             {this.state.label}
           </div>
 

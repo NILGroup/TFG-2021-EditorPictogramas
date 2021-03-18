@@ -27,7 +27,7 @@ export const FormPicto = ({ onSubmit }) => {
                             <tbody>
                                 <tr>
                                     <td>
-                                        <input name="hair" cssClass="e-primary" type="radio" value="A65E26" /> Brown <br />
+                                        <input name="hair" type="radio" value="A65E26" /> Brown <br />
                                         <input name="hair" type="radio" value="FDD700" /> Blonde <br />
                                         <input name="hair" type="radio" value="ED4120" /> Red <br />
                                         <input name="hair" type="radio" value="020100" /> Black <br />
@@ -51,6 +51,17 @@ export const FormPicto = ({ onSubmit }) => {
                         </table>
 
                         
+                        <select id="borderColor" className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option style={{backgroundColor: "#ffffff"}} value="#ffffff">Blanco</option>
+                            <option style={{backgroundColor: "#ffeb3b"}} value="#ffeb3b">Amarillo</option>
+                            <option style={{backgroundColor: "#ff9800"}} value="#ff9800">Naranja</option>
+                            <option style={{backgroundColor: "#4caf50"}} value="#4caf50">Verde</option>
+                            <option style={{backgroundColor: "#2196f3"}} value="#2196f3">Azul</option>
+                            <option style={{backgroundColor: "#fda1ff"}} value="#fda1ff">Rosa</option>
+                            <option style={{backgroundColor: "#000000"}} value="#000000">Negro</option>
+                        </select>
+
+                        
                         <input name="label" type="text" />  <br />
                         <input type="color" id="myColor" />
                         <br/><br/>
@@ -60,7 +71,7 @@ export const FormPicto = ({ onSubmit }) => {
                         <div>
                             <button className="form-control btn btn-primary" type="submit">
                                 Modificar
-                </button>
+                             </button>
                         </div>
 
 
