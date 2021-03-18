@@ -18,6 +18,7 @@ import UploadPhoto from './UploadPhoto/newUploadPhoto'
 import "bootstrap/dist/css/bootstrap.min.css"
 //import UploadState from './Downloader/UploadState'
 //import ZipMaker from './Downloader/ZipMaker'
+import NIL from './API/NIL.jsx'
 
 import zipUtils from './Utilities/zipUtils'
 import Collection from './Utilities/Collection'
@@ -43,6 +44,8 @@ export class DragOnCanvasExample extends React.Component {
     this.postID = 0;
     this.Body = ""
 
+
+
     this.zipUtils = new zipUtils
     this.collect = new Collection()
 
@@ -53,7 +56,8 @@ export class DragOnCanvasExample extends React.Component {
       lineArray: [],
       figureArray: [],
       idPhoto: "",
-      idPicto: ""
+      idPicto: "",
+      selectedFont: "Nunito"
     }
 
 
@@ -61,6 +65,7 @@ export class DragOnCanvasExample extends React.Component {
     //Para el modal
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleFontChange = this.handleFontChange.bind(this);
   }
 
 
@@ -251,6 +256,13 @@ export class DragOnCanvasExample extends React.Component {
 
   }
 
+  handleFontChange = (e) => {
+    console.log(e.target.value)
+    this.setState({
+      selectedFont: e.target.value
+    })
+  }
+
 
   render() {
 
@@ -265,11 +277,9 @@ export class DragOnCanvasExample extends React.Component {
 
         <div className="container-fluid">
           <div className="row">
-            <div className="col">
-              <button className="btn btn-primary" onClick={this.createFile}>
-                Zip
-          </button>
-              <input type="file" onChange={this.importFile} />
+            <div className="col-4">
+
+              <NIL />
 
               {/* <UploadState/> */}
               <UploadPhoto sendData={this.addPictoFromPhoto} />
@@ -327,6 +337,8 @@ export class DragOnCanvasExample extends React.Component {
 
               </ReactModal>
 
+
+
               {/* Crear Objeto */}
               {/* <div>
                 <input type="text" onBlur={this.setPicto} />
@@ -336,18 +348,34 @@ export class DragOnCanvasExample extends React.Component {
               <div className="container-fluid">
                 <div className="row">
 
-                  <div className="input-group ">
-                    <input type="text" onBlur={this.setPicto} onKeyDown={this.keyPress} />
+
+
+
+                  <div className="input-group mb-4">
+                  
+
+                    <input type="text" claclassNamess="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
+
                     <div className="input-group-prepend">
-                      <button className="btn btn-outline-primary" title="Pictos recientes" onClick={this.addText}>
-                        Añadir texto
-                  </button>
+                      <button type="button" className="btn btn-outline-secondary" onClick={this.addText}>+
+                        <a style={{ fontFamily: this.state.selectedFont }}>Texto</a>
+                      </button>
                     </div>
+
+                    <select className="form-select col-4" onChange={this.handleFontChange}>
+                      <option value="Nunito" className="dropdown-item" style={{ fontFamily: "Nunito" }}>Nunito</option>
+                      <option value="Massallera" className="dropdown-item" style={{ fontFamily: "Massallera" }}>Masella</option>
+                      <option value="CurPunt" className="dropdown-item" style={{ fontFamily: "CurPunt" }}>CurPunt</option>
+                      <option value="CurCuad" className="dropdown-item" style={{ fontFamily: "CurCuad" }}>CurCuad</option>
+                      <option value="CurCuadPunt" className="dropdown-item" style={{ fontFamily: "CurCuadPunt" }}>CurCuadPunt</option>
+                      <option value="Tommy" className="dropdown-item" style={{ fontFamily: "Tommy" }}>Tommy</option>
+                    </select>
+                  
                   </div>
                 </div>
                 <div className="row mt-2">
                   <button onClick={this.addLine}>Añadir linea</button>
-                
+
                   <button onClick={this.addFigure}>Añadir figura</button>
                 </div>
               </div>
@@ -360,7 +388,7 @@ export class DragOnCanvasExample extends React.Component {
               </div> */}
 
             </div>
-            <div className="col">
+            <div className="col-8">
               {/* Pintar Canvas  */}
               <Canvas hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
                 {
@@ -393,6 +421,7 @@ export class DragOnCanvasExample extends React.Component {
                     return (
 
                       <TextItem label={photo.body} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={photo.id}
+                        fontFamily={this.state.selectedFont}
                         sendData={this.handleData}
                       />
                     )
