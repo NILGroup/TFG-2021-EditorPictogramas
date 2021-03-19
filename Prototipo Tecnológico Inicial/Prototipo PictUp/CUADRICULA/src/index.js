@@ -10,6 +10,13 @@ import AllViews from './views/AllViews';
 import DemoView from './views/Demo';
 import {DragOnCanvasView} from './views/DragOnCanvas';
 
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
+import 'bootstrap/dist/js/bootstrap.js';
+import $ from 'jquery';
+import Popper from 'popper.js';
+
 import './index.css';
 
 ReactDOM.render(

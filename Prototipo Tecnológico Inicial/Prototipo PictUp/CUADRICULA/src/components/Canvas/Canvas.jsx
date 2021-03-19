@@ -79,7 +79,7 @@ class Canvas extends Component {
     var style = {
       backgroundSize: backgroundSize,
       backgroundPosition: '10px 10px', // TODO: remove hardcoding
-      width: size + 'px',
+      width: 1.5* size + 'px',
       height: size + 'px',
     };
     

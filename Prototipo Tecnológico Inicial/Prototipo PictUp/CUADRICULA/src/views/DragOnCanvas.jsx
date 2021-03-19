@@ -24,6 +24,8 @@ import zipUtils from './Utilities/zipUtils'
 import Collection from './Utilities/Collection'
 import Navbar from './Utilities/Navbar';
 
+import html2canvas from 'html2canvas';
+
 
 
 const proptypes = {
@@ -150,8 +152,6 @@ export class DragOnCanvasExample extends React.Component {
 
   /*Cuando se pulsa el boton + de La APi, lo añadimos al canvas */
   addPictoFromAPI = (formModel) => {
-    console.log("Recivi2", formModel);
-
     this.postID = this.postID + 1;
     const copyPostArray = Object.assign([], this.state.pictoArray)
     copyPostArray.push({
@@ -164,6 +164,7 @@ export class DragOnCanvasExample extends React.Component {
     this.setState({
       pictoArray: copyPostArray
     })
+
   }
 
   addPictoFromPhoto = (File) => {
@@ -219,6 +220,21 @@ export class DragOnCanvasExample extends React.Component {
 
   importFile = (f) => {
     var x = this.zipUtils.getFiles(f)
+  }
+
+  descargaFotoTablero = () => {
+    //Prueba Html2Canvas
+
+    var container = document.getElementById("tableroPrint") // full page 
+    html2canvas(container, { allowTaint: true, useCORS: true }).then(function (canvas) {
+
+      var link = document.createElement("a");
+      document.body.appendChild(link);
+      link.download = "PictUpTablero.png";
+      link.href = canvas.toDataURL("image/png");
+      link.target = '_blank';
+      link.click();
+    });
   }
 
 
@@ -352,7 +368,7 @@ export class DragOnCanvasExample extends React.Component {
 
 
                   <div className="input-group mb-4">
-                  
+
 
                     <input type="text" claclassNamess="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
 
@@ -370,14 +386,23 @@ export class DragOnCanvasExample extends React.Component {
                       <option value="CurCuadPunt" className="dropdown-item" style={{ fontFamily: "CurCuadPunt" }}>CurCuadPunt</option>
                       <option value="Tommy" className="dropdown-item" style={{ fontFamily: "Tommy" }}>Tommy</option>
                     </select>
-                  
+
                   </div>
                 </div>
                 <div className="row mt-2">
                   <button onClick={this.addLine}>Añadir linea</button>
 
                   <button onClick={this.addFigure}>Añadir figura</button>
+
+                  <button className="btn btn-outline-info btn-sm ml-2" onClick={this.descargaFotoTablero}>
+                    <i className="fas fa-file-image"></i>
+                  &nbsp; Descargar Tablero
+                </button>
                 </div>
+
+
+
+
               </div>
               {/* <div>
                 <button onClick={this.setLocalStorage}>Save</button>
@@ -388,9 +413,9 @@ export class DragOnCanvasExample extends React.Component {
               </div> */}
 
             </div>
-            <div className="col-8">
+            <div className="col-8" id="tableroPrint">
               {/* Pintar Canvas  */}
-              <Canvas hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
+              <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
                 {
                   this.state.pictoArray.map((picto, index) => {
                     return (
