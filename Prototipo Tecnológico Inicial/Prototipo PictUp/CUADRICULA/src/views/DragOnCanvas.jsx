@@ -260,7 +260,24 @@ export class DragOnCanvasExample extends React.Component {
     this.setState({
       pictoArray: copyPostArray
     })
+  }
 
+  handleDeleteText = (e) =>{
+    const copyPostArray = Object.assign([], this.state.textArray)
+    console.log(copyPostArray.length)
+    var long = copyPostArray.length
+    var posBorrar;
+
+    for (var i = 0; i < long; i++) {
+      if (copyPostArray[i].id === e) {
+        posBorrar = i;
+      }
+    }
+
+    copyPostArray.splice(posBorrar, 1);
+    this.setState({
+      textArray: copyPostArray
+    })
   }
 
   handleChange(e) {
@@ -367,11 +384,7 @@ export class DragOnCanvasExample extends React.Component {
               <div className="container-fluid">
                 <div className="row">
 
-
-
-
                   <div className="input-group mb-4">
-
 
                     <input type="text" claclassNamess="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
 
@@ -445,12 +458,12 @@ export class DragOnCanvasExample extends React.Component {
 
 
                 {
-                  this.state.textArray.map((photo, index) => {
+                  this.state.textArray.map((text, index) => {
                     return (
 
-                      <TextItem label={photo.body} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={photo.id}
+                      <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
                         fontFamily={this.state.selectedFont}
-                        sendData={this.handleData}
+                        sendData={this.handleDeleteText}
                       />
                     )
                   })
