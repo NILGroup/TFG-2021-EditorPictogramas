@@ -113,7 +113,8 @@ export class DragOnCanvasExample extends React.Component {
     this.postID = this.postID + 1;
     const copyPostArray = Object.assign([], this.state.lineArray)
     copyPostArray.push({
-
+      id: this.postID,
+      body: this.Body
     })
 
     this.setState({
@@ -125,7 +126,8 @@ export class DragOnCanvasExample extends React.Component {
     this.postID = this.postID + 1;
     const copyPostArray = Object.assign([], this.state.figureArray)
     copyPostArray.push({
-
+      id: this.postID,
+      body: this.Body
     })
 
     this.setState({
@@ -211,7 +213,7 @@ export class DragOnCanvasExample extends React.Component {
     console.log(copyPostArray)
     copyPostArray.forEach(photo => {
       console.log("FOTAKA", photo.file)
-      zip.file(photo.body, photo.file, { base64: true }); //"Fotos/" + 
+      zip.file(photo.body, photo.file, { base64: true }); 
     });
     zip.generateAsync({ type: "blob" }).then(function (blob) {
       saveAs(blob, "Proyecto.zip");
@@ -277,6 +279,60 @@ export class DragOnCanvasExample extends React.Component {
     copyPostArray.splice(posBorrar, 1);
     this.setState({
       textArray: copyPostArray
+    })
+  }
+
+  handleDeleteLine = (e) =>{
+    const copyPostArray = Object.assign([], this.state.lineArray)
+    console.log(copyPostArray.length)
+    var long = copyPostArray.length
+    var posBorrar;
+
+    for (var i = 0; i < long; i++) {
+      if (copyPostArray[i].id === e) {
+        posBorrar = i;
+      }
+    }
+
+    copyPostArray.splice(posBorrar, 1);
+    this.setState({
+      lineArray: copyPostArray
+    })
+  }
+
+  handleDeleteFigure = (e) =>{
+    const copyPostArray = Object.assign([], this.state.figureArray)
+    console.log(copyPostArray.length)
+    var long = copyPostArray.length
+    var posBorrar;
+
+    for (var i = 0; i < long; i++) {
+      if (copyPostArray[i].id === e) {
+        posBorrar = i;
+      }
+    }
+
+    copyPostArray.splice(posBorrar, 1);
+    this.setState({
+      figureArray: copyPostArray
+    })
+  }
+
+  handleDeleteImage = (e) =>{
+    const copyPostArray = Object.assign([], this.state.photoArray)
+    console.log(copyPostArray.length)
+    var long = copyPostArray.length
+    var posBorrar;
+
+    for (var i = 0; i < long; i++) {
+      if (copyPostArray[i].id === e) {
+        posBorrar = i;
+      }
+    }
+
+    copyPostArray.splice(posBorrar, 1);
+    this.setState({
+      photoArray: copyPostArray
     })
   }
 
@@ -450,7 +506,7 @@ export class DragOnCanvasExample extends React.Component {
 
                       <CanvasImage label={photo.body} idPicto={photo.id} x={2} y={2} width={10} height={11} minWidth={3} minHeight={3} key={photo.id}
                         imageURL={photo.url}
-                        sendData={this.handleData}
+                        sendData={this.handleDeleteImage}
                       />
                     )
                   })
@@ -470,22 +526,22 @@ export class DragOnCanvasExample extends React.Component {
                 }
 
                 {
-                  this.state.lineArray.map((photo, index) => {
+                  this.state.lineArray.map((line, index) => {
                     return (
 
-                      <LineItem x={5} y={5} width={1} height={9} minWidth={1} minHeight={1}
-                        sendData={this.handleData}
+                      <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
+                        sendData={this.handleDeleteLine}
                       />
                     )
                   })
                 }
 
                 {
-                  this.state.figureArray.map((photo, index) => {
+                  this.state.figureArray.map((figure, index) => {
                     return (
 
-                      <FigureItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4}
-                        sendData={this.handleData}
+                      <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} key={figure.id}
+                        sendData={this.handleDeleteFigure}
                       />
                     )
                   })

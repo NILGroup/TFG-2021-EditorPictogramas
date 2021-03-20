@@ -34,7 +34,7 @@ class CanvasItem extends Component {
 
         this.handleResizeClick = this.handleResizeClick.bind(this);
         this.handleResizeKeyDown = this.handleResizeKeyDown.bind(this);
-
+        this.handleRemoveClick = this.handleRemoveClick.bind(this);
         this.handleEditClick = this.handleEditClick.bind(this);
         this.handleEditKeyDown = this.handleEditKeyDown.bind(this);
 
@@ -333,6 +333,16 @@ class CanvasItem extends Component {
         });
     }
 
+    handleRemoveClick(event) {
+        const isEditing = !this.state.isEditing;
+        this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
+    
+        if (isEditing) {
+          console.log("estamos en item y pasamos el id", this.props.idPicto)
+          this.props.sendData(this.props.idPicto); //etiqueta del picto
+        }
+        
+      }
 
     /** ---- Resizing element END ---- **/
 
@@ -373,10 +383,30 @@ class CanvasItem extends Component {
                 lockAspectRatio={1/1}
             >
 
-
-
                 <img src={this.props.imageURL}/>
                 {this.props.label}
+
+                <div className="dnd-canvas__object-buttons">
+                <IconButton
+                    assistiveText={"Resize " + this.props.label}
+                    ariaDescribedby={this.props.resizeAriaDescribedby}
+                    className="dnd-canvas__object-button dnd-canvas__object-button--resize"
+                    sprite="custom"
+                    symbol="corner_drag"
+                    onClick={this.handleResizeClick}
+                    onKeyDown={this.handleResizeKeyDown} 
+                />
+
+                <IconButton
+                    assistiveText={"Borrar " + this.props.label}
+                    ariaDescribedby={this.props.editAriaDescribedby}
+                    className="dnd-canvas__object-button dnd-canvas__object-button--edit"
+                    sprite="utility"
+                    symbol="delete"
+                    onClick={this.handleRemoveClick}
+                    onKeyDown={this.handleEditKeyDown} 
+                />
+                </div>
 
 
             </Rnd>

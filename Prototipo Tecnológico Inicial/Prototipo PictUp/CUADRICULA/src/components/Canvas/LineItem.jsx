@@ -7,9 +7,7 @@ import PropTypes from 'prop-types';
 import Rnd from 'react-rnd';
 import IconButton from '../Icon/IconButton';
 import './CanvasItem.css';
-import {FormPicto} from './Form/formPicto'
-
-import Modal from 'react-modal';
+import ReactModal from 'react-modal';
 
 const proptypes = {
   x: PropTypes.number,
@@ -38,7 +36,7 @@ class LineItem extends Component {
     this.handleResizeClick = this.handleResizeClick.bind(this);
     this.handleResizeKeyDown = this.handleResizeKeyDown.bind(this);
 
-    //this.handleRemoveClick = this.handleRemoveClick.bind(this);
+    this.handleRemoveClick = this.handleRemoveClick.bind(this);
     this.handleRotateClick = this.handleRotateClick.bind(this)
     //this.handleModifyClik = this.handleModifyClik.bind(this)
     this.handleEditKeyDown = this.handleEditKeyDown.bind(this);
@@ -373,6 +371,15 @@ class LineItem extends Component {
     });
   }
 
+  handleRemoveClick(event) {
+    const isEditing = !this.state.isEditing;
+    this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
+
+    if (isEditing) {
+      console.log("estamos en item y pasamos el id", this.props.idPicto)
+      this.props.sendData(this.props.idPicto); //etiqueta del picto
+    }
+  }
 
   openModal = () => {
     this.setState({ modalIsOpen: true });
@@ -416,12 +423,22 @@ class LineItem extends Component {
       >
 
       <IconButton
-              ariaDescribedby={this.props.editAriaDescribedby}
-              className="dnd-canvas__object-button dnd-canvas__object-button--edit"
-              sprite="utility"
-              symbol="rotate"
-              onClick={this.handleRotateClick}
-            />
+        ariaDescribedby={this.props.editAriaDescribedby}
+        className="dnd-canvas__object-button dnd-canvas__object-button--edit"
+        sprite="utility"
+        symbol="rotate"
+        onClick={this.handleRotateClick}
+      />
+
+      <IconButton
+        assistiveText={"Borrar " + this.props.label}
+        ariaDescribedby={this.props.editAriaDescribedby}
+        className="dnd-canvas__object-button dnd-canvas__object-button--edit"
+        sprite="utility"
+        symbol="delete"
+        onClick={this.handleRemoveClick}
+        onKeyDown={this.handleEditKeyDown} 
+      />
 
       </Rnd>
     );

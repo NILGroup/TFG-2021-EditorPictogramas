@@ -437,6 +437,15 @@ class FigureItem extends Component {
                             symbol="edit"
                             onClick={this.openModal}
                         />
+                        <IconButton
+                            assistiveText={"Borrar " + this.props.label}
+                            ariaDescribedby={this.props.editAriaDescribedby}
+                            className="dnd-canvas__object-button dnd-canvas__object-button--edit"
+                            sprite="utility"
+                            symbol="delete"
+                            onClick={this.handleRemoveClick}
+                            onKeyDown={this.handleEditKeyDown} 
+                        />
 
                         <div>
                             <ReactModal

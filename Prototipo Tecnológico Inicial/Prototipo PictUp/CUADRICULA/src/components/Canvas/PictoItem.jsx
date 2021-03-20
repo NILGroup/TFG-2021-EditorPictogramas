@@ -499,7 +499,7 @@ class PictoItem extends Component {
               onKeyDown={this.handleResizeKeyDown} />
 
             <IconButton
-              assistiveText={"Edit " + this.props.label}
+              assistiveText={"Borrar " + this.props.label}
               ariaDescribedby={this.props.editAriaDescribedby}
               className="dnd-canvas__object-button dnd-canvas__object-button--edit"
               sprite="utility"
