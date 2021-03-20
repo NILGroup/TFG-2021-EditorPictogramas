@@ -72,12 +72,12 @@ class ARASAAC extends Component {
 	}
 
 
-
 	render() {
 
 		return (
 			<div class="cajon">
 
+				
 
 				<div className="input-group mb-3">
 					<div className="input-group-prepend">

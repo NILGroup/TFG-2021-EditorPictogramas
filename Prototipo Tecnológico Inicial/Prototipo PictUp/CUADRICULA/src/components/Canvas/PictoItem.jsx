@@ -451,6 +451,8 @@ class PictoItem extends Component {
         'background-color': "#8fef74"
       });
 
+      var modalStyles = {overlay: {zIndex: 10}};
+
     return (
       <Rnd
         ref={c => { this.rnd = c; }}
@@ -527,7 +529,9 @@ class PictoItem extends Component {
                 ariaHideApp={false}
                 contentLabel="Selected Option"
                 onRequestClose={this.closeModal}
-                className="Modal">
+                className="Modal"
+                style={ modalStyles }
+                >
 
                 <FormPicto onSubmit={this.handleModifyClik} />
 

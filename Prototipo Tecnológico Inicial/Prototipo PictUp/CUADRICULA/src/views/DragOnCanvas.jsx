@@ -18,7 +18,7 @@ import UploadPhoto from './UploadPhoto/newUploadPhoto'
 import "bootstrap/dist/css/bootstrap.min.css"
 //import UploadState from './Downloader/UploadState'
 //import ZipMaker from './Downloader/ZipMaker'
-import NIL from './API/NIL.jsx'
+// import NIL from './API/NIL.jsx'
 
 import zipUtils from './Utilities/zipUtils'
 import Collection from './Utilities/Collection'
@@ -286,6 +286,8 @@ export class DragOnCanvasExample extends React.Component {
       <option value={c.name}>{c.name}</option>
     ));
 
+    var modalStyles = {overlay: {zIndex: 10}};
+
     return (
 
       <div>
@@ -295,7 +297,7 @@ export class DragOnCanvasExample extends React.Component {
           <div className="row">
             <div className="col-4">
 
-              <NIL />
+              {/* <NIL /> */}
 
               {/* <UploadState/> */}
               <UploadPhoto sendData={this.addPictoFromPhoto} />
@@ -311,6 +313,7 @@ export class DragOnCanvasExample extends React.Component {
                 onRequestClose={this.handleCloseModal}
                 className="Modal"
                 ariaHideApp={false}
+                style={ modalStyles}
               >
                 <div className="modal-dialog">
                   <div className="modal-content">
