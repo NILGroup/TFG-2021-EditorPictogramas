@@ -13,14 +13,11 @@ export const FormFigure = ({ onSubmit }) => {
                         <h1>Modificar Figura</h1>
                         <input type="color" id="myColor" />
                         <div>
-                            <button className="form-control btn btn-primary" type="submit">
+                            <button className="form-control btn btn-primary mt-4" type="submit">
                                 Modificar
                             </button>
                         </div>
                     </form>
-                </div>
-                    <div className="modal-footer">
-
                 </div>
             </div>
         </div>

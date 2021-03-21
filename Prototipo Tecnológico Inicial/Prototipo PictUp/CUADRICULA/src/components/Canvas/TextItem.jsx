@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 import Rnd from 'react-rnd';
 import IconButton from '../Icon/IconButton';
 import {FormPicto} from './Form/formTextItem'
+import ReactModal from 'react-modal';
 
-import Modal from 'react-modal';
 
 const proptypes = {
   label: PropTypes.string.isRequired,
@@ -408,6 +408,8 @@ class TextIcon extends Component {
       'dnd-canvas__object--editing': this.state.isEditing
     });
 
+    var modalStyles = {overlay: {zIndex: 10}};
+
     return (
       <Rnd
         ref={c => { this.rnd = c; }}
@@ -482,20 +484,18 @@ class TextIcon extends Component {
             />
 
             <div>
-              <Modal 
+              <ReactModal 
                 isOpen={this.state.modalIsOpen}
-                ariaHideApp={false}
                 contentLabel="Selected Option" 
-                onRequestClose={this.closeModal}>
-                <button onClick={this.closeModal}>X</button>
-                <div>Editar Pictograma</div>
+                onRequestClose={this.closeModal}
+                className="Modal"
+                ariaHideApp={false}
+                style={ modalStyles}>
+                {/* <button onClick={this.closeModal}>X</button>    */}
 
-                
+                <FormPicto onSubmit={this.handleModifyClik} />  
 
-                <FormPicto onSubmit={this.handleModifyClik} />
-                
-
-              </Modal>
+              </ReactModal>
             </div>
 
           </div>

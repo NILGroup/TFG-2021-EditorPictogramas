@@ -65,7 +65,7 @@ class FigureItem extends Component {
             y: this.defaultPosition.y,
             width: this.defaultPosition.width,
             height: this.defaultPosition.height,
-
+            borderColor: "black",
             label: this.props.label,
 
         }
@@ -338,17 +338,17 @@ class FigureItem extends Component {
 
     handleModifyClik(event) {
 
-        console.log(event.target.textLabel.value)
+       
         console.log(event.target.myColor.value)
-        console.log(event.target.bold.checked)
-        console.log(event.target.italic.checked)
-        console.log(event.target.underline.checked)
+        // console.log(event.target.bold.checked)
+        // console.log(event.target.italic.checked)
+        // console.log(event.target.underline.checked)
         this.setState({
-            label: event.target.textLabel.value,
-            fontColor: event.target.myColor.value,
-            isBold: event.target.bold.checked,
-            isItalic: event.target.italic.checked,
-            isUnderline: event.target.underline.checked,
+            // label: event.target.textLabel.value,
+            borderColor: event.target.myColor.value,
+            // isBold: event.target.bold.checked,
+            // isItalic: event.target.italic.checked,
+            // isUnderline: event.target.underline.checked,
         })
 
         event.preventDefault();
@@ -399,6 +399,7 @@ class FigureItem extends Component {
             'dnd-canvas__object--resizing': this.state.isResizing,
             'dnd-canvas__object--editing': this.state.isEditing
         });
+        var modalStyles = {overlay: {zIndex: 10}};
 
         return (
             <Rnd
@@ -424,7 +425,7 @@ class FigureItem extends Component {
                     <div className="slds-p-vertical_medium slds-text-heading_small">
                     <svg width={this.state.width * 0.9} height={this.state.width * 0.9}>
                         <rect  rx="10" ry="10" width={this.state.width* 0.9} height={this.state.width* 0.9}
-                        style={{fill:"transparent", stroke:"black", strokeWidth:10, opacity:1}} />
+                        style={{fill:"transparent", stroke:this.state.borderColor, strokeWidth:10, opacity:1}} />
                     </svg> 
                     </div>
 
@@ -452,7 +453,10 @@ class FigureItem extends Component {
                                 isOpen={this.state.modalIsOpen}
                                 ariaHideApp={false}
                                 contentLabel="Selected Option"
-                                onRequestClose={this.closeModal}>
+                                onRequestClose={this.closeModal}
+                                className="Modal"
+                                ariaHideApp={false}
+                                style={ modalStyles}>
 
                                 <FormFigure onSubmit={this.handleModifyClik} />        
                                 
