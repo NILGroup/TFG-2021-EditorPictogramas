@@ -1,102 +1,751 @@
-#loader {
-	color: #008cff;
-	height: 40px;
-	left: 45%;
-	position: absolute;
-	top: 45%;
-	width: 30%;
+/* The contCB */
+.contCB {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.e-radio-wrap {
-  margin-top: 18px;
+/* Hide the browser's default radio button */
+.contCB input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.e-radio:checked + .e-success::after { /* csslint allow: adjoining-classes */
-  background-color: #689f38;
-  border-color: #689f38;
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
 }
 
-.e-radio:checked:focus + .e-success::after, .e-radio:checked + .e-success:hover::after { /* csslint allow: adjoining-classes */
-  background-color: #449d44;
-  border-color: #449d44;
+/* On mouse-over, add a grey background color */
+.contCB:hover input ~ .checkmark {
+  background-color: #ccc;
 }
 
-.e-radio:checked + .e-success::before {
-  border-color: #689f38;
+/* When the radio button is checked, add a blue background */
+.contCB input:checked ~ .checkmark {
+  background-color: #2196F3;
 }
 
-.e-radio:checked:focus + .e-success::before, .e-radio:checked + .e-success:hover::before { /* csslint allow: adjoining-classes */
-  border-color: #449d44;
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
-.e-radio +.e-success:hover::before {
-  border-color: #b1afaf
-}
-.e-radio:checked + .e-info::after { /* csslint allow: adjoining-classes */
-  background-color: #2196f3;
-  border-color: #2196f3;
+/* Show the indicator (dot/circle) when checked */
+.contCB input:checked ~ .checkmark:after {
+  display: block;
 }
 
-.e-radio:checked:focus + .e-info::after, .e-radio:checked + .e-info:hover::after { /* csslint allow: adjoining-classes */
-  background-color: #0b7dda;
-  border-color: #0b7dda;
+/* Style the indicator (dot/circle) */
+.contCB .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
 
-.e-radio:checked + .e-info::before {
-  border-color: #2196f3;
+/*PIEL: #A65C17 */
+.contCB-A65C17 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.e-radio:checked:focus + .e-info::before, .e-radio:checked + .e-info:hover::before {
-  border-color: #0b7dda;
+.contCB-A65C17 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.e-radio + .e-info:hover::before {
-  border-color: #b1afaf
+.checkmark-A65C17 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #A65C17;
+  border-radius: 50%;
 }
 
-.e-radio:checked + .e-warning::after { /* csslint allow: adjoining-classes */
-  background-color: #ef6c00;
-  border-color: #ef6c00;
+.contCB-A65C17:hover input ~ .checkmark-A65C17 {
+  background-color: #c58447;
 }
 
-.e-radio:checked:focus + .e-warning::after, .e-radio:checked + .e-warning:hover::after { /* csslint allow: adjoining-classes */
-  background-color: #cc5c00;
+.contCB-A65C17 input:checked ~ .checkmark-A65C17 {
+  background-color: #A65C17;
 }
 
-.e-radio:checked + .e-warning::before {
-  border-color: #ef6c00;
+.checkmark-A65C17:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
-.e-radio:checked:focus + .e-warning::before, .e-radio:checked + .e-warning:hover::before {
-  border-color: #cc5c00;
+.contCB-A65C17 input:checked ~ .checkmark-A65C17:after {
+  display: block;
 }
 
-.e-radio + .e-warning:hover::before {
-  border-color: #b1afaf
+.contCB-A65C17 .checkmark-A65C17:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
 
-.e-radio:checked + .e-danger::after { /* csslint allow: adjoining-classes */
-  background-color: #d84315;
-  border-color: #d84315;
-}
-.e-radio:checked:focus + .e-danger::after, .e-radio:checked + .e-danger:hover::after { /* csslint allow: adjoining-classes */
-  background-color: #ba330a;
-  border-color: #ba330a;
+/*E3AB72*/
+
+.contCB-E3AB72 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.e-radio:checked + .e-danger::before {
-  border-color: #d84315;
+.contCB-E3AB72 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.e-radio:checked:focus + .e-danger::before, .e-radio:checked + .e-danger:hover::before {
-  border-color: #ba330a;
+.checkmark-E3AB72 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #E3AB72;
+  border-radius: 50%;
 }
 
-.e-radio + .e-danger:hover::before {
-  border-color: #b1afaf
+.contCB-E3AB72:hover input ~ .checkmark-E3AB72 {
+  background-color: #d49a63;
 }
 
-li {
-  list-style: none;
-  margin: 25px auto;
+.contCB-E3AB72 input:checked ~ .checkmark-E3AB72 {
+  background-color: #E3AB72;
+}
+
+.checkmark-E3AB72:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-E3AB72 input:checked ~ .checkmark-E3AB72:after {
+  display: block;
+}
+
+.contCB-E3AB72 .checkmark-E3AB72:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*CF9D7C Aztec*/
+
+.contCB-CF9D7C {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-CF9D7C input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-CF9D7C {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #CF9D7C;
+  border-radius: 50%;
+}
+
+.contCB-CF9D7C:hover input ~ .checkmark-CF9D7C {
+  background-color: rgb(230, 168, 111);
+}
+
+.contCB-CF9D7C input:checked ~ .checkmark-CF9D7C {
+  background-color: #CF9D7C;
+}
+
+.checkmark-CF9D7C:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-CF9D7C input:checked ~ .checkmark-CF9D7C:after {
+  display: block;
+}
+
+.contCB-CF9D7C .checkmark-CF9D7C:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*F4ECAD Assian*/
+
+.contCB-F4ECAD {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-F4ECAD input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-F4ECAD {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #F4ECAD;
+  border-radius: 50%;
+}
+
+.contCB-F4ECAD:hover input ~ .checkmark-F4ECAD {
+  background-color: #fff193;
+}
+
+.contCB-F4ECAD input:checked ~ .checkmark-F4ECAD {
+  background-color: #F4ECAD;
+}
+
+.checkmark-F4ECAD:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-F4ECAD input:checked ~ .checkmark-F4ECAD:after {
+  display: block;
+}
+
+.contCB-F4ECAD .checkmark-F4ECAD:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgb(117, 117, 117);
+}
+
+
+/*F5E5DE White*/
+
+.contCB-F5E5DE {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-F5E5DE input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-F5E5DE {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #F5E5DE;
+  border-radius: 50%;
+}
+
+.contCB-F5E5DE:hover input ~ .checkmark-F5E5DE {
+  background-color: #f0c3b0;
+}
+
+.contCB-F5E5DE input:checked ~ .checkmark-F5E5DE {
+  background-color: #F5E5DE;
+}
+
+.checkmark-F5E5DE:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-F5E5DE input:checked ~ .checkmark-F5E5DE:after {
+  display: block;
+}
+
+.contCB-F5E5DE .checkmark-F5E5DE:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgb(94, 94, 94);
+}
+
+
+/*HAIR COLOR*/
+
+
+/*A65E26 Brown*/
+
+.contCB-A65E26 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-A65E26 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-A65E26 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #A65E26;
+  border-radius: 50%;
+}
+
+.contCB-A65E26:hover input ~ .checkmark-A65E26 {
+  background-color: #c58447;
+}
+
+.contCB-A65E26 input:checked ~ .checkmark-A65E26 {
+  background-color: #A65E26;
+}
+
+.checkmark-A65E26:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-A65E26 input:checked ~ .checkmark-A65E26:after {
+  display: block;
+}
+
+.contCB-A65E26 .checkmark-A65E26:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*FDD700 Blonde*/
+
+.contCB-FDD700 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-FDD700 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-FDD700 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #FDD700;
+  border-radius: 50%;
+}
+
+.contCB-FDD700:hover input ~ .checkmark-FDD700 {
+  background-color: #bba736;
+}
+
+.contCB-FDD700 input:checked ~ .checkmark-FDD700 {
+  background-color: #FDD700;
+}
+
+.checkmark-FDD700:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-FDD700 input:checked ~ .checkmark-FDD700:after {
+  display: block;
+}
+
+.contCB-FDD700 .checkmark-FDD700:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*ED4120 Red*/
+
+.contCB-ED4120 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-ED4120 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-ED4120 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ED4120;
+  border-radius: 50%;
+}
+
+.contCB-ED4120:hover input ~ .checkmark-ED4120 {
+  background-color: #ED4120;
+}
+
+.contCB-ED4120 input:checked ~ .checkmark-ED4120 {
+  background-color: #ED4120;
+}
+
+.checkmark-ED4120:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-ED4120 input:checked ~ .checkmark-ED4120:after {
+  display: block;
+}
+
+.contCB-ED4120 .checkmark-ED4120:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*020100 Black*/
+
+.contCB-020100 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-020100 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-020100 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #020100;
+  border-radius: 50%;
+}
+
+.contCB-020100:hover input ~ .checkmark-020100 {
+  background-color: #5e5e5e;
+}
+
+.contCB-020100 input:checked ~ .checkmark-020100 {
+  background-color: #020100;
+}
+
+.checkmark-020100:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-020100 input:checked ~ .checkmark-020100:after {
+  display: block;
+}
+
+.contCB-020100 .checkmark-020100:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+/*EFEFEF Black*/
+
+.contCB-EFEFEF {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-EFEFEF input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-EFEFEF {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #EFEFEF;
+  border-radius: 50%;
+}
+
+.contCB-EFEFEF:hover input ~ .checkmark-EFEFEF {
+  background-color: #979797;
+}
+
+.contCB-EFEFEF input:checked ~ .checkmark-EFEFEF {
+  background-color: #EFEFEF;
+}
+
+.checkmark-EFEFEF:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-EFEFEF input:checked ~ .checkmark-EFEFEF:after {
+  display: block;
+}
+
+.contCB-EFEFEF .checkmark-EFEFEF:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*AAABAB Dark Gray*/
+
+.contCB-AAABAB {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-AAABAB input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-AAABAB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #AAABAB;
+  border-radius: 50%;
+}
+
+.contCB-AAABAB:hover input ~ .checkmark-AAABAB {
+  background-color: #636666;
+}
+
+.contCB-AAABAB input:checked ~ .checkmark-AAABAB {
+  background-color: #AAABAB;
+}
+
+.checkmark-AAABAB:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-AAABAB input:checked ~ .checkmark-AAABAB:after {
+  display: block;
+}
+
+.contCB-AAABAB .checkmark-AAABAB:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*6A2703 Dark Frown*/
+
+.contCB-6A2703 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-6A2703 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-6A2703 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #6A2703;
+  border-radius: 50%;
+}
+
+.contCB-6A2703:hover input ~ .checkmark-6A2703 {
+  background-color: #944215;
+}
+
+.contCB-6A2703 input:checked ~ .checkmark-6A2703 {
+  background-color: #6A2703;
+}
+
+.checkmark-6A2703:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-6A2703 input:checked ~ .checkmark-6A2703:after {
+  display: block;
+}
+
+.contCB-6A2703 .checkmark-6A2703:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
