@@ -21,7 +21,7 @@ const proptypes = {
 };
 
 const defaultProps = {
-  gridInterval: 20,
+  gridInterval: 15,
   gridSize: 50,
   minWidth: 3,
   minHeight: 3,

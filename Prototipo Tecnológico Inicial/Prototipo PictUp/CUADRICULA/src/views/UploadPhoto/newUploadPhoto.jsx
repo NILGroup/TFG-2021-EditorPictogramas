@@ -56,7 +56,7 @@ class Upload extends React.Component {
         <FileDrop
           onDrop={(files) => this.drag_and_dropFile(files)}
         >
-          Drop some files here!
+          Arrastra tus fotos aquí
         </FileDrop>
 
         </div> 

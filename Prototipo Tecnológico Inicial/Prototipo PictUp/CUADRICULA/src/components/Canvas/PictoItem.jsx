@@ -369,7 +369,7 @@ class PictoItem extends Component {
     if (api.skin && skin !== "") {
       query += "_skin-" + event.target.skin.value
     }
-    
+
     if(plural){
       query = "_plural"
     }
@@ -378,7 +378,7 @@ class PictoItem extends Component {
       query += "_nocolor"
     }
 
-
+console.log(query)
 
     if (event.target.label.value !== "") {
       this.setState({
@@ -533,7 +533,7 @@ class PictoItem extends Component {
                 style={ modalStyles }
                 >
 
-                <FormPicto onSubmit={this.handleModifyClik} />
+                <FormPicto onSubmit={this.handleModifyClik} picto={this.props.apiObject}/>
 
               </ReactModal>
             </div>

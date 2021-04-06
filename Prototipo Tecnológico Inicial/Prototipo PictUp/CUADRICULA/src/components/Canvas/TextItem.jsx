@@ -50,7 +50,7 @@ class TextIcon extends Component {
     this.defaultPosition = {
       x: (this.props.gridInterval * this.props.x),
       y: (this.props.gridInterval * this.props.y),
-      width: (this.props.gridInterval * this.props.width),
+      width: (this.props.label.length * 20),
       height: (this.props.gridInterval * this.props.height),
       minWidth: (this.props.gridInterval * this.props.minWidth),
       minHeight: (this.props.gridInterval * this.props.minHeight)
@@ -69,8 +69,8 @@ class TextIcon extends Component {
       label: this.props.label,
       url: this.props.imageURL,
       fontFamily: this.props.fontFamily,
-      fontSize: 0.3,
-      defaultFontSize: 1,
+      fontSize: 36,
+      defaultFontSize: 100,
       isBold: false,
       isItalic: false,
       isUnderline: false,
@@ -367,7 +367,7 @@ class TextIcon extends Component {
     console.log(this.state.fontSize)
     if(this.state.fontSize <= this.state.defaultFontSize*6){
       this.setState({  
-        fontSize: this.state.fontSize + 0.03
+        fontSize: this.state.fontSize * 1.2
       })
     }
   }
@@ -375,7 +375,7 @@ class TextIcon extends Component {
     console.log(this.state.fontSize)
     if(this.state.fontSize <= this.state.defaultFontSize){
       this.setState({  
-        fontSize: this.state.fontSize - 0.02
+        fontSize: this.state.fontSize * 0.8
       })
     }
   }
@@ -430,7 +430,7 @@ class TextIcon extends Component {
         <div>
           <div className="slds-p-vertical_medium slds-text-heading_small">
           <text style={{ 
-            fontSize: (this.state.width * this.state.fontSize),
+            fontSize: ( this.state.fontSize),
             color: (this.state.fontColor),
             fontFamily: this.state.fontFamily
 
