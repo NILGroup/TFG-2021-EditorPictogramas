@@ -1,5 +1,6 @@
 {
   "name": "dnd-a11y-patterns",
+  "name": "pict-up",
   "version": "0.1.1",
   "private": true,
   "homepage": "https://salesforce-ux.github.io/dnd-a11y-patterns",
@@ -41,7 +42,6 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
       "not op_mini all"
     ],
     "development": [

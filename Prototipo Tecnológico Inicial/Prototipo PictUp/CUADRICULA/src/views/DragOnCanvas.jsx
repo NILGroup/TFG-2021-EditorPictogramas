@@ -226,9 +226,10 @@ export class DragOnCanvasExample extends React.Component {
 
   descargaFotoTablero = () => {
     //Prueba Html2Canvas
-
+    window.scrollTo(0,0)
     var container = document.getElementById("tableroPrint") // full page 
-    html2canvas(container, { allowTaint: true, useCORS: true }).then(function (canvas) {
+    html2canvas(container, { allowTaint: true, useCORS: true, scale: 2, scrollY: window.scrollY})
+    .then(function (canvas) {
 
       var link = document.createElement("a");
       document.body.appendChild(link);

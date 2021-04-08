@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import NILtraductor from './NILtraductor'
+
 import './pictoStyle.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -77,7 +79,7 @@ class ARASAAC extends Component {
 		return (
 			<div class="cajon">
 
-				
+				<NILtraductor/>
 
 				<div className="input-group mb-3">
 					<div className="input-group-prepend">
@@ -120,6 +122,7 @@ class ARASAAC extends Component {
 					</div>
 				</div>
 			</div>
+
 		);
 
 	}
