@@ -1,7 +1,0 @@
-
-POST https://jsonplaceholder.typicode.com/posts
-Content-Type: : application/json
-{
-    "title": "Post de XD",
-    "body": "PRUEBA"
-}
