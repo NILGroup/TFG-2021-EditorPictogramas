@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import NILtraductor from './NILtraductor'
+
 import './pictoStyle.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -51,11 +53,24 @@ class ARASAAC extends Component {
 
 		var recentPictos = JSON.parse(localStorage.getItem("recentPictos"));
 		if (recentPictos == null) recentPictos = [];
-		recentPictos.push(picto);
+
+		//Historial limitado a 50 pictogramas
+		if (recentPictos.length > 100) {
+			recentPictos.pop()
+		}
+
+		//Ponemos el elemnto al inicio
+		recentPictos.unshift(picto);
 		localStorage.setItem("recentPictos", JSON.stringify(recentPictos));
 
 		this.props.sendData(picto);
 	}
+
+	getFromTrad = (picto) => {
+		this.sendSelectedPicto(picto)
+	}
+
+
 
 	recentPictos = () => {
 		this.setState({
@@ -77,7 +92,7 @@ class ARASAAC extends Component {
 		return (
 			<div class="cajon">
 
-				
+				<NILtraductor send2sac={this.getFromTrad} />
 
 				<div className="input-group mb-3">
 					<div className="input-group-prepend">
@@ -97,19 +112,16 @@ class ARASAAC extends Component {
 							<div key={item._id} className="card">
 								<img className="card-img-top"
 									src={'https://api.arasaac.org/api/pictograms/' + item._id}
-									alt={item.keywords[0].keyword}
+
 									sizes="40px" srcset="50px"
 								/>
 
 								<div className="card-body">
 									<h5 className="card-title text-center">{item.keywords[0].keyword}</h5>
-
-
-
 									<div class="btn-group" role="group">
-										<button className="btn btn-primary btn-xs" onClick={() => this.sendSelectedPicto(item)}>
+										<button className="btn-sm btn-primary" onClick={() => this.sendSelectedPicto(item)}>
 											<i className="fas fa-plus"></i></button>
-										<button className="btn btn-outline-primary" onClick={() => this.sendSelectedCollection(item)}>
+										<button className="btn-sm btn-outline-primary" onClick={() => this.sendSelectedCollection(item)}>
 											<span className="fas fa-th"></span>
 										</button>
 									</div>
@@ -120,6 +132,7 @@ class ARASAAC extends Component {
 					</div>
 				</div>
 			</div>
+
 		);
 
 	}
