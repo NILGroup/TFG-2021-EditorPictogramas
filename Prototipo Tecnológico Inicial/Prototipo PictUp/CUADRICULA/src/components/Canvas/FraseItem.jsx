@@ -44,7 +44,7 @@ class TextIcon extends Component {
         this.defaultPosition = {
             x: (this.props.gridInterval * this.props.x),
             y: (this.props.gridInterval * this.props.y),
-            width: (this.props.gridInterval * this.props.width),
+            width: (this.props.gridInterval * this.props.width * 5),
             height: (this.props.gridInterval * this.props.height),
             minWidth: (this.props.gridInterval * this.props.minWidth),
             minHeight: (this.props.gridInterval * this.props.minHeight)
@@ -333,13 +333,15 @@ class TextIcon extends Component {
 
 
     renderLemas = () => {
+
+        
         return (
-            <div class="row">
+            <div className="row">
 
                 {
                     this.state.frase.map((palabra) => {
                         return (
-                            <div className="col-md-2 col-md-offset-1">
+                            <div className="col">
                                 <img className="img-responsive" src={"https://api.arasaac.org/api/pictograms/" + palabra._id} />
                             </div>
                         )
@@ -379,10 +381,12 @@ class TextIcon extends Component {
             //lockAspectRatio={this.lockAspectRatio}
             >
                 <div>
-                    <div className="slds-p-vertical_medium slds-text-heading_small">
-                        {this.renderLemas()}
 
-                        <h1>{this.state.texto}</h1>
+                {this.renderLemas()}      
+
+                    <div className="slds-p-vertical_medium slds-text-heading_small">
+                    <h1>{this.state.texto}</h1>
+                                          
                     </div>
 
                     <div className="dnd-canvas__object-buttons">
