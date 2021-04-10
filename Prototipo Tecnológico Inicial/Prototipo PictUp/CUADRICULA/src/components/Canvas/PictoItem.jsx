@@ -519,7 +519,7 @@ console.log(query)
             <IconButton
               className="dnd-canvas__object-button dnd-canvas__object-button--edit"
               sprite="utility"
-              symbol="home"
+              symbol="play"
               onClick={this.handlePlaySound}
             />
 

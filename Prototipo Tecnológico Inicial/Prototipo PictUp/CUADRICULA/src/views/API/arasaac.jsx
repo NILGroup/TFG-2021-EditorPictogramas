@@ -49,6 +49,21 @@ class ARASAAC extends Component {
 	}
 
 	//Envia información del pictograma seleccionado a la capa superior
+
+	getFromTrad = (picto) => {
+		this.sendSelectedPicto(picto)
+	}
+
+
+	recentPictos = () => {
+		this.setState({
+			items: JSON.parse(localStorage.getItem("recentPictos"))
+		})
+
+		console.log("hola")
+
+	}
+
 	sendSelectedPicto = (picto) => {
 
 		var recentPictos = JSON.parse(localStorage.getItem("recentPictos"));
@@ -66,19 +81,12 @@ class ARASAAC extends Component {
 		this.props.sendData(picto);
 	}
 
-	getFromTrad = (picto) => {
-		this.sendSelectedPicto(picto)
+	getFraseFromTrad = (frase) =>{
+		this.sendFrase(frase)
 	}
 
-
-
-	recentPictos = () => {
-		this.setState({
-			items: JSON.parse(localStorage.getItem("recentPictos"))
-		})
-
-		console.log("hola")
-
+	sendFrase = (frase) =>{
+		this.props.sendFrase(frase)
 	}
 
 	sendSelectedCollection = (picto) => {
@@ -92,7 +100,7 @@ class ARASAAC extends Component {
 		return (
 			<div class="cajon">
 
-				<NILtraductor send2sac={this.getFromTrad} />
+				<NILtraductor send2sac={this.getFromTrad} sendFrase={this.getFraseFromTrad}/>
 
 				<div className="input-group mb-3">
 					<div className="input-group-prepend">

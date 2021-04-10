@@ -33,6 +33,23 @@ class NILtraductor extends Component {
                 })
             });
     }
+    //https://holstein.fdi.ucm.es/nil-ws-api/v1/texto/pictogramas
+    postNIL = (query) => {
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ texto: query })
+        })
+            .then(response => response.json())
+            .then(result => {
+                this.setState({ tradPic: result })
+                console.log(result)
+            }
+            )
+    }
 
     async populateLema() {
 
@@ -79,8 +96,6 @@ class NILtraductor extends Component {
         var cleaned = []
         var selected = []
 
-
-
         for (let i = 0; i < lemas.length; i++) {
             const lema = lemas[i][0];
             var aux
@@ -94,43 +109,61 @@ class NILtraductor extends Component {
             cleaned[i] = aux
 
             selected.push(0)
-
         }
 
         //isTraducted hace que empieze a renderizarse
         this.setState({
             lemasRaw: cleaned,
             selected: selected,
+            countTrad: 0,
             isLoading: false,
             isTraduced: true
         })
 
     }
 
+    frase2Canvas = () => {
+        var lemas = this.state.lemasRaw;
+        var sel = this.state.selected
+        var frase = []
+
+
+        //Recorremos el array de lemas para guardar los lemas seleccionados
+        //Siendo los seleccionados, los que se ven en pantalla ()
+        for (let i = 0; i < lemas.length; i++) {
+            const lema = lemas[i];
+            frase.push(lema.list[sel[i]])
+        }
+
+        console.log(frase)
+
+    }
+
     renderLemaItems() {
 
-        if (this.state.isLoading ) {
-
-            console.log((this.state.countTrad * 100)/13)
-
-            //Barra de carga!
+        if (this.state.isLoading) {
+            console.log((this.state.countTrad * 100) / 13)
             return (
-
                 <div>
+                    <div className="progress">
+                        <div className="progress-bar bg-success" role="progressbar" style={{ width: (this.state.countTrad * 100) / 13 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
 
-                <div className="progress">
-                    <div className="progress-bar bg-success" role="progressbar" style={{width: (this.state.countTrad * 100)/13 + '%'}}  aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                
-                {console.log((this.state.countTrad * 100)/13)}
-                    {/* Cargando items: {this.state.countTrad} */}
+                    {console.log((this.state.countTrad * 100) / 13)}
                 </div>
             )
         }
 
-        if(this.state.isTraduced){
+        if (this.state.isTraduced) {
             return (
                 <div id="div1" className="row pl-4">
+
+                    <button className="btn btn-success btn-sm ml-2" onClick={() => this.frase2Canvas()}>
+                        Colocar frase al tablero &nbsp; 
+                        <i className="fas fa-arrow-right"></i>
+                        
+                    </button>
+
                     <div className="row row-cols-3 row-cols-md-4 g-5">
                         {this.state.lemasRaw.map(item => (
                             this.renderItem(item, this.state.selected[item.pos])
@@ -206,7 +239,7 @@ class NILtraductor extends Component {
         this.setState({
             query: q
         })
-        this.fetchResult(q)
+        this.postNIL(q)
     }
 
     //Envia información del pictograma seleccionado a la capa superior
@@ -220,6 +253,25 @@ class NILtraductor extends Component {
         this.props.send2sac(picto);
     }
 
+    frase2Canvas = () => {
+        var lemas = this.state.lemasRaw;
+        var sel = this.state.selected
+        var frase = []
+
+
+        //Recorremos el array de lemas para guardar los lemas seleccionados
+        //Siendo los seleccionados, los que se ven en pantalla ()
+        for (let i = 0; i < lemas.length; i++) {
+            const lema = lemas[i];
+            frase.push(lema.list[sel[i]])
+        }
+
+        console.log(frase)
+        this.props.sendFrase(frase);
+
+
+    }
+
 
     render() {
 
@@ -231,12 +283,12 @@ class NILtraductor extends Component {
                             <span className="fas fa-search"></span>
                         </button>
                         <button className="btn btn-outline-secondary" onClick={() => this.populateLema()}>
-                    <span className="fas fa-dragon"></span>
-                </button>
+                            <span className="fas fa-dragon"></span>
+                        </button>
                     </div>
-                    <input type="text" className="form-control" placeholder='Traduccion a Picto' />
+                    <input type="text" className="form-control" placeholder='Traduccion a Picto' onBlur={this.fetchInputQuery} onKeyDown={this.keyPress} />
                     {/* onBlur={this.fetchInputQuery} onKeyDown={this.keyPress}*/}
-                </div> 
+                </div>
 
                 {
                     this.renderLemaItems()
