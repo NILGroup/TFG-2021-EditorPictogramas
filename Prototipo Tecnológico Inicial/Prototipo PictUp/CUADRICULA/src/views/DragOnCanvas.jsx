@@ -15,6 +15,7 @@ import CanvasImage from '../components/Canvas/CanvasImage';
 import TextItem from '../components/Canvas/TextItem'
 import ARASAAC from './API/arasaac'
 import UploadPhoto from './UploadPhoto/newUploadPhoto'
+import FraseItem from '../components/Canvas/FraseItem'
 import "bootstrap/dist/css/bootstrap.min.css"
 //import UploadState from './Downloader/UploadState'
 //import ZipMaker from './Downloader/ZipMaker'
@@ -22,6 +23,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import zipUtils from './Utilities/zipUtils'
 import Collection from './Utilities/Collection'
+import ColShow from './Utilities/ColShow'
 import Navbar from './Utilities/Navbar';
 
 import html2canvas from 'html2canvas';
@@ -45,29 +47,39 @@ export class DragOnCanvasExample extends React.Component {
     super();
     this.postID = 0;
     this.Body = ""
-
-
-
     this.zipUtils = new zipUtils
-    this.collect = new Collection()
+    this.defaultName = "---";
+    this.nameSelected = "---"; //nombre por defecto de la coleccion 
+    this.Nueva = ""   //guardar el nombre de una coleccion    
+    this.Id = ""      //guardar el id del picto a meter en una coleccion
+    this.contador = 3;
+
+    const defaultFileType = "json";
+    this.fileNames = {
+      json: "states.json",
+    }
 
     this.state = {
+      selectedColection: "---", //numero de la colección seleccionada
       pictoArray: [],
       photoArray: [],
       textArray: [],
       lineArray: [],
       figureArray: [],
+      fraseArray: [],
       idPhoto: "",
       idPicto: "",
-      selectedFont: "Nunito"
+      selectedFont: "Nunito",
+      fileType: defaultFileType,
+      fileDownloadUrl: null,
+      colection: []
     }
-
-
 
     //Para el modal
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.handleFontChange = this.handleFontChange.bind(this);
+
   }
 
 
@@ -136,20 +148,17 @@ export class DragOnCanvasExample extends React.Component {
   }
 
   setLocalStorage = () => {
-    localStorage.setItem('Alfon', JSON.stringify(this.state.pictoArray))
+    localStorage.setItem('Foto', JSON.stringify(this.state.pictoArray))
   }
 
   getLocalStorage = () => {
 
-    console.log(JSON.parse(window.localStorage.getItem('Alfon')))
+    console.log(JSON.parse(window.localStorage.getItem('Foto')))
   }
 
   cuantosHay = (picto) => {
-    console.log(picto);
-    // console.log(this.collection.state);
-    // this.collection.show();
-    console.log(this.collect.state.colection);
-    this.handleOpenModal();
+    this.Id = picto; //guado el picto para despues añadirlo a una coleccion
+    this.handleOpenModal(); // TODO aqui ya esta guardo, cuando pulse el boton se puede hacer this.setState... .concat(this.Id) VER ????
   }
 
   /*Cuando se pulsa el boton + de La APi, lo añadimos al canvas */
@@ -168,6 +177,22 @@ export class DragOnCanvasExample extends React.Component {
     })
 
   }
+
+  addFraseTrad = (frase) => {
+
+    this.postID = this.postID + 1;
+    const copyPostArray = Object.assign([], this.state.fraseArray)
+    copyPostArray.push({
+      id: this.postID,
+      frase: frase,
+      texto: "Hoy va a ser un gran día par probar la API de NIL"
+    })
+
+    this.setState({
+      fraseArray: copyPostArray
+    })
+  }
+
 
   addPictoFromPhoto = (File) => {
     console.log(File);
@@ -188,6 +213,18 @@ export class DragOnCanvasExample extends React.Component {
     console.log("Añadido: ", File.name)
   }
 
+  importarColecciones = (colecciones) => {
+
+    console.log("estoy en drag on canvas con las colecciones importadas =>", colecciones);
+    for (var i = 0; i < colecciones.length; i++) {
+      var total = this.state.colection.concat(colecciones[i]); //añado por el final las nuevas colecciones
+      this.setState({ colection: total });
+    }
+
+    console.log("estado final", this.state.colection);
+
+  }
+
   addImage = (name, imgUrl) => {
 
     this.postID = this.postID + 1;
@@ -202,8 +239,6 @@ export class DragOnCanvasExample extends React.Component {
     this.setState({
       photoArray: copyPostArray
     })
-
-    console.log("Padentro!")
   }
 
 
@@ -213,7 +248,7 @@ export class DragOnCanvasExample extends React.Component {
     console.log(copyPostArray)
     copyPostArray.forEach(photo => {
       console.log("FOTAKA", photo.file)
-      zip.file(photo.body, photo.file, { base64: true }); 
+      zip.file(photo.body, photo.file, { base64: true });
     });
     zip.generateAsync({ type: "blob" }).then(function (blob) {
       saveAs(blob, "Proyecto.zip");
@@ -228,15 +263,16 @@ export class DragOnCanvasExample extends React.Component {
     //Prueba Html2Canvas
 
     var container = document.getElementById("tableroPrint") // full page 
-    html2canvas(container, { allowTaint: true, useCORS: true }).then(function (canvas) {
+    html2canvas(container, { allowTaint: true, useCORS: true, scale: 4, scrollY: window.scrollY })
+      .then(function (canvas) {
 
-      var link = document.createElement("a");
-      document.body.appendChild(link);
-      link.download = "PictUpTablero.png";
-      link.href = canvas.toDataURL("image/png");
-      link.target = '_blank';
-      link.click();
-    });
+        var link = document.createElement("a");
+        document.body.appendChild(link);
+        link.download = "PictUpTablero.png";
+        link.href = canvas.toDataURL("image/png");
+        link.target = '_blank';
+        link.click();
+      });
   }
 
 
@@ -264,7 +300,7 @@ export class DragOnCanvasExample extends React.Component {
     })
   }
 
-  handleDeleteText = (e) =>{
+  handleDeleteText = (e) => {
     const copyPostArray = Object.assign([], this.state.textArray)
     console.log(copyPostArray.length)
     var long = copyPostArray.length
@@ -282,7 +318,7 @@ export class DragOnCanvasExample extends React.Component {
     })
   }
 
-  handleDeleteLine = (e) =>{
+  handleDeleteLine = (e) => {
     const copyPostArray = Object.assign([], this.state.lineArray)
     console.log(copyPostArray.length)
     var long = copyPostArray.length
@@ -300,7 +336,7 @@ export class DragOnCanvasExample extends React.Component {
     })
   }
 
-  handleDeleteFigure = (e) =>{
+  handleDeleteFigure = (e) => {
     const copyPostArray = Object.assign([], this.state.figureArray)
     console.log(copyPostArray.length)
     var long = copyPostArray.length
@@ -318,7 +354,28 @@ export class DragOnCanvasExample extends React.Component {
     })
   }
 
-  handleDeleteImage = (e) =>{
+  handleDeleteFrase = (e) => {
+    const copyPostArray = Object.assign([], this.state.fraseArray)
+    console.log(e)
+    var long = copyPostArray.length
+    var posBorrar;
+
+    for (var i = 0; i < long; i++) {
+      if (copyPostArray[i].id === e) {
+        posBorrar = i;
+      }
+    }
+
+    console.log(this.state.fraseArray, posBorrar)
+
+    copyPostArray.splice(posBorrar, 1);
+    this.setState({
+      fraseArray: copyPostArray
+    })
+  }
+
+
+  handleDeleteImage = (e) => {
     const copyPostArray = Object.assign([], this.state.photoArray)
     console.log(copyPostArray.length)
     var long = copyPostArray.length
@@ -336,13 +393,55 @@ export class DragOnCanvasExample extends React.Component {
     })
   }
 
-  handleChange(e) {
-    console.log(e.target.value);
-    //here you will see the current selected value of the select input
+  coleccionToShow = (e) => {
+    for (var i = 0; i < this.state.colection.length; i++) {
+      if (this.state.colection[i].name === e.target.value) {
+        this.setState({
+          selectedColection: i
+        });
+      }
+    }
+    console.log(this.state.selectedColection);
+  }
+
+  handleChange = (e) => {
+    this.nameSelected = e.target.value;
+    // console.log(this.nameSelected);
   }
 
   addToCollection = () => {
+    if (this.nameSelected == "---") {
+      alert("Por favor, selecciona una colección.");
+    }
+    else {
+      for (var i = 0; i < this.state.colection.length; i++) {
+        if (this.state.colection[i].name == this.nameSelected) {
+          var aux = this.state.colection;
+          var actualizada = this.state.colection[i].idPicto.concat(this.Id);
+          aux[i].idPicto = actualizada;
+          this.setState({ colection: aux });
+        }
+      }
+      this.nameSelected = "---"; //reseteamos el valor
+    }
 
+  }
+
+  newCollection = () => { //TODO hacer if
+    var nueva = this.state.colection.concat({
+      name: this.NewName,
+      idPicto: [this.Id]
+    })
+
+    console.log(nueva);
+    this.setState({ colection: nueva });
+    console.log(this.state.colection);
+
+  }
+
+  setNameCollection = (e) => {
+    this.NewName = e.target.value;
+    console.log(this.NewName);
   }
 
   handleFontChange = (e) => {
@@ -352,14 +451,22 @@ export class DragOnCanvasExample extends React.Component {
     })
   }
 
+  mostrarColecciones = () => {
+    console.log(this.state.selectedColection);
+    if (this.state.selectedColection != "---") {
+      return (
+        <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[this.state.selectedColection].idPicto} />
+      )
+    }
+  }
 
   render() {
 
-    let optionColection = this.collect.state.colection.map(c => (
+    let optionColection = this.state.colection.map(c => (
       <option value={c.name}>{c.name}</option>
     ));
 
-    var modalStyles = {overlay: {zIndex: 10}};
+    var modalStyles = { overlay: { zIndex: 10 } };
 
     return (
 
@@ -376,9 +483,9 @@ export class DragOnCanvasExample extends React.Component {
               <UploadPhoto sendData={this.addPictoFromPhoto} />
 
               {/* API ARASAAC */}
-              <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} />
+              <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
 
-              <Collection />
+              <Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /> {/* pedir colecciones  */}
 
               <ReactModal
                 isOpen={this.state.showModal}
@@ -386,7 +493,7 @@ export class DragOnCanvasExample extends React.Component {
                 onRequestClose={this.handleCloseModal}
                 className="Modal"
                 ariaHideApp={false}
-                style={ modalStyles}
+                style={modalStyles}
               >
                 <div className="modal-dialog">
                   <div className="modal-content">
@@ -398,6 +505,7 @@ export class DragOnCanvasExample extends React.Component {
                         <div className="row">
                           <div className="col-sm">
                             <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                              <option value={"---"}>{ }</option>
                               {optionColection}
                             </select>
                           </div>
@@ -412,10 +520,10 @@ export class DragOnCanvasExample extends React.Component {
                       <div className="container">
                         <div className="row">
                           <div className="col-sm">
-                            <input type="text" onBlur={this.setCollection} />
+                            <input type="text" onBlur={this.setNameCollection} />
                           </div>
                           <div className="col-sm">
-                            <button type="button" className="btn btn-outline-primary ml-2" onClick={this.addToCollection}>Nueva colección</button>
+                            <button type="button" className="btn btn-outline-primary ml-2" onClick={this.newCollection}>Nueva colección</button>
                           </div>
                         </div>
                       </div>
@@ -484,6 +592,14 @@ export class DragOnCanvasExample extends React.Component {
                 <button onClick={this.getLocalStorage}>Load</button>
               </div> */}
 
+              <select className="form-control" value={this.state.value} onChange={this.coleccionToShow}>
+                <option value={"---"}>{ }</option>
+                {optionColection}
+              </select>
+
+              {this.mostrarColecciones()}
+              {/* <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[0].idPicto} /> */}
+
             </div>
             <div className="col-8" id="tableroPrint">
               {/* Pintar Canvas  */}
@@ -543,6 +659,18 @@ export class DragOnCanvasExample extends React.Component {
                       <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} key={figure.id}
                         sendData={this.handleDeleteFigure}
                       />
+                    )
+                  })
+                }
+
+                {
+                  this.state.fraseArray.map((frase) => {
+                    return (
+
+                      <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
+                        deleteItem={this.handleDeleteFrase} />
+
+
                     )
                   })
                 }
