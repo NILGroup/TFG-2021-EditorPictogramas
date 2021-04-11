@@ -23,11 +23,7 @@ export class Collection extends React.Component {
       fileType: defaultFileType,
       fileDownloadUrl: null,
       status: "",
-      colection: [
-        { name: "Granja", idPicto: ["3411", "2522", "3123"] },
-        { name: "Parque", idPicto: ["2129"] },
-        { name: "Cole", idPicto: ["1230", "4321"] },
-      ]
+      colection: []
     }
     //Para el modal
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -92,9 +88,9 @@ export class Collection extends React.Component {
   }
 
   show = () => {
-
+    console.log(this.props.dataFromParent);
     for (var i = 0; i < this.contador; ++i) {
-      console.log(this.state.colection[i].name);
+      console.log(this.state.colection[i]);
     }
   }
 
@@ -105,7 +101,7 @@ export class Collection extends React.Component {
 
   download(event) {
     event.preventDefault();
-    var colection = this.state.colection;
+    var colection = this.props.coleccionesActuales;
     var output;
     if (this.state.fileType === "json") {
       output = JSON.stringify({ colection },
@@ -136,10 +132,14 @@ export class Collection extends React.Component {
       var collections = JSON.parse(fileContents);
       console.log(collections.colection[0].name);
       for (var i = 0; i < collections.colection.length; i++) {
-        this.state.colection[i] = collections.colection[i];
+        var total = this.state.colection.concat(collections.colection[i]);
+        this.setState({colection: total});
       }
-      this.contador = collections.colection.length;
-      console.log(this.state.colection);
+
+      this.contador = this.contador + collections.colection.length;
+
+      //aqui devolver las colecciones
+      this.props.sendColeccion(this.state.colection);
     }
 
 
@@ -155,10 +155,6 @@ export class Collection extends React.Component {
   }
 
   render() {
-
-    let optionColection = this.state.colection.map(c => (
-      <option value={c.name}>{c.name}</option>
-    ));
 
     return (
       <div>
@@ -185,8 +181,8 @@ export class Collection extends React.Component {
               onChange={evt => this.openFile(evt)}
               ref={e => this.dofileUpload = e}
             />
-
-            {/* <button onClick={this.show}>Ver Colecciones</button> */}
+  
+            <button onClick={this.show}>Ver Colecciones</button>
 
           </div>
         </div>
