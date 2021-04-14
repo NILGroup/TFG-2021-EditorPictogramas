@@ -202,15 +202,17 @@ export class DragOnCanvasExample extends React.Component {
     copyPostArray.push({
       id: this.postID,
       body: File.name,
-      url: URL.createObjectURL(File),
-      file: File
+      url: File.url,
+      width: File.width,
+      height: File.height,
+      scale: File.width/File.height
     })
 
     this.setState({
       photoArray: copyPostArray
     })
 
-    console.log("Añadido: ", File.name)
+    console.log("Añadido: ", File)
   }
 
   importarColecciones = (colecciones) => {
@@ -620,7 +622,7 @@ export class DragOnCanvasExample extends React.Component {
                   this.state.photoArray.map((photo, index) => {
                     return (
 
-                      <CanvasImage label={photo.body} idPicto={photo.id} x={2} y={2} width={10} height={11} minWidth={3} minHeight={3} key={photo.id}
+                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={15} minWidth={3} minHeight={3} key={photo.id}
                         imageURL={photo.url}
                         sendData={this.handleDeleteImage}
                       />
@@ -653,10 +655,10 @@ export class DragOnCanvasExample extends React.Component {
                 }
 
                 {
-                  this.state.figureArray.map((figure, index) => {
+                  this.state.figureArray.map((figure) => {
                     return (
 
-                      <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} key={figure.id}
+                      <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
                         sendData={this.handleDeleteFigure}
                       />
                     )

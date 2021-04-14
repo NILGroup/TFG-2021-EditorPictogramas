@@ -29,42 +29,54 @@ class Upload extends React.Component {
   }
 
   sendPhoto = (e) => {
-    this.props.sendData(e);
+
+    const img = new Image();
+    img.src = window.URL.createObjectURL(e);
+    img.addEventListener('load', () => {
+      var file = {
+        url: URL.createObjectURL(e),
+        width: img.width,
+        height: img.height
+      }
+      this.props.sendData(file);
+    });
+  
+    //this.props.sendData(e);
   }
 
-  drag_and_dropFile = (loadedFiles) => {
+drag_and_dropFile = (loadedFiles) => {
 
-    var files = loadedFiles
+  var files = loadedFiles
 
-    for (var i = 0; i < files.length; i++) {
-      console.log(files[i])
-      console.log(URL.createObjectURL(files[i]))
-      this.props.sendData(files[i]);
-    }
-    
-    
-
+  for (var i = 0; i < files.length; i++) {
+    console.log(files[i])
+    console.log(URL.createObjectURL(files[i]))
+    this.props.sendData(files[i]);
   }
 
-  render() {
-    return (
+
+
+}
+
+render() {
+  return (
 
 
 
-      <div>      
-        <div>
+    <div>
+      <div>
         <FileDrop
           onDrop={(files) => this.drag_and_dropFile(files)}
         >
           Arrastra tus fotos aquí
         </FileDrop>
 
-        </div> 
-          <input type="file" onChange={this.handleChange} />
-          <img height='100px' width='100px' src={this.state.photo} />
-          <button onClick={() => this.sendPhoto(this.state.file)}>+</button> 
       </div>
-    );
-  }
+      <input type="file" onChange={this.handleChange} />
+      <img height='100px' width='100px' src={this.state.photo} />
+      <button onClick={() => this.sendPhoto(this.state.file)}>+</button>
+    </div>
+  );
+}
 }
 export default Upload;
