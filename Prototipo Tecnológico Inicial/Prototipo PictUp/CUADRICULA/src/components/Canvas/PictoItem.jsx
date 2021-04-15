@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Rnd from 'react-rnd';
 import IconButton from '../Icon/IconButton';
 import './CanvasItem.css';
-import { FormPicto } from './Form/formPicto'
+import FormPicto from './Form/formPicto'
 
 import ReactModal from 'react-modal';
 
@@ -343,73 +343,37 @@ class PictoItem extends Component {
 
   handleModifyClik(event) {
 
-    var api = this.props.apiObject
-    console.log(api)
-    console.log(event.target.myColor.value)
-    var id = api._id
-    var query = ""
-    var hair = event.target.hair.value
-    var skin = event.target.skin.value
-    var time = event.target.time.value
 
-    var noColor = event.target.noColor.checked
-    var plural = event.target.plural.checked
 
-    var borderCol = document.getElementById("borderColor").value;
-    console.log(borderCol)
+    // if (event.target.label.value !== "") {
+    //   this.setState({
+    //     label: event.target.label.value,
 
-    if (time !== "present") {
-      query += "_action-" + time
-    }
+    //   })
+    // }
 
-    if (api.hair && hair !== "") {
-      query += "_hair-" + event.target.hair.value
-    }
-
-    if (api.skin && skin !== "") {
-      query += "_skin-" + event.target.skin.value
-    }
-
-    if(plural){
-      query = "_plural"
-    }
-
-    if(noColor){
-      query += "_nocolor"
-    }
-
-console.log(query)
-
-    if (event.target.label.value !== "") {
-      this.setState({
-        label: event.target.label.value,
-
-      })
-    }
-
-    if (event.target.myColor.value !== "#000000") {
-      this.setState({
-        backColor: event.target.myColor.value
-      })
-    }
+    // if (event.target.myColor.value !== "#000000") {
+    //   this.setState({
+    //     backColor: event.target.myColor.value
+    //   })
+    // }
 
     this.setState({
-      url: "https://static.arasaac.org/pictograms/" + id + "/" + id + query + "_500.png",
-      backColor: borderCol
+      url: event
     })
 
-    event.preventDefault();
+    //event.preventDefault();
   }
 
-  handlePlaySound(){
+  handlePlaySound() {
 
     var api = this.props.apiObject
 
-    if(api.keywords[0].hasLocution){
-      var audio = new Audio("https://privateapi.arasaac.org/api/locutions/es/" + api.keywords[0].keyword);  
+    if (api.keywords[0].hasLocution) {
+      var audio = new Audio("https://privateapi.arasaac.org/api/locutions/es/" + api.keywords[0].keyword);
       audio.play();
     }
-    else{
+    else {
       var msg = new SpeechSynthesisUtterance();
       msg.lang = "es-ES";
       msg.continuous = false;
@@ -451,7 +415,7 @@ console.log(query)
         'background-color': "#8fef74"
       });
 
-      var modalStyles = {overlay: {zIndex: 10}};
+    var modalStyles = { overlay: { zIndex: 10 } };
 
     return (
       <Rnd
@@ -471,10 +435,21 @@ console.log(query)
 
       >
         <div>
-          <div className="slds-p-vertical_medium slds-text-heading_small">
 
+          <div>
+            <IconButton
+              assistiveText={"Borrar " + this.props.label}
+              ariaDescribedby={this.props.editAriaDescribedby}
+              className="dnd-canvas__object-button dnd-canvas__object-button--resize"
+              sprite="utility"
+              symbol="close"
+              onClick={this.handleRemoveClick}
+              onKeyDown={this.handleEditKeyDown} />
+          </div>
+
+          <div className="slds-p-vertical_medium slds-text-heading_small">
             <img style={{
-              border: "10px solid" + this.state.backColor
+              //border: "10px solid" + this.state.backColor
             }} src={this.state.url} alt={this.state.label} />
             {this.state.label}
           </div>
@@ -499,15 +474,6 @@ console.log(query)
               onKeyDown={this.handleResizeKeyDown} />
 
             <IconButton
-              assistiveText={"Borrar " + this.props.label}
-              ariaDescribedby={this.props.editAriaDescribedby}
-              className="dnd-canvas__object-button dnd-canvas__object-button--edit"
-              sprite="utility"
-              symbol="delete"
-              onClick={this.handleRemoveClick}
-              onKeyDown={this.handleEditKeyDown} />
-
-            <IconButton
               assistiveText={"Edit " + this.props.label}
               ariaDescribedby={this.props.editAriaDescribedby}
               className="dnd-canvas__object-button dnd-canvas__object-button--edit"
@@ -530,10 +496,10 @@ console.log(query)
                 contentLabel="Selected Option"
                 onRequestClose={this.closeModal}
                 className="Modal"
-                style={ modalStyles }
-                >
+                style={modalStyles}
+              >
 
-                <FormPicto onSubmit={this.handleModifyClik} picto={this.props.apiObject}/>
+                <FormPicto onSubmit={this.handleModifyClik} picto={this.props.apiObject} />
 
               </ReactModal>
             </div>
