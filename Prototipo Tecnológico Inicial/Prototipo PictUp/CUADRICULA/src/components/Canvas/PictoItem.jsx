@@ -71,7 +71,7 @@ class PictoItem extends Component {
       label: this.props.label,
       url: this.props.imageURL,
       backColor: "white",
-
+      borderWidth: "0"
     }
 
 
@@ -341,29 +341,7 @@ class PictoItem extends Component {
     }
   }
 
-  handleModifyClik(event) {
 
-
-
-    // if (event.target.label.value !== "") {
-    //   this.setState({
-    //     label: event.target.label.value,
-
-    //   })
-    // }
-
-    // if (event.target.myColor.value !== "#000000") {
-    //   this.setState({
-    //     backColor: event.target.myColor.value
-    //   })
-    // }
-
-    this.setState({
-      url: event
-    })
-
-    //event.preventDefault();
-  }
 
   handlePlaySound() {
 
@@ -403,6 +381,17 @@ class PictoItem extends Component {
     this.setState({ modalIsOpen: false });
   };
 
+  handleModifyClik(e) {
+
+    this.setState({
+      url: e.url,
+      borderWidth: e.borferWidth,
+      backColor: e.border
+    })
+
+    //event.preventDefault();
+  }
+
   /** ---- Resizing element END ---- **/
 
   render() {
@@ -415,7 +404,7 @@ class PictoItem extends Component {
         'background-color': "#8fef74"
       });
 
-    var modalStyles = { overlay: { zIndex: 10 } };
+    var modalStyles = { overlay: { zIndex: 10 }, width: "30%" };
 
     return (
       <Rnd
@@ -449,7 +438,7 @@ class PictoItem extends Component {
 
           <div className="slds-p-vertical_medium slds-text-heading_small">
             <img style={{
-              //border: "10px solid" + this.state.backColor
+              border: this.state.borderWidth + "px solid #" + this.state.backColor
             }} src={this.state.url} alt={this.state.label} />
             {this.state.label}
           </div>

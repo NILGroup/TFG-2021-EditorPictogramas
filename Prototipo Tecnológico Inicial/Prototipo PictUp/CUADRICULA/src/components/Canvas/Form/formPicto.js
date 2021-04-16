@@ -15,15 +15,19 @@ class FormPicto extends Component {
             isPlural: false,
             text: null,
             borderColor: null,
+            borderWidth: 0,
+            hasBorder: false,
             url: "https://static.arasaac.org/pictograms/" + this.props.picto._id + "/" + this.props.picto._id + "_500.png",
             picto: this.props.picto
         }
 
         this.handleHairColor = this.handleHairColor.bind(this);
         this.handleSkin = this.handleSkin.bind(this);
+        this.handleBorderCol = this.handleBorderCol.bind(this);
         this.handleTime = this.handleTime.bind(this);
         this.handleIsColored = this.handleIsColored.bind(this);
         this.handleisPlural = this.handleisPlural.bind(this);
+        this.handleHasBorder = this.handleHasBorder.bind(this);
 
         this.setState({
             isColorized: true,
@@ -73,7 +77,14 @@ class FormPicto extends Component {
 
     handleSubmit = (event) => {
         //event.preventDefault()
-        this.props.onSubmit(event)
+
+        var aux = {
+            url: this.state.url,
+            border: this.state.borderColor,
+            borferWidth: this.state.borderWidth
+        }
+
+        this.props.onSubmit(aux)
         //this.createUrl()
     }
 
@@ -90,6 +101,13 @@ class FormPicto extends Component {
         console.log("Skin: ", event.target.value)
         this.setState({
             skin: event.target.value
+        }, () => this.createUrl())
+    }
+
+    handleBorderCol(event) {
+        console.log("Border: ", event.target.value)
+        this.setState({
+            borderColor: event.target.value
         }, () => this.createUrl())
     }
 
@@ -114,6 +132,18 @@ class FormPicto extends Component {
         }, () => this.createUrl())
     }
 
+    handleHasBorder() {
+
+        console.log(this.state.hasBorder)
+        var w = 10
+        if(this.state.hasBorder) w = 0
+
+        this.setState({
+            hasBorder: !this.state.hasBorder,
+            borderWidth: w
+        }, () => this.createUrl())
+    }
+
     renderHair() {
 
         if (!this.props.picto.hair || !this.state.isColorized || this.state.isPlural) {
@@ -121,46 +151,57 @@ class FormPicto extends Component {
         }
         return (
 
-            <div className="d-flex justify-content-start" id="colorPelo" onChange={this.handleHairColor}>
+            <div className="row">
+                <div className="w-25 p-3">
+                    <div className="col-9">
+                        <div className="d-flex justify-content-start" id="colorPelo" onChange={this.handleHairColor}>
 
+                            <div className="col">
+                                Pelo:
+                            </div>
 
-                <div className="col">
-                    <label className="contCB-A65E26 ">
-                        <input type="radio" name="hair" value="A65E26" />
-                        <span className="checkmark-A65E26"></span>
-                    </label>
-                </div>
-                <div className="col">
-                    <label className="contCB-FDD700">
-                        <input type="radio" name="hair" value="FDD700" />
-                        <span className="checkmark-FDD700"></span>
-                    </label>
-                </div>
-                <div className="col">
-                    <label className="contCB-ED4120" >
-                        <input type="radio" name="hair" value="ED4120" />
-                        <span className="checkmark-ED4120"></span>
-                    </label>
-                </div>
-                <div className="col">
-                    <label className="contCB-020100">
-                        <input type="radio" name="hair" value="020100" />
-                        <span className="checkmark-020100"></span>
-                    </label>
-                </div>
-                <div className="col">
-                    <label className="contCB-AAABAB" >
-                        <input type="radio" name="hair" value="AAABAB" />
-                        <span className="checkmark-AAABAB"></span>
-                    </label>
-                </div>
-                <div className="col">
-                    <label className="contCB-EFEFEF" >
-                        <input type="radio" name="hair" value="EFEFEF" />
-                        <span className="checkmark-EFEFEF"></span>
-                    </label>
+                            <div className="col">
+                                <label className="contCB-A65E26 ">
+                                    <input type="radio" name="hair" value="A65E26" />
+                                    <span className="checkmark-A65E26"></span>
+                                </label>
+                            </div>
+                            <div className="col">
+                                <label className="contCB-FDD700">
+                                    <input type="radio" name="hair" value="FDD700" />
+                                    <span className="checkmark-FDD700"></span>
+                                </label>
+                            </div>
+                            <div className="col">
+                                <label className="contCB-ED4120" >
+                                    <input type="radio" name="hair" value="ED4120" />
+                                    <span className="checkmark-ED4120"></span>
+                                </label>
+                            </div>
+                            <div className="col">
+                                <label className="contCB-020100">
+                                    <input type="radio" name="hair" value="020100" />
+                                    <span className="checkmark-020100"></span>
+                                </label>
+                            </div>
+                            <div className="col">
+                                <label className="contCB-AAABAB" >
+                                    <input type="radio" name="hair" value="AAABAB" />
+                                    <span className="checkmark-AAABAB"></span>
+                                </label>
+                            </div>
+                            <div className="col">
+                                <label className="contCB-EFEFEF" >
+                                    <input type="radio" name="hair" value="EFEFEF" />
+                                    <span className="checkmark-EFEFEF"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
         )
     }
 
@@ -169,45 +210,115 @@ class FormPicto extends Component {
         if (!this.props.picto.skin || !this.state.isColorized || this.state.isPlural) {
             return (null)
         }
+        return (
+
+
+            <div className="row">
+                <div className="w-25 p-3">
+                    <div className="col-9">
+                        <div className="d-flex justify-content-start" id="tonoPiel" onChange={this.handleSkin}>
+                            <div className="col">
+                                Piel:
+                            </div>
+
+                            <div className="col">
+                                <label className="contCB-A65C17 ">
+                                    <input type="radio" name="skin" value="A65C17" />
+                                    <span className="checkmark-A65C17"></span>
+                                </label>
+                            </div>
+
+                            <div className="col">
+                                <label className="contCB-CF9D7C" >
+                                    <input type="radio" name="skin" value="CF9D7C" />
+                                    <span className="checkmark-CF9D7C"></span>
+                                </label>
+                            </div>
+
+                            <div className="col">
+                                <label className="contCB-E3AB72">
+                                    <input type="radio" name="skin" value="E3AB72" />
+                                    <span className="checkmark-E3AB72"></span>
+                                </label>
+                            </div>
+
+                            <div className="col">
+                                <label className="contCB-F4ECAD">
+                                    <input type="radio" name="skin" value="F4ECAD" />
+                                    <span className="checkmark-F4ECAD"></span>
+                                </label>
+                            </div>
+                            <div className="col">
+                                <label className="contCB-F5E5DE" >
+                                    <input type="radio" name="skin" value="F5E5DE" />
+                                    <span className="checkmark-F5E5DE"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+    }
+
+    renderBorder() {
+
+        if (!this.state.hasBorder) {
+            return (null)
+        }
 
         return (
 
-            <div className="d-flex justify-content-start" id="tonoPiel" onChange={this.handleSkin}>
 
-                <div className="col">
-                    <label className="contCB-A65C17 ">
-                        <input type="radio" name="skin" value="A65C17" />
-                        <span className="checkmark-A65C17"></span>
-                    </label>
-                </div>
+            <div className="row">
+                <div className="w-25 p-3">
+                    <div className="col-9">
+                        <div className="d-flex justify-content-start" id="colorBorde" onChange={this.handleBorderCol}>
+                            <div className="col">
+                                Box:
+                            </div>
 
-                <div className="col">
-                    <label className="contCB-CF9D7C" >
-                        <input type="radio" name="skin" value="CF9D7C" />
-                        <span className="checkmark-CF9D7C"></span>
-                    </label>
-                </div>
+                            <div className="col">
+                                <label className="contCB-ffeb3b ">
+                                    <input type="radio" name="border" value="ffeb3b" />
+                                    <span className="checkmark-ffeb3b"></span>
+                                </label>
+                            </div>
 
-                <div className="col">
-                    <label className="contCB-E3AB72">
-                        <input type="radio" name="skin" value="E3AB72" />
-                        <span className="checkmark-E3AB72"></span>
-                    </label>
-                </div>
+                            <div className="col">
+                                <label className="contCB-ff9800 ">
+                                    <input type="radio" name="border" value="ff9800" />
+                                    <span className="checkmark-ff9800"></span>
+                                </label>
+                            </div>
 
-                <div className="col">
-                    <label className="contCB-F4ECAD">
-                        <input type="radio" name="skin" value="F4ECAD" />
-                        <span className="checkmark-F4ECAD"></span>
-                    </label>
+                            <div className="col">
+                                <label className="contCB-4caf50 ">
+                                    <input type="radio" name="border" value="4caf50" />
+                                    <span className="checkmark-4caf50"></span>
+                                </label>
+                            </div>
+
+                            <div className="col">
+                                <label className="contCB-2196f3 ">
+                                    <input type="radio" name="border" value="2196f3" />
+                                    <span className="checkmark-2196f3"></span>
+                                </label>
+                            </div>
+
+                            <div className="col">
+                                <label className="contCB-fda1ff ">
+                                    <input type="radio" name="border" value="fda1ff" />
+                                    <span className="checkmark-fda1ff"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div className="col">
-                    <label className="contCB-F5E5DE" >
-                        <input type="radio" name="skin" value="F5E5DE" />
-                        <span className="checkmark-F5E5DE"></span>
-                    </label>
-                </div>
-            </div>)
+            </div>
+        )
     }
 
     renderTimes() {
@@ -226,7 +337,10 @@ class FormPicto extends Component {
 
     renderPrePicto() {
         return (
-            <img src={this.state.url} />
+            <img style={{
+                border: "5px solid #" + this.state.borderColor
+              }} 
+              src={this.state.url}/>
         )
     }
 
@@ -245,68 +359,40 @@ class FormPicto extends Component {
                     </div>
                     <div className="modal-body">
                         <form onSubmit={this.handleSubmit}>
-
                             <div className="container">
 
                                 <div className="row">
+                                    <div className="col-3">
+                                        <input type="checkbox" id="noColor" onChange={this.handleIsColored} /> Sin Color
 
+                                    </div>
+                                    <div className="col-3">
+                                        <input type="checkbox" id="plural" onChange={this.handleisPlural} /> Plural
+                                    </div>
+                                    <div className="col-3">
+                                        <input type="checkbox" id="plural" onChange={this.handleHasBorder} /> Borde:
+                                    </div>
+                                </div>
+
+                                <div className="row">
                                     <div className="col-9">
                                         {this.renderHair()}
-                                        <br />
                                         {this.renderSkinTone()}
-                                        <br />
-                                        <br />
-                                        <br />
+                                        {this.renderBorder()}
+                                        {this.renderTimes()}
                                     </div>
                                     <div className="col-3">
                                         {this.renderPrePicto()}
                                     </div>
-
                                 </div>
-
-                                {this.renderTimes()}
-
-                                <div className="row">
-                                    <div className="col-3">
-                                        <input type="checkbox" id="noColor" onChange={this.handleIsColored} /> Sin Color <br />
-                                        <input type="checkbox" id="plural" onChange={this.handleisPlural} /> Plural <br />
-                                    </div>
-
-                                </div>
-
-
                             </div>
-
-                            {/* 
-                            TODO: Cambiar borde y texto
-                            <select id="borderColor" className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                <option style={{ backgroundColor: "#ffffff" }} value="#ffffff">Blanco</option>
-                                <option style={{ backgroundColor: "#ffeb3b" }} value="#ffeb3b">Amarillo</option>
-                                <option style={{ backgroundColor: "#ff9800" }} value="#ff9800">Naranja</option>
-                                <option style={{ backgroundColor: "#4caf50" }} value="#4caf50">Verde</option>
-                                <option style={{ backgroundColor: "#2196f3" }} value="#2196f3">Azul</option>
-                                <option style={{ backgroundColor: "#fda1ff" }} value="#fda1ff">Rosa</option>
-                                <option style={{ backgroundColor: "#000000" }} value="#000000">Negro</option>
-                            </select>
-
-
-                            <input name="label" type="text" />  <br />
-                            <input type="color" id="myColor" />
-                            <br /><br /> */}
-
-
-
-
-
                         </form>
-
                         <div className="modal-footer">
                             <button className="form-control btn btn-primary" onClick={() => this.handleSubmit(this.state.url)}>
                                 Aplicar cambios
                                 </button>
                         </div>
                     </div>
-
                 </div>
             </div>
         )
