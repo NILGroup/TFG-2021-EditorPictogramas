@@ -633,7 +633,7 @@
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background: white;
+	background: rgb(0, 0, 0);
 }
 
 /*AAABAB Dark Gray*/
@@ -742,6 +742,291 @@
 }
 
 .contCB-6A2703 .checkmark-6A2703:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*Colers de los bordes*/
+
+.contCB-ffeb3b {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-ffeb3b input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-ffeb3b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffeb3b;
+  border-radius: 50%;
+}
+
+.contCB-ffeb3b:hover input ~ .checkmark-ffeb3b {
+  background-color: #f0d800;
+}
+
+.contCB-ffeb3b input:checked ~ .checkmark-ffeb3b {
+  background-color: #ffeb3b;
+}
+
+.checkmark-ffeb3b:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-ffeb3b input:checked ~ .checkmark-ffeb3b:after {
+  display: block;
+}
+
+.contCB-ffeb3b .checkmark-ffeb3b:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*Naranja*/
+
+.contCB-ff9800 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-ff9800 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-ff9800 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ff9800;
+  border-radius: 50%;
+}
+
+.contCB-ff9800:hover input ~ .checkmark-ff9800 {
+  background-color: #fc5800;
+}
+
+.contCB-ff9800 input:checked ~ .checkmark-ff9800 {
+  background-color: #ff9800;
+}
+
+.checkmark-ff9800:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-ff9800 input:checked ~ .checkmark-ff9800:after {
+  display: block;
+}
+
+.contCB-ff9800 .checkmark-ff9800:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*Verde*/
+
+.contCB-4caf50 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-4caf50 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-4caf50 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #4caf50;
+  border-radius: 50%;
+}
+
+.contCB-4caf50:hover input ~ .checkmark-4caf50 {
+  background-color: #139113;
+}
+
+.contCB-4caf50 input:checked ~ .checkmark-4caf50 {
+  background-color: #4caf50;
+}
+
+.checkmark-4caf50:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-4caf50 input:checked ~ .checkmark-4caf50:after {
+  display: block;
+}
+
+.contCB-4caf50 .checkmark-4caf50:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*Azul*/
+
+.contCB-2196f3 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-2196f3 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-2196f3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #2196f3;
+  border-radius: 50%;
+}
+
+.contCB-2196f3:hover input ~ .checkmark-2196f3 {
+  background-color: #0c63b4;
+}
+
+.contCB-2196f3 input:checked ~ .checkmark-2196f3 {
+  background-color: #2196f3;
+}
+
+.checkmark-2196f3:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-2196f3 input:checked ~ .checkmark-2196f3:after {
+  display: block;
+}
+
+.contCB-2196f3 .checkmark-2196f3:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*Rosa*/
+
+.contCB-fda1ff {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contCB-fda1ff input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-fda1ff {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fda1ff;
+  border-radius: 50%;
+}
+
+.contCB-fda1ff:hover input ~ .checkmark-fda1ff {
+  background-color: #f021f3;
+}
+
+.contCB-fda1ff input:checked ~ .checkmark-fda1ff {
+  background-color: #fda1ff;
+}
+
+.checkmark-fda1ff:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contCB-fda1ff input:checked ~ .checkmark-fda1ff:after {
+  display: block;
+}
+
+.contCB-fda1ff .checkmark-fda1ff:after {
  	top: 9px;
 	left: 9px;
 	width: 8px;

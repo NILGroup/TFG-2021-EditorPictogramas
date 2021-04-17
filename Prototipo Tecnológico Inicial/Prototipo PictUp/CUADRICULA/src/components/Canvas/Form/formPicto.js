@@ -339,8 +339,8 @@ class FormPicto extends Component {
         return (
             <img style={{
                 border: "5px solid #" + this.state.borderColor
-              }} 
-              src={this.state.url}/>
+            }} 
+            src={this.state.url}/>
         )
     }
 
