@@ -25,9 +25,9 @@ import zipUtils from './Utilities/zipUtils'
 import Collection from './Utilities/Collection'
 import ColShow from './Utilities/ColShow'
 import Navbar from './Utilities/Navbar';
-
 import html2canvas from 'html2canvas';
-
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 
 const proptypes = {
@@ -205,7 +205,7 @@ export class DragOnCanvasExample extends React.Component {
       url: File.url,
       width: File.width,
       height: File.height,
-      scale: File.width/File.height
+      scale: File.width / File.height
     })
 
     this.setState({
@@ -481,13 +481,32 @@ export class DragOnCanvasExample extends React.Component {
 
               {/* <NIL /> */}
 
+              <div className="ml-4">
+                <Tabs>
+                  <TabList>
+                    <Tab>Busqueda simple</Tab>
+                    <Tab>Traducción de frase</Tab>
+                    <Tab>Añadir imagen</Tab>
+                  </TabList>
+
+                  <TabPanel>
+                    <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
+                  </TabPanel>
+                  <TabPanel>
+                    <h2>Any content 2</h2>
+                  </TabPanel>
+                  <TabPanel>
+                    <UploadPhoto sendData={this.addPictoFromPhoto} />
+                  </TabPanel>
+                </Tabs>
+              </div>
+
               {/* <UploadState/> */}
-              <UploadPhoto sendData={this.addPictoFromPhoto} />
+              {/* <UploadPhoto sendData={this.addPictoFromPhoto} /> */}
 
               {/* API ARASAAC */}
-              <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
 
-              <Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /> {/* pedir colecciones  */}
+              <div className="mt-5"></div>
 
               <ReactModal
                 isOpen={this.state.showModal}
@@ -547,8 +566,49 @@ export class DragOnCanvasExample extends React.Component {
                 <button onClick={this.addText}>Añadir texto</button>
               </div> */}
 
-              <div className="container-fluid">
-                <div className="row">
+              <div className="card" >
+                <h5 className="card-header" style={{backgroundColor: '#ADD8E6'}}><strong>Personalización del tablero</strong></h5>
+                <div className="card-body">
+                  <div className="card-text">
+                    <div className="row mt-3">
+
+                      <div className="input-group mb-4">
+
+                        <input type="text" className="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
+
+                        <div className="input-group-prepend">
+                          <button type="button" className="btn btn-outline-secondary" onClick={this.addText}>+
+                          <a style={{ fontFamily: this.state.selectedFont }}>Texto</a>
+                          </button>
+                        </div>
+
+                        <select className="form-select col-4" onChange={this.handleFontChange}>
+                          <option value="Nunito" className="dropdown-item" style={{ fontFamily: "Nunito" }}>Nunito</option>
+                          <option value="Massallera" className="dropdown-item" style={{ fontFamily: "Massallera" }}>Masella</option>
+                          <option value="CurPunt" className="dropdown-item" style={{ fontFamily: "CurPunt" }}>CurPunt</option>
+                          <option value="CurCuad" className="dropdown-item" style={{ fontFamily: "CurCuad" }}>CurCuad</option>
+                          <option value="CurCuadPunt" className="dropdown-item" style={{ fontFamily: "CurCuadPunt" }}>CurCuadPunt</option>
+                          <option value="Tommy" className="dropdown-item" style={{ fontFamily: "Tommy" }}>Tommy</option>
+                        </select>
+
+                      </div>
+                    </div>
+                    <div className="row mt-2 ml-4">
+                      <button className="btn btn-outline-info btn-sm ml-3" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i> Añadir linea</button>
+
+                      <button className="btn btn-outline-info btn-sm ml-1" onClick={this.addFigure}><i className="far fa-square"></i> Añadir figura</button>
+
+                      <button className="btn btn-outline-info ml-2" onClick={this.descargaFotoTablero}>
+                        <i className="fas fa-file-image"></i>
+                  &nbsp; Descargar Tablero
+                  </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className="container-fluid"> */}
+              {/* <div className="row">
 
                   <div className="input-group mb-4">
 
@@ -570,22 +630,20 @@ export class DragOnCanvasExample extends React.Component {
                     </select>
 
                   </div>
-                </div>
-                <div className="row mt-2">
-                  <button onClick={this.addLine}>Añadir linea</button>
+                </div> */}
+              {/* <div className="row mt-2">
+                  <button className="btn btn-outline-info btn-sm ml-3" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i> Añadir linea</button>
 
-                  <button onClick={this.addFigure}>Añadir figura</button>
+                  <button className="btn btn-outline-info btn-sm ml-1" onClick={this.addFigure}><i className="far fa-square"></i> Añadir figura</button>
 
-                  <button className="btn btn-outline-info btn-sm ml-2" onClick={this.descargaFotoTablero}>
+                  <button className="btn btn-outline-info ml-2" onClick={this.descargaFotoTablero}>
                     <i className="fas fa-file-image"></i>
                   &nbsp; Descargar Tablero
-                </button>
-                </div>
+                  </button>
+                </div> */}
 
 
-
-
-              </div>
+              {/* </div> */}
               {/* <div>
                 <button onClick={this.setLocalStorage}>Save</button>
               </div>
@@ -594,12 +652,28 @@ export class DragOnCanvasExample extends React.Component {
                 <button onClick={this.getLocalStorage}>Load</button>
               </div> */}
 
-              <select className="form-control" value={this.state.value} onChange={this.coleccionToShow}>
+              <div className="card mt-4 mb-3" >
+                <h5 className="card-header" style={{backgroundColor: '#ADD8E6'}}><strong>Colecciones</strong></h5>
+                <div className="card-body">
+                  <h6 class="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
+                  <div className="card-text">
+                    <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
+                      <option value={"---"}>{ }</option>
+                      {optionColection}
+                    </select>
+
+                    {this.mostrarColecciones()}
+
+                  </div>
+                </div>
+              </div>
+
+              {/* <select className="form-control" value={this.state.value} onChange={this.coleccionToShow}>
                 <option value={"---"}>{ }</option>
                 {optionColection}
               </select>
 
-              {this.mostrarColecciones()}
+              {this.mostrarColecciones()} */}
               {/* <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[0].idPicto} /> */}
 
             </div>
