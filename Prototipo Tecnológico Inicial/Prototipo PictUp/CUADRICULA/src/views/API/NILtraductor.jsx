@@ -31,13 +31,20 @@ class NILtraductor extends Component {
                 this.setState({
                     items: json,
                 })
+            }).catch(error => {
+                console.log(error)
             });
     }
     //https://holstein.fdi.ucm.es/nil-ws-api/v1/texto/pictogramas
+
+    // fetch('http://localhost:5000/getData')
+    // .then(response => response.json())
+    // .then(data => console.log(data));
+
     postNIL = (query) => {
-        fetch('https://jsonplaceholder.typicode.com/posts', {
+
+        fetch('http://localhost:5000/frase2picto', {
             method: 'POST',
-            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -45,15 +52,21 @@ class NILtraductor extends Component {
         })
             .then(response => response.json())
             .then(result => {
-                this.setState({ tradPic: result })
+                this.setState({ tradPic: result.traduccion })
                 console.log(result)
             }
             )
+        // fetch('http://localhost:5000/getData')
+        //     .then(response => response.json())
+        //     .then(data => console.log(data));
+
     }
 
     async populateLema() {
 
-        var lemas = this.state.tradPic.traduccion
+        var lemas = this.state.tradPic
+
+        console.log(lemas)
 
         //Ponemos la barra de carga
         this.setState({
@@ -75,7 +88,7 @@ class NILtraductor extends Component {
             //Axios las resuelve todas y las añade al estado. Await es para que se hagan de manera secuencial, de otra manera se podían sobreescribir
             await axios.all(consulta).then(
                 axios.spread((...allData) => {
-                    var lemaAux = this.state.lemasRaw
+                    lemaAux = this.state.lemasRaw
 
                     lemaAux[i] = []
 
@@ -122,23 +135,6 @@ class NILtraductor extends Component {
 
     }
 
-    frase2Canvas = () => {
-        var lemas = this.state.lemasRaw;
-        var sel = this.state.selected
-        var frase = []
-
-
-        //Recorremos el array de lemas para guardar los lemas seleccionados
-        //Siendo los seleccionados, los que se ven en pantalla ()
-        for (let i = 0; i < lemas.length; i++) {
-            const lema = lemas[i];
-            frase.push(lema.list[sel[i]])
-        }
-
-        console.log(frase)
-
-    }
-
     renderLemaItems() {
 
         if (this.state.isLoading) {
@@ -159,9 +155,9 @@ class NILtraductor extends Component {
                 <div id="div1" className="row pl-4">
 
                     <button className="btn btn-success btn-sm ml-2" onClick={() => this.frase2Canvas()}>
-                        Colocar frase al tablero &nbsp; 
+                        Colocar frase al tablero &nbsp;
                         <i className="fas fa-arrow-right"></i>
-                        
+
                     </button>
 
                     <div className="row row-cols-3 row-cols-md-4 g-5">
@@ -268,8 +264,6 @@ class NILtraductor extends Component {
 
         console.log(frase)
         this.props.sendFrase(frase);
-
-
     }
 
 
