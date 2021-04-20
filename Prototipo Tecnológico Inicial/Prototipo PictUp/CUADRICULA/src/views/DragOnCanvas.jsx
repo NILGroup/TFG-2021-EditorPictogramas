@@ -14,6 +14,7 @@ import FigureItem from '../components/Canvas/FigureItem';
 import CanvasImage from '../components/Canvas/CanvasImage';
 import TextItem from '../components/Canvas/TextItem'
 import ARASAAC from './API/arasaac'
+import NILtraductor from './API/NILtraductor'
 import UploadPhoto from './UploadPhoto/newUploadPhoto'
 import FraseItem from '../components/Canvas/FraseItem'
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -178,14 +179,14 @@ export class DragOnCanvasExample extends React.Component {
 
   }
 
-  addFraseTrad = (frase) => {
+  addFraseTrad = (e) => {
 
     this.postID = this.postID + 1;
     const copyPostArray = Object.assign([], this.state.fraseArray)
     copyPostArray.push({
       id: this.postID,
-      frase: frase,
-      texto: "Hoy va a ser un gran día par probar la API de NIL"
+      frase: e.pictos,
+      texto: e.frase
     })
 
     this.setState({
@@ -258,7 +259,7 @@ export class DragOnCanvasExample extends React.Component {
   }
 
   importFile = (f) => {
-    var x = this.zipUtils.getFiles(f)
+    //var x = this.zipUtils.getFiles(f)
   }
 
   descargaFotoTablero = () => {
@@ -490,10 +491,12 @@ export class DragOnCanvasExample extends React.Component {
                   </TabList>
 
                   <TabPanel>
-                    <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
+                  <NILtraductor  sendFrase={this.addFraseTrad}/> 
+                    
                   </TabPanel>
                   <TabPanel>
-                    <h2>Any content 2</h2>
+                    <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
+                    {/* send2sac={this.getFromTrad} */}
                   </TabPanel>
                   <TabPanel>
                     <UploadPhoto sendData={this.addPictoFromPhoto} />

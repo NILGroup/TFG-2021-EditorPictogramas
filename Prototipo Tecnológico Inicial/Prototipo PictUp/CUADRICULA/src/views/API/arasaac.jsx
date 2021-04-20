@@ -100,7 +100,7 @@ class ARASAAC extends Component {
 		return (
 			<div class="cajon">
 
-				<NILtraductor send2sac={this.getFromTrad} sendFrase={this.getFraseFromTrad}/>
+				{/* <NILtraductor send2sac={this.getFromTrad} sendFrase={this.getFraseFromTrad}/> */}
 
 				<div className="input-group mb-3">
 					<div className="input-group-prepend">

@@ -342,7 +342,7 @@ class TextIcon extends Component {
                     this.state.frase.map((palabra) => {
                         return (
                             <div className="col">
-                                <img className="img-responsive" src={"https://api.arasaac.org/api/pictograms/" + palabra._id} />
+                                <img className="img-responsive" src={palabra.url} />
                             </div>
                         )
                     })
