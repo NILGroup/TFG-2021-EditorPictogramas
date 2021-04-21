@@ -47,7 +47,8 @@ export class DragOnCanvasExample extends React.Component {
   constructor() {
     super();
     this.postID = 0;
-    this.Body = ""
+    this.Body = "";
+    this.calidad = "alta";
     this.zipUtils = new zipUtils
     this.defaultName = "---";
     this.nameSelected = "---"; //nombre por defecto de la coleccion 
@@ -93,7 +94,20 @@ export class DragOnCanvasExample extends React.Component {
 
   handleCloseModal = () => {
     this.setState({ showModal: false });
+  }
 
+  modalDownloadOpen = () => {
+    this.setState({ showModalDownload: true });
+  }
+
+  modalDownloadClose = () => {
+    this.setState({ showModalDownload: false });
+  }
+
+  seleccionarCalidad = (e) => {
+    // console.log(e.target.value);
+    this.calidad = e.target.value;
+    console.log(this.calidad);
   }
 
   deleteEvent = (index) => {
@@ -266,7 +280,19 @@ export class DragOnCanvasExample extends React.Component {
     //Prueba Html2Canvas
 
     var container = document.getElementById("tableroPrint") // full page 
-    html2canvas(container, { allowTaint: true, useCORS: true, scale: 4, scrollY: window.scrollY })
+    var escala;
+
+    if (this.calidad == "alta") {
+      escala = 4;
+    }
+    else if (this.calidad == "media") {
+      escala = 3;
+    } else {
+      escala = 2;
+    }
+    console.log("se va a descargar en calidad", escala);
+    this.calidad = "alta"; //reseteamos valor por defecto
+    html2canvas(container, { allowTaint: true, useCORS: true, scale: 2, scrollY: window.scrollY })
       .then(function (canvas) {
 
         var link = document.createElement("a");
@@ -482,7 +508,7 @@ export class DragOnCanvasExample extends React.Component {
 
               {/* <NIL /> */}
 
-              <div className="ml-4">
+              <div className="ml-3">
                 <Tabs>
                   <TabList>
                     <Tab>Busqueda simple</Tab>
@@ -491,8 +517,8 @@ export class DragOnCanvasExample extends React.Component {
                   </TabList>
 
                   <TabPanel>
-                  <NILtraductor  sendFrase={this.addFraseTrad}/> 
-                    
+                    <NILtraductor sendFrase={this.addFraseTrad} />
+
                   </TabPanel>
                   <TabPanel>
                     <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
@@ -569,8 +595,8 @@ export class DragOnCanvasExample extends React.Component {
                 <button onClick={this.addText}>Añadir texto</button>
               </div> */}
 
-              <div className="card" >
-                <h5 className="card-header" style={{backgroundColor: '#ADD8E6'}}><strong>Personalización del tablero</strong></h5>
+              <div className="card ml-3" >
+                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}><strong>Personalización del tablero</strong></h5>
                 <div className="card-body">
                   <div className="card-text">
                     <div className="row mt-3">
@@ -601,10 +627,50 @@ export class DragOnCanvasExample extends React.Component {
 
                       <button className="btn btn-outline-info btn-sm ml-1" onClick={this.addFigure}><i className="far fa-square"></i> Añadir figura</button>
 
-                      <button className="btn btn-outline-info ml-2" onClick={this.descargaFotoTablero}>
+                      <button className="btn btn-outline-info ml-2" onClick={this.modalDownloadOpen}>
                         <i className="fas fa-file-image"></i>
-                  &nbsp; Descargar Tablero
-                  </button>
+                        &nbsp; Descargar Tablero
+                      </button>
+
+                      <ReactModal
+                        isOpen={this.state.showModalDownload}
+                        contentLabel="onRequestClose Example"
+                        onRequestClose={this.modalDownloadClose}
+                        className="Modal"
+                        ariaHideApp={false}
+                        style={modalStyles}
+                      >
+                        <div className="modal-dialog">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              <h5 className="modal-title" id="exampleModalLabel">Selecciona la calidad que quieres que tenga la imagen:</h5>
+                              <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.modalDownloadClose}>
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div className="modal-body">
+                              <div className="container">
+
+                                <div onClick={this.seleccionarCalidad}>
+                                  <div className="row mt-2 ml-3">
+                                    <input type="radio" value="alta" name="gender" defaultChecked />&nbsp; Calidad alta
+                                  </div>
+                                  <div className="row mt-3 ml-3">
+                                    <input type="radio" value="media" name="gender" />&nbsp; Calidad media
+                                  </div>
+                                  <div className="row mt-3 ml-3">
+                                    <input type="radio" value="baja" name="gender" />&nbsp; Calidad baja
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="modal-footer">
+                              <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{alignSelf: 'center'}} data-bs-dismiss="modal" onClick={this.descargaFotoTablero}><i className="fas fa-file-download"></i> Descargar imagen</button>
+                            </div>
+                          </div>
+                        </div>
+                      </ReactModal>
+
                     </div>
                   </div>
                 </div>
@@ -655,10 +721,10 @@ export class DragOnCanvasExample extends React.Component {
                 <button onClick={this.getLocalStorage}>Load</button>
               </div> */}
 
-              <div className="card mt-4 mb-3" >
-                <h5 className="card-header" style={{backgroundColor: '#ADD8E6'}}><strong>Colecciones</strong></h5>
+              <div className="card mt-4 mb-3 ml-3" >
+                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong>Colecciones</strong></h5>
                 <div className="card-body">
-                  <h6 class="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
+                  <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
                   <div className="card-text">
                     <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
                       <option value={"---"}>{ }</option>

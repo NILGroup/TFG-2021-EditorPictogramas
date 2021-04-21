@@ -98,7 +98,7 @@ class ARASAAC extends Component {
 	render() {
 
 		return (
-			<div class="cajon">
+			<div className="cajon">
 
 				{/* <NILtraductor send2sac={this.getFromTrad} sendFrase={this.getFraseFromTrad}/> */}
 
@@ -126,7 +126,7 @@ class ARASAAC extends Component {
 
 								<div className="card-body">
 									<h5 className="card-title text-center">{item.keywords[0].keyword}</h5>
-									<div class="btn-group" role="group">
+									<div className="btn-group" role="group">
 										<button className="btn-sm btn-primary" onClick={() => this.sendSelectedPicto(item)}>
 											<i className="fas fa-plus"></i></button>
 										<button className="btn-sm btn-outline-primary" onClick={() => this.sendSelectedCollection(item)}>

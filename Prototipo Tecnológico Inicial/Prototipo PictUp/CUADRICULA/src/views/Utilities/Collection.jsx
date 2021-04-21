@@ -175,14 +175,12 @@ export class Collection extends React.Component {
               &nbsp; Importar colecciones
             </button></p>
 
-            <input type="file" className="hidden"
+            <input type="file" className="hidden" style={{display: 'none'}}
               multiple={false}
               accept=".json,.csv,.txt,.text,application/json,text/csv,text/plain"
               onChange={evt => this.openFile(evt)}
               ref={e => this.dofileUpload = e}
             />
-  
-            <button onClick={this.show}>Ver Colecciones</button>
 
           </div>
         </div>

@@ -158,7 +158,7 @@ class NILtraductor extends Component {
 
                 <div className="card-body">
                     <h5 className="card-title text-center">{item.lema}</h5>
-                    <div class="btn-group" role="group">
+                    <div className="btn-group" role="group">
                         {/* <button className="btn-sm btn-primary" onClick={() => this.sendSelectedPicto(item)}>
                             <i className="fas fa-plus"></i>
                         </button> */}
@@ -258,7 +258,7 @@ class NILtraductor extends Component {
     render() {
 
         return (
-            <div class="cajon">
+            <div className="cajon">
                 <div className="input-group mb-3">
                     <div className="input-group-prepend">
                         <button className="btn btn-outline-primary" title="Traduccion a Picto" onClick={this.fetchInputQuery}>

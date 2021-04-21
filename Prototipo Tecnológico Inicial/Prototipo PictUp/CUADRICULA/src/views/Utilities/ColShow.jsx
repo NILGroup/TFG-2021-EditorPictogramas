@@ -25,7 +25,7 @@ class ColShow extends Component {
 		}
 		else{	//si ya hay colecciones visializo la seleccionada por el usuario
 		return (
-			<div class="cajon">
+			<div className="cajon">
 				<div id="div1" className="row pl-4">
 					<div className="row row-cols-3 row-cols-md-5 g-4">
 						{this.props.colections && !!this.props.colections.length && this.props.colections.map(item => (
@@ -37,7 +37,7 @@ class ColShow extends Component {
 								/>
 								<div className="card-body">
 								 <h5 className="card-title text-center">{item.keywords[0].keyword}</h5>
-									<div class="btn-group" role="group">
+									<div className="btn-group" role="group">
 										<button className="btn btn-primary btn-xs" onClick={() => this.sendSelectedPicto(item)}>
 											<i className="fas fa-plus"></i>
                                         </button>
