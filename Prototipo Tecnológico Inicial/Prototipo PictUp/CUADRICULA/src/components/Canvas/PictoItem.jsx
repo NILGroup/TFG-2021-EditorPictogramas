@@ -388,7 +388,7 @@ class PictoItem extends Component {
       borderWidth: e.borferWidth,
       backColor: e.border
     })
-
+    this.closeModal()
     //event.preventDefault();
   }
 
