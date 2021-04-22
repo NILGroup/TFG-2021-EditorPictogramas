@@ -7,8 +7,10 @@ import PropTypes from 'prop-types';
 import Rnd from 'react-rnd';
 import IconButton from '../Icon/IconButton';
 
+import FormEditFrase from './Form/formEditFrase'
+import ReactModal from 'react-modal';
+
 const proptypes = {
-    label: PropTypes.string.isRequired,
     x: PropTypes.number,
     y: PropTypes.number,
     width: PropTypes.number,
@@ -20,11 +22,11 @@ const proptypes = {
     moveAriaDescribedby: PropTypes.string,
     resizeAriaDescribedby: PropTypes.string,
     idPicto: PropTypes.number,
-    frase: PropTypes.object,
+    frase: PropTypes.array,
     texto: PropTypes.string,
 };
 
-class TextIcon extends Component {
+class FraseItem extends Component {
     constructor(props) {
         super(props);
 
@@ -39,6 +41,8 @@ class TextIcon extends Component {
 
         this.increaseZIndex = this.increaseZIndex.bind(this);
         this.handleDragStop = this.handleDragStop.bind(this);
+
+        this.handleModifyClik = this.handleModifyClik.bind(this)
 
 
         this.defaultPosition = {
@@ -62,7 +66,8 @@ class TextIcon extends Component {
 
             texto: this.props.texto,
             frase: this.props.frase,
-
+            modalIsOpen: false,
+            selected: new Array(this.props.frase.length).fill(true)
         }
 
         this.lockAspectRatio = true;
@@ -78,8 +83,6 @@ class TextIcon extends Component {
             topLeft: false,
             topRight: false
         };
-
-
     }
 
     increaseZIndex() {
@@ -91,30 +94,17 @@ class TextIcon extends Component {
     updatePosition(x, y, isCancel) {
         this.rnd.updatePosition({ x: x, y: y });
         this.setState({ x: x, y: y });
-        if (isCancel) {
-            this.props.updateLiveText(`Move cancelled.`);
-        }
-        else {
-            this.props.updateLiveText(`
-        Row: ${x / this.props.gridInterval + 1},
-        Column: ${y / this.props.gridInterval + 1}.
-      `);
-        }
     }
 
     moveLeft() {
         if (this.state.x > 0) {
             this.updatePosition(this.state.x - this.props.gridInterval, this.state.y);
-        } else {
-            this.props.updateLiveText('Reached left edge of canvas');
         }
     }
 
     moveRight() {
         if (this.state.x + this.state.width < this.props.canvasSize) {
             this.updatePosition(this.state.x + this.props.gridInterval, this.state.y);
-        } else {
-            this.props.updateLiveText('Reached right edge of canvas');
         }
     }
 
@@ -203,15 +193,6 @@ class TextIcon extends Component {
     updateSize(width, height, isCancel) {
         this.rnd.updateSize({ width: width, height: height });
         this.setState({ width: width, height: height });
-        if (isCancel) {
-            this.props.updateLiveText(`Resize cancelled.`);
-        }
-        else {
-            this.props.updateLiveText(`
-        Width: ${width / this.props.gridInterval},
-        Height: ${height / this.props.gridInterval}.
-      `);
-        }
     }
 
     makeShorter() {
@@ -283,19 +264,7 @@ class TextIcon extends Component {
         this.setState({ isResizing: isResizing, isMoving: false, isEditing: false });
 
         if (isResizing) {
-            this.props.updateLiveText(`
-        Resize element. Current size:
-        ${this.state.width / this.props.gridInterval} cells wide by
-        ${this.state.height / this.props.gridInterval} cells tall.
-        Press Right Arrow to make wider, Left Arrow to make narrower,
-        Down Arrow to make taller, Up Arrow to make shorter,
-        Spacebar to finish, Escape key to cancel.`);
             this.setState({ prevWidth: this.state.width, prevHeight: this.state.height });
-        } else {
-            this.props.updateLiveText(`
-        Element resized. New size:
-        ${this.state.width / this.props.gridInterval} cells wide by
-        ${this.state.height / this.props.gridInterval} cells tall.`);
         }
     }
 
@@ -331,26 +300,49 @@ class TextIcon extends Component {
         }
     }
 
+    handleModifyClik(e) {
+
+        console.log(e)
+
+        this.setState({
+            texto: e.text,
+            selected: e.selected
+        })
+        this.closeModal()
+        //event.preventDefault();
+    }
 
     renderLemas = () => {
-
-        
         return (
             <div className="row">
 
                 {
-                    this.state.frase.map((palabra) => {
+                    this.state.frase.map((palabra, i) => {
                         return (
-                            <div className="col">
-                                <img className="img-responsive" src={palabra.url} />
-                            </div>
+                            this.renderPalabra(palabra, i)
                         )
                     })
                 }
             </div>
-
         )
     }
+
+    renderPalabra(palabra, i){
+        if(!this.state.selected[i]) return ""
+        return (
+            <div className="col" key={i}>
+                <img className="img-responsive" src={palabra.url} size="50px" key={palabra.url} />
+            </div>
+        )
+    }
+
+    openModal = () => {
+        this.setState({ modalIsOpen: true });
+    };
+
+    closeModal = () => {
+        this.setState({ modalIsOpen: false });
+    };
 
 
     /** ---- Resizing element END ---- **/
@@ -363,7 +355,11 @@ class TextIcon extends Component {
             'dnd-canvas__object--editing': this.state.isEditing
         });
 
+        var modalStyles = { overlay: { zIndex: 10 }, width: "30%" };
+
         return (
+
+
             <Rnd
                 ref={c => { this.rnd = c; }}
                 className={itemClasses}
@@ -382,11 +378,11 @@ class TextIcon extends Component {
             >
                 <div>
 
-                {this.renderLemas()}      
+                    {this.renderLemas()}
 
                     <div className="slds-p-vertical_medium slds-text-heading_small">
-                    <h1>{this.state.texto}</h1>
-                                          
+                        <h1>{this.state.texto}</h1>
+
                     </div>
 
                     <div className="dnd-canvas__object-buttons">
@@ -399,6 +395,32 @@ class TextIcon extends Component {
                             onClick={this.handleRemoveClick}
                             onKeyDown={this.handleEditKeyDown}
                         />
+
+                        <IconButton
+                            assistiveText={"Edit " + this.props.label}
+                            ariaDescribedby={this.props.editAriaDescribedby}
+                            className="dnd-canvas__object-button dnd-canvas__object-button--edit"
+                            sprite="utility"
+                            symbol="edit"
+                            onClick={this.openModal}
+                        />
+
+                    </div>
+
+
+                    <div>
+                        <ReactModal
+                            isOpen={this.state.modalIsOpen}
+                            ariaHideApp={false}
+                            contentLabel="Selected Option"
+                            onRequestClose={this.closeModal}
+                            className="Modal"
+                            style={modalStyles}
+                        >
+
+                            <FormEditFrase onSubmit={this.handleModifyClik} frase={this.props.frase} selected={this.state.selected} texto={this.state.texto} />
+
+                        </ReactModal>
                     </div>
 
                 </div>
@@ -407,6 +429,6 @@ class TextIcon extends Component {
     }
 }
 
-TextIcon.propTypes = proptypes;
+FraseItem.propTypes = proptypes;
 
-export default TextIcon;
+export default FraseItem;
