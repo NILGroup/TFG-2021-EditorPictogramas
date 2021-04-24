@@ -52,7 +52,7 @@ export class DragOnCanvasExample extends React.Component {
     this.zipUtils = new zipUtils
     this.defaultName = "---";
     this.nameSelected = "---"; //nombre por defecto de la coleccion 
-    this.Nueva = ""   //guardar el nombre de una coleccion    
+    this.NewName = ""   //guardar el nombre de una coleccion    
     this.Id = ""      //guardar el id del picto a meter en una coleccion
     this.contador = 3;
 
@@ -302,6 +302,8 @@ export class DragOnCanvasExample extends React.Component {
         link.target = '_blank';
         link.click();
       });
+
+    this.modalDownloadClose();
   }
 
 
@@ -439,7 +441,11 @@ export class DragOnCanvasExample extends React.Component {
   }
 
   addToCollection = () => {
-    if (this.nameSelected == "---") {
+    console.log(this.Id);
+    if(this.state.colection.length == 0){
+      alert("No hay ninguna colección, crea una nueva.");
+    }
+    else if (this.nameSelected == "---") {
       alert("Por favor, selecciona una colección.");
     }
     else {
@@ -456,16 +462,35 @@ export class DragOnCanvasExample extends React.Component {
 
   }
 
-  newCollection = () => { //TODO hacer if
-    var nueva = this.state.colection.concat({
-      name: this.NewName,
-      idPicto: [this.Id]
-    })
+  newCollection = () => {
 
-    console.log(nueva);
-    this.setState({ colection: nueva });
-    console.log(this.state.colection);
+    var existe = false;
 
+    if(this.state.colection.length != 0){
+      for(var i=0; i<this.state.colection.length && !existe; i++){
+        if(this.state.colection[i].name == this.NewName){
+          existe = true;
+        }
+      }
+    }
+
+    if(existe){
+      alert("Ya existe otra colección con el mismo nombre.");
+    }
+    else if (this.NewName == "") {
+      alert("No puedes crear una colección sin nombre.");
+    } else {
+
+      var nueva = this.state.colection.concat({
+        name: this.NewName,
+        idPicto: [this.Id]
+      })
+
+      console.log(nueva);
+      this.setState({ colection: nueva });
+      console.log(this.state.colection);
+      this.NewName=""; //reseteamos valor
+    }
   }
 
   setNameCollection = (e) => {
@@ -517,11 +542,10 @@ export class DragOnCanvasExample extends React.Component {
                   </TabList>
 
                   <TabPanel>
-                    <NILtraductor sendFrase={this.addFraseTrad} />
-
+                    <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
                   </TabPanel>
                   <TabPanel>
-                    <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
+                    <NILtraductor sendFrase={this.addFraseTrad} />
                     {/* send2sac={this.getFromTrad} */}
                   </TabPanel>
                   <TabPanel>
@@ -548,52 +572,46 @@ export class DragOnCanvasExample extends React.Component {
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
-                      <h5 className="modal-title" id="exampleModalLabel">Añadir a colección:</h5>
+                      <h5 className="modal-title" id="exampleModalLabel">Crea o añade a una colección el pictograma <img style={{border: '1px solid', color: 'black', borderRadius: '10' }} src={'https://api.arasaac.org/api/pictograms/' + this.Id._id} width="90" height="90"></img></h5>
+                      <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.handleCloseModal}>
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                     </div>
                     <div className="modal-body">
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-sm">
-                            <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+
+                      <Tabs>
+                        <TabList>
+                          <Tab>Añadir a colección existente</Tab>
+                          <Tab>Crear una nueva colección</Tab>
+                        </TabList>
+
+                        <TabPanel>
+                          <div className="col-sm ">
+                            <p style={{ fontSize: '15' }}>Selecciona una colección:</p>
+                            <select className="form-control ml-1 mr-4 mt-3" value={this.state.value} onChange={this.handleChange}>
                               <option value={"---"}>{ }</option>
                               {optionColection}
                             </select>
                           </div>
-
-                          <div className="col-sm">
-                            <button type="button" className="btn btn-outline-primary ml-2" onClick={this.addToCollection}>Añadir a colección</button>
+                          <div className="modal-footer border-0">
+                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.addToCollection}>Añadir a colección</button>
                           </div>
-                        </div>
-                      </div>
-                      <pre></pre>
-
-                      <div className="container">
-                        <div className="row">
+                        </TabPanel>
+                        <TabPanel>
                           <div className="col-sm">
-                            <input type="text" onBlur={this.setNameCollection} />
+                            <p style={{ fontSize: '15' }}>Introduce el nuevo nombre para la colección:</p>
+                            <input className="form-control mt-3" type="text" onBlur={this.setNameCollection} />
                           </div>
-                          <div className="col-sm">
-                            <button type="button" className="btn btn-outline-primary ml-2" onClick={this.newCollection}>Nueva colección</button>
+                          <div className="modal-footer border-0">
+                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.newCollection}>Nueva colección</button>
                           </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div className="modal-footer">
-                      <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={this.handleCloseModal}>Close</button>
+                        </TabPanel>
+                      </Tabs>
                     </div>
                   </div>
                 </div>
 
               </ReactModal>
-
-
-
-              {/* Crear Objeto */}
-              {/* <div>
-                <input type="text" onBlur={this.setPicto} />
-                <button onClick={this.addText}>Añadir texto</button>
-              </div> */}
 
               <div className="card ml-3" >
                 <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}><strong>Personalización del tablero</strong></h5>
@@ -645,8 +663,8 @@ export class DragOnCanvasExample extends React.Component {
                             <div className="modal-header">
                               <h5 className="modal-title" id="exampleModalLabel">Selecciona la calidad que quieres que tenga la imagen:</h5>
                               <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.modalDownloadClose}>
-                              <span aria-hidden="true">&times;</span>
-                            </button>
+                                <span aria-hidden="true">&times;</span>
+                              </button>
                             </div>
                             <div className="modal-body">
                               <div className="container">
@@ -665,7 +683,7 @@ export class DragOnCanvasExample extends React.Component {
                               </div>
                             </div>
                             <div className="modal-footer">
-                              <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{alignSelf: 'center'}} data-bs-dismiss="modal" onClick={this.descargaFotoTablero}><i className="fas fa-file-download"></i> Descargar imagen</button>
+                              <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.descargaFotoTablero}><i className="fas fa-file-download"></i> Descargar imagen</button>
                             </div>
                           </div>
                         </div>

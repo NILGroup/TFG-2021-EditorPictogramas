@@ -488,7 +488,7 @@ class PictoItem extends Component {
                 style={modalStyles}
               >
 
-                <FormPicto onSubmit={this.handleModifyClik} picto={this.props.apiObject} />
+                <FormPicto onSubmit={this.handleModifyClik} picto={this.props.apiObject} onCloseModal={this.closeModal}/>
 
               </ReactModal>
             </div>

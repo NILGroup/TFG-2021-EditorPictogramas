@@ -64,14 +64,14 @@ render() {
 
 
     <div>
-      <div>
+      {/* <div>
         <FileDrop
           onDrop={(files) => this.drag_and_dropFile(files)}
         >
           Arrastra tus fotos aquí
         </FileDrop>
 
-      </div>
+      </div> */}
       <input type="file" onChange={this.handleChange} />
       <img height='100px' width='100px' src={this.state.photo} />
       <button onClick={() => this.sendPhoto(this.state.file)}>+</button>
