@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Rnd from 'react-rnd';
 import IconButton from '../Icon/IconButton';
-import {FormPicto} from './Form/formTextItem'
+import FormPicto from './Form/formTextItem'
 import ReactModal from 'react-modal';
 
 
@@ -345,36 +345,31 @@ class TextIcon extends Component {
   }
 
   handleModifyClik(event) {
-    
-    console.log(event.target.textLabel.value)
-    console.log(event.target.myColor.value)
-    console.log(event.target.bold.checked)
-    console.log(event.target.italic.checked)
-    console.log(event.target.underline.checked)
-    this.setState({  
-      label: event.target.textLabel.value,
-      fontColor : event.target.myColor.value,
-      isBold: event.target.bold.checked,
-      isItalic: event.target.italic.checked,
-      isUnderline: event.target.underline.checked,
+
+    console.log(event)
+
+    this.setState({
+      label: event.text,
+      fontColor: event.fontColor,
     })
 
-    event.preventDefault();
+    this.closeModal()
+    //event.preventDefault();
   }
 
   //Funciones de aumentar o disminuir el texto
   handleIncreaseText = () => {
     console.log(this.state.fontSize)
-    if(this.state.fontSize <= this.state.defaultFontSize*6){
-      this.setState({  
+    if (this.state.fontSize <= this.state.defaultFontSize * 6) {
+      this.setState({
         fontSize: this.state.fontSize * 1.2
       })
     }
   }
-  handleReduzeText = () =>{
+  handleReduceText = () => {
     console.log(this.state.fontSize)
-    if(this.state.fontSize <= this.state.defaultFontSize){
-      this.setState({  
+    if (this.state.fontSize * 6 >= this.state.defaultFontSize) {
+      this.setState({
         fontSize: this.state.fontSize * 0.8
       })
     }
@@ -408,7 +403,7 @@ class TextIcon extends Component {
       'dnd-canvas__object--editing': this.state.isEditing
     });
 
-    var modalStyles = {overlay: {zIndex: 10}};
+    var modalStyles = { overlay: { zIndex: 10 } };
 
     return (
       <Rnd
@@ -420,23 +415,33 @@ class TextIcon extends Component {
         minWidth={this.props.minWidth * this.props.gridInterval}
         minHeight={this.props.minHeight * this.props.gridInterval}
         bounds="parent"
-        z={this.state.zIndex}
+        z="3"
         onDragStart={this.increaseZIndex}
         onDragStop={this.handleDragStop}
         onResizeStop={this.handleResizeStop}
         enableResizing={this.resizeHandles}
-        //lockAspectRatio={this.lockAspectRatio}
+      //lockAspectRatio={this.lockAspectRatio}
       >
         <div>
+          <div>
+            <IconButton
+              assistiveText={"Borrar " + this.props.label}
+              ariaDescribedby={this.props.editAriaDescribedby}
+              className="dnd-canvas__object-button dnd-canvas__object-button--resize"
+              sprite="utility"
+              symbol="close"
+              onClick={this.handleRemoveClick}
+              onKeyDown={this.handleEditKeyDown} />
+          </div>
           <div className="slds-p-vertical_medium slds-text-heading_small">
-          <text style={{ 
-            fontSize: ( this.state.fontSize),
-            color: (this.state.fontColor),
-            fontFamily: this.state.fontFamily
+            <text style={{
+              fontSize: (this.state.fontSize),
+              color: (this.state.fontColor),
+              fontFamily: this.state.fontFamily
 
-            }}> 
-            {this.state.label}
-          </text>
+            }}>
+              {this.state.label}
+            </text>
           </div>
 
           <div className="dnd-canvas__object-buttons">
@@ -447,15 +452,15 @@ class TextIcon extends Component {
               sprite="utility"
               symbol="zoomin"
               onClick={this.handleIncreaseText}
-            />  
+            />
 
             <IconButton
               ariaDescribedby={this.props.moveAriaDescribedby}
               className="dnd-canvas__object-button dnd-canvas__object-button--move"
               sprite="utility"
               symbol="zoomout"
-              onClick={this.handleReduzeText}
-              />
+              onClick={this.handleReduceText}
+            />
 
             <IconButton
               assistiveText={"Resize " + this.props.label}
@@ -470,30 +475,21 @@ class TextIcon extends Component {
               ariaDescribedby={this.props.editAriaDescribedby}
               className="dnd-canvas__object-button dnd-canvas__object-button--edit"
               sprite="utility"
-              symbol="delete"
-              onClick={this.handleRemoveClick}
-              onKeyDown={this.handleEditKeyDown} 
-            />
-
-            <IconButton
-              ariaDescribedby={this.props.editAriaDescribedby}
-              className="dnd-canvas__object-button dnd-canvas__object-button--edit"
-              sprite="utility"
               symbol="edit"
               onClick={this.openModal}
             />
 
             <div>
-              <ReactModal 
+              <ReactModal
                 isOpen={this.state.modalIsOpen}
-                contentLabel="Selected Option" 
+                contentLabel="Selected Option"
                 onRequestClose={this.closeModal}
                 className="Modal"
                 ariaHideApp={false}
-                style={ modalStyles}>
+                style={modalStyles}>
                 {/* <button onClick={this.closeModal}>X</button>    */}
 
-                <FormPicto onSubmit={this.handleModifyClik} />  
+                <FormPicto onSubmit={this.handleModifyClik} text={this.state.label} onCloseModal={this.closeModal}/>
 
               </ReactModal>
             </div>
