@@ -336,13 +336,13 @@ class CanvasItem extends Component {
     handleRemoveClick(event) {
         const isEditing = !this.state.isEditing;
         this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
-    
+
         if (isEditing) {
-          console.log("estamos en item y pasamos el id", this.props.idPicto)
-          this.props.sendData(this.props.idPicto); //etiqueta del picto
+            console.log("estamos en item y pasamos el id", this.props.idPicto)
+            this.props.sendData(this.props.idPicto); //etiqueta del picto
         }
-        
-      }
+
+    }
 
     /** ---- Resizing element END ---- **/
 
@@ -354,18 +354,8 @@ class CanvasItem extends Component {
             'dnd-canvas__object--editing': this.state.isEditing
         });
 
-        let localPhoto = ""
-
-        if (this.props.imageSRC == undefined) {
-            localPhoto = ""
-        }
-        else {
-            localPhoto = process.env.PUBLIC_URL + "./img/" + this.props.imageSRC
-        }
-
-
         return (
-            
+
             <Rnd
                 ref={c => { this.rnd = c; }}
                 className={itemClasses}
@@ -380,35 +370,24 @@ class CanvasItem extends Component {
                 onDragStop={this.handleDragStop}
                 onResizeStop={this.handleResizeStop}
                 enableResizing={this.resizeHandles}
-                lockAspectRatio={1/1}
+                lockAspectRatio={1}
             >
-
-                <img src={this.props.imageURL}/>
-                {this.props.label}
-
-                <div className="dnd-canvas__object-buttons">
-                <IconButton
-                    assistiveText={"Resize " + this.props.label}
-                    ariaDescribedby={this.props.resizeAriaDescribedby}
-                    className="dnd-canvas__object-button dnd-canvas__object-button--resize"
-                    sprite="custom"
-                    symbol="corner_drag"
-                    onClick={this.handleResizeClick}
-                    onKeyDown={this.handleResizeKeyDown} 
-                />
-
-                <IconButton
-                    assistiveText={"Borrar " + this.props.label}
-                    ariaDescribedby={this.props.editAriaDescribedby}
-                    className="dnd-canvas__object-button dnd-canvas__object-button--edit"
-                    sprite="utility"
-                    symbol="delete"
-                    onClick={this.handleRemoveClick}
-                    onKeyDown={this.handleEditKeyDown} 
-                />
+                <div>
+                    <IconButton
+                        assistiveText={"Borrar Foto"}
+                        ariaDescribedby={this.props.editAriaDescribedby}
+                        className="dnd-canvas__object-button dnd-canvas__object-button--resize"
+                        sprite="utility"
+                        symbol="close"
+                        onClick={this.handleRemoveClick}
+                        onKeyDown={this.handleEditKeyDown} />
                 </div>
 
-
+                <img src={this.props.imageURL} />
+                <blockquote className="blockquote">
+                    <p className="mb-0">{this.props.label}</p>
+                </blockquote>
+                
             </Rnd>
         );
     }

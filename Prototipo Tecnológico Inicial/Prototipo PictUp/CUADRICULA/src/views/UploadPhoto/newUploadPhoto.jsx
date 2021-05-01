@@ -11,9 +11,12 @@ class Upload extends React.Component {
     super(props)
     this.state = {
       file: null,
-      photo: null
+      photo: null,
+      isLoaded: false,
+      text: null,
     }
     this.handleChange = this.handleChange.bind(this)
+    this.upload = this.upload.bind(this);
   }
 
   handleChange(event) {
@@ -22,49 +25,88 @@ class Upload extends React.Component {
 
     this.setState({
       file: event.target.files[0],
-      photo: URL.createObjectURL(event.target.files[0])
+      isLoaded: true,
+      photo: URL.createObjectURL(event.target.files[0]),
     })
 
     console.log(URL.createObjectURL(event.target.files[0]))
   }
 
   sendPhoto = (e) => {
-
+    console.log(this.state.text)
     const img = new Image();
     img.src = window.URL.createObjectURL(e);
     img.addEventListener('load', () => {
       var file = {
         url: URL.createObjectURL(e),
         width: img.width,
-        height: img.height
+        height: img.height,
+        text: this.state.text,
       }
       this.props.sendData(file);
     });
-  
+
     //this.props.sendData(e);
   }
 
-drag_and_dropFile = (loadedFiles) => {
+  drag_and_dropFile = (loadedFiles) => {
 
-  var files = loadedFiles
+    var files = loadedFiles
 
-  for (var i = 0; i < files.length; i++) {
-    console.log(files[i])
-    console.log(URL.createObjectURL(files[i]))
-    this.props.sendData(files[i]);
+    for (var i = 0; i < files.length; i++) {
+      console.log(files[i])
+      console.log(URL.createObjectURL(files[i]))
+      this.props.sendData(files[i]);
+    }
   }
 
+  upload(event) {
+    event.preventDefault();
+    this.dofileUpload.click()
+  }
+
+  renderFoto() {
+    if (this.state.isLoaded) {
+      return (
 
 
-}
+        <div className="container">
+          <div className="row p-2">
+            <div className="col">
+              <img src={this.state.photo} />
+            </div>
+          </div>
+          <div className="row">
 
-render() {
-  return (
+          </div>
+          <div className="row p-2">
+            <div className="col-9">
+              <div className="input-group input-group-lg">
+                <input type="text" placeholder="Texto inferior..." className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" 
+                  onChange={e => this.setState({ text: e.target.value })}
+                />
+              </div>
+            </div>
+            <div className="col-3">
+              <button className="btn btn-success btn-lg" onClick={() => this.sendPhoto(this.state.file)}>
+                <i className="fas fa-plus"></i>
+
+              </button>
+
+            </div>
+          </div>
+        </div>
 
 
 
-    <div>
-      {/* <div>
+      )
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        {/* <div>
         <FileDrop
           onDrop={(files) => this.drag_and_dropFile(files)}
         >
@@ -72,11 +114,27 @@ render() {
         </FileDrop>
 
       </div> */}
-      <input type="file" onChange={this.handleChange} />
-      <img height='100px' width='100px' src={this.state.photo} />
-      <button onClick={() => this.sendPhoto(this.state.file)}>+</button>
-    </div>
-  );
-}
+        <div className="container">
+          <div className="row p-2">
+            <p>
+              <button className="btn btn-outline-info " onClick={this.upload}><i className="far fa-image"></i>
+                &nbsp; Cargar foto
+              </button>
+            </p>
+          </div>
+        </div>
+
+
+        <input type="file" className="hidden" style={{ display: 'none' }}
+          multiple={false}
+          accept=".png, .gif, .jpeg, .jpg"
+          onChange={evt => this.handleChange(evt)}
+          ref={e => this.dofileUpload = e}
+        />
+        {this.renderFoto()}
+
+      </div>
+    );
+  }
 }
 export default Upload;
