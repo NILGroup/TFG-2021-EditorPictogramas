@@ -104,10 +104,10 @@ class ARASAAC extends Component {
 
 				<div className="input-group mb-3">
 					<div className="input-group-prepend">
-						<button className="btn btn-outline-primary" title="Buscar Picto">
+						<button className="btn btn-outline-primary" title="Buscar Pictograma">
 							<span className="fas fa-search"></span>
 						</button>
-						<button className="btn btn-outline-secondary" title="Pictos recientes" onClick={this.recentPictos}>
+						<button className="btn btn-outline-secondary" title="Pictogramas buscados recientemente" onClick={this.recentPictos}>
 							<span className="fas fa-history"></span>
 						</button>
 					</div>
@@ -127,9 +127,9 @@ class ARASAAC extends Component {
 								<div className="card-body">
 									<h5 className="card-title text-center">{item.keywords[0].keyword}</h5>
 									<div className="btn-group" role="group">
-										<button className="btn-sm btn-primary" onClick={() => this.sendSelectedPicto(item)}>
+										<button className="btn-sm btn-primary" title="Añadir pictograma al tablero" onClick={() => this.sendSelectedPicto(item)}>
 											<i className="fas fa-plus"></i></button>
-										<button className="btn-sm btn-outline-primary" onClick={() => this.sendSelectedCollection(item)}>
+										<button className="btn-sm btn-outline-primary" title="Añadir el pictograma a mis listas de pictogramas" onClick={() => this.sendSelectedCollection(item)}>
 											<span className="fas fa-th"></span>
 										</button>
 									</div>

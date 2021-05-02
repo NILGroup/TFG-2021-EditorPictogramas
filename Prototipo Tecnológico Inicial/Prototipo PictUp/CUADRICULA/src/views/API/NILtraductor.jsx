@@ -261,7 +261,7 @@ class NILtraductor extends Component {
             <div className="cajon">
                 <div className="input-group mb-3">
                     <div className="input-group-prepend">
-                        <button className="btn btn-outline-primary" title="Traduccion a Picto" onClick={this.fetchInputQuery}>
+                        <button className="btn btn-outline-primary" title="Traducción de la frase" onClick={this.fetchInputQuery}>
                             <span className="fas fa-search"></span>
                         </button>
 

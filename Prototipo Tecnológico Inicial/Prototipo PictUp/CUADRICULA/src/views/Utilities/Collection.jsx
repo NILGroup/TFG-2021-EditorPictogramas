@@ -161,8 +161,8 @@ export class Collection extends React.Component {
 
         <div className="container">
           <div className="row mb-2 mt-2">
-            <button className="btn btn-outline-info btn-sm" onClick={this.download}><i className="fas fa-file-download"></i> 
-              &nbsp; Exportar colecciones
+            <button className="btn btn-outline-info btn-sm" title="Guarda el estado de tus listas de pictogramas" onClick={this.download}><i className="fas fa-file-download"></i> 
+              &nbsp; Exportar mis listas de pictogramas
             </button>
 
             <a className="hidden"
@@ -171,8 +171,8 @@ export class Collection extends React.Component {
               ref={e => this.dofileDownload = e}
             ></a>
 
-            <p><button className="btn btn-outline-info btn-sm ml-2" onClick={this.upload}><i className="fas fa-file-upload"></i> 
-              &nbsp; Importar colecciones
+            <p><button className="btn btn-outline-info btn-sm ml-2" title="Carga el estado de tus listas de pictogramas" onClick={this.upload}><i className="fas fa-file-upload"></i> 
+              &nbsp; Importar mis listas de pictogramas
             </button></p>
 
             <input type="file" className="hidden" style={{display: 'none'}}

@@ -62,6 +62,7 @@ export class DragOnCanvasExample extends React.Component {
     }
 
     this.state = {
+      tipoDeAlerta: "",
       selectedColection: "---", //numero de la colección seleccionada
       pictoArray: [],
       photoArray: [],
@@ -442,7 +443,7 @@ export class DragOnCanvasExample extends React.Component {
 
   addToCollection = () => {
     console.log(this.Id);
-    if(this.state.colection.length == 0){
+    if (this.state.colection.length == 0) {
       alert("No hay ninguna colección, crea una nueva.");
     }
     else if (this.nameSelected == "---") {
@@ -466,15 +467,15 @@ export class DragOnCanvasExample extends React.Component {
 
     var existe = false;
 
-    if(this.state.colection.length != 0){
-      for(var i=0; i<this.state.colection.length && !existe; i++){
-        if(this.state.colection[i].name == this.NewName){
+    if (this.state.colection.length != 0) {
+      for (var i = 0; i < this.state.colection.length && !existe; i++) {
+        if (this.state.colection[i].name == this.NewName) {
           existe = true;
         }
       }
     }
 
-    if(existe){
+    if (existe) {
       alert("Ya existe otra colección con el mismo nombre.");
     }
     else if (this.NewName == "") {
@@ -489,7 +490,11 @@ export class DragOnCanvasExample extends React.Component {
       console.log(nueva);
       this.setState({ colection: nueva });
       console.log(this.state.colection);
-      this.NewName=""; //reseteamos valor
+      this.NewName = ""; //reseteamos valor
+      this.setState({
+        tipoDeAlerta: "Creada nueva lista de pictogramas"
+      })
+      this.handleCloseModal();
     }
   }
 
@@ -514,6 +519,27 @@ export class DragOnCanvasExample extends React.Component {
     }
   }
 
+
+  reseteaAlert = () => {
+    this.setState({
+      tipoDeAlerta: ""
+    })
+  }
+
+  mostrarAletrs = () => {
+
+    if (this.state.tipoDeAlerta != "") {
+      return (
+        <div className="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{this.state.tipoDeAlerta} </strong>
+          <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={this.reseteaAlert}>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      )
+    }
+  }
+
   render() {
 
     let optionColection = this.state.colection.map(c => (
@@ -533,6 +559,8 @@ export class DragOnCanvasExample extends React.Component {
 
               {/* <NIL /> */}
 
+              {this.mostrarAletrs()}
+              
               <div className="ml-3">
                 <Tabs>
                   <TabList>
@@ -572,7 +600,7 @@ export class DragOnCanvasExample extends React.Component {
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
-                      <h5 className="modal-title" id="exampleModalLabel">Crea o añade a una colección el pictograma <img style={{border: '1px solid', color: 'black', borderRadius: '10' }} src={'https://api.arasaac.org/api/pictograms/' + this.Id._id} width="90" height="90"></img></h5>
+                      <h5 className="modal-title" id="exampleModalLabel">Crea o añade a una colección el pictograma <img style={{ border: '1px solid', color: 'black', borderRadius: '10' }} src={'https://api.arasaac.org/api/pictograms/' + this.Id._id} width="90" height="90"></img></h5>
                       <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.handleCloseModal}>
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -594,7 +622,7 @@ export class DragOnCanvasExample extends React.Component {
                             </select>
                           </div>
                           <div className="modal-footer border-0">
-                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.addToCollection}>Añadir a colección</button>
+                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.addToCollection}>Añadir a mi lista de pictogramas</button>
                           </div>
                         </TabPanel>
                         <TabPanel>
@@ -603,7 +631,7 @@ export class DragOnCanvasExample extends React.Component {
                             <input className="form-control mt-3" type="text" onBlur={this.setNameCollection} />
                           </div>
                           <div className="modal-footer border-0">
-                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.newCollection}>Nueva colección</button>
+                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.newCollection}>Nueva lista de pictogramas</button>
                           </div>
                         </TabPanel>
                       </Tabs>
@@ -624,7 +652,7 @@ export class DragOnCanvasExample extends React.Component {
                         <input type="text" className="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
 
                         <div className="input-group-prepend">
-                          <button type="button" className="btn btn-outline-secondary" onClick={this.addText}>+
+                          <button type="button" className="btn btn-outline-secondary" title="Añadir el texto al tablero " onClick={this.addText}>+
                           <a style={{ fontFamily: this.state.selectedFont }}>Texto</a>
                           </button>
                         </div>
@@ -641,11 +669,11 @@ export class DragOnCanvasExample extends React.Component {
                       </div>
                     </div>
                     <div className="row mt-2 ml-4">
-                      <button className="btn btn-outline-info btn-sm ml-3" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i> Añadir linea</button>
+                      <button className="btn btn-outline-info btn-sm ml-3" title="Añadir una linea al tablero" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i> Añadir linea</button>
 
-                      <button className="btn btn-outline-info btn-sm ml-1" onClick={this.addFigure}><i className="far fa-square"></i> Añadir figura</button>
+                      <button className="btn btn-outline-info btn-sm ml-1" title="Añadir un cuadrado al tablero" onClick={this.addFigure}><i className="far fa-square"></i> Añadir cuadrado</button>
 
-                      <button className="btn btn-outline-info ml-2" onClick={this.modalDownloadOpen}>
+                      <button className="btn btn-outline-info ml-2" title="Descargar el tablero como imagen" onClick={this.modalDownloadOpen}>
                         <i className="fas fa-file-image"></i>
                         &nbsp; Descargar Tablero
                       </button>
@@ -740,7 +768,7 @@ export class DragOnCanvasExample extends React.Component {
               </div> */}
 
               <div className="card mt-4 mb-3 ml-3" >
-                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong>Colecciones</strong></h5>
+                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong>Mis listas de pictogramas</strong></h5>
                 <div className="card-body">
                   <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
                   <div className="card-text">
@@ -755,97 +783,91 @@ export class DragOnCanvasExample extends React.Component {
                 </div>
               </div>
 
-              {/* <select className="form-control" value={this.state.value} onChange={this.coleccionToShow}>
-                <option value={"---"}>{ }</option>
-                {optionColection}
-              </select>
-
-              {this.mostrarColecciones()} */}
-              {/* <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[0].idPicto} /> */}
 
             </div>
             <div className="col-8" id="tableroPrint">
-              {/* Pintar Canvas  */}
-              <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
-                {
-                  this.state.pictoArray.map((picto, index) => {
-                    return (
 
-                      <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={7} height={10} minWidth={3} minHeight={3} key={picto.id}
-                        imageURL={'https://api.arasaac.org/api/pictograms/' + picto.picto_id}
-                        sendData={this.handleData}
-                      />
-                    )
-                  })
-                }
+            {/* Pintar Canvas  */}
+            <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
+              {
+                this.state.pictoArray.map((picto, index) => {
+                  return (
 
-                {
-                  this.state.photoArray.map((photo, index) => {
-                    return (
+                    <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={7} height={10} minWidth={3} minHeight={3} key={picto.id}
+                      imageURL={'https://api.arasaac.org/api/pictograms/' + picto.picto_id}
+                      sendData={this.handleData}
+                    />
+                  )
+                })
+              }
 
-                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={15} minWidth={3} minHeight={3} key={photo.id}
-                        imageURL={photo.url}
-                        sendData={this.handleDeleteImage}
-                      />
-                    )
-                  })
-                }
+              {
+                this.state.photoArray.map((photo, index) => {
+                  return (
 
-
-                {
-                  this.state.textArray.map((text, index) => {
-                    return (
-
-                      <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
-                        fontFamily={this.state.selectedFont}
-                        sendData={this.handleDeleteText}
-                      />
-                    )
-                  })
-                }
-
-                {
-                  this.state.lineArray.map((line, index) => {
-                    return (
-
-                      <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
-                        sendData={this.handleDeleteLine}
-                      />
-                    )
-                  })
-                }
-
-                {
-                  this.state.figureArray.map((figure) => {
-                    return (
-
-                      <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
-                        sendData={this.handleDeleteFigure}
-                      />
-                    )
-                  })
-                }
-
-                {
-                  this.state.fraseArray.map((frase) => {
-                    return (
-
-                      <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
-                        deleteItem={this.handleDeleteFrase} />
+                    <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={15} minWidth={3} minHeight={3} key={photo.id}
+                      imageURL={photo.url}
+                      sendData={this.handleDeleteImage}
+                    />
+                  )
+                })
+              }
 
 
-                    )
-                  })
-                }
+              {
+                this.state.textArray.map((text, index) => {
+                  return (
 
-                {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
+                    <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
+                      fontFamily={this.state.selectedFont}
+                      sendData={this.handleDeleteText}
+                    />
+                  )
+                })
+              }
+
+              {
+                this.state.lineArray.map((line, index) => {
+                  return (
+
+                    <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
+                      sendData={this.handleDeleteLine}
+                    />
+                  )
+                })
+              }
+
+              {
+                this.state.figureArray.map((figure) => {
+                  return (
+
+                    <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
+                      sendData={this.handleDeleteFigure}
+                    />
+                  )
+                })
+              }
+
+              {
+                this.state.fraseArray.map((frase) => {
+                  return (
+
+                    <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
+                      deleteItem={this.handleDeleteFrase} />
+
+
+                  )
+                })
+              }
+
+              {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
           <CanvasItem label="NIÑO" x={6} y={12} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"niño.png"} /> */}
 
-              </Canvas>
-            </div>
+            </Canvas>
           </div>
         </div>
       </div>
+      </div >
 
 
 
