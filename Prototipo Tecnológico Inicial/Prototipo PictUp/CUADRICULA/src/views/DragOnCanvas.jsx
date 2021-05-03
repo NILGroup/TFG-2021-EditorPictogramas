@@ -63,6 +63,8 @@ export class DragOnCanvasExample extends React.Component {
 
     this.state = {
       tipoDeAlerta: "",
+      coleccionExistente: false,
+      borrando: "-1",
       selectedColection: "---", //numero de la colección seleccionada
       pictoArray: [],
       photoArray: [],
@@ -426,13 +428,24 @@ export class DragOnCanvasExample extends React.Component {
   }
 
   coleccionToShow = (e) => {
+    this.setState({
+      borrando: "-1"
+    })
+    var encontrado = false;
     for (var i = 0; i < this.state.colection.length; i++) {
       if (this.state.colection[i].name === e.target.value) {
+        encontrado = true;
         this.setState({
           selectedColection: i
         });
       }
     }
+    if (!encontrado) {
+      this.setState({
+        selectedColection: "---"
+      });
+    }
+
     console.log(this.state.selectedColection);
   }
 
@@ -512,11 +525,45 @@ export class DragOnCanvasExample extends React.Component {
 
   mostrarColecciones = () => {
     console.log(this.state.selectedColection);
-    if (this.state.selectedColection != "---") {
+    if (this.state.selectedColection != "---" &&  this.state.selectedColection != this.state.borrando) {
       return (
         <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[this.state.selectedColection].idPicto} />
       )
+    }else if (this.state.selectedColection == this.state.borrando){
+      //comprobar que no sea la ultima colección
+      if(this.state.borrando < this.state.colection.length){
+        return (
+          <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[this.state.borrando].idPicto} />
+        )
+      }
     }
+  }
+
+
+  borrarColeccion = () => {
+    console.log(this.state.selectedColection);
+    const copyPostArray = Object.assign([], this.state.colection);
+    var posBorrar = this.state.selectedColection;
+
+    copyPostArray.splice(posBorrar, 1);
+    this.setState({
+      colection: copyPostArray
+    })
+
+    this.setState({
+      borrando: this.state.selectedColection
+    })
+  
+
+  }
+
+  mostrarBorrar = () => {
+    if (this.state.selectedColection != "---"){
+      return (
+        <button type="button" className="btn btn-outline-danger" onClick={this.borrarColeccion}><i className="fas fa-trash-alt" ></i> Borrar lista</button>
+      )
+    }
+      
   }
 
 
@@ -560,7 +607,7 @@ export class DragOnCanvasExample extends React.Component {
               {/* <NIL /> */}
 
               {this.mostrarAletrs()}
-              
+
               <div className="ml-3">
                 <Tabs>
                   <TabList>
@@ -772,11 +819,17 @@ export class DragOnCanvasExample extends React.Component {
                 <div className="card-body">
                   <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
                   <div className="card-text">
-                    <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
-                      <option value={"---"}>{ }</option>
-                      {optionColection}
-                    </select>
-
+                    <div className="row">
+                      <div className="col-8">
+                        <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
+                          <option value={"---"}>{ }</option>
+                          {optionColection}
+                        </select>
+                      </div>
+                      <div className="col-4 mt-3 mb-2">
+                        {this.mostrarBorrar()}
+                      </div>
+                    </div>
                     {this.mostrarColecciones()}
 
                   </div>
@@ -787,86 +840,86 @@ export class DragOnCanvasExample extends React.Component {
             </div>
             <div className="col-8" id="tableroPrint">
 
-            {/* Pintar Canvas  */}
-            <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
-              {
-                this.state.pictoArray.map((picto, index) => {
-                  return (
+              {/* Pintar Canvas  */}
+              <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
+                {
+                  this.state.pictoArray.map((picto, index) => {
+                    return (
 
-                    <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={7} height={10} minWidth={3} minHeight={3} key={picto.id}
-                      imageURL={'https://api.arasaac.org/api/pictograms/' + picto.picto_id}
-                      sendData={this.handleData}
-                    />
-                  )
-                })
-              }
+                      <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={7} height={10} minWidth={3} minHeight={3} key={picto.id}
+                        imageURL={'https://api.arasaac.org/api/pictograms/' + picto.picto_id}
+                        sendData={this.handleData}
+                      />
+                    )
+                  })
+                }
 
-              {
-                this.state.photoArray.map((photo, index) => {
-                  return (
+                {
+                  this.state.photoArray.map((photo, index) => {
+                    return (
 
-                    <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={15} minWidth={3} minHeight={3} key={photo.id}
-                      imageURL={photo.url}
-                      sendData={this.handleDeleteImage}
-                    />
-                  )
-                })
-              }
-
-
-              {
-                this.state.textArray.map((text, index) => {
-                  return (
-
-                    <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
-                      fontFamily={this.state.selectedFont}
-                      sendData={this.handleDeleteText}
-                    />
-                  )
-                })
-              }
-
-              {
-                this.state.lineArray.map((line, index) => {
-                  return (
-
-                    <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
-                      sendData={this.handleDeleteLine}
-                    />
-                  )
-                })
-              }
-
-              {
-                this.state.figureArray.map((figure) => {
-                  return (
-
-                    <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
-                      sendData={this.handleDeleteFigure}
-                    />
-                  )
-                })
-              }
-
-              {
-                this.state.fraseArray.map((frase) => {
-                  return (
-
-                    <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
-                      deleteItem={this.handleDeleteFrase} />
+                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={15} minWidth={3} minHeight={3} key={photo.id}
+                        imageURL={photo.url}
+                        sendData={this.handleDeleteImage}
+                      />
+                    )
+                  })
+                }
 
 
-                  )
-                })
-              }
+                {
+                  this.state.textArray.map((text, index) => {
+                    return (
 
-              {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
+                      <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
+                        fontFamily={this.state.selectedFont}
+                        sendData={this.handleDeleteText}
+                      />
+                    )
+                  })
+                }
+
+                {
+                  this.state.lineArray.map((line, index) => {
+                    return (
+
+                      <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
+                        sendData={this.handleDeleteLine}
+                      />
+                    )
+                  })
+                }
+
+                {
+                  this.state.figureArray.map((figure) => {
+                    return (
+
+                      <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
+                        sendData={this.handleDeleteFigure}
+                      />
+                    )
+                  })
+                }
+
+                {
+                  this.state.fraseArray.map((frase) => {
+                    return (
+
+                      <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
+                        deleteItem={this.handleDeleteFrase} />
+
+
+                    )
+                  })
+                }
+
+                {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
           <CanvasItem label="NIÑO" x={6} y={12} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"niño.png"} /> */}
 
-            </Canvas>
+              </Canvas>
+            </div>
           </div>
         </div>
-      </div>
       </div >
 
 
