@@ -54,24 +54,16 @@ class NILtraductor extends Component {
         })
             .then(response => response.json())
             .then(result => {
-                this.setState({ tradPic: result.traduccion  } ,() => this.parseFrase(result))
+                this.setState({ tradPic: result.traduccion }, () => this.parseFrase(result))
                 //console.log(result)
 
             }
             )
-        // fetch('http://localhost:5000/getData')
-        //     .then(response => response.json())
-        //     .then(data => console.log(data));
-
     }
 
-    parseFrase(result){
-        if(!result.ok){
-            //No se ha encontrado traduccion
-            return;
-        }
+    parseFrase(result) {
 
-        let trad = result.traduccion
+        let trad = result
 
         console.log(trad)
 
@@ -79,11 +71,21 @@ class NILtraductor extends Component {
         let cont = 0
         let select = []
         for (let i = 0; i < trad.length; i++) {
-            const lema = trad[i];
-            if(!lema.pictogramas.length == 0){
+            var lema = trad[i];
+            if (lema.length > 5) lema = lema.slice(0, 4)
+
+            var idList = []
+
+            for (let j = 0; j < lema.length; j++) {
+                const id = lema[j]._id;
+                idList.push(id)
+            }
+
+            if (!lema.length == 0) {
                 res.push({
-                    lema: lema.lema,
-                    pictos: lema.pictogramas,
+                    lema: lema[0].keywords[0].keyword,
+                    pictos: idList,
+                    api_object: lema,
                     pos: cont
                 })
 
@@ -120,13 +122,7 @@ class NILtraductor extends Component {
         if (this.state.isTraduced) {
             return (
                 <div id="div1" className="row pl-4">
-
-                    <button className="btn btn-success btn-sm ml-2" onClick={() => this.frase2Canvas()}>
-                        Colocar frase al tablero &nbsp;
-                        <i className="fas fa-arrow-right"></i>
-                    </button>
-
-                    <div className="row row-cols-3 row-cols-md-4 g-5">
+                    <div className="row row-cols-3 row-cols-md-5 g-5">
                         {this.state.lemasRaw.map(lema => (
                             this.renderItem(lema, this.state.selected[lema.pos])
                         ))}
@@ -141,45 +137,74 @@ class NILtraductor extends Component {
         var reroll
         if (item.pictos.length != 1) {
             reroll =
-                <button className="btn-sm btn-outline-primary"
-                    onClick={() => this.changeSelected(item.pictos, i, item.pos)}>
-                    <span className="fas fa-redo-alt"></span>
-                </button>
+
+                <div className="col-3">
+                    <div className="row">
+                        <button className="btn-sm btn-outline-secondary"
+                            onClick={() => this.changeSelected(item.pictos, i, item.pos, 1)}>
+                            <span className="fas fa-angle-up"></span>
+                        </button>
+                    </div>
+                    <div className="row">
+                        <button className="btn-sm btn-outline-secondary"
+                            onClick={() => this.changeSelected(item.pictos, i, item.pos, -1)}>
+                            <span className="fas fa-angle-down"></span>
+                        </button>
+                    </div>
+                </div>
         }
 
         return (
             <div className="card">
 
                 <img className="card-img-top"
-                    src={'http://hypatia.fdi.ucm.es/conversor/Pictos/' + item.pictos[i]}
+                    src={'https://api.arasaac.org/api/pictograms/' + item.pictos[i]}
                     // alt={item}
                     sizes="40px" srcset="50px"
                 />
 
-                <div className="card-body">
-                    <h5 className="card-title text-center">{item.lema}</h5>
-                    <div className="btn-group" role="group">
-                        {/* <button className="btn-sm btn-primary" onClick={() => this.sendSelectedPicto(item)}>
-                            <i className="fas fa-plus"></i>
-                        </button> */}
-                        {reroll}
+                <div className="container">
+                    <h5 className="card-title text-center">{item.api_object[i].keywords[0].keyword}</h5>
 
+                    <div className="row justify-content-center">
+                        {reroll}
+                        <div className="col-6">
+                            <button className="btn btn-primary btn-lg" onClick={() => this.sendSelectedPicto(item.api_object[i])}>
+                                <i className="fas fa-plus"></i>
+                            </button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         )
     }
 
-    changeSelected = (item, selPosItem, pos) => {
+    //dir = 1, avanza || dir = -1 retorocede en la lista
+    changeSelected = (item, selPosItem, pos, dir) => {
 
         console.log(item, selPosItem, item.length)
         var selAux = this.state.selected
-
-        if (item.length - 1 > selPosItem) {
-            selAux[pos]++
+        //palante
+        if (dir === 1) {
+            if (item.length - 1 > selPosItem) {
+                selAux[pos]++
+            }
+            else if (item.length - 1 == selPosItem) {
+                selAux[pos] = 0
+            }
         }
-        else if (item.length - 1 == selPosItem) {
-            selAux[pos] = 0
+
+
+        if (dir === -1) {
+            console.log("atras",selAux[pos])
+            if (selPosItem != 0) {
+                selAux[pos] = selAux[pos] - 1
+            }
+            else if (selPosItem == 0) {
+                selAux[pos] = item.length - 1
+            }
+            console.log("atras",selAux[pos])
         }
 
         this.setState({
@@ -190,12 +215,12 @@ class NILtraductor extends Component {
 
     }
 
-    
+
     fetchInputQuery = (event) => {
         this.sendQuery(event.target.value)
         event.preventDefault();
     };
-    
+
     keyPress = (event) => {
         //Al pulsar Intro reaaliza la consulta
         if (event.keyCode === 13) {
@@ -214,7 +239,23 @@ class NILtraductor extends Component {
 
     //Realizar consulta
     sendQuery() {
-        this.postNIL(this.state.query)
+        //this.postNIL(this.state.query)
+        this.tradARASAAC(this.state.query.split(" "))
+    }
+
+    tradARASAAC = (frase) => {
+        const promises = frase.map(item => {
+            return fetch(`https://api.arasaac.org/api/pictograms/es/search/` + item)
+                .then(response => {
+                    return response.json()
+                });
+        });
+
+        Promise.all(promises).then(results => {
+            const palabras = results.map(result => result);
+            console.log(palabras);
+            this.setState({ tradPic: palabras }, () => this.parseFrase(palabras));
+        })
     }
 
     //Envia información del pictograma seleccionado a la capa superior
@@ -237,11 +278,12 @@ class NILtraductor extends Component {
 
         //Recorremos el array de lemas para guardar los lemas seleccionados
         //Siendo los seleccionados, los que se ven en pantalla ()
+        //http://hypatia.fdi.ucm.es/conversor/Pictos/
         for (let i = 0; i < lemas.length; i++) {
             const lema = lemas[i];
             res.push({
                 lema: lema.lema,
-                url: "http://hypatia.fdi.ucm.es/conversor/Pictos/" + lema.pictos[sel[i]]
+                url: "https://api.arasaac.org/api/pictograms/" + lema.pictos[sel[i]]
             })
         }
 
@@ -267,6 +309,12 @@ class NILtraductor extends Component {
 
                     </div>
                     <input type="text" className="form-control" placeholder='Traduccion a Picto' onChange={this.keyPress} onKeyDown={this.keyPress} />
+
+                    <button className="btn btn-success btn-sm ml-2" onClick={() => this.frase2Canvas()} disabled={!this.state.isTraduced}>
+                        Colocar al tablero &nbsp;
+                        <i className="fas fa-arrow-right"></i>
+                    </button>
+
                     {/* onBlur={this.fetchInputQuery} onKeyDown={this.keyPress}*/}
                 </div>
 

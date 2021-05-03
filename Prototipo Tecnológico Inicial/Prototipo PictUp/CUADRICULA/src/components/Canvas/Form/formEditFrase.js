@@ -6,7 +6,7 @@ class FormEditFrase extends Component {
         super(props);
 
         this.state = {
-            textFrase: this.props.text,
+            textFrase: this.props.texto,
             arrayPictos: this.props.frase,
             selected: this.props.selected
         }
@@ -24,12 +24,16 @@ class FormEditFrase extends Component {
         })
     }
 
-    handleSubmit(){
+    handleSubmit() {
         var aux = {
             text: this.state.textFrase,
             selected: this.state.selected
         }
         this.props.onSubmit(aux)
+    }
+    
+    closeModal = (e) => {
+        this.props.onCloseModal();
     }
 
     renderPicto(picto, i) {
@@ -93,7 +97,7 @@ class FormEditFrase extends Component {
 
         console.log(noVisiblePictos)
 
-        if(noVisiblePictos) return(<h1>No hay pictos visibles</h1>)
+        if (noVisiblePictos) return (<h1>No hay pictos visibles</h1>)
 
         return (
             <div className="row row-cols-md-8 g-8">
@@ -110,16 +114,23 @@ class FormEditFrase extends Component {
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLabel">Editar frase: {this.state.textFrase}</h5>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.closeModal}>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
 
                     <div className="modal-body">
-                        
                         {this.renderPictoFrase()}
                     </div>
 
                     <div className="modal-body">
                         {this.renderAllPictos()}
                     </div>
+
+                    <div className="input-group mb-3">
+                        <input type="text" value={this.state.textFrase} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" onChange={e => this.setState({ textFrase: e.target.value })} />
+                    </div>
+
                     <div className="modal-footer">
                         <button className="form-control btn btn-primary" onClick={() => this.handleSubmit()}>
                             Aplicar cambios

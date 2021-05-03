@@ -391,7 +391,7 @@ class FraseItem extends Component {
                             ariaDescribedby={this.props.editAriaDescribedby}
                             className="dnd-canvas__object-button dnd-canvas__object-button--edit"
                             sprite="utility"
-                            symbol="delete"
+                            symbol="close"
                             onClick={this.handleRemoveClick}
                             onKeyDown={this.handleEditKeyDown}
                         />
@@ -418,7 +418,7 @@ class FraseItem extends Component {
                             style={modalStyles}
                         >
 
-                            <FormEditFrase onSubmit={this.handleModifyClik} frase={this.props.frase} selected={this.state.selected} texto={this.state.texto} />
+                            <FormEditFrase onSubmit={this.handleModifyClik} onCloseModal={this.closeModal} frase={this.props.frase} selected={this.state.selected} texto={this.state.texto} />
 
                         </ReactModal>
                     </div>
