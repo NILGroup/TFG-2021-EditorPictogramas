@@ -1,14 +1,14 @@
 {
-  "short_name": "Drag-and-Drop Accessibility Patterns",
-  "name": "Drag-and-Drop Accessibility Patterns",
+  "short_name": "PictUp!",
+  "name": "PictUp!",  
+  "start_url": "./index.html",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "PictUpIcon.ico",
       "sizes": "192x192",
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
