@@ -130,7 +130,7 @@ class ARASAAC extends Component {
 										<button className="btn-sm btn-primary" title="Añadir pictograma al tablero" onClick={() => this.sendSelectedPicto(item)}>
 											<i className="fas fa-plus"></i></button>
 										<button className="btn-sm btn-outline-primary" title="Añadir el pictograma a mis listas de pictogramas" onClick={() => this.sendSelectedCollection(item)}>
-											<span className="fas fa-th"></span>
+											<span className="fas fa-folder-open"></span>
 										</button>
 									</div>
 								</div>

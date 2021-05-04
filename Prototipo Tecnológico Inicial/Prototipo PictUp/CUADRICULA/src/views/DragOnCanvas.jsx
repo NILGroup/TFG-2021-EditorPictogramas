@@ -669,7 +669,7 @@ export class DragOnCanvasExample extends React.Component {
                             </select>
                           </div>
                           <div className="modal-footer border-0">
-                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.addToCollection}>Añadir a mi lista de pictogramas</button>
+                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.addToCollection}><i className="fas fa-file-import fa-lg"></i> Añadir a mi lista de pictogramas</button>
                           </div>
                         </TabPanel>
                         <TabPanel>
@@ -678,7 +678,7 @@ export class DragOnCanvasExample extends React.Component {
                             <input className="form-control mt-3" type="text" onBlur={this.setNameCollection} />
                           </div>
                           <div className="modal-footer border-0">
-                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.newCollection}>Nueva lista de pictogramas</button>
+                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.newCollection}><i className="fas fa-folder-plus fa-lg"></i> Nueva lista de pictogramas</button>
                           </div>
                         </TabPanel>
                       </Tabs>
@@ -689,7 +689,7 @@ export class DragOnCanvasExample extends React.Component {
               </ReactModal>
 
               <div className="card ml-3" >
-                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}><strong>Personalización del tablero</strong></h5>
+                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}><strong><i className="fas fa-pencil-ruler"></i> Personalización del tablero</strong></h5>
                 <div className="card-body">
                   <div className="card-text">
                     <div className="row mt-3">
@@ -815,7 +815,7 @@ export class DragOnCanvasExample extends React.Component {
               </div> */}
 
               <div className="card mt-4 mb-3 ml-3" >
-                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong>Mis listas de pictogramas</strong></h5>
+                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong><i className="fas fa-folder-open"></i> Mis listas de pictogramas</strong></h5>
                 <div className="card-body">
                   <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
                   <div className="card-text">
