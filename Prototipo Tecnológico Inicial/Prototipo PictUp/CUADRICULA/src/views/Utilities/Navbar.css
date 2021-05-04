@@ -1,5 +1,5 @@
 .NavbarItems {
-    background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73,63,252,1) 100%);
+    background: #2a67a3;
     height: 60px;
     display: flex;
     margin-bottom: 20px;
@@ -9,7 +9,7 @@
 }
 
 .navbar-logo {
-    color: #fff;
+    color: #ffffff;
     justify-self: start;
     margin-top: -10px;
     margin-left: 20px;
