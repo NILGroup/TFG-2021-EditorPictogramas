@@ -11,7 +11,10 @@ class Navbar extends Component {
     render() {
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">Pict Up! <img src={"./img/PictUpIcon.png"} height="40" width="40" /></h1>
+                <h1 className="navbar-logo"  style={{cursor:'default', fontSize: '30px'}} >Pict Up! <img src={"./img/PictUpIcon.png"} style={{marginTop: '-10px'}}  height="50" width="50" /></h1>
+                <div className="menu-icon" onClick={()=> window.open("https://www.instagram.com/pictupweb/", "_blank")}><span style={{color: 'white'}}>
+                    <i style={{marginRight: '35px'}} className="fab fa-instagram"></i></span>
+                </div>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
