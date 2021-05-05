@@ -62,6 +62,7 @@ export class DragOnCanvasExample extends React.Component {
     }
 
     this.state = {
+      tipoDeAlertaBorrado: "",
       tipoDeAlerta: "",
       coleccionExistente: false,
       borrando: "-1",
@@ -469,9 +470,14 @@ export class DragOnCanvasExample extends React.Component {
           var actualizada = this.state.colection[i].idPicto.concat(this.Id);
           aux[i].idPicto = actualizada;
           this.setState({ colection: aux });
+          this.setState({
+            tipoDeAlerta: "Añadido el picograma " + this.Id.keywords[0].keyword + " a la lista " + this.state.colection[i].name
+          })
         }
       }
+
       this.nameSelected = "---"; //reseteamos el valor
+      this.handleCloseModal();
     }
 
   }
@@ -500,13 +506,12 @@ export class DragOnCanvasExample extends React.Component {
         idPicto: [this.Id]
       })
 
-      console.log(nueva);
       this.setState({ colection: nueva });
       console.log(this.state.colection);
-      this.NewName = ""; //reseteamos valor
       this.setState({
-        tipoDeAlerta: "Creada nueva lista de pictogramas"
+        tipoDeAlerta: "Creada lista de pictogramas " + this.NewName
       })
+      this.NewName = ""; //reseteamos valor
       this.handleCloseModal();
     }
   }
@@ -525,13 +530,13 @@ export class DragOnCanvasExample extends React.Component {
 
   mostrarColecciones = () => {
     console.log(this.state.selectedColection);
-    if (this.state.selectedColection != "---" &&  this.state.selectedColection != this.state.borrando) {
+    if (this.state.selectedColection != "---" && this.state.selectedColection != this.state.borrando) {
       return (
         <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[this.state.selectedColection].idPicto} />
       )
-    }else if (this.state.selectedColection == this.state.borrando){
+    } else if (this.state.selectedColection == this.state.borrando) {
       //comprobar que no sea la ultima colección
-      if(this.state.borrando < this.state.colection.length){
+      if (this.state.borrando < this.state.colection.length) {
         return (
           <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[this.state.borrando].idPicto} />
         )
@@ -541,10 +546,14 @@ export class DragOnCanvasExample extends React.Component {
 
 
   borrarColeccion = () => {
-    console.log(this.state.selectedColection);
+    if (this.state.colection.length == 1) {
+      this.setState({
+        selectedColection: "---"
+      })
+    }
     const copyPostArray = Object.assign([], this.state.colection);
     var posBorrar = this.state.selectedColection;
-
+    var name = this.state.colection[posBorrar].name
     copyPostArray.splice(posBorrar, 1);
     this.setState({
       colection: copyPostArray
@@ -553,19 +562,29 @@ export class DragOnCanvasExample extends React.Component {
     this.setState({
       borrando: this.state.selectedColection
     })
-  
+
+
+
+    this.setState({
+      tipoDeAlertaBorrado: "Se ha borrado la lista de pictogramas " + name
+    })
 
   }
 
   mostrarBorrar = () => {
-    if (this.state.selectedColection != "---"){
+    if (this.state.selectedColection != "---" && this.state.colection.length != 0) {
       return (
         <button type="button" className="btn btn-outline-danger" onClick={this.borrarColeccion}><i className="fas fa-trash-alt" ></i> Borrar lista</button>
       )
     }
-      
+
   }
 
+  reseteaAlertBorrado = () => {
+    this.setState({
+      tipoDeAlertaBorrado: ""
+    })
+  }
 
   reseteaAlert = () => {
     this.setState({
@@ -577,12 +596,82 @@ export class DragOnCanvasExample extends React.Component {
 
     if (this.state.tipoDeAlerta != "") {
       return (
-        <div className="alert alert-success alert-dismissible fade show" role="alert">
+        <div className="alert alert-success alert-dismissible fade show mb-3 ml-3" role="alert">
           <strong>{this.state.tipoDeAlerta} </strong>
           <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={this.reseteaAlert}>
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+      )
+    }
+  }
+
+  mostrarAletrsBorrado = () => {
+
+    if (this.state.tipoDeAlertaBorrado != "") {
+      return (
+        <div className="alert alert-success alert-dismissible fade show mt-3 mb-3 ml-3" role="alert">
+          <strong>{this.state.tipoDeAlertaBorrado} </strong>
+          <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={this.reseteaAlertBorrado}>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      )
+    }
+  }
+
+  mostrarContenidoColecciones = () => {
+    let optionColection = this.state.colection.map(c => (
+      <option value={c.name}>{c.name}</option>
+    ));
+    if (this.state.colection.length != 0) {
+      return (
+        <Tabs>
+          <TabList>
+            <Tab>Añadir a colección existente</Tab>
+            <Tab>Crear una nueva colección</Tab>
+          </TabList>
+
+          <TabPanel>
+            <div className="col-sm ">
+              <p style={{ fontSize: '15' }}>Selecciona una colección:</p>
+              <select className="form-control ml-1 mr-4 mt-3" value={this.state.value} onChange={this.handleChange}>
+                <option value={"---"}>{ }</option>
+                {optionColection}
+              </select>
+            </div>
+            <div className="modal-footer border-0">
+              <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.addToCollection}><i className="fas fa-file-import fa-lg"></i> Añadir a mi lista de pictogramas</button>
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="col-sm">
+              <p style={{ fontSize: '15' }}>Introduce el nuevo nombre para la colección:</p>
+              <input className="form-control mt-3" type="text" onBlur={this.setNameCollection} />
+            </div>
+            <div className="modal-footer border-0">
+              <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.newCollection}><i className="fas fa-folder-plus fa-lg"></i> Nueva lista de pictogramas</button>
+            </div>
+          </TabPanel>
+        </Tabs>
+      )
+    } else {
+      return (
+        <Tabs>
+          <TabList>
+            <Tab>Crear una nueva colección</Tab>
+          </TabList>
+
+          <TabPanel>
+            <div className="col-sm">
+              <p style={{ fontSize: '15' }}>No tienes ninguna lista, por favor introduce un nombre para crearla:</p>
+              <input className="form-control mt-3" type="text" onBlur={this.setNameCollection} />
+            </div>
+            <div className="modal-footer border-0">
+              <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.newCollection}><i className="fas fa-folder-plus fa-lg"></i> Nueva lista de pictogramas</button>
+            </div>
+          </TabPanel>
+        </Tabs>
       )
     }
   }
@@ -653,35 +742,7 @@ export class DragOnCanvasExample extends React.Component {
                       </button>
                     </div>
                     <div className="modal-body">
-
-                      <Tabs>
-                        <TabList>
-                          <Tab>Añadir a colección existente</Tab>
-                          <Tab>Crear una nueva colección</Tab>
-                        </TabList>
-
-                        <TabPanel>
-                          <div className="col-sm ">
-                            <p style={{ fontSize: '15' }}>Selecciona una colección:</p>
-                            <select className="form-control ml-1 mr-4 mt-3" value={this.state.value} onChange={this.handleChange}>
-                              <option value={"---"}>{ }</option>
-                              {optionColection}
-                            </select>
-                          </div>
-                          <div className="modal-footer border-0">
-                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.addToCollection}><i className="fas fa-file-import fa-lg"></i> Añadir a mi lista de pictogramas</button>
-                          </div>
-                        </TabPanel>
-                        <TabPanel>
-                          <div className="col-sm">
-                            <p style={{ fontSize: '15' }}>Introduce el nuevo nombre para la colección:</p>
-                            <input className="form-control mt-3" type="text" onBlur={this.setNameCollection} />
-                          </div>
-                          <div className="modal-footer border-0">
-                            <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.newCollection}><i className="fas fa-folder-plus fa-lg"></i> Nueva lista de pictogramas</button>
-                          </div>
-                        </TabPanel>
-                      </Tabs>
+                      {this.mostrarContenidoColecciones()}
                     </div>
                   </div>
                 </div>
@@ -813,6 +874,8 @@ export class DragOnCanvasExample extends React.Component {
               <div>
                 <button onClick={this.getLocalStorage}>Load</button>
               </div> */}
+
+              {this.mostrarAletrsBorrado()}
 
               <div className="card mt-4 mb-3 ml-3" >
                 <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong><i className="fas fa-folder-open"></i> Mis listas de pictogramas</strong></h5>
