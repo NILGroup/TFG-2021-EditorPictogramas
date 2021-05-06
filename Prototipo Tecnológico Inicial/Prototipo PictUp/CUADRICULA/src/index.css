@@ -36,9 +36,9 @@
 }
 
 @font-face {
-  font-family: "Tommy";
-  src: local("Tommy"),
-    url("./fonts/tommys.ttf") format("truetype");
+  font-family: "ComicSans";
+  src: local("ComicSans"),
+    url("./fonts/comic-sans.TTF") format("truetype");
   font-weight: normal;
 }
 

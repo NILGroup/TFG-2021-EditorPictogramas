@@ -766,14 +766,13 @@ export class DragOnCanvasExample extends React.Component {
                         </div>
 
                         <select className="form-select col-4" onChange={this.handleFontChange}>
-                          <option value="Nunito" className="dropdown-item" style={{ fontFamily: "Nunito" }}>Nunito</option>
-                          <option value="Massallera" className="dropdown-item" style={{ fontFamily: "Massallera" }}>Masella</option>
-                          <option value="CurPunt" className="dropdown-item" style={{ fontFamily: "CurPunt" }}>CurPunt</option>
-                          <option value="CurCuad" className="dropdown-item" style={{ fontFamily: "CurCuad" }}>CurCuad</option>
-                          <option value="CurCuadPunt" className="dropdown-item" style={{ fontFamily: "CurCuadPunt" }}>CurCuadPunt</option>
-                          <option value="Tommy" className="dropdown-item" style={{ fontFamily: "Tommy" }}>Tommy</option>
+                          <option value="Nunito" className="dropdown-item" style={{ fontFamily: "Nunito" }}>Arial</option>
+                          <option value="Massallera" className="dropdown-item" style={{ fontFamily: "Massallera" }}>Caligrafía</option>
+                          <option value="CurPunt" className="dropdown-item" style={{ fontFamily: "CurPunt" }}>Caligrafía Punteada</option>
+                          <option value="CurCuad" className="dropdown-item" style={{ fontFamily: "CurCuad" }}>Caligrafía en cuadrícula</option>
+                          <option value="CurCuadPunt" className="dropdown-item" style={{ fontFamily: "CurCuadPunt" }}>Caligrafía en cuadrícula punteada</option>
+                          <option value="ComicSans" className="dropdown-item" style={{ fontFamily: "ComicSans" }}>ComicSans</option>
                         </select>
-
                       </div>
                     </div>
                     <div className="row mt-2 ml-4">
@@ -992,14 +991,6 @@ export class DragOnCanvasExample extends React.Component {
 }
 
 export class DragOnCanvasView extends Component {
-  renderDocumentation() {
-    return (
-      <div>
-
-      </div>
-    );
-  }
-
   render() {
     return (
 
