@@ -13,14 +13,14 @@ class Navbar extends Component {
             <nav className="NavbarItems">
                 <h1 className="navbar-logo" style={{ cursor: 'default', fontSize: '30px' }} >Pict Up! <img src={"./img/PictUpIcon.png"} style={{ marginTop: '-10px' }} height="50" width="50" /></h1>
 
-                <div className="menu-icon" onClick={() => window.open("https://chromedino.com/", "_blank")}><span style={{ color: 'white' }}>
+                <div className="menu-icon" title="Realiza el cuestionario" onClick={() => window.open("https://chromedino.com/", "_blank")}><span style={{ color: 'white' }}>
                     <i style={{ marginRight: '140px' }} className="fas fa-vote-yea"></i></span>
                 </div>
-                <div className="menu-icon" onClick={() => window.open("http://nil.fdi.ucm.es/?q=aplicaciones/accesibilidad", "_blank")}><span style={{ color: 'white' }}>
+                <div className="menu-icon" title="Descubre más aplicaciones" onClick={() => window.open("http://nil.fdi.ucm.es/?q=aplicaciones/accesibilidad", "_blank")}><span style={{ color: 'white' }}>
 
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                         width="30px" height="30px" viewBox="0 0 108.000000 130.000000"
-                        preserveAspectRatio="xMidYMid meet" style={{ marginRight: '105px' }}>   
+                        preserveAspectRatio="xMidYMid meet" style={{ marginRight: '105px', marginTop:'-10px' }}>   
                         <g transform="translate(0.000000,130.000000) scale(0.100000,-0.100000)"
                             fill="#FFFFFF" stroke="none">
                             <path d="M490 1200 l0 -80 50 0 50 0 0 80 0 80 -50 0 -50 0 0 -80z" />
@@ -33,10 +33,10 @@ class Navbar extends Component {
                 </span>
 
                 </div>
-                <div className="menu-icon" onClick={() => window.location.href = ("mailto:pictupdevalfon@gmail.com")}><span style={{ color: 'white' }}>
+                <div className="menu-icon" title="Contacta con nosotros" onClick={() => window.location.href = ("mailto:pictupdevalfon@gmail.com")}><span style={{ color: 'white' }}>
                     <i style={{ marginRight: '70px' }} className="far fa-envelope-open"></i></span>
                 </div>
-                <div className="menu-icon" onClick={() => window.open("https://www.instagram.com/pictupweb/", "_blank")}><span style={{ color: 'white' }}>
+                <div className="menu-icon" title="Nuestras redes sociales" onClick={() => window.open("https://www.instagram.com/pictupweb/", "_blank")}><span style={{ color: 'white' }}>
                     <i style={{ marginRight: '35px' }} className="fab fa-instagram"></i></span>
                 </div>
                 <div className="menu-icon" onClick={this.handleClick}>
