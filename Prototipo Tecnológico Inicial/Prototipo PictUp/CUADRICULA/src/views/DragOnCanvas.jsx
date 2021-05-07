@@ -61,8 +61,10 @@ export class DragOnCanvasExample extends React.Component {
     }
 
     this.state = {
+      historialColeccion:"---",
       tipoDeAlertaBorrado: "",
       tipoDeAlerta: "",
+      tipoDeError: "",
       coleccionExistente: false,
       borrando: "-1",
       selectedColection: "---", //numero de la colección seleccionada
@@ -456,11 +458,19 @@ export class DragOnCanvasExample extends React.Component {
 
   handleChange = (e) => {
     this.nameSelected = e.target.value;
+    this.setState({
+      historialColeccion: e.target.value
+    })
     // console.log(this.nameSelected);
   }
 
   addToCollection = () => {
     console.log(this.Id);
+    
+    if(this.nameSelected == "---"){
+      this.nameSelected = this.state.historialColeccion;
+    }
+
     if (this.state.colection.length == 0) {
       alert("No hay ninguna colección, crea una nueva.");
     }
@@ -468,15 +478,28 @@ export class DragOnCanvasExample extends React.Component {
       alert("Por favor, selecciona una colección.");
     }
     else {
+      //Primer for para asegurarnos de que no exista ese pictograma en esa coleccion
+      var existe = false;
+
       for (var i = 0; i < this.state.colection.length; i++) {
         if (this.state.colection[i].name == this.nameSelected) {
-          var aux = this.state.colection;
-          var actualizada = this.state.colection[i].idPicto.concat(this.Id);
-          aux[i].idPicto = actualizada;
-          this.setState({ colection: aux });
-          this.setState({
-            tipoDeAlerta: "Añadido el picograma " + this.Id.keywords[0].keyword + " a la lista " + this.state.colection[i].name
-          })
+          for (var j = 0; j < this.state.colection[i].idPicto.length; j++) {
+            if (this.state.colection[i].idPicto[j] == this.Id) {
+              existe = true;
+              this.setState({
+                tipoDeError: "El pictograma " + this.Id.keywords[0].keyword + " ya está en la lista " + this.state.colection[i].name + "."
+              })
+            }
+          }
+          if (!existe) {
+            var aux = this.state.colection;
+            var actualizada = this.state.colection[i].idPicto.concat(this.Id);
+            aux[i].idPicto = actualizada;
+            this.setState({ colection: aux });
+            this.setState({
+              tipoDeAlerta: "Añadido el picograma " + this.Id.keywords[0].keyword + " a la lista " + this.state.colection[i].name
+            })
+          }
         }
       }
 
@@ -509,7 +532,7 @@ export class DragOnCanvasExample extends React.Component {
         name: this.NewName,
         idPicto: [this.Id]
       })
-
+      this.setState({historialColeccion: this.NewName})
       this.setState({ colection: nueva });
       console.log(this.state.colection);
       this.setState({
@@ -610,6 +633,26 @@ export class DragOnCanvasExample extends React.Component {
     }
   }
 
+  reseteaError = () => {
+    this.setState({
+      tipoDeError: ""
+    })
+  }
+
+  mostrarAletrsError = () => {
+
+    if (this.state.tipoDeError != "") {
+      return (
+        <div className="alert alert-danger alert-dismissible fade show mb-3 ml-3" role="alert">
+          <strong>{this.state.tipoDeError} </strong>
+          <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={this.reseteaError}>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      )
+    }
+  }
+
   mostrarAletrsBorrado = () => {
 
     if (this.state.tipoDeAlertaBorrado != "") {
@@ -626,8 +669,9 @@ export class DragOnCanvasExample extends React.Component {
 
   mostrarContenidoColecciones = () => {
     let optionColection = this.state.colection.map(c => (
-      <option value={c.name}>{c.name}</option>
+      <option value={c.name} >{c.name}</option>
     ));
+  
     if (this.state.colection.length != 0) {
       return (
         <Tabs>
@@ -639,7 +683,7 @@ export class DragOnCanvasExample extends React.Component {
           <TabPanel>
             <div className="col-sm ">
               <p style={{ fontSize: '15' }}>Selecciona una colección:</p>
-              <select className="form-control ml-1 mr-4 mt-3" value={this.state.value} onChange={this.handleChange}>
+              <select className="form-control ml-1 mr-4 mt-3" defaultValue={this.state.historialColeccion} value={this.state.value} onChange={this.handleChange}>
                 <option value={"---"}>{ }</option>
                 {optionColection}
               </select>
@@ -700,6 +744,7 @@ export class DragOnCanvasExample extends React.Component {
               {/* <NIL /> */}
 
               {this.mostrarAletrs()}
+              {this.mostrarAletrsError()}
 
               <div className="ml-3">
                 <Tabs>
@@ -740,7 +785,7 @@ export class DragOnCanvasExample extends React.Component {
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
-                      <h5 className="modal-title" id="exampleModalLabel">Crea o añade a una colección el pictograma <img style={{ border: '1px solid', color: 'black', borderRadius: '10' }} src={'https://api.arasaac.org/api/pictograms/' + this.Id._id} width="90" height="90"></img></h5>
+                      <h5 className="modal-title" id="exampleModalLabel">Crea o añade a una lista el pictograma <img style={{ border: '1px solid', color: 'black', borderRadius: '10' }} src={'https://api.arasaac.org/api/pictograms/' + this.Id._id} width="90" height="90"></img></h5>
                       <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.handleCloseModal}>
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -834,51 +879,6 @@ export class DragOnCanvasExample extends React.Component {
                   </div>
                 </div>
               </div>
-
-              {/* <div className="container-fluid"> */}
-              {/* <div className="row">
-
-                  <div className="input-group mb-4">
-
-                    <input type="text" claclassNamess="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
-
-                    <div className="input-group-prepend">
-                      <button type="button" className="btn btn-outline-secondary" onClick={this.addText}>+
-                        <a style={{ fontFamily: this.state.selectedFont }}>Texto</a>
-                      </button>
-                    </div>
-
-                    <select className="form-select col-4" onChange={this.handleFontChange}>
-                      <option value="Nunito" className="dropdown-item" style={{ fontFamily: "Nunito" }}>Nunito</option>
-                      <option value="Massallera" className="dropdown-item" style={{ fontFamily: "Massallera" }}>Masella</option>
-                      <option value="CurPunt" className="dropdown-item" style={{ fontFamily: "CurPunt" }}>CurPunt</option>
-                      <option value="CurCuad" className="dropdown-item" style={{ fontFamily: "CurCuad" }}>CurCuad</option>
-                      <option value="CurCuadPunt" className="dropdown-item" style={{ fontFamily: "CurCuadPunt" }}>CurCuadPunt</option>
-                      <option value="Tommy" className="dropdown-item" style={{ fontFamily: "Tommy" }}>Tommy</option>
-                    </select>
-
-                  </div>
-                </div> */}
-              {/* <div className="row mt-2">
-                  <button className="btn btn-outline-info btn-sm ml-3" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i> Añadir linea</button>
-
-                  <button className="btn btn-outline-info btn-sm ml-1" onClick={this.addFigure}><i className="far fa-square"></i> Añadir figura</button>
-
-                  <button className="btn btn-outline-info ml-2" onClick={this.descargaFotoTablero}>
-                    <i className="fas fa-file-image"></i>
-                  &nbsp; Descargar Tablero
-                  </button>
-                </div> */}
-
-
-              {/* </div> */}
-              {/* <div>
-                <button onClick={this.setLocalStorage}>Save</button>
-              </div>
-
-              <div>
-                <button onClick={this.getLocalStorage}>Load</button>
-              </div> */}
 
               {this.mostrarAletrsBorrado()}
 
