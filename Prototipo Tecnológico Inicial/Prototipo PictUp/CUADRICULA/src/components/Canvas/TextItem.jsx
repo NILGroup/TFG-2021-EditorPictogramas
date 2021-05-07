@@ -50,7 +50,7 @@ class TextIcon extends Component {
     this.defaultPosition = {
       x: (this.props.gridInterval * this.props.x),
       y: (this.props.gridInterval * this.props.y),
-      width: (this.props.label.length * 20),
+      width: (this.props.label.length * 20 + 100),
       height: (this.props.gridInterval * this.props.height),
       minWidth: (this.props.gridInterval * this.props.minWidth),
       minHeight: (this.props.gridInterval * this.props.minHeight)
