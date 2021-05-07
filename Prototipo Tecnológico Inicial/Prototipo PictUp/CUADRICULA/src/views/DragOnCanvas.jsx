@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import { saveAs } from 'file-saver';
 
 import Canvas from '../components/Canvas/Canvas';
-import CanvasItem from '../components/Canvas/CanvasItem';
 import PictoItem from '../components/Canvas/PictoItem';
 import LineItem from '../components/Canvas/LineItem';
 import FigureItem from '../components/Canvas/FigureItem';
@@ -216,14 +215,19 @@ export class DragOnCanvasExample extends React.Component {
   addPictoFromPhoto = (File) => {
     console.log(File);
 
+    var auxHeigh = 15
+    if (File.text != "") {
+      auxHeigh = 15 + 3
+    }
+
     this.postID = this.postID + 1;
     const copyPostArray = Object.assign([], this.state.photoArray)
     copyPostArray.push({
       id: this.postID,
-      body: File.name,
+      body: File.text,
       url: File.url,
       width: File.width,
-      height: File.height,
+      height: auxHeigh,
       scale: File.width / File.height
     })
 
@@ -296,7 +300,7 @@ export class DragOnCanvasExample extends React.Component {
     }
     console.log("se va a descargar en calidad", escala);
     this.calidad = "alta"; //reseteamos valor por defecto
-    html2canvas(container, { allowTaint: true, useCORS: true, scale: 2, scrollY: window.scrollY })
+    html2canvas(container, { allowTaint: true, useCORS: true, scale: escala, scrollY: window.scrollY })
       .then(function (canvas) {
 
         var link = document.createElement("a");
@@ -709,7 +713,7 @@ export class DragOnCanvasExample extends React.Component {
                     <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
                   </TabPanel>
                   <TabPanel>
-                    <NILtraductor sendFrase={this.addFraseTrad} />
+                    <NILtraductor sendFrase={this.addFraseTrad} sendPicto={this.addPictoFromAPI} />
                     {/* send2sac={this.getFromTrad} */}
                   </TabPanel>
                   <TabPanel>
@@ -753,35 +757,37 @@ export class DragOnCanvasExample extends React.Component {
                 <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}><strong><i className="fas fa-pencil-ruler"></i> Personalización del tablero</strong></h5>
                 <div className="card-body">
                   <div className="card-text">
-                    <div className="row mt-3">
-
-                      <div className="input-group mb-4">
-
-                        <input type="text" className="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
-
-                        <div className="input-group-prepend">
-                          <button type="button" className="btn btn-outline-secondary" title="Añadir el texto al tablero " onClick={this.addText}>+
-                          <a style={{ fontFamily: this.state.selectedFont }}>Texto</a>
-                          </button>
-                        </div>
-
-                        <select className="form-select col-4" onChange={this.handleFontChange}>
-                          <option value="Nunito" className="dropdown-item" style={{ fontFamily: "Nunito" }}>Arial</option>
-                          <option value="Massallera" className="dropdown-item" style={{ fontFamily: "Massallera" }}>Caligrafía</option>
-                          <option value="CurPunt" className="dropdown-item" style={{ fontFamily: "CurPunt" }}>Caligrafía Punteada</option>
-                          <option value="CurCuad" className="dropdown-item" style={{ fontFamily: "CurCuad" }}>Caligrafía en cuadrícula</option>
-                          <option value="CurCuadPunt" className="dropdown-item" style={{ fontFamily: "CurCuadPunt" }}>Caligrafía en cuadrícula punteada</option>
-                          <option value="ComicSans" className="dropdown-item" style={{ fontFamily: "ComicSans" }}>ComicSans</option>
-                        </select>
+                    <div className="row my-2">
+                      <select className="form-control col-6" onChange={this.handleFontChange}>
+                        <option value="Nunito" className="dropdown-item" style={{ fontFamily: "Nunito" }}>Arial</option>
+                        <option value="Massallera" className="dropdown-item" style={{ fontFamily: "Massallera" }}>Caligrafía</option>
+                        <option value="CurPunt" className="dropdown-item" style={{ fontFamily: "CurPunt" }}>Caligrafía Punteada</option>
+                        <option value="CurCuad" className="dropdown-item" style={{ fontFamily: "CurCuad" }}>Caligrafía en cuadrícula</option>
+                        <option value="CurCuadPunt" className="dropdown-item" style={{ fontFamily: "CurCuadPunt" }}>Caligrafía cuadrícula punteada</option>
+                        <option value="ComicSans" className="dropdown-item" style={{ fontFamily: "ComicSans" }}>ComicSans</option>
+                      </select>
+                      <div className="col-6">
+                        <p className="h4" style={{ fontFamily: this.state.selectedFont }}>Tipografía</p>
                       </div>
                     </div>
+                    <div className="row mt-3">
+
+                      <div className="input-group mb-3">
+                        <input type="text" placeholder="Añade una frase..." className="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
+                        <button type="button" className="btn btn-primary btn-sm ml-2" title="Añadir el texto al tablero " onClick={this.addText}>
+                          <i className="fas fa-plus"></i> Texto
+                        </button>
+                      </div>
+
+                    </div>
+
                     <div className="row mt-2 ml-4">
                       <button className="btn btn-outline-info btn-sm ml-3" title="Añadir una linea al tablero" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i> Añadir linea</button>
 
                       <button className="btn btn-outline-info btn-sm ml-1" title="Añadir un cuadrado al tablero" onClick={this.addFigure}><i className="far fa-square"></i> Añadir cuadrado</button>
 
-                      <button className="btn btn-outline-info ml-2" title="Descargar el tablero como imagen" onClick={this.modalDownloadOpen}>
-                        <i className="fas fa-file-image"></i>
+                      <button className="btn btn-info ml-2" title="Descargar el tablero como imagen" onClick={this.modalDownloadOpen}>
+                        <i className="fas fa-download"></i>
                         &nbsp; Descargar Tablero
                       </button>
 
@@ -920,7 +926,7 @@ export class DragOnCanvasExample extends React.Component {
                   this.state.photoArray.map((photo, index) => {
                     return (
 
-                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={15} minWidth={3} minHeight={3} key={photo.id}
+                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={photo.height} minWidth={3} minHeight={3} key={photo.id}
                         imageURL={photo.url}
                         sendData={this.handleDeleteImage}
                       />

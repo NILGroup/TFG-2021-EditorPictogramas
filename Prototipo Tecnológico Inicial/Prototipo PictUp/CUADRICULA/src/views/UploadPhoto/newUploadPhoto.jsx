@@ -1,7 +1,7 @@
 //import FileDrop  from 'react-file-drop';
 
 import React from 'react';
-import { FileDrop } from 'react-file-drop';
+// import { FileDrop } from 'react-file-drop';
 import './Upload.css';
 
 //npm i react-file-drop
@@ -13,7 +13,7 @@ class Upload extends React.Component {
       file: null,
       photo: null,
       isLoaded: false,
-      text: null,
+      text: "",
     }
     this.handleChange = this.handleChange.bind(this)
     this.upload = this.upload.bind(this);

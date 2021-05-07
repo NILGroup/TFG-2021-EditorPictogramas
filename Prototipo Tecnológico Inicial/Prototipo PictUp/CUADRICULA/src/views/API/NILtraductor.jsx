@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+
 import './pictoStyle.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -266,7 +266,7 @@ class NILtraductor extends Component {
         recentPictos.push(picto);
         localStorage.setItem("recentPictos", JSON.stringify(recentPictos));
 
-        this.props.send2sac(picto);
+        this.props.sendPicto(picto);
     }
 
     frase2Canvas = () => {
