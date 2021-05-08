@@ -7,19 +7,22 @@ class FormPicto extends Component {
     constructor(props) {
         super(props);
 
+        console.log(this.props.conf.hair)
+
         this.state = {
-            hair: null,
-            skin: null,
-            time: "present",
-            isColorized: true,
-            isPlural: false,
-            text: null,
-            borderColor: null,
-            borderWidth: 0,
-            hasBorder: false,
+            hair: this.props.conf.hair,
+            skin: this.props.conf.skin,
+            time: this.props.conf.time,
+            isColorized: this.props.conf.isColorized,
+            isPlural: this.props.conf.isPlural,
+            text: this.props.conf.text,
+            borderColor: this.props.conf.borderColor,
+            borderWidth: this.props.conf.borderWidth,
+            hasBorder: this.props.conf.hasBorder,
             url: "https://static.arasaac.org/pictograms/" + this.props.picto._id + "/" + this.props.picto._id + "_500.png",
             picto: this.props.picto
         }
+    
 
         this.handleHairColor = this.handleHairColor.bind(this);
         this.handleSkin = this.handleSkin.bind(this);
@@ -29,12 +32,17 @@ class FormPicto extends Component {
         this.handleisPlural = this.handleisPlural.bind(this);
         this.handleHasBorder = this.handleHasBorder.bind(this);
 
-        this.setState({
-            isColorized: true,
-            isPlural: false,
-            url: "https://static.arasaac.org/pictograms/" + this.props.picto._id + "/" + this.props.picto._id
-        })
 
+
+    }
+
+    componentDidMount(){
+        this.createUrl();
+        // this.setState({
+        //     isColorized: true,
+        //     isPlural: false,
+        //     url: "https://static.arasaac.org/pictograms/" + this.props.picto._id + "/" + this.props.picto._id
+        // })
     }
 
     createUrl() {
@@ -78,10 +86,23 @@ class FormPicto extends Component {
     handleSubmit = (event) => {
         //event.preventDefault()
 
+        var conf = {
+            hair: this.state.hair,
+            skin: this.state.skin,
+            time: this.state.time,
+            isColorized: this.state.isColorized,
+            isPlural: this.state.isPlural,
+            text: this.state.text,
+            borderColor: this.state.borderColor,
+            borderWidth: this.state.borderWidth,
+            hasBorder: this.state.hasBorder,
+        }
+
         var aux = {
+            newConf: conf,
             url: this.state.url,
             border: this.state.borderColor,
-            borferWidth: this.state.borderWidth
+            borderWidth: this.state.borderWidth
         }
 
         this.props.onSubmit(aux)
@@ -135,12 +156,12 @@ class FormPicto extends Component {
     handleHasBorder() {
 
         console.log(this.state.hasBorder)
-        var w = 10
-        if(this.state.hasBorder) w = 0
+        var width = 10
+        if (this.state.hasBorder) width = 0
 
         this.setState({
             hasBorder: !this.state.hasBorder,
-            borderWidth: w
+            borderWidth: width
         }, () => this.createUrl())
     }
 
@@ -323,11 +344,15 @@ class FormPicto extends Component {
 
     renderTimes() {
 
+        if(!this.state.isColorized || this.state.isPlural){
+            return null
+        }
+
         return (
             <div className="row" >
-                <h1><b>Tiempo verbal:<br /></b></h1>
-                <select className="form-select" onChange={this.handleTime} disabled={(!this.state.isColorized || this.state.isPlural)}>
-                    <option selected value="present">Presente</option>
+                <select className="form-control mb-3" onChange={this.handleTime} disabled={(!this.state.isColorized || this.state.isPlural)}>
+                    <option defaultValue value="present">Selecciona un tiempo verbal</option>
+                    <option value="present">Presente</option>
                     <option value="past">Pasado</option>
                     <option value="future">Futuro</option>
                 </select>
@@ -338,9 +363,9 @@ class FormPicto extends Component {
     renderPrePicto() {
         return (
             <img style={{
-                border: "5px solid #" + this.state.borderColor
-            }} 
-            src={this.state.url}/>
+                border: this.state.borderWidth/2 + "px solid #" + this.state.borderColor
+            }}
+                src={this.state.url} />
         )
     }
 
@@ -371,14 +396,13 @@ class FormPicto extends Component {
 
                                 <div className="row">
                                     <div className="col-3">
-                                        <input type="checkbox" id="noColor" onChange={this.handleIsColored} /> Sin Color
-
+                                        <input type="checkbox" checked={!this.state.isColorized} id="noColor" onChange={this.handleIsColored} /> Sin Color
                                     </div>
                                     <div className="col-3">
-                                        <input type="checkbox" id="plural" onChange={this.handleisPlural} /> Plural
+                                        <input type="checkbox" checked={this.state.isPlural} id="plural" onChange={this.handleisPlural} /> Plural
                                     </div>
                                     <div className="col-3">
-                                        <input type="checkbox" id="plural" onChange={this.handleHasBorder} /> Borde:
+                                        <input type="checkbox" checked={this.state.hasBorder} id="plural" onChange={this.handleHasBorder} /> Borde:
                                     </div>
                                 </div>
 

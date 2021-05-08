@@ -26,7 +26,8 @@ const proptypes = {
   idPicto: PropTypes.number,
   imageSRC: PropTypes.string,
   imageURL: PropTypes.string,
-  apiObject: PropTypes.object
+  apiObject: PropTypes.object,
+  config: PropTypes.object
 };
 
 class PictoItem extends Component {
@@ -70,8 +71,11 @@ class PictoItem extends Component {
 
       label: this.props.label,
       url: this.props.imageURL,
-      backColor: "white",
-      borderWidth: "0"
+      borderColor: "white",
+      borderWidth: "0",
+
+      conf: this.props.config
+
     }
 
 
@@ -383,16 +387,35 @@ class PictoItem extends Component {
 
   handleModifyClik(e) {
 
+    console.log(e.borderWidth)
+
     this.setState({
+      conf: e.newConf,
       url: e.url,
-      borderWidth: e.borferWidth,
-      backColor: e.border
+      borderWidth: e.borderWidth,
+      borderColor: e.border
     })
     this.closeModal()
     //event.preventDefault();
   }
 
   /** ---- Resizing element END ---- **/
+
+  renderPicto() {
+    if (this.state.conf.hasBorder) {
+      return (
+        <img style={{
+          border: 10 + "px solid #" + this.state.borderColor
+        }} src={this.state.url} alt={this.state.label} />
+      )
+    }
+    else {
+      return (
+        <img src={this.state.url} alt={this.state.label} />
+      )
+
+    }
+  }
 
   render() {
     const itemClasses = classNames(
@@ -437,9 +460,7 @@ class PictoItem extends Component {
           </div>
 
           <div className="slds-p-vertical_medium slds-text-heading_small">
-            <img style={{
-              border: this.state.borderWidth + "px solid #" + this.state.backColor
-            }} src={this.state.url} alt={this.state.label} />
+            {this.renderPicto()}
             {this.state.label}
           </div>
 
@@ -488,7 +509,7 @@ class PictoItem extends Component {
                 style={modalStyles}
               >
 
-                <FormPicto onSubmit={this.handleModifyClik} picto={this.props.apiObject} onCloseModal={this.closeModal}/>
+                <FormPicto onSubmit={this.handleModifyClik} conf={this.state.conf} picto={this.props.apiObject} onCloseModal={this.closeModal} />
 
               </ReactModal>
             </div>
