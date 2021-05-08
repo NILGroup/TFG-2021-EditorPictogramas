@@ -135,11 +135,11 @@ class ARASAAC extends Component {
 			query += "_action-" + this.state.time
 		}
 
-		if (picto.hair && picto.hair !== null) {
+		if (picto.hair && this.state.conf.hair !== null) {
 			query += "_hair-" + this.state.conf.hair
 		}
 
-		if (picto.skin && picto.skin !== null) {
+		if (picto.skin && this.state.conf.skin !== null) {
 			query += "_skin-" + this.state.conf.skin
 		}
 
