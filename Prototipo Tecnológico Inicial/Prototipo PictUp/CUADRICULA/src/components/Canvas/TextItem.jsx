@@ -353,6 +353,8 @@ class TextIcon extends Component {
       fontColor: event.fontColor,
     })
 
+    this.rnd.updateSize({ width: event.text.length * this.state.fontSize/3 + 100, height: this.state.height });
+
     this.closeModal()
     //event.preventDefault();
   }

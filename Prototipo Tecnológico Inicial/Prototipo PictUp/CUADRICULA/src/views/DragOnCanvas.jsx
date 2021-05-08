@@ -61,7 +61,7 @@ export class DragOnCanvasExample extends React.Component {
     }
 
     this.state = {
-      historialColeccion:"---",
+      historialColeccion: "---",
       tipoDeAlertaBorrado: "",
       tipoDeAlerta: "",
       tipoDeError: "",
@@ -79,7 +79,19 @@ export class DragOnCanvasExample extends React.Component {
       selectedFont: "Nunito",
       fileType: defaultFileType,
       fileDownloadUrl: null,
-      colection: []
+      colection: [],
+
+      pictoConfig: {
+        hair: null,
+        skin: null,
+        time: "present",
+        isColorized: true,
+        isPlural: false,
+        borderColor: null,
+        borderWidth: 0,
+        hasBorder: false,
+      }
+
     }
 
     //Para el modal
@@ -187,9 +199,11 @@ export class DragOnCanvasExample extends React.Component {
     const copyPostArray = Object.assign([], this.state.pictoArray)
     copyPostArray.push({
       id: this.postID,
-      body: formModel.keywords[0].keyword,
-      picto_id: formModel._id,
-      apiObject: formModel
+      body: formModel.picto.keywords[0].keyword,
+      picto_id: formModel.picto._id,
+      apiObject: formModel.picto,
+      config: this.state.pictoConfig,
+      url: formModel.url
     })
 
     this.setState({
@@ -466,8 +480,8 @@ export class DragOnCanvasExample extends React.Component {
 
   addToCollection = () => {
     console.log(this.Id);
-    
-    if(this.nameSelected == "---"){
+
+    if (this.nameSelected == "---") {
       this.nameSelected = this.state.historialColeccion;
     }
 
@@ -532,7 +546,7 @@ export class DragOnCanvasExample extends React.Component {
         name: this.NewName,
         idPicto: [this.Id]
       })
-      this.setState({historialColeccion: this.NewName})
+      this.setState({ historialColeccion: this.NewName })
       this.setState({ colection: nueva });
       console.log(this.state.colection);
       this.setState({
@@ -601,7 +615,7 @@ export class DragOnCanvasExample extends React.Component {
   mostrarBorrar = () => {
     if (this.state.selectedColection != "---" && this.state.colection.length != 0) {
       return (
-        <button type="button" className="btn btn-outline-danger" onClick={this.borrarColeccion}><i className="fas fa-trash-alt" ></i> Borrar lista</button>
+        <button type="button" className="btn btn-outline-danger" onClick={this.borrarColeccion}><i className="fas fa-trash-alt" ></i>   lista</button>
       )
     }
 
@@ -671,7 +685,7 @@ export class DragOnCanvasExample extends React.Component {
     let optionColection = this.state.colection.map(c => (
       <option value={c.name} >{c.name}</option>
     ));
-  
+
     if (this.state.colection.length != 0) {
       return (
         <Tabs>
@@ -755,7 +769,7 @@ export class DragOnCanvasExample extends React.Component {
                   </TabList>
 
                   <TabPanel>
-                    <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} />
+                    <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} config={this.state.pictoConfig} newConf={(e) => this.setState({ pictoConfig: e })} />
                   </TabPanel>
                   <TabPanel>
                     <NILtraductor sendFrase={this.addFraseTrad} sendPicto={this.addPictoFromAPI} />
@@ -914,8 +928,8 @@ export class DragOnCanvasExample extends React.Component {
                   this.state.pictoArray.map((picto, index) => {
                     return (
 
-                      <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={7} height={10} minWidth={3} minHeight={3} key={picto.id}
-                        imageURL={'https://api.arasaac.org/api/pictograms/' + picto.picto_id}
+                      <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={10} height={14} minWidth={3} minHeight={3} key={picto.id}
+                        imageURL={picto.url} config={picto.config}
                         sendData={this.handleData}
                       />
                     )
