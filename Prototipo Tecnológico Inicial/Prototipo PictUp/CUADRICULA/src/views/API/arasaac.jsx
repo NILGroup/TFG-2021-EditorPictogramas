@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import FormPicto from './formPreAjuste'
+import ReactModal from 'react-modal';
+
 
 import './pictoStyle.css';
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -8,12 +11,18 @@ class ARASAAC extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			modalIsOpen: false,
 			items: [],
 			query: '',
 			isLoaded: false,
-			selectedHistorial: false
+			selectedHistorial: false,
+
+			conf: this.props.config
+
 		};
 		this.cancel = ''
+
+		this.sendSelectedConf = this.sendSelectedConf.bind(this)
 	}
 
 	//Conexióin a la API
@@ -46,7 +55,7 @@ class ARASAAC extends Component {
 		this.setState({
 			query: q
 		}, () => this.fetchResult(q))
-		
+
 	}
 
 	//Envia información del pictograma seleccionado a la capa superior
@@ -77,7 +86,22 @@ class ARASAAC extends Component {
 		recentPictos.unshift(picto);
 		localStorage.setItem("recentPictos", JSON.stringify(recentPictos));
 
-		this.props.sendData(picto);
+		var aux = {
+			picto: picto,
+			url: this.createUrl(picto)
+		}
+
+		this.props.sendData(aux);
+	}
+
+	sendSelectedConf(newConf) {
+		console.log(newConf)
+
+		this.setState({
+			conf: newConf
+		}, () => this.closeModal())
+
+		this.props.newConf(newConf)
 	}
 
 
@@ -94,10 +118,54 @@ class ARASAAC extends Component {
 		this.props.sendC(picto);
 	}
 
+	openModal = () => {
+		this.setState({ modalIsOpen: true });
+	};
+
+	closeModal = () => {
+		this.setState({ modalIsOpen: false });
+	};
+
+	createUrl(picto) {
+
+
+		var query = "";
+
+		if (this.state.conf.time !== "present") {
+			query += "_action-" + this.state.time
+		}
+
+		if (picto.hair && picto.hair !== null) {
+			query += "_hair-" + this.state.conf.hair
+		}
+
+		if (picto.skin && picto.skin !== null) {
+			query += "_skin-" + this.state.conf.skin
+		}
+
+		if (this.state.conf.isPlural || !this.state.conf.isColorized) query = ""
+
+		if (this.state.conf.isPlural) {
+			query = "_plural"
+		}
+
+		if (!this.state.conf.isColorized) {
+			query += "_nocolor"
+		}
+
+		console.log(this.state.conf.time)
+
+
+		return ("https://static.arasaac.org/pictograms/" + picto._id + "/" + picto._id + query + "_500.png")
+
+		//console.log(this.state.url)
+
+	}
+
 	renderResultadoPicto() {
 
 		if (!this.state.isLoaded && !this.state.selectedHistorial) {
-			return ( null
+			return (null
 				// <div>
 				// 	<ul class="list-unstyled">
 				// 		<li>
@@ -117,8 +185,8 @@ class ARASAAC extends Component {
 			)
 		}
 
-		if(this.state.selectedHistorial && this.state.items == null){
-			return(
+		if (this.state.selectedHistorial && this.state.items == null) {
+			return (
 				<p className="fst-italic">No has colocado ningún pictograma aún. Aquí apareceran los útimos pictos que añadas al tablero 😉</p>
 			)
 		}
@@ -129,7 +197,7 @@ class ARASAAC extends Component {
 				{this.state.items && !!this.state.items.length && this.state.items.map(item => (
 					<div key={item._id} className="card">
 						<img className="card-img-top"
-							src={'https://api.arasaac.org/api/pictograms/' + item._id}
+							src={this.createUrl(item)}
 
 							sizes="40px" srcset="50px"
 						/>
@@ -154,6 +222,8 @@ class ARASAAC extends Component {
 
 	render() {
 
+		var modalStyles = { overlay: { zIndex: 10 }, width: "30%" };
+
 		return (
 			<div className="cajon">
 
@@ -168,9 +238,28 @@ class ARASAAC extends Component {
 							<span className="fas fa-history"></span>
 						</button>
 					</div>
-					<input type="text" className="form-control" placeholder='Traducir palabra en picto'  onChange={e => this.setState({ query: e.target.value })} onKeyDown={this.keyPress} />
+					<input type="text" className="form-control" placeholder='Traducir palabra en picto' onChange={e => this.setState({ query: e.target.value })} onKeyDown={this.keyPress} />
+					<button className="btn btn-secondary" title="Pre-editar pictogramas" onClick={this.openModal}>
+						<span className="fas fa-cogs"></span>
+					</button>
 				</div>
 				{this.renderResultadoPicto()}
+
+				<div>
+					<ReactModal
+						isOpen={this.state.modalIsOpen}
+						ariaHideApp={false}
+						contentLabel="Selected Option"
+						onRequestClose={this.closeModal}
+						className="Modal"
+						style={modalStyles}
+					>
+
+						<FormPicto conf={this.state.conf} onCloseModal={this.closeModal} onSubmitConf={this.sendSelectedConf} />
+
+					</ReactModal>
+				</div>
+
 			</div>
 
 		);
