@@ -676,13 +676,13 @@ export class DragOnCanvasExample extends React.Component {
       return (
         <Tabs>
           <TabList>
-            <Tab>Añadir a colección existente</Tab>
-            <Tab>Crear una nueva colección</Tab>
+            <Tab>Añadir a lista existente</Tab>
+            <Tab>Crear una nueva lista</Tab>
           </TabList>
 
           <TabPanel>
             <div className="col-sm ">
-              <p style={{ fontSize: '15' }}>Selecciona una colección:</p>
+              <p style={{ fontSize: '15' }}>Selecciona una lista:</p>
               <select className="form-control ml-1 mr-4 mt-3" defaultValue={this.state.historialColeccion} value={this.state.value} onChange={this.handleChange}>
                 <option value={"---"}>{ }</option>
                 {optionColection}
@@ -694,7 +694,7 @@ export class DragOnCanvasExample extends React.Component {
           </TabPanel>
           <TabPanel>
             <div className="col-sm">
-              <p style={{ fontSize: '15' }}>Introduce el nuevo nombre para la colección:</p>
+              <p style={{ fontSize: '15' }}>Introduce el nuevo nombre para la lista:</p>
               <input className="form-control mt-3" type="text" onBlur={this.setNameCollection} />
             </div>
             <div className="modal-footer border-0">
@@ -707,7 +707,7 @@ export class DragOnCanvasExample extends React.Component {
       return (
         <Tabs>
           <TabList>
-            <Tab>Crear una nueva colección</Tab>
+            <Tab>Crear una nueva lista</Tab>
           </TabList>
 
           <TabPanel>
