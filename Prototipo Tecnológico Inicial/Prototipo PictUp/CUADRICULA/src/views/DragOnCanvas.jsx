@@ -839,7 +839,7 @@ export class DragOnCanvasExample extends React.Component {
                 <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}><strong><i className="fas fa-pencil-ruler"></i> Personalización del tablero</strong></h5>
                 <div className="card-body">
                   <div className="card-text">
-                    <div className="row my-2">
+                    <div className="row my-2 ml-2">
                       <select className="form-control col-6" onChange={this.handleFontChange}>
                         <option value="Nunito" className="dropdown-item" style={{ fontFamily: "Nunito" }}>Arial</option>
                         <option value="Massallera" className="dropdown-item" style={{ fontFamily: "Massallera" }}>Caligrafía</option>
@@ -852,7 +852,7 @@ export class DragOnCanvasExample extends React.Component {
                         <p className="h4" style={{ fontFamily: this.state.selectedFont }}>Tipografía</p>
                       </div>
                     </div>
-                    <div className="row mt-3">
+                    <div className="row mt-3 ml-2 mr-2">
 
                       <div className="input-group mb-3">
                         <input type="text" placeholder="Añade una frase..." className="form-control" aria-label="Text input with segmented dropdown button" onBlur={this.setPicto} />
@@ -863,7 +863,7 @@ export class DragOnCanvasExample extends React.Component {
 
                     </div>
 
-                    <div className="row mt-2 ml-4">
+                    <div className="row mt-2 ml-3">
                       <strong>Figuras disponibles para añadir al tablero </strong>
                       <button className="btn btn-outline-info btn-sm ml-3" title="Añadir una linea al tablero" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i></button>
 
