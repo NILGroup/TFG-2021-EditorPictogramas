@@ -39,13 +39,13 @@ class Navbar extends Component {
                 <div className="menu-icon" title="Nuestras redes sociales" onClick={() => window.open("https://www.instagram.com/pictupweb/", "_blank")}><span style={{ color: 'white' }}>
                     <i style={{ marginRight: '35px' }} className="fab fa-instagram"></i></span>
                 </div>
-                <div className="menu-icon" onClick={this.handleClick}>
+                {/* <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     <li>Poner aqui algo?</li>
                     <li>Otro por aqui</li>
-                </ul>
+                </ul> */}
             </nav>
         )
     }
