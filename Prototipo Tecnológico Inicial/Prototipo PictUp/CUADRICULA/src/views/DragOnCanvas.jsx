@@ -21,6 +21,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 //import ZipMaker from './Downloader/ZipMaker'
 // import NIL from './API/NIL.jsx'
 
+import Iconos from './Utilities/Iconos'
 import zipUtils from './Utilities/zipUtils'
 import Collection from './Utilities/Collection'
 import ColShow from './Utilities/ColShow'
@@ -167,11 +168,18 @@ export class DragOnCanvasExample extends React.Component {
   }
 
   addFigure = () => {
+    // tipo: claseIcono //color, tipo y rango
+    var data = {
+      tipo : "---",
+      color: "#000000",
+      range: "1"
+  }
     this.postID = this.postID + 1;
     const copyPostArray = Object.assign([], this.state.figureArray)
     copyPostArray.push({
       id: this.postID,
-      body: this.Body
+      body: this.Body,
+      tipo: data
     })
 
     this.setState({
@@ -738,6 +746,25 @@ export class DragOnCanvasExample extends React.Component {
     }
   }
 
+  addIcono = (claseIcono) => {
+    this.postID = this.postID + 1;
+    const copyPostArray = Object.assign([], this.state.figureArray)
+    copyPostArray.push({
+      id: this.postID,
+      body: this.Body,
+      tipo: claseIcono //color, tipo y rango
+    })
+
+    this.setState({
+      figureArray: copyPostArray
+    })
+  }
+
+  iconoCheck = (claseIcono) => {
+    this.addIcono(claseIcono);
+  }
+
+
   render() {
 
     let optionColection = this.state.colection.map(c => (
@@ -781,10 +808,6 @@ export class DragOnCanvasExample extends React.Component {
                 </Tabs>
               </div>
 
-              {/* <UploadState/> */}
-              {/* <UploadPhoto sendData={this.addPictoFromPhoto} /> */}
-
-              {/* API ARASAAC */}
 
               <div className="mt-5"></div>
 
@@ -841,14 +864,13 @@ export class DragOnCanvasExample extends React.Component {
                     </div>
 
                     <div className="row mt-2 ml-4">
-                      <button className="btn btn-outline-info btn-sm ml-3" title="Añadir una linea al tablero" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i> Añadir linea</button>
+                      <strong>Figuras disponibles para añadir al tablero </strong>
+                      <button className="btn btn-outline-info btn-sm ml-3" title="Añadir una linea al tablero" onClick={this.addLine}><i className="fas fa-grip-lines-vertical"></i></button>
 
-                      <button className="btn btn-outline-info btn-sm ml-1" title="Añadir un cuadrado al tablero" onClick={this.addFigure}><i className="far fa-square"></i> Añadir cuadrado</button>
+                      <button className="btn btn-outline-info btn-sm ml-2" title="Añadir un cuadrado al tablero" onClick={this.addFigure}><i className="far fa-square"></i></button>
 
-                      <button className="btn btn-info ml-2" title="Descargar el tablero como imagen" onClick={this.modalDownloadOpen}>
-                        <i className="fas fa-download"></i>
-                        &nbsp; Descargar Tablero
-                      </button>
+                      <Iconos check={this.iconoCheck} />
+
 
                       <ReactModal
                         isOpen={this.state.showModalDownload}
@@ -888,120 +910,126 @@ export class DragOnCanvasExample extends React.Component {
                           </div>
                         </div>
                       </ReactModal>
-
                     </div>
+                    <hr style={{ margin: 10 }}></hr>
+                    <div className="text-center">
+                      <button className="btn btn-info ml-2" title="Descargar el tablero como imagen" onClick={this.modalDownloadOpen}>
+                        <i className="fas fa-download"></i>
+                        &nbsp; Descargar Tablero
+                    </button>
                   </div>
                 </div>
               </div>
-
-              {this.mostrarAletrsBorrado()}
-
-              <div className="card mt-4 mb-3 ml-3" >
-                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong><i className="fas fa-folder-open"></i> Mis listas de pictogramas</strong></h5>
-                <div className="card-body">
-                  <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
-                  <div className="card-text">
-                    <div className="row">
-                      <div className="col-8">
-                        <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
-                          <option value={"---"}>{ }</option>
-                          {optionColection}
-                        </select>
-                      </div>
-                      <div className="col-4 mt-3 mb-2">
-                        {this.mostrarBorrar()}
-                      </div>
-                    </div>
-                    {this.mostrarColecciones()}
-
-                  </div>
-                </div>
-              </div>
-
-
             </div>
-            <div className="col-8" id="tableroPrint">
 
-              {/* Pintar Canvas  */}
-              <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
-                {
-                  this.state.pictoArray.map((picto, index) => {
-                    return (
+            {this.mostrarAletrsBorrado()}
 
-                      <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={10} height={14} minWidth={3} minHeight={3} key={picto.id}
-                        imageURL={picto.url} config={picto.config}
-                        sendData={this.handleData}
-                      />
-                    )
-                  })
-                }
+            <div className="card mt-4 mb-3 ml-3" >
+              <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong><i className="fas fa-folder-open"></i> Mis listas de pictogramas</strong></h5>
+              <div className="card-body">
+                <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
+                <div className="card-text">
+                  <div className="row">
+                    <div className="col-8">
+                      <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
+                        <option value={"---"}>{ }</option>
+                        {optionColection}
+                      </select>
+                    </div>
+                    <div className="col-4 mt-3 mb-2">
+                      {this.mostrarBorrar()}
+                    </div>
+                  </div>
+                  {this.mostrarColecciones()}
 
-                {
-                  this.state.photoArray.map((photo, index) => {
-                    return (
-
-                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={photo.height} minWidth={3} minHeight={3} key={photo.id}
-                        imageURL={photo.url}
-                        sendData={this.handleDeleteImage}
-                      />
-                    )
-                  })
-                }
+                </div>
+              </div>
+            </div>
 
 
-                {
-                  this.state.textArray.map((text, index) => {
-                    return (
+          </div>
+          <div className="col-8" id="tableroPrint">
 
-                      <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
-                        fontFamily={this.state.selectedFont}
-                        sendData={this.handleDeleteText}
-                      />
-                    )
-                  })
-                }
+            {/* Pintar Canvas  */}
+            <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
+              {
+                this.state.pictoArray.map((picto, index) => {
+                  return (
 
-                {
-                  this.state.lineArray.map((line, index) => {
-                    return (
+                    <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={10} height={14} minWidth={3} minHeight={3} key={picto.id}
+                      imageURL={picto.url} config={picto.config}
+                      sendData={this.handleData}
+                    />
+                  )
+                })
+              }
 
-                      <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
-                        sendData={this.handleDeleteLine}
-                      />
-                    )
-                  })
-                }
+              {
+                this.state.photoArray.map((photo, index) => {
+                  return (
 
-                {
-                  this.state.figureArray.map((figure) => {
-                    return (
-
-                      <FigureItem label={figure.body} idPicto={figure.id} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
-                        sendData={this.handleDeleteFigure}
-                      />
-                    )
-                  })
-                }
-
-                {
-                  this.state.fraseArray.map((frase) => {
-                    return (
-
-                      <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
-                        deleteItem={this.handleDeleteFrase} />
+                    <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={photo.height} minWidth={3} minHeight={3} key={photo.id}
+                      imageURL={photo.url}
+                      sendData={this.handleDeleteImage}
+                    />
+                  )
+                })
+              }
 
 
-                    )
-                  })
-                }
+              {
+                this.state.textArray.map((text, index) => {
+                  return (
 
-                {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
+                    <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
+                      fontFamily={this.state.selectedFont}
+                      sendData={this.handleDeleteText}
+                    />
+                  )
+                })
+              }
+
+              {
+                this.state.lineArray.map((line, index) => {
+                  return (
+
+                    <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
+                      sendData={this.handleDeleteLine}
+                    />
+                  )
+                })
+              }
+
+              {
+                this.state.figureArray.map((figure) => {
+                  return (
+
+                    <FigureItem label={figure.body} idPicto={figure.id} tipo={figure.tipo} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
+                      sendData={this.handleDeleteFigure}
+                    />
+                  )
+                })
+              }
+
+              {
+                this.state.fraseArray.map((frase) => {
+                  return (
+
+                    <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
+                      deleteItem={this.handleDeleteFrase} />
+
+
+                  )
+                })
+              }
+
+              {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
           <CanvasItem label="NIÑO" x={6} y={12} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"niño.png"} /> */}
 
-              </Canvas>
-            </div>
+            </Canvas>
           </div>
         </div>
+      </div>
       </div >
 
 

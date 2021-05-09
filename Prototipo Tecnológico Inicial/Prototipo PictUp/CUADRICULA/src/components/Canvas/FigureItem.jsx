@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Rnd from 'react-rnd';
 import IconButton from '../Icon/IconButton';
-import { FormFigure } from './Form/formFigure'
+import FormFigure from './Form/formFigure'
 import './Styles/FigureItemStyle.css';
 
 import ReactModal from 'react-modal';
@@ -24,6 +24,7 @@ const proptypes = {
     moveAriaDescribedby: PropTypes.string,
     resizeAriaDescribedby: PropTypes.string,
     idPicto: PropTypes.number,
+    tipo: PropTypes.object,
     imageSRC: PropTypes.string,
     imageURL: PropTypes.string,
     apiObject: PropTypes.object
@@ -65,9 +66,9 @@ class FigureItem extends Component {
             y: this.defaultPosition.y,
             width: this.defaultPosition.width,
             height: this.defaultPosition.height,
-            borderColor: "black",
+            borderColor: this.props.tipo.color,
             label: this.props.label,
-
+            opacidad: this.props.tipo.range,
         }
 
         this.lockAspectRatio = true;
@@ -338,20 +339,39 @@ class FigureItem extends Component {
 
     handleModifyClik(event) {
 
-       
-        console.log(event.target.myColor.value)
-        // console.log(event.target.bold.checked)
-        // console.log(event.target.italic.checked)
-        // console.log(event.target.underline.checked)
+        var range = Number(event.range);
+        var color = event.color;
+
+
         this.setState({
-            // label: event.target.textLabel.value,
-            borderColor: event.target.myColor.value,
-            // isBold: event.target.bold.checked,
-            // isItalic: event.target.italic.checked,
-            // isUnderline: event.target.underline.checked,
+            borderColor: color,
+            opacidad: range
         })
 
-        event.preventDefault();
+        console.log("EL rango en numero ", Number(range));
+
+        // this.setState({
+        //     opacidad: range
+        // })
+        // }else if(range == 0.4){
+        //     this.setState({
+        //         opacidad: 0.9
+        //     })
+        // }else if(range == 0.3){
+        //     this.setState({
+        //         opacidad: 0.8
+        //     })
+        // }else if(range == 0.2){
+        //     this.setState({
+        //         opacidad: 0.7
+        //     })
+        // }else{
+        //     this.setState({
+        //         opacidad: 0.5
+        //     })
+        // }
+
+        this.closeModal();
     }
 
     //Funciones de aumentar o disminuir el texto
@@ -390,6 +410,28 @@ class FigureItem extends Component {
         this.setState({ modalIsOpen: false });
     };
 
+    mostrarFigura = () => {
+        if (this.props.tipo.tipo == "---") {//es un cuadrado
+            return (
+                <div className="slds-p-vertical_medium slds-text-heading_small">
+                    <svg width={this.state.width * 0.9} height={this.state.width * 0.9}>
+                        <rect rx="10" ry="10" width={this.state.width * 0.9} height={this.state.width * 0.9}
+                            style={{ fill: "transparent", stroke: this.state.borderColor, strokeWidth: 10, opacity: this.state.opacidad}} />
+                    </svg>
+
+                </div>
+            )
+        } else {
+            return (
+                // <i className={this.props.tipo} ></i>
+                <div className="slds-p-vertical_medium slds-text-heading_small" >
+                    <span style={{ fontSize: this.state.width * 0.7, color: this.state.borderColor, opacity: this.state.opacidad }} >
+                        <i className={this.props.tipo.tipo} ></i>
+                    </span>
+                </div>
+            )
+        }
+    }
     /** ---- Resizing element END ---- **/
 
     render() {
@@ -399,7 +441,7 @@ class FigureItem extends Component {
             'dnd-canvas__object--resizing': this.state.isResizing,
             'dnd-canvas__object--editing': this.state.isEditing
         });
-        var modalStyles = {overlay: {zIndex: 10}};
+        var modalStyles = { overlay: { zIndex: 10 } };
 
         return (
             <Rnd
@@ -416,18 +458,23 @@ class FigureItem extends Component {
                 onDragStop={this.handleDragStop}
                 onResizeStop={this.handleResizeStop}
                 enableResizing={this.resizeHandles}
-            lockAspectRatio={this.lockAspectRatio}
+                lockAspectRatio={this.lockAspectRatio}
                 style={{
-                        backgroundcolor: "white"
+                    backgroundcolor: "white"
                 }}
             >
                 <div>
-                    <div className="slds-p-vertical_medium slds-text-heading_small">
-                    <svg width={this.state.width * 0.9} height={this.state.width * 0.9}>
-                        <rect  rx="10" ry="10" width={this.state.width* 0.9} height={this.state.width* 0.9}
-                        style={{fill:"transparent", stroke:this.state.borderColor, strokeWidth:10, opacity:1}} />
-                    </svg> 
+                    <div>
+                        <IconButton
+                            assistiveText={"Borrar " + this.props.label}
+                            ariaDescribedby={this.props.editAriaDescribedby}
+                            className="dnd-canvas__object-button dnd-canvas__object-button--resize"
+                            sprite="utility"
+                            symbol="close"
+                            onClick={this.handleRemoveClick}
+                            onKeyDown={this.handleEditKeyDown} />
                     </div>
+                    {this.mostrarFigura()}
 
                     <div className="dnd-canvas__object-buttons">
 
@@ -438,15 +485,7 @@ class FigureItem extends Component {
                             symbol="edit"
                             onClick={this.openModal}
                         />
-                        <IconButton
-                            assistiveText={"Borrar " + this.props.label}
-                            ariaDescribedby={this.props.editAriaDescribedby}
-                            className="dnd-canvas__object-button dnd-canvas__object-button--edit"
-                            sprite="utility"
-                            symbol="delete"
-                            onClick={this.handleRemoveClick}
-                            onKeyDown={this.handleEditKeyDown} 
-                        />
+
 
                         <div>
                             <ReactModal
@@ -456,10 +495,10 @@ class FigureItem extends Component {
                                 onRequestClose={this.closeModal}
                                 className="Modal"
                                 ariaHideApp={false}
-                                style={ modalStyles}>
+                                style={modalStyles}>
 
-                                <FormFigure onSubmit={this.handleModifyClik} />        
-                                
+                                <FormFigure onSubmit={this.handleModifyClik} onCloseModal={this.closeModal} iniColor={this.state.borderColor} iniRange={this.state.opacidad} />
+
                             </ReactModal>
                         </div>
 
