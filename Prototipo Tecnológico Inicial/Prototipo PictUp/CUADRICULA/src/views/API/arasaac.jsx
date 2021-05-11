@@ -95,7 +95,6 @@ class ARASAAC extends Component {
 	}
 
 	sendSelectedConf(newConf) {
-		console.log(newConf)
 
 		this.setState({
 			conf: newConf
@@ -114,7 +113,6 @@ class ARASAAC extends Component {
 	}
 
 	sendSelectedCollection = (picto) => {
-		console.log(picto);
 		this.props.sendC(picto);
 	}
 
@@ -152,9 +150,6 @@ class ARASAAC extends Component {
 		if (!this.state.conf.isColorized) {
 			query += "_nocolor"
 		}
-
-		console.log(this.state.conf.time)
-
 
 		return ("https://static.arasaac.org/pictograms/" + picto._id + "/" + picto._id + query + "_500.png")
 

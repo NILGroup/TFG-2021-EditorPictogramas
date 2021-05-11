@@ -15,7 +15,7 @@ export default class ZipUtils extends React.Component {
   }
 
   getImage() {
-    console.log("Eyy")
+    //console.log("Eyy")
   }
 
 
@@ -49,8 +49,6 @@ export default class ZipUtils extends React.Component {
         alert("Error reading " + f.name + ": " + e.message);
       })
 
-    console.log("Sol", slidesobj)
-
     return url
 
   }
@@ -61,8 +59,6 @@ export default class ZipUtils extends React.Component {
     const promises = []
 
     var file = f.target.files[0]
-
-    console.log(file.target.files)
 
     var JSZip = require('jszip')();
 

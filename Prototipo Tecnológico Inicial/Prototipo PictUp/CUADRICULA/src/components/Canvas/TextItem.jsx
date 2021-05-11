@@ -339,14 +339,11 @@ class TextIcon extends Component {
     this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
 
     if (isEditing) {
-      console.log("estamos en item y pasamos el id", this.props.idPicto)
       this.props.sendData(this.props.idPicto); //etiqueta del picto
     }
   }
 
   handleModifyClik(event) {
-
-    console.log(event)
 
     this.setState({
       label: event.text,
@@ -361,7 +358,6 @@ class TextIcon extends Component {
 
   //Funciones de aumentar o disminuir el texto
   handleIncreaseText = () => {
-    console.log(this.state.fontSize)
     if (this.state.fontSize <= this.state.defaultFontSize * 6) {
       this.setState({
         fontSize: this.state.fontSize * 1.2
@@ -369,7 +365,6 @@ class TextIcon extends Component {
     }
   }
   handleReduceText = () => {
-    console.log(this.state.fontSize)
     if (this.state.fontSize * 6 >= this.state.defaultFontSize) {
       this.setState({
         fontSize: this.state.fontSize * 0.8

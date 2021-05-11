@@ -52,7 +52,6 @@ export class Collection extends React.Component {
   setId = (event) => {
     var aux = event.target.value;
     this.Id = aux;
-    console.log(this.Id);
   }
 
   //crea una nueva coleccion
@@ -72,7 +71,6 @@ export class Collection extends React.Component {
     var nameCollection = this.Nueva;
     var picto = this.Id;
     var encontrado = 0;
-    console.log(picto);
 
     for (var i = 0; i < this.contador; ++i) {
       if (this.state.colection[i].name == nameCollection) {
@@ -81,18 +79,11 @@ export class Collection extends React.Component {
       }
     }
     if (encontrado == 0) {
-      console.log("El nombre de la colección ", nameCollection, " no existe");
+      //console.log("El nombre de la colección ", nameCollection, " no existe");
     }
-    console.log(this.state.colection);
 
   }
 
-  show = () => {
-    console.log(this.props.dataFromParent);
-    for (var i = 0; i < this.contador; ++i) {
-      console.log(this.state.colection[i]);
-    }
-  }
 
   openModal = (idPicto) => {
     //this.Id = idPicto;
@@ -130,7 +121,6 @@ export class Collection extends React.Component {
     let fileloaded = e => {
       const fileContents = e.target.result;
       var collections = JSON.parse(fileContents);
-      console.log(collections.colection[0].name);
       for (var i = 0; i < collections.colection.length; i++) {
         var total = this.state.colection.concat(collections.colection[i]);
         this.setState({colection: total});
@@ -150,7 +140,6 @@ export class Collection extends React.Component {
   }
 
   handleChange(e) {
-    console.log(e.target.value);
     //here you will see the current selected value of the select input
   }
 

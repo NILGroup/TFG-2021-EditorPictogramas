@@ -15,10 +15,10 @@ export class ZipMaker extends React.Component {
 
         
 
-        zip.file("UWU.txt", "Oleee")
-        zip.file("Fotos/EstoEsUnaFoto.txt", "Oleee")
+        zip.file("texto.txt", "---")
+        zip.file("Fotos/EstoEsUnaFoto.txt", "--")
         zip.generateAsync({type:"blob"}).then(function (blob) {
-            saveAs(blob, "JorgeGay.zip");
+            saveAs(blob, "compresion.zip");
         });
 
     }

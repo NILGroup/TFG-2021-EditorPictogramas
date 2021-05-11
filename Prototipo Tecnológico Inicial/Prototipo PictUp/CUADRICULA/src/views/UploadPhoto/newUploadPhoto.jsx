@@ -21,19 +21,15 @@ class Upload extends React.Component {
 
   handleChange(event) {
 
-    console.log(event.target.files[0])
-
     this.setState({
       file: event.target.files[0],
       isLoaded: true,
       photo: URL.createObjectURL(event.target.files[0]),
     })
 
-    console.log(URL.createObjectURL(event.target.files[0]))
   }
 
   sendPhoto = (e) => {
-    console.log(this.state.text)
     const img = new Image();
     img.src = window.URL.createObjectURL(e);
     img.addEventListener('load', () => {
@@ -54,8 +50,6 @@ class Upload extends React.Component {
     var files = loadedFiles
 
     for (var i = 0; i < files.length; i++) {
-      console.log(files[i])
-      console.log(URL.createObjectURL(files[i]))
       this.props.sendData(files[i]);
     }
   }

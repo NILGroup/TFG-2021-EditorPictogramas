@@ -319,7 +319,6 @@ class CanvasItem extends Component {
         this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
 
         if (isEditing) {
-            console.log("estamos en item y pasamos el id", this.props.idPicto)
             this.props.sendData(this.props.idPicto); //etiqueta del picto
         }
     }
@@ -338,7 +337,6 @@ class CanvasItem extends Component {
         this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
 
         if (isEditing) {
-            console.log("estamos en item y pasamos el id", this.props.idPicto)
             this.props.sendData(this.props.idPicto); //etiqueta del picto
         }
 

@@ -123,9 +123,7 @@ export class DragOnCanvasExample extends React.Component {
   }
 
   seleccionarCalidad = (e) => {
-    // console.log(e.target.value);
     this.calidad = e.target.value;
-    console.log(this.calidad);
   }
 
   deleteEvent = (index) => {
@@ -137,7 +135,6 @@ export class DragOnCanvasExample extends React.Component {
   }
 
   setPicto = (element) => {
-    console.log(element)
     this.Body = element.target.value
   }
 
@@ -193,7 +190,7 @@ export class DragOnCanvasExample extends React.Component {
 
   getLocalStorage = () => {
 
-    console.log(JSON.parse(window.localStorage.getItem('Foto')))
+    // console.log(JSON.parse(window.localStorage.getItem('Foto')))
   }
 
   cuantosHay = (picto) => {
@@ -261,8 +258,6 @@ export class DragOnCanvasExample extends React.Component {
 
 
   addPictoFromPhoto = (File) => {
-    console.log(File);
-
     var auxHeigh = 15
     if (File.text != "") {
       auxHeigh = 15 + 3
@@ -283,19 +278,13 @@ export class DragOnCanvasExample extends React.Component {
       photoArray: copyPostArray
     })
 
-    console.log("Añadido: ", File)
   }
 
   importarColecciones = (colecciones) => {
-
-    console.log("estoy en drag on canvas con las colecciones importadas =>", colecciones);
     for (var i = 0; i < colecciones.length; i++) {
       var total = this.state.colection.concat(colecciones[i]); //añado por el final las nuevas colecciones
       this.setState({ colection: total });
     }
-
-    console.log("estado final", this.state.colection);
-
   }
 
   addImage = (name, imgUrl) => {
@@ -318,9 +307,7 @@ export class DragOnCanvasExample extends React.Component {
   createFile = () => {
     const zip = require('jszip')();
     const copyPostArray = Object.assign([], this.state.photoArray)
-    console.log(copyPostArray)
     copyPostArray.forEach(photo => {
-      console.log("FOTAKA", photo.file)
       zip.file(photo.body, photo.file, { base64: true });
     });
     zip.generateAsync({ type: "blob" }).then(function (blob) {
@@ -346,7 +333,6 @@ export class DragOnCanvasExample extends React.Component {
     } else {
       escala = 2;
     }
-    console.log("se va a descargar en calidad", escala);
     this.calidad = "alta"; //reseteamos valor por defecto
     html2canvas(container, { allowTaint: true, useCORS: true, scale: escala, scrollY: window.scrollY })
       .then(function (canvas) {
@@ -365,13 +351,12 @@ export class DragOnCanvasExample extends React.Component {
 
   createPhotoZip() {
     this.state.photoArray.forEach(element => {
-      console.log(element)
+      //console.log(element) 
     });
   }
 
   handleData = (e) => {
     const copyPostArray = Object.assign([], this.state.pictoArray)
-    console.log(copyPostArray.length)
     var long = copyPostArray.length
     var posBorrar;
 
@@ -389,7 +374,6 @@ export class DragOnCanvasExample extends React.Component {
 
   handleDeleteText = (e) => {
     const copyPostArray = Object.assign([], this.state.textArray)
-    console.log(copyPostArray.length)
     var long = copyPostArray.length
     var posBorrar;
 
@@ -407,7 +391,6 @@ export class DragOnCanvasExample extends React.Component {
 
   handleDeleteLine = (e) => {
     const copyPostArray = Object.assign([], this.state.lineArray)
-    console.log(copyPostArray.length)
     var long = copyPostArray.length
     var posBorrar;
 
@@ -425,7 +408,6 @@ export class DragOnCanvasExample extends React.Component {
 
   handleDeleteFigure = (e) => {
     const copyPostArray = Object.assign([], this.state.figureArray)
-    console.log(copyPostArray.length)
     var long = copyPostArray.length
     var posBorrar;
 
@@ -443,7 +425,6 @@ export class DragOnCanvasExample extends React.Component {
 
   handleDeleteFrase = (e) => {
     const copyPostArray = Object.assign([], this.state.fraseArray)
-    console.log(e)
     var long = copyPostArray.length
     var posBorrar;
 
@@ -452,8 +433,6 @@ export class DragOnCanvasExample extends React.Component {
         posBorrar = i;
       }
     }
-
-    console.log(this.state.fraseArray, posBorrar)
 
     copyPostArray.splice(posBorrar, 1);
     this.setState({
@@ -464,7 +443,6 @@ export class DragOnCanvasExample extends React.Component {
 
   handleDeleteImage = (e) => {
     const copyPostArray = Object.assign([], this.state.photoArray)
-    console.log(copyPostArray.length)
     var long = copyPostArray.length
     var posBorrar;
 
@@ -499,7 +477,6 @@ export class DragOnCanvasExample extends React.Component {
       });
     }
 
-    console.log(this.state.selectedColection);
   }
 
   handleChange = (e) => {
@@ -507,11 +484,9 @@ export class DragOnCanvasExample extends React.Component {
     this.setState({
       historialColeccion: e.target.value
     })
-    // console.log(this.nameSelected);
   }
 
   addToCollection = () => {
-    console.log(this.Id);
 
     if (this.nameSelected == "---") {
       this.nameSelected = this.state.historialColeccion;
@@ -543,7 +518,7 @@ export class DragOnCanvasExample extends React.Component {
             aux[i].idPicto = actualizada;
             this.setState({ colection: aux });
             this.setState({
-              tipoDeAlerta: "Añadido el picograma " + this.Id.keywords[0].keyword + " a la lista " + this.state.colection[i].name
+              tipoDeAlerta: "Añadido el pictograma " + this.Id.keywords[0].keyword + " a la lista " + this.state.colection[i].name
             })
           }
         }
@@ -580,7 +555,6 @@ export class DragOnCanvasExample extends React.Component {
       })
       this.setState({ historialColeccion: this.NewName })
       this.setState({ colection: nueva });
-      console.log(this.state.colection);
       this.setState({
         tipoDeAlerta: "Creada lista de pictogramas " + this.NewName
       })
@@ -591,18 +565,15 @@ export class DragOnCanvasExample extends React.Component {
 
   setNameCollection = (e) => {
     this.NewName = e.target.value;
-    console.log(this.NewName);
   }
 
   handleFontChange = (e) => {
-    console.log(e.target.value)
     this.setState({
       selectedFont: e.target.value
     })
   }
 
   mostrarColecciones = () => {
-    console.log(this.state.selectedColection);
     if (this.state.selectedColection != "---" && this.state.selectedColection != this.state.borrando) {
       return (
         <ColShow sendData={this.addPictoFromCol} colections={this.state.colection[this.state.selectedColection].idPicto} />
@@ -624,24 +595,28 @@ export class DragOnCanvasExample extends React.Component {
         selectedColection: "---"
       })
     }
-    const copyPostArray = Object.assign([], this.state.colection);
-    var posBorrar = this.state.selectedColection;
-    var name = this.state.colection[posBorrar].name
-    copyPostArray.splice(posBorrar, 1);
-    this.setState({
-      colection: copyPostArray
-    })
+    if (this.state.selectedColection != '---') {
+      const copyPostArray = Object.assign([], this.state.colection);
+      var posBorrar = this.state.selectedColection;
+      var name = this.state.colection[posBorrar].name
+      if (posBorrar == (this.state.colection.length - 1)) {
+        this.setState({
+          selectedColection: "---"
+        })
+      }
+      copyPostArray.splice(posBorrar, 1);
+      this.setState({
+        colection: copyPostArray
+      })
 
-    this.setState({
-      borrando: this.state.selectedColection
-    })
+      this.setState({
+        borrando: this.state.selectedColection
+      })
 
-
-
-    this.setState({
-      tipoDeAlertaBorrado: "Se ha borrado la lista de pictogramas " + name
-    })
-
+      this.setState({
+        tipoDeAlertaBorrado: "Se ha borrado la lista de pictogramas " + name
+      })
+    }
   }
 
   mostrarBorrar = () => {

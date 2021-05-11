@@ -7,8 +7,6 @@ class FormPicto extends Component {
     constructor(props) {
         super(props);
 
-        console.log(this.props.conf.hair)
-
         this.state = {
             hair: this.props.conf.hair,
             skin: this.props.conf.skin,
@@ -73,13 +71,10 @@ class FormPicto extends Component {
             query += "_nocolor"
         }
 
-        console.log(this.state.time)
 
         this.setState({
             url: "https://static.arasaac.org/pictograms/" + picto._id + "/" + picto._id + query + "_500.png"
         })
-
-        console.log(this.state.url)
 
     }
 
@@ -119,14 +114,12 @@ class FormPicto extends Component {
 
     handleSkin(event) {
 
-        console.log("Skin: ", event.target.value)
         this.setState({
             skin: event.target.value
         }, () => this.createUrl())
     }
 
     handleBorderCol(event) {
-        console.log("Border: ", event.target.value)
         this.setState({
             borderColor: event.target.value
         }, () => this.createUrl())
@@ -155,7 +148,6 @@ class FormPicto extends Component {
 
     handleHasBorder() {
 
-        console.log(this.state.hasBorder)
         var width = 10
         if (this.state.hasBorder) width = 0
 
@@ -370,7 +362,6 @@ class FormPicto extends Component {
     }
 
     send = (e) => {
-        console.log(e)
         this.props.onSubmit(e)
     }
 

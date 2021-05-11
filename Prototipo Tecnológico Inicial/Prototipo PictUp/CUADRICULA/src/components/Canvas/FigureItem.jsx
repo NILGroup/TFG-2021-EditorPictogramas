@@ -341,7 +341,6 @@ class FigureItem extends Component {
         this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
 
         if (isEditing) {
-            console.log("estamos en item y pasamos el id", this.props.idPicto)
             this.props.sendData(this.props.idPicto); //etiqueta del picto
         }
     }
@@ -357,35 +356,11 @@ class FigureItem extends Component {
             opacidad: range
         })
 
-        console.log("EL rango en numero ", Number(range));
-
-        // this.setState({
-        //     opacidad: range
-        // })
-        // }else if(range == 0.4){
-        //     this.setState({
-        //         opacidad: 0.9
-        //     })
-        // }else if(range == 0.3){
-        //     this.setState({
-        //         opacidad: 0.8
-        //     })
-        // }else if(range == 0.2){
-        //     this.setState({
-        //         opacidad: 0.7
-        //     })
-        // }else{
-        //     this.setState({
-        //         opacidad: 0.5
-        //     })
-        // }
-
         this.closeModal();
     }
 
     //Funciones de aumentar o disminuir el texto
     handleIncreaseText = () => {
-        console.log(this.state.fontSize)
         if (this.state.fontSize <= this.state.defaultFontSize * 6) {
             this.setState({
                 fontSize: this.state.fontSize + 0.03
@@ -393,7 +368,6 @@ class FigureItem extends Component {
         }
     }
     handleReduzeText = () => {
-        console.log(this.state.fontSize)
         if (this.state.fontSize <= this.state.defaultFontSize) {
             this.setState({
                 fontSize: this.state.fontSize - 0.02

@@ -7,7 +7,6 @@ class ColShow extends Component {
 	sendSelectedPicto = (picto) => {
 
 		//el boton + que añadiria al tablero
-		console.log(this.props.colections);
 		this.props.sendData(picto);
 	}
 
@@ -15,7 +14,6 @@ class ColShow extends Component {
 		this.setState({
 			items: JSON.parse(localStorage.getItem("recentPictos"))
 		})
-		console.log("hola")
 	}
 
 

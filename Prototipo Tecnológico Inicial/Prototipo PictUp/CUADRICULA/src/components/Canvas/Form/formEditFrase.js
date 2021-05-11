@@ -44,7 +44,6 @@ class FormEditFrase extends Component {
             ButtonColor = "btn btn-outline-danger btn-sm"
         }
 
-        console.log(i)
 
         return (
 
@@ -65,8 +64,6 @@ class FormEditFrase extends Component {
 
 
     renderAllPictos() {
-        console.log("Frase: ", this.props.frase)
-        console.log("Selected: ", this.props.selected)
 
         return (
             <div className="row">
@@ -94,8 +91,6 @@ class FormEditFrase extends Component {
         let noVisiblePictos = this.state.selected.every(function (e) {
             return !e
         });
-
-        console.log(noVisiblePictos)
 
         if (noVisiblePictos) return (<h1>No hay pictos visibles</h1>)
 

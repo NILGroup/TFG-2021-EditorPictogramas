@@ -12,12 +12,9 @@ export class UploadPhoto extends Component {
       }
     }
     reader.readAsDataURL(e.target.files[0])
-    console.log(e.target.files[0])
 
     localStorage.setItem("message", "saved in browser storage");
-    // sets the value of "message" to be "saved in browser storage"
-    console.log("HOLAAA!", localStorage.getItem("message"));
-    
+    // sets the value of "message" to be "saved in browser storage"    
   };
 
   sendPhoto = (e) => {

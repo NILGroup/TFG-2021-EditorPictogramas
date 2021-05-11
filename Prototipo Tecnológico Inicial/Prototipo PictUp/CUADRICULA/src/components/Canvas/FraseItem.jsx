@@ -295,14 +295,11 @@ class FraseItem extends Component {
         this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
 
         if (isEditing) {
-            console.log("estamos en item y pasamos el id", this.props.idPicto)
             this.props.deleteItem(this.props.idPicto); //etiqueta del picto
         }
     }
 
     handleModifyClik(e) {
-
-        console.log(e)
 
         this.setState({
             texto: e.text,

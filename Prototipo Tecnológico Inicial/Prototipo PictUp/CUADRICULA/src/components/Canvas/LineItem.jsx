@@ -343,7 +343,6 @@ class LineItem extends Component {
 
       this.rnd.updateSize({ width: old_heigh, height: old_width });
       this.setState({ width: old_heigh, height: old_width });
-      console.log(this.state.height)
     }
     else{
       this.resizeHandles = {
@@ -376,7 +375,6 @@ class LineItem extends Component {
     this.setState({ isResizing: false, isMoving: false, isEditing: isEditing });
 
     if (isEditing) {
-      console.log("estamos en item y pasamos el id", this.props.idPicto)
       this.props.sendData(this.props.idPicto); //etiqueta del picto
     }
   }
