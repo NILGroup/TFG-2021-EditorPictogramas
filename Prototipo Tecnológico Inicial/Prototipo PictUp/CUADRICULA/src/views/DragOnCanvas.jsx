@@ -170,10 +170,10 @@ export class DragOnCanvasExample extends React.Component {
   addFigure = () => {
     // tipo: claseIcono //color, tipo y rango
     var data = {
-      tipo : "---",
+      tipo: "---",
       color: "#000000",
       range: "1"
-  }
+    }
     this.postID = this.postID + 1;
     const copyPostArray = Object.assign([], this.state.figureArray)
     copyPostArray.push({
@@ -218,6 +218,30 @@ export class DragOnCanvasExample extends React.Component {
       pictoArray: copyPostArray
     })
 
+  }
+
+  addPictoFromCol = (form) => {
+    this.postID = this.postID + 1;
+
+
+    var formModel = {
+      picto: form,
+      url: "https://static.arasaac.org/pictograms/" + form._id + "/" + form._id + "_500.png"
+    }
+
+    const copyPostArray = Object.assign([], this.state.pictoArray)
+    copyPostArray.push({
+      id: this.postID,
+      body: formModel.picto.keywords[0].keyword,
+      picto_id: formModel.picto._id,
+      apiObject: formModel.picto,
+      config: this.state.pictoConfig,
+      url: formModel.url
+    })
+
+    this.setState({
+      pictoArray: copyPostArray
+    })
   }
 
   addFraseTrad = (e) => {
@@ -581,13 +605,13 @@ export class DragOnCanvasExample extends React.Component {
     console.log(this.state.selectedColection);
     if (this.state.selectedColection != "---" && this.state.selectedColection != this.state.borrando) {
       return (
-        <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[this.state.selectedColection].idPicto} />
+        <ColShow sendData={this.addPictoFromCol} colections={this.state.colection[this.state.selectedColection].idPicto} />
       )
     } else if (this.state.selectedColection == this.state.borrando) {
       //comprobar que no sea la ultima colección
       if (this.state.borrando < this.state.colection.length) {
         return (
-          <ColShow sendData={this.addPictoFromAPI} colections={this.state.colection[this.state.borrando].idPicto} />
+          <ColShow sendData={this.addPictoFromCol} colections={this.state.colection[this.state.borrando].idPicto} />
         )
       }
     }
@@ -799,7 +823,7 @@ export class DragOnCanvasExample extends React.Component {
                     <ARASAAC sendData={this.addPictoFromAPI} sendC={this.cuantosHay} sendFrase={this.addFraseTrad} config={this.state.pictoConfig} newConf={(e) => this.setState({ pictoConfig: e })} />
                   </TabPanel>
                   <TabPanel>
-                    <NILtraductor sendFrase={this.addFraseTrad} sendPicto={this.addPictoFromAPI} />
+                    <NILtraductor sendFrase={this.addFraseTrad} sendPicto={this.addPictoFromCol} />
                     {/* send2sac={this.getFromTrad} */}
                   </TabPanel>
                   <TabPanel>
@@ -917,119 +941,119 @@ export class DragOnCanvasExample extends React.Component {
                         <i className="fas fa-download"></i>
                         &nbsp; Descargar Tablero
                     </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {this.mostrarAletrsBorrado()}
+              {this.mostrarAletrsBorrado()}
 
-            <div className="card mt-4 mb-3 ml-3" >
-              <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong><i className="fas fa-folder-open"></i> Mis listas de pictogramas</strong></h5>
-              <div className="card-body">
-                <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
-                <div className="card-text">
-                  <div className="row">
-                    <div className="col-8">
-                      <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
-                        <option value={"---"}>{ }</option>
-                        {optionColection}
-                      </select>
+              <div className="card mt-4 mb-3 ml-3" >
+                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong><i className="fas fa-folder-open"></i> Mis listas de pictogramas</strong></h5>
+                <div className="card-body">
+                  <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
+                  <div className="card-text">
+                    <div className="row">
+                      <div className="col-8">
+                        <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
+                          <option value={"---"}>{ }</option>
+                          {optionColection}
+                        </select>
+                      </div>
+                      <div className="col-4 mt-3 mb-2">
+                        {this.mostrarBorrar()}
+                      </div>
                     </div>
-                    <div className="col-4 mt-3 mb-2">
-                      {this.mostrarBorrar()}
-                    </div>
+                    {this.mostrarColecciones()}
+
                   </div>
-                  {this.mostrarColecciones()}
-
                 </div>
               </div>
+
+
             </div>
+            <div className="col-8" id="tableroPrint">
+
+              {/* Pintar Canvas  */}
+              <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
+                {
+                  this.state.pictoArray.map((picto, index) => {
+                    return (
+
+                      <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={10} height={14} minWidth={3} minHeight={3} key={picto.id}
+                        imageURL={picto.url} config={picto.config}
+                        sendData={this.handleData}
+                      />
+                    )
+                  })
+                }
+
+                {
+                  this.state.photoArray.map((photo, index) => {
+                    return (
+
+                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={photo.height} minWidth={3} minHeight={3} key={photo.id}
+                        imageURL={photo.url}
+                        sendData={this.handleDeleteImage}
+                      />
+                    )
+                  })
+                }
 
 
-          </div>
-          <div className="col-8" id="tableroPrint">
+                {
+                  this.state.textArray.map((text, index) => {
+                    return (
 
-            {/* Pintar Canvas  */}
-            <Canvas id="tableroPicto" hideFancyLiveRegion={this.props.hideFancyLiveRegion}>
-              {
-                this.state.pictoArray.map((picto, index) => {
-                  return (
+                      <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
+                        fontFamily={this.state.selectedFont}
+                        sendData={this.handleDeleteText}
+                      />
+                    )
+                  })
+                }
 
-                    <PictoItem label={picto.body} apiObject={picto.apiObject} idPicto={picto.id} x={2} y={2} width={10} height={14} minWidth={3} minHeight={3} key={picto.id}
-                      imageURL={picto.url} config={picto.config}
-                      sendData={this.handleData}
-                    />
-                  )
-                })
-              }
+                {
+                  this.state.lineArray.map((line, index) => {
+                    return (
 
-              {
-                this.state.photoArray.map((photo, index) => {
-                  return (
+                      <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
+                        sendData={this.handleDeleteLine}
+                      />
+                    )
+                  })
+                }
 
-                    <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={photo.height} minWidth={3} minHeight={3} key={photo.id}
-                      imageURL={photo.url}
-                      sendData={this.handleDeleteImage}
-                    />
-                  )
-                })
-              }
+                {
+                  this.state.figureArray.map((figure) => {
+                    return (
 
+                      <FigureItem label={figure.body} idPicto={figure.id} tipo={figure.tipo} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
+                        sendData={this.handleDeleteFigure}
+                      />
+                    )
+                  })
+                }
 
-              {
-                this.state.textArray.map((text, index) => {
-                  return (
+                {
+                  this.state.fraseArray.map((frase) => {
+                    return (
 
-                    <TextItem label={text.body} idPicto={text.id} x={2} y={2} width={10} height={5} minWidth={5} minHeight={4} key={text.id}
-                      fontFamily={this.state.selectedFont}
-                      sendData={this.handleDeleteText}
-                    />
-                  )
-                })
-              }
-
-              {
-                this.state.lineArray.map((line, index) => {
-                  return (
-
-                    <LineItem label={line.body} idPicto={line.id} x={5} y={5} width={1} height={9} minWidth={1} minHeight={1} key={line.id}
-                      sendData={this.handleDeleteLine}
-                    />
-                  )
-                })
-              }
-
-              {
-                this.state.figureArray.map((figure) => {
-                  return (
-
-                    <FigureItem label={figure.body} idPicto={figure.id} tipo={figure.tipo} x={5} y={5} width={15} height={15} minWidth={4} minHeight={4} key={figure.id}
-                      sendData={this.handleDeleteFigure}
-                    />
-                  )
-                })
-              }
-
-              {
-                this.state.fraseArray.map((frase) => {
-                  return (
-
-                    <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
-                      deleteItem={this.handleDeleteFrase} />
+                      <FraseItem x={5} y={5} width={10} height={10} minWidth={4} minHeight={4} idPicto={frase.id} frase={frase.frase} texto={frase.texto} key={frase.id}
+                        deleteItem={this.handleDeleteFrase} />
 
 
-                  )
-                })
-              }
+                    )
+                  })
+                }
 
-              {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
+                {/* <CanvasItem label="COLE" x={20} y={6} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"cole.png"} />
           <CanvasItem label="NIÑO" x={6} y={12} width={7} height={10} minWidth={7} minHeight={10} imageSRC={"niño.png"} /> */}
 
-            </Canvas>
+              </Canvas>
+            </div>
           </div>
         </div>
-      </div>
       </div >
 
 

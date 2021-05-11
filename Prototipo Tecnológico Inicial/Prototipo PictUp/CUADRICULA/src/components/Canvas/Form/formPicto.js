@@ -55,11 +55,11 @@ class FormPicto extends Component {
             query += "_action-" + this.state.time
         }
 
-        if (this.state.hair !== null) {
+        if (this.state.hair !== null && picto.hair) {
             query += "_hair-" + this.state.hair
         }
 
-        if (this.state.skin !== null) {
+        if (this.state.skin !== null && picto.skin) {
             query += "_skin-" + this.state.skin
         }
 

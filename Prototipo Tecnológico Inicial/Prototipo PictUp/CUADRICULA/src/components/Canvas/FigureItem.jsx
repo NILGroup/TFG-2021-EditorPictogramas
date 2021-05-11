@@ -88,6 +88,15 @@ class FigureItem extends Component {
 
     }
 
+    componentDidMount() {
+        if (this.props.tipo.tipo === "---") {
+            this.setState({ zIndex: 1 })
+        }
+        else {
+            this.setState({ zIndex: 9 })
+        }
+    }
+
     increaseZIndex() {
         this.setState({ zIndex: this.state.zIndex + 1 });
     }
@@ -416,13 +425,14 @@ class FigureItem extends Component {
                 <div className="slds-p-vertical_medium slds-text-heading_small">
                     <svg width={this.state.width * 0.9} height={this.state.width * 0.9}>
                         <rect rx="10" ry="10" width={this.state.width * 0.9} height={this.state.width * 0.9}
-                            style={{ fill: "transparent", stroke: this.state.borderColor, strokeWidth: 10, opacity: this.state.opacidad}} />
+                            style={{ fill: "transparent", stroke: this.state.borderColor, strokeWidth: 10, opacity: this.state.opacidad }} />
                     </svg>
 
                 </div>
             )
         } else {
             return (
+
                 // <i className={this.props.tipo} ></i>
                 <div className="slds-p-vertical_medium slds-text-heading_small" >
                     <span style={{ fontSize: this.state.width * 0.7, color: this.state.borderColor, opacity: this.state.opacidad }} >
@@ -437,9 +447,7 @@ class FigureItem extends Component {
     render() {
         const itemClasses = classNames(
             'dnd-canvas__object_Box', {
-            'dnd-canvas__object--moving': this.state.isMoving,
-            'dnd-canvas__object--resizing': this.state.isResizing,
-            'dnd-canvas__object--editing': this.state.isEditing
+            'dnd-canvas__object--invisible': true
         });
         var modalStyles = { overlay: { zIndex: 10 } };
 
@@ -453,7 +461,7 @@ class FigureItem extends Component {
                 minWidth={this.props.minWidth * this.props.gridInterval}
                 minHeight={this.props.minHeight * this.props.gridInterval}
                 bounds="parent"
-                z="1"
+                z={this.state.zIndex}
 
                 onDragStop={this.handleDragStop}
                 onResizeStop={this.handleResizeStop}

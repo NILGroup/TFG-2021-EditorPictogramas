@@ -390,17 +390,17 @@ class FormPicto extends Component {
                                     <div className="col-3">
                                         <input type="checkbox" checked={this.state.isPlural} id="plural" onChange={this.handleisPlural} /> Plural
                                     </div>
-                                    <div className="col-3">
+                                    {/* <div className="col-3">
                                         <input type="checkbox" checked={this.state.hasBorder} id="plural" onChange={this.handleHasBorder} /> Borde:
-                                    </div>
+                                    </div> */}
                                 </div>
 
                                 <div className="row">
                                     <div className="col-9">
                                         {this.renderHair()}
                                         {this.renderSkinTone()}
-                                        {this.renderBorder()}
-                                        {this.renderTimes()}
+                                        {/* {this.renderBorder()} */}
+                                        {/* {this.renderTimes()} */}
                                     </div>
                                     <div className="col-3">
                                         {this.renderPrePicto()}
