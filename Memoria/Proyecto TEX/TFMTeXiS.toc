@@ -41,9 +41,29 @@
 \contentsline {section}{\numberline {4.4}Prototipado de la interfaz}{44}{section.125}%
 \contentsline {section}{\numberline {4.5}Herramientas}{44}{section.126}%
 \contentsline {section}{\numberline {4.6}Componentes}{45}{section.127}%
-\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{47}{chapter.128}%
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{49}{chapter.129}%
+\contentsline {chapter}{\numberline {5}Arquitectura}{47}{chapter.128}%
+\contentsline {section}{\numberline {5.1}Buscador de pictogramas}{47}{section.129}%
+\contentsline {subsection}{\numberline {5.1.1}Búsqueda}{48}{subsection.132}%
+\contentsline {subsection}{\numberline {5.1.2}Preajuste}{49}{subsection.133}%
+\contentsline {subsection}{\numberline {5.1.3}Historial de pictos}{51}{subsection.140}%
+\contentsline {subsection}{\numberline {5.1.4}PictoItem}{52}{subsection.141}%
+\contentsline {section}{\numberline {5.2}Traducir frase a pictogramas}{54}{section.144}%
+\contentsline {subsection}{\numberline {5.2.1}FraseItem}{55}{subsection.147}%
+\contentsline {subsection}{\numberline {5.2.2}NIL WS Group}{55}{subsection.151}%
+\contentsline {subsection}{\numberline {5.2.3}CORS}{57}{subsection.152}%
+\contentsline {section}{\numberline {5.3}Añadir imagen al tablero}{58}{section.154}%
+\contentsline {subsection}{\numberline {5.3.1}PhotoItem}{59}{subsection.157}%
+\contentsline {subsection}{\numberline {5.3.2}Opciones investigadas y descartadas}{60}{subsection.160}%
+\contentsline {section}{\numberline {5.4}Listas de pictogramas}{61}{section.161}%
+\contentsline {subsection}{\numberline {5.4.1}Añadir y crear a una lista}{61}{subsection.162}%
+\contentsline {subsection}{\numberline {5.4.2}Listas de Pictogramas creadas}{62}{subsection.166}%
+\contentsline {section}{\numberline {5.5}Texto}{63}{section.168}%
+\contentsline {subsection}{\numberline {5.5.1}TextoItem}{64}{subsection.170}%
+\contentsline {section}{\numberline {5.6}Iconos}{64}{section.173}%
+\contentsline {section}{\numberline {5.7}Descargar Tablero}{66}{section.177}%
+\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{67}{chapter.179}%
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{69}{chapter.180}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{51}{appendix.130}%
+\contentsline {chapter}{\numberline {A}Título}{71}{appendix.181}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{53}{appendix.131}%
+\contentsline {chapter}{\numberline {B}Título}{73}{appendix.182}%
