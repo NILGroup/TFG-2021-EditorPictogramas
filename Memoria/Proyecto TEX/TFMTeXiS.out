@@ -42,27 +42,28 @@
 \BOOKMARK [1][-]{section.126}{Herramientas}{chapter.104}% 42
 \BOOKMARK [1][-]{section.127}{Componentes}{chapter.104}% 43
 \BOOKMARK [0][-]{chapter.128}{Arquitectura}{}% 44
-\BOOKMARK [1][-]{section.129}{Buscador de pictogramas}{chapter.128}% 45
-\BOOKMARK [2][-]{subsection.132}{B\372squeda}{section.129}% 46
-\BOOKMARK [2][-]{subsection.133}{Preajuste}{section.129}% 47
-\BOOKMARK [2][-]{subsection.140}{Historial de pictos}{section.129}% 48
-\BOOKMARK [2][-]{subsection.141}{PictoItem}{section.129}% 49
-\BOOKMARK [1][-]{section.144}{Traducir frase a pictogramas}{chapter.128}% 50
-\BOOKMARK [2][-]{subsection.147}{FraseItem}{section.144}% 51
-\BOOKMARK [2][-]{subsection.151}{NIL WS Group}{section.144}% 52
-\BOOKMARK [2][-]{subsection.152}{CORS}{section.144}% 53
-\BOOKMARK [1][-]{section.154}{A\361adir imagen al tablero}{chapter.128}% 54
-\BOOKMARK [2][-]{subsection.157}{PhotoItem}{section.154}% 55
-\BOOKMARK [2][-]{subsection.160}{Opciones investigadas y descartadas}{section.154}% 56
-\BOOKMARK [1][-]{section.161}{Listas de pictogramas}{chapter.128}% 57
-\BOOKMARK [2][-]{subsection.162}{A\361adir y crear a una lista}{section.161}% 58
-\BOOKMARK [2][-]{subsection.166}{Listas de Pictogramas creadas}{section.161}% 59
-\BOOKMARK [1][-]{section.168}{Texto}{chapter.128}% 60
-\BOOKMARK [2][-]{subsection.170}{TextoItem}{section.168}% 61
-\BOOKMARK [1][-]{section.173}{Iconos}{chapter.128}% 62
-\BOOKMARK [1][-]{section.177}{Descargar Tablero}{chapter.128}% 63
-\BOOKMARK [0][-]{chapter.179}{Conclusiones y Trabajo Futuro}{}% 64
-\BOOKMARK [0][-]{chapter.180}{Conclusions and Future Work}{}% 65
-\BOOKMARK [0][-]{appendix.181}{T\355tulo}{}% 66
-\BOOKMARK [0][-]{appendix.182}{T\355tulo}{}% 67
-\BOOKMARK [0][-]{fin.0}{Fin}{}% 68
+\BOOKMARK [1][-]{section.129}{Cuadr\355cula e \315tems}{chapter.128}% 45
+\BOOKMARK [1][-]{section.131}{Buscador de pictogramas}{chapter.128}% 46
+\BOOKMARK [2][-]{subsection.133}{B\372squeda}{section.131}% 47
+\BOOKMARK [2][-]{subsection.134}{Preajuste}{section.131}% 48
+\BOOKMARK [2][-]{subsection.141}{Historial de pictos}{section.131}% 49
+\BOOKMARK [2][-]{subsection.143}{PictoItem}{section.131}% 50
+\BOOKMARK [1][-]{section.148}{Traducir frase a pictogramas}{chapter.128}% 51
+\BOOKMARK [2][-]{subsection.151}{FraseItem}{section.148}% 52
+\BOOKMARK [2][-]{subsection.155}{NIL WS Group}{section.148}% 53
+\BOOKMARK [2][-]{subsection.157}{CORS}{section.148}% 54
+\BOOKMARK [1][-]{section.162}{A\361adir imagen al tablero}{chapter.128}% 55
+\BOOKMARK [2][-]{subsection.166}{PhotoItem}{section.162}% 56
+\BOOKMARK [2][-]{subsection.169}{Opciones investigadas y descartadas}{section.162}% 57
+\BOOKMARK [1][-]{section.173}{Listas de pictogramas}{chapter.128}% 58
+\BOOKMARK [2][-]{subsection.174}{A\361adir y crear a una lista}{section.173}% 59
+\BOOKMARK [2][-]{subsection.178}{Listas de Pictogramas creadas}{section.173}% 60
+\BOOKMARK [1][-]{section.180}{Texto}{chapter.128}% 61
+\BOOKMARK [2][-]{subsection.182}{TextoItem}{section.180}% 62
+\BOOKMARK [1][-]{section.185}{Iconos}{chapter.128}% 63
+\BOOKMARK [1][-]{section.190}{Descargar Tablero}{chapter.128}% 64
+\BOOKMARK [0][-]{chapter.193}{Conclusiones y Trabajo Futuro}{}% 65
+\BOOKMARK [0][-]{chapter.194}{Conclusions and Future Work}{}% 66
+\BOOKMARK [0][-]{appendix.195}{T\355tulo}{}% 67
+\BOOKMARK [0][-]{appendix.196}{T\355tulo}{}% 68
+\BOOKMARK [0][-]{fin.0}{Fin}{}% 69
