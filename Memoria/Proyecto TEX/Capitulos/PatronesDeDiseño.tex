@@ -1,0 +1,55 @@
+\chapter{Patrones de diseño}
+\label{cap:patronesDeDiseño}
+
+
+
+\begin{resumen}
+	En este capítulo se verá una visión general de los patrones de diseño utilizados en la aplicación.
+\end{resumen}
+
+
+Los patrones de diseño son un estándar de reglas a seguir para poder conseguir una aplicación con una correcta usabilidad de cara a los usuarios finales. Aunque existen muchos patrones con diferentes reglas para cada uno, uno de los más comunes es “Diseño de la interfaz de usuario” escrito por Ben Shneiderman. Este tipo de patrón estaba compuesto por 8 reglas para ayudar a mejorar la usabilidad de la aplicación.
+En nuestra aplicación se utilizan la mayoría de ellas exceptuando la de diseñar diálogos para notificar la conclusión, ya que en ningún momento de la aplicación se requiere hacer uso de secuencias de acciones donde deben de estar organizadas en grupos con un comienzo y una finalización.
+
+
+
+\begin{itemize}
+	\item \textbf{Coherencia}
+	
+	Durante el desarrollo de la aplicación se ha procurado una cierta uniformidad en diferentes aspectos, como el color color utilizado en la aplicación, la disposición de los botones o la estructura de los modales.  
+	Un ejemplo de consistencia que encontramos son los iconos utilizados, todos ellos siempre tienen el mismo significado para ayudar al usuario a saber que acción va a realizar. Por ejemplo en todos los elementos que se pueden añadir al tablero de la aplicación cuentan con un icono “x” en la parte superior derecha que representa la acción de eliminarlos y un icono de un lápiz en la parte inferior que representa la acción de editar.
+	Respecto a las herramientas,el icono “+” visible en “Búsqueda simple”,  “Mis listas de pictogramas” y  “Cargar imagen” representa la acción de añadir un elemento al tablero. Por otro lado, el icono de la carpeta siempre está ligado a las acciones relacionadas con las listas de pictogramas.
+	
+	\item \textbf{Usabilidad universal}
+	
+	El principio de usabilidad reconoce las necesidades de los distintos tipos de usuarios ya sean nuevos o expertos en ella. Esto se refleja en la aplicación conforme se utiliza, siendo el caso del preajuste de pictos y las listas de pictos funcionalidades que pueden ser de utilidad a usuarios expertos. Por ejemplo, añadir un pictograma a la cuadrícula y editarlo es una tarea asequible para cualquiera, pero mediante el preajuste de pictograma se pueden colocar varios sin tener que editarlos individualmente. 
+	Otra opción que un usuario podría pasar por alto en un primer momento son las listas de pictogramas, disponibles desde la búsqueda de pictogramas. Un uno más avanzado sabrá hacer uso de esta función ahorrando tiempo de búsqueda de pictogramas que ya tiene guardados y clasificados. 
+	
+	\item \textbf{Retroalimentación informativa}
+	
+	En la aplicación hay diferentes acciones que muestran de manera visual si se ha podido realizar dicha acción correctamente. Algunas resultan inmediatas, como por ejemplo el hecho de añadir un pictograma al tablero, pero hay otras acciones en las que el resultado no es evidente. En estos casos se utilizan las alerts, las cuales son utilizadas para todas las acciones relacionadas con las listas de pictogramas. Éstas alerts utilizadas pueden ser de dos tipos, verdes para las acciones realizadas correctamente y las rojas para las acciones que han dado algún tipo de error como crear dos listas con el mismo nombre. Éstas aparecen siempre en la parte superior de la pantalla para asegurar que sean vistas con facilidad.
+	
+	\item \textbf{Prevenir errores}
+	
+	La aplicación está diseñada para prevenir que el usuario cometa un error y en caso de error sea detectado e informe con un breve mensaje describiendolo.  
+	Este tipo de patrón se aplica en todas las acciones correspondientes a las listas de pictogramas a la hora de crear una lista, donde se comprueba que la lista tenga un nombre y no se repita con otra existente, y al añadir un pictograma a una lista donde se verifica que no se haya añadido anteriormente. En caso de error se utilizarán las alerts con un mensaje informando del problema.
+	Al editar un pictograma, pueden existir combinaciones de parámetros incompatibles, como poner un picto sin color y rubio. Para prevenir estos posibles errores conforme se seleccionan las opciones, se ocultan las otras que sean incompatibles con ellas. 
+	También se puede ver en traducción de frases que el botón de añadir una frase al tablero no está disponible hasta que no haya una frase traducida. 
+	
+	\item \textbf{Permitir deshacer acciones de forma fácil}
+	
+	El usuario tiene la opción de poder deshacer acciones, esta característica es fundamental ya que se le ofrece la posibilidad de revertir un error y explorar funcionalidades sin temor a no poder volver al estado previo.
+	El usuario en todo momento puede borrar una lista que ha creado, un pictograma, frase, texto, o icono añadido al tablero. Además si decide editar un pictograma siempre podrá volver al estado anterior eliminado los ajustes seleccionados. 
+	No obstante no existe un historial de acciones realizadas, por lo que al eliminar un elemento del tablero se realiza de manera permanente.
+	
+	\item \textbf{Maximizar la sensación de control}
+	
+	
+	\textcolor{red}{¿Aquí iría lo de la cuadrícula?, ya que ayuda a alinear los elementos del tablero o que las acciones se realizan en pocos clicks (regla de los 3 clicks) }
+	
+	\item \textbf{Reducir la carga de la memoria a corto plazo}
+	
+	Para no sobrecargar la aplicación y condensar la información mostrada, se han utilizado tabs. Los tabs permiten organizar el contenido en diferentes pestañas. A parte, en ciertos elementos como los modales es recurrente el uso de selectores para simplificar el contenido.
+	Los iconos mencionados anteriormente también ayudan a identificar rápidamente qué hace cada botón. Ésto también se aplica a las herramientas donde las barras de búsqueda, y los pictogramas mostrados siempre se muestran de la misma manera. 
+	
+\end{itemize}
