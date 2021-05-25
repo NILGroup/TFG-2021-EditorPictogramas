@@ -40,49 +40,49 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de cómo se puede modificar el color de pelo y tono de piel de un pictograma entre otras opciones, en la web de ARASAAC\relax }}{30}{figure.caption.98}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Boceto de pantalla inicial\relax }}{35}{figure.caption.112}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Boceto pantalla de plantillas\relax }}{36}{figure.caption.113}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Boceto pantalla de edición de tableros \relax }}{37}{figure.caption.114}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Boceto de las componentes canjón de picto y espacio picto.\relax }}{37}{figure.caption.115}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Boceto de actividad con cajón de pictos y hueco picto\relax }}{38}{figure.caption.116}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura\relax }}{38}{figure.caption.117}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Boceto de una escena de un cuanto, con pictogramas en la zona inferior y botones en los laterales para pasar o retroceder la escena o tablero\relax }}{39}{figure.caption.118}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Boceto del compositor de actividades\relax }}{39}{figure.caption.119}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Pantalla de inicio con botones que muestran las otras pantallas de la aplicación.\relax }}{40}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Pantalla de configuración de tablero.\relax }}{42}{figure.caption.121}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Pantalla de configuración de normas.\relax }}{42}{figure.caption.122}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Pantalla de configuración de juego.\relax }}{43}{figure.caption.123}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Pantalla de juego en ejecución.\relax }}{44}{figure.caption.124}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Boceto de pantalla inicial\relax }}{35}{figure.caption.113}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Boceto pantalla de plantillas\relax }}{35}{figure.caption.114}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Boceto pantalla de edición de tableros \relax }}{36}{figure.caption.115}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Boceto de las componentes canjón de picto y espacio picto.\relax }}{36}{figure.caption.116}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Boceto de actividad con cajón de pictos y hueco picto\relax }}{37}{figure.caption.117}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura\relax }}{37}{figure.caption.118}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Boceto de una escena de un cuanto, con pictogramas en la zona inferior y botones en los laterales para pasar o retroceder la escena o tablero\relax }}{38}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Boceto del compositor de actividades\relax }}{38}{figure.caption.120}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Pantalla de inicio con botones que muestran las otras pantallas de la aplicación.\relax }}{39}{figure.caption.122}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Pantalla de configuración de tablero.\relax }}{41}{figure.caption.123}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Pantalla de configuración de normas.\relax }}{41}{figure.caption.124}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Pantalla de configuración de juego.\relax }}{42}{figure.caption.125}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Pantalla de juego en ejecución.\relax }}{43}{figure.caption.126}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Vista del componente de búsqueda de pictogramas\relax }}{49}{figure.caption.132}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Vista del modal del preajuste de pictos con las opciones color rubio y piel morena marcada.\relax }}{51}{figure.caption.135}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Vista de la interfaz de búsqueda de pictogramas al aplicar un preajuste. En este caso piel morena y pelo rubio\relax }}{52}{figure.caption.140}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Vista de un PictoItem en la cuadrícula con preajuste de pelo y piel. \relax }}{54}{figure.caption.144}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Vista de la interfaz del modal que muestra una edición de pictogramas con más opciones. En este caso, se ha seleccionado el tiempo futuro y el borde verde. \relax }}{55}{figure.caption.145}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Interfaz inicial Traducción frase a pictograma.\relax }}{55}{figure.caption.149}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Resultado de la traducción de una frase\relax }}{56}{figure.caption.150}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Vista de FraseItem en la cuadrícula\relax }}{56}{figure.caption.152}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Vista del modal de edición del FraseItem\relax }}{57}{figure.caption.153}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces FraseItem tras aplicar los cambios\relax }}{57}{figure.caption.154}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Diagrama de conexiones entre aplicaciones para traducir una frase\relax }}{59}{figure.caption.161}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Interfaz inicial al añadir una imagen al tablero\relax }}{59}{figure.caption.163}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista de la Interfaz al cargar una imagen\relax }}{60}{figure.caption.164}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Ejemplod de PhotoItem con y sin texto\relax }}{61}{figure.caption.167}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Ejemmplo de PhotoItemn si no mantuviera la proporción\relax }}{61}{figure.caption.168}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Vistas del modal con ninguna lista y al menos una, respectivamente\relax }}{63}{figure.caption.175}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Alerta tras añadir satisfactoriamente un pictograma a la lista\relax }}{63}{figure.caption.176}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Alerta de acción no permitida\relax }}{63}{figure.caption.177}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Vista de las listas de pictogramas\relax }}{64}{figure.caption.179}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Vista de la selección de fuente y campo de texto\relax }}{65}{figure.caption.181}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Representación del TextoItem en la cuadrícula\relax }}{65}{figure.caption.183}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Vista del modal para editar un TextoItem\relax }}{66}{figure.caption.184}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Vista de los botones que añaden iconos\relax }}{66}{figure.caption.186}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Ejemplo de uso de iconos sobre algunos pictogramas\relax }}{67}{figure.caption.188}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Vista del modal de edición de iconos.\relax }}{67}{figure.caption.189}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Vista del modal para descargar tablero\relax }}{68}{figure.caption.192}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Vista del componente de búsqueda de pictogramas\relax }}{49}{figure.caption.134}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Vista del modal del preajuste de pictos con las opciones color rubio y piel morena marcada.\relax }}{51}{figure.caption.137}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Vista de la interfaz de búsqueda de pictogramas al aplicar un preajuste. En este caso piel morena y pelo rubio\relax }}{52}{figure.caption.142}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vista de un PictoItem en la cuadrícula con preajuste de pelo y piel. \relax }}{54}{figure.caption.146}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Vista de la interfaz del modal que muestra una edición de pictogramas con más opciones. En este caso, se ha seleccionado el tiempo futuro y el borde verde. \relax }}{55}{figure.caption.147}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Interfaz inicial Traducción frase a pictograma.\relax }}{55}{figure.caption.151}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Resultado de la traducción de una frase\relax }}{56}{figure.caption.152}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Vista de FraseItem en la cuadrícula\relax }}{56}{figure.caption.154}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Vista del modal de edición del FraseItem\relax }}{57}{figure.caption.155}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces FraseItem tras aplicar los cambios\relax }}{57}{figure.caption.156}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Diagrama de conexiones entre aplicaciones para traducir una frase\relax }}{59}{figure.caption.163}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Interfaz inicial al añadir una imagen al tablero\relax }}{59}{figure.caption.165}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista de la Interfaz al cargar una imagen\relax }}{60}{figure.caption.166}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ejemplod de PhotoItem con y sin texto\relax }}{61}{figure.caption.169}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Ejemmplo de PhotoItemn si no mantuviera la proporción\relax }}{61}{figure.caption.170}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Vistas del modal con ninguna lista y al menos una, respectivamente\relax }}{63}{figure.caption.177}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Alerta tras añadir satisfactoriamente un pictograma a la lista\relax }}{63}{figure.caption.178}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Alerta de acción no permitida\relax }}{63}{figure.caption.179}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Vista de las listas de pictogramas\relax }}{64}{figure.caption.181}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Vista de la selección de fuente y campo de texto\relax }}{65}{figure.caption.183}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Representación del TextoItem en la cuadrícula\relax }}{65}{figure.caption.185}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Vista del modal para editar un TextoItem\relax }}{66}{figure.caption.186}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Vista de los botones que añaden iconos\relax }}{66}{figure.caption.188}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Ejemplo de uso de iconos sobre algunos pictogramas\relax }}{67}{figure.caption.190}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Vista del modal de edición de iconos.\relax }}{67}{figure.caption.191}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Vista del modal para descargar tablero\relax }}{68}{figure.caption.194}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Ejemplo de pista en el formulario: Buscar un pictograma. \relax }}{75}{figure.caption.198}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ejemplo de pista en el formulario: Buscar un pictograma. \relax }}{75}{figure.caption.200}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {english}{}

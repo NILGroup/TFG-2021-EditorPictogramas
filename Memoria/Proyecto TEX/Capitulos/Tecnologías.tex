@@ -57,3 +57,22 @@ JSZip \footnote{\url{https://stuk.github.io/jszip/}} es una biblioteca de javasc
 	\item \textbf{Generar ZIP}: Crea un zip con todo lo que haya creado el usuario, como las fotos que haya subido, la posición de los pictogramas colocados y su información asociada (Por ejemplo, si se ha cambiado la descripción de un pictograma)
 	\item \textbf{Cargar ZIP}: Al subir un ZIP, vuelve al estado cuando fue generado.
 \end{itemize}	
+
+
+\textcolor{red}{CAMBIAR}
+
+
+\section{Prototipos Tecnológicos}
+
+Durante las primeras etapas del desarrollo, creamos algunos prototipos para familiarizarnos con las tecnologías imprescindibles para crear la aplicación. Estas fueron el acceso a la API de ARASAAC \footnote{\url{https://arasaac.org/developers/api}} y desplazar elementos en una aplicación web.
+
+\subsection{API ARASAAC}
+
+Para probar el acceso a la API se creó un buscador de pictogramas independiente para comprender el funcionamiento de la API y las posibilidades que ésta ofrece. Aunque inicialmente simplemente muestra el pictograma de una palabra introducida. Pero más adelante en el desarrollo, explotamos la posibilidad de cambiar el color de pelo y tono de piel de los pictogramas que lo permiten.
+
+
+\subsection{React Drag and Drop:}
+
+Otro objetivo es el de la interacción de los componentes en una superficie cuadriculada. Tras experimentar con distintas bibliotecas de JavaScript como Interact JS \footnote{\url{https://interactjs.io/}} no obtuvimos el resultado esperado pues el desplazamiento de los objetos no era lo suficientemente preciso.
+
+React tenía la biblioteca Drag and Drop que permite desplazar los componentes. La principal diferencia entre Drag and Drop y Interact JS, es que al mover un elemento, “Interact JS”  deja unos píxeles de diferencia y “Drag and Drop.” permite mover objetos en intervalos definidos, como poder mover un objeto de 10 píxeles en 10 píxeles.

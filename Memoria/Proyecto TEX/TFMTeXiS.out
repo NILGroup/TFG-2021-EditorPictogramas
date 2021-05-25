@@ -32,44 +32,46 @@
 \BOOKMARK [1][-]{section.99}{React}{chapter.93}% 32
 \BOOKMARK [1][-]{section.100}{Drag and Drop}{chapter.93}% 33
 \BOOKMARK [1][-]{section.102}{JSZip}{chapter.93}% 34
-\BOOKMARK [0][-]{chapter.104}{PictUp!}{}% 35
-\BOOKMARK [1][-]{section.105}{Introducci\363n}{chapter.104}% 36
-\BOOKMARK [1][-]{section.106}{Prototipos Tecnol\363gicos}{chapter.104}% 37
-\BOOKMARK [2][-]{subsection.108}{API ARASAAC}{section.106}% 38
-\BOOKMARK [2][-]{subsection.109}{React Drag and Drop:}{section.106}% 39
-\BOOKMARK [1][-]{section.111}{Prototipo de papel interactivo}{chapter.104}% 40
-\BOOKMARK [1][-]{section.125}{Prototipado de la interfaz}{chapter.104}% 41
-\BOOKMARK [1][-]{section.126}{Herramientas}{chapter.104}% 42
-\BOOKMARK [1][-]{section.127}{Componentes}{chapter.104}% 43
-\BOOKMARK [0][-]{chapter.128}{Arquitectura}{}% 44
-\BOOKMARK [1][-]{section.129}{Cuadr\355cula e \315tems}{chapter.128}% 45
-\BOOKMARK [1][-]{section.131}{Buscador de pictogramas}{chapter.128}% 46
-\BOOKMARK [2][-]{subsection.133}{B\372squeda}{section.131}% 47
-\BOOKMARK [2][-]{subsection.134}{Preajuste}{section.131}% 48
-\BOOKMARK [2][-]{subsection.141}{Historial de pictos}{section.131}% 49
-\BOOKMARK [2][-]{subsection.143}{PictoItem}{section.131}% 50
-\BOOKMARK [1][-]{section.148}{Traducir frase a pictogramas}{chapter.128}% 51
-\BOOKMARK [2][-]{subsection.151}{FraseItem}{section.148}% 52
-\BOOKMARK [2][-]{subsection.155}{NIL WS Group}{section.148}% 53
-\BOOKMARK [2][-]{subsection.157}{CORS}{section.148}% 54
-\BOOKMARK [1][-]{section.162}{A\361adir imagen al tablero}{chapter.128}% 55
-\BOOKMARK [2][-]{subsection.166}{PhotoItem}{section.162}% 56
-\BOOKMARK [2][-]{subsection.169}{Opciones investigadas y descartadas}{section.162}% 57
-\BOOKMARK [1][-]{section.173}{Listas de pictogramas}{chapter.128}% 58
-\BOOKMARK [2][-]{subsection.174}{A\361adir y crear a una lista}{section.173}% 59
-\BOOKMARK [2][-]{subsection.178}{Listas de Pictogramas creadas}{section.173}% 60
-\BOOKMARK [1][-]{section.180}{Texto}{chapter.128}% 61
-\BOOKMARK [2][-]{subsection.182}{TextoItem}{section.180}% 62
-\BOOKMARK [1][-]{section.185}{Iconos}{chapter.128}% 63
-\BOOKMARK [1][-]{section.190}{Descargar Tablero}{chapter.128}% 64
-\BOOKMARK [0][-]{chapter.193}{Patrones de dise\361o}{}% 65
-\BOOKMARK [0][-]{chapter.194}{Evaluaci\363n}{}% 66
-\BOOKMARK [1][-]{section.195}{Preparaci\363n de la evaluaci\363n}{chapter.194}% 67
-\BOOKMARK [1][-]{section.197}{Dise\361o de la evaluaci\363n}{chapter.194}% 68
-\BOOKMARK [1][-]{section.214}{Resultados de la evaluaci\363n}{chapter.194}% 69
-\BOOKMARK [1][-]{section.215}{An\341lisis de los resultados}{chapter.194}% 70
-\BOOKMARK [0][-]{chapter.216}{Conclusiones y Trabajo Futuro}{}% 71
-\BOOKMARK [0][-]{chapter.217}{Conclusions and Future Work}{}% 72
-\BOOKMARK [0][-]{appendix.218}{T\355tulo}{}% 73
-\BOOKMARK [0][-]{appendix.219}{T\355tulo}{}% 74
-\BOOKMARK [0][-]{fin.0}{Fin}{}% 75
+\BOOKMARK [1][-]{section.104}{Prototipos Tecnol\363gicos}{chapter.93}% 35
+\BOOKMARK [2][-]{subsection.106}{API ARASAAC}{section.104}% 36
+\BOOKMARK [2][-]{subsection.107}{React Drag and Drop:}{section.104}% 37
+\BOOKMARK [0][-]{chapter.109}{Requisitos y dise\361o}{}% 38
+\BOOKMARK [1][-]{section.110}{Introducci\363n}{chapter.109}% 39
+\BOOKMARK [1][-]{section.111}{Dise\361o de la aplicaci\363n}{chapter.109}% 40
+\BOOKMARK [2][-]{subsection.112}{Prototipo realizado por Alfonso}{section.111}% 41
+\BOOKMARK [2][-]{subsection.121}{Prototipo realizado por Jorge}{section.111}% 42
+\BOOKMARK [1][-]{section.127}{Requisitos de la aplicaci\363n}{chapter.109}% 43
+\BOOKMARK [2][-]{subsection.128}{Herramientas}{section.127}% 44
+\BOOKMARK [2][-]{subsection.129}{Componentes}{section.127}% 45
+\BOOKMARK [0][-]{chapter.130}{Arquitectura}{}% 46
+\BOOKMARK [1][-]{section.131}{Cuadr\355cula e \315tems}{chapter.130}% 47
+\BOOKMARK [1][-]{section.133}{Buscador de pictogramas}{chapter.130}% 48
+\BOOKMARK [2][-]{subsection.135}{B\372squeda}{section.133}% 49
+\BOOKMARK [2][-]{subsection.136}{Preajuste}{section.133}% 50
+\BOOKMARK [2][-]{subsection.143}{Historial de pictos}{section.133}% 51
+\BOOKMARK [2][-]{subsection.145}{PictoItem}{section.133}% 52
+\BOOKMARK [1][-]{section.150}{Traducir frase a pictogramas}{chapter.130}% 53
+\BOOKMARK [2][-]{subsection.153}{FraseItem}{section.150}% 54
+\BOOKMARK [2][-]{subsection.157}{NIL WS Group}{section.150}% 55
+\BOOKMARK [2][-]{subsection.159}{CORS}{section.150}% 56
+\BOOKMARK [1][-]{section.164}{A\361adir imagen al tablero}{chapter.130}% 57
+\BOOKMARK [2][-]{subsection.168}{PhotoItem}{section.164}% 58
+\BOOKMARK [2][-]{subsection.171}{Opciones investigadas y descartadas}{section.164}% 59
+\BOOKMARK [1][-]{section.175}{Listas de pictogramas}{chapter.130}% 60
+\BOOKMARK [2][-]{subsection.176}{A\361adir y crear a una lista}{section.175}% 61
+\BOOKMARK [2][-]{subsection.180}{Listas de Pictogramas creadas}{section.175}% 62
+\BOOKMARK [1][-]{section.182}{Texto}{chapter.130}% 63
+\BOOKMARK [2][-]{subsection.184}{TextoItem}{section.182}% 64
+\BOOKMARK [1][-]{section.187}{Iconos}{chapter.130}% 65
+\BOOKMARK [1][-]{section.192}{Descargar Tablero}{chapter.130}% 66
+\BOOKMARK [0][-]{chapter.195}{Patrones de dise\361o}{}% 67
+\BOOKMARK [0][-]{chapter.196}{Evaluaci\363n}{}% 68
+\BOOKMARK [1][-]{section.197}{Preparaci\363n de la evaluaci\363n}{chapter.196}% 69
+\BOOKMARK [1][-]{section.199}{Dise\361o de la evaluaci\363n}{chapter.196}% 70
+\BOOKMARK [1][-]{section.216}{Resultados de la evaluaci\363n}{chapter.196}% 71
+\BOOKMARK [1][-]{section.217}{An\341lisis de los resultados}{chapter.196}% 72
+\BOOKMARK [0][-]{chapter.218}{Conclusiones y Trabajo Futuro}{}% 73
+\BOOKMARK [0][-]{chapter.219}{Conclusions and Future Work}{}% 74
+\BOOKMARK [0][-]{appendix.220}{T\355tulo}{}% 75
+\BOOKMARK [0][-]{appendix.221}{T\355tulo}{}% 76
+\BOOKMARK [0][-]{fin.0}{Fin}{}% 77
