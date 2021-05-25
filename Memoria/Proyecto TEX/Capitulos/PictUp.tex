@@ -44,10 +44,10 @@ Después de probar distintas tecnologías y estudiar la situación actual de los
 
 \subsection{Prototipo realizado por Alfonso}
 
-Teniendo en cuenta, los requisitos de los usuarios, las aplicaciones existentes y el trabajo futuro de Pictableros empezamos a bocetar una primera idea del proyecto.
+Teniendo en cuenta, los requisitos de los usuarios, las aplicaciones existentes y el trabajo futuro de desarrollado en trabajos similares, empezamos a bocetar una primera idea del proyecto.
 
 
-En la Figura \ref{fig:loginalfonso} podemos ver el boceto de la pantalla de  inicio, la cual estaría compuesta por cuatro secciones bien diferenciadas.\textbf{ Creación de tablero libre} serviría para crear un tablero donde se pueden colocar pictogramas, texto o figuras. \textbf{Creación de actividad} añadiría interacción a los tableros mediante la sucesión de los mismos. Más tarde profundizaremos en esas dos secciones.
+En la Figura \ref{fig:loginalfonso} podemos ver el boceto de la pantalla de  inicio, la cual estaría compuesta por cuatro secciones bien diferenciadas. Creación de tablero libre serviría para crear un tablero donde se pueden colocar pictogramas, texto o figuras. Creación de actividad añadiría interacción a los tableros mediante la sucesión de los mismos. Más tarde profundizaremos en esas dos secciones.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -57,9 +57,8 @@ En la Figura \ref{fig:loginalfonso} podemos ver el boceto de la pantalla de  ini
 	\label{fig:loginalfonso}
 \end{figure}
 
-Las \textbf{plantillas} permitirían crear un tablero mediante el uso de una plantilla que cuenta con espacios donde colocar pictogramas. Las plantillas facilitan la creación del material laborioso de crear.
-
-Un ejemplo de ello es la creación de un horario, donde pueden haber decenas de huecos a rellenar y se estructuran generalmente de la misma manera. Al tener una plantilla, el usuario se puede despreocupar de que los elementos queden bien centrados o añadir los días de la semana. En la Figura \ref{fig:inicioalfonso} podemos ver un ejemplo de algunas ideas de plantillas disponibles. La sección de Social tendría la función de compartir tableros, actividades y plantillas con la comunidad de usuarios.
+Las Plantillas permitirían crear un tablero mediante el uso de una plantilla que cuenta con espacios donde colocar pictogramas. Las plantillas facilitan la creación del material que sigue una misma estructura, pero con contenido diferente. Un ejemplo de ello es la creación de un horario, donde pueden haber decenas de huecos a rellenar y se estructuran generalmente de la misma manera. Al tener una plantilla, el usuario se puede despreocupar de que los elementos queden bien centrados o añadir los días de la semana. En la Figura \ref{fig:inicioalfonso} podemos ver un ejemplo de algunas ideas de plantillas disponibles. 
+La sección de Social tendría la función de compartir tableros, actividades y plantillas con la comunidad de usuarios.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -70,7 +69,7 @@ Un ejemplo de ello es la creación de un horario, donde pueden haber decenas de 
 \end{figure}
 
 
-Por último, existe un inicio de sesión opcional para mantener el progreso entre dispositivos. Si profundizamos en la creación de un tablero en la Figura \ref{fig:dibujolibrealfon}, podemos ver los componentes que se pueden colocar sobre el tablero. Éstos son los pictogramas, texto, figuras como flechas o rectángulos y la posibilidad de subir imágenes. También comenzamos a plantear la idea de almacenar colecciones de pictogramas, éstas almacenan distintos conjuntos de pictogramas que el usuario agrupa según su criterio. Por ejemplo, si un profesor tiene que crear varios tableros respecto a un tema, como “Animales de la granja”, puede ser útil tener una colección con los pictogramas de gallina, cabra, oveja, etc agilizando el proceso de creación.
+Por último, existe un inicio de sesión opcional para mantener el progreso entre dispositivos. Si profundizamos en la creación de un tablero en la Figura \ref{fig:dibujolibrealfon}, podemos ver los componentes que se pueden colocar sobre el tablero. Éstos son los pictogramas, texto, figuras como flechas o rectángulos y la posibilidad de subir imágenes. También comenzamos a plantear la idea de almacenar colecciones de pictogramas, que almacenan distintos conjuntos de pictogramas que el usuario agrupa según su criterio. Por ejemplo, si un profesor tiene que crear varios tableros respecto a un tema, como “Animales de la granja”, puede ser útil tener una colección con los pictogramas de gallina, cabra, oveja, etc. Agilizando el proceso de creación.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -80,50 +79,50 @@ Por último, existe un inicio de sesión opcional para mantener el progreso entr
 	\label{fig:dibujolibrealfon}
 \end{figure}
 
-El apartado de  creación de actividad no deja de ser una extensión de creación libre pero con más  componentes que permiten interacción con el usuario para crear distintos tipos de actividad. Éstos componentes que a partir de ahora denominaremos como \textbf{componentes interactivos} son:
+El apartado de  creación de actividad no deja de ser una extensión de creación libre pero con más  componentes que permiten interacción con el usuario para crear distintos tipos de actividad. Estos componentes, que a partir de ahora denominaremos como \textbf{componentes interactivos} son:
 
+\begin{itemize}
+	
+	\item \textbf{Cajón de pictgramas y espacio picto}: Se trata de dos componentes que van ligados entre sí. En primer lugar está el \textit{cajón de picto}, que es un espacio al margen del tablero donde aparecen un conjunto de pictogramas, como se puede ver en la Figura \ref{fig:componentecajon}. Los elementos que aparecen en el cajón pueden  ser desplazados a un \textit{espacio picto}. Esta componente es un hueco inicialmente vacío donde puede ser colocado un pictograma como se puede ver también en la Figura \ref{fig:componentecajon}. Ambos componentes son configurables, lo que permite establecer los pictogramas que aparecen en el \textit{cajón de pictogramas}, y los pictogramas que acepta el \textit{espacio picto}. Ambos elementos se beneficiarían de las colecciones, pues son conjuntos de pictogramas establecidos por el usuario.
+	
+	% TODO: \usepackage{graphicx} required
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/componenteCajon}
+		\caption{Boceto de las componentes canjón de picto y espacio picto.}
+		\label{fig:componentecajon}
+	\end{figure}
+	
+	
+	Por ejemplo, un \textbf{cajón de pictgramas} podría tener asignado varias colecciones de pictogramas para que aparezcan mezclados. Asimismo, en el \textit{espacio picto} podría ser configurado para únicamente aceptar pictogramas de una de las colecciones o un pictograma concreto. De esta manera podría ser construido con facilidad un ejercicio donde el usuario que interactúe con el tablero pueda arrastrar distintos pictogramas del cajón de pictos a un espacio picto. En la Figura \ref{fig:cajonpictosgranja} se ve el \textit{cajón de pictos} mostrando pictogramas que representan animales de la granja y la selva, junto a unos \textit{espacio pictos} donde colocar los pictos de cada tipo.  El objetivo es dar la máxima flexibilidad al usuario que cree una actividad.
+	
+	
+	% TODO: \usepackage{graphicx} required
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Imagenes/Bitmap/cajonPictosGranja}
+		\caption{Boceto de actividad con cajón de pictos y hueco picto}
+		\label{fig:cajonpictosgranja}
+	\end{figure}
 
-\textbf{Cajón de pictos} y \textbf{espacio picto}: Son dos componentes que van ligados, en primer lugar está el cajón de pictogramas que es un \textbf{espacio al margen del tablero donde aparecen un conjunto de pictogramas}, podemos ver cómo son los componentes en la Figura \ref{fig:componentecajon}. Los elementos que aparecen en el cajón, pueden  ser desplazadas a un \textbf{espacio picto} que es un hueco inicialmente vacío donde puede ser colocado un pictograma. Ambos componentes son configurables, lo que permite establecer los pictogramas que aparecen en el cajón de pictogramas, y los pictogramas que acepta el espacio picto. Estos dos elementos se beneficiarían de las colecciones, pues son conjuntos ya hechos por el usuario.
+	\item \textbf{Subtablero}: El componente subtablero permite desplegar un tablero de pictogramas. Los pictogramas que componen dicho tablero pueden venir dados por una colección de pictogramas creada por el usuario o indicarse en el propio componente. Su finalidad es la de añadir más pictogramas en el mismo espacio y agilizar la comunicación. La idea ha sido rescatada de Piktoplus \ref{cap2:pkplus} que también permitía crear subtableros.
+	
+	\item \textbf{Enlace}: Permite ligar dos pictogramas diferentes. Está compuesto por dos “piezas” las cuales se asignan a dos pictogramas para ser enlazados. Su finalidad es la de crear actividades como “hacer parejas”.
+	
+	En la Figura \ref{fig:componenteenla} podemos ver el ejemplo del pictograma hueso y perro, a los cuales se les asignan la misma pieza identificada por un símbolo de pica con fondo verde. El motivo por el que  las piezas tienen una forma y color asociado facilita al usuario que cree la actividad identificar las piezas ya  ligadas. El usuario final al pulsar sobre los pictos permitirá hacer parejas ,y completar la actividad.
+	
+	% TODO: \usepackage{graphicx} required
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/componenteEnla}
+		\caption{Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura}
+		\label{fig:componenteenla}
+	\end{figure}
 
-% TODO: \usepackage{graphicx} required
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/componenteCajon}
-	\caption{Boceto de las componentes canjón de picto y espacio picto.}
-	\label{fig:componentecajon}
-\end{figure}
+	
+\end{itemize}
 
-
-
-
-Retomando el ejemplo de la granja, podríamos construir un ejercicio que permita al usuario mover los pictogramas según al espacio al que pertenezca un animal, como vemos en la Figura \ref{fig:cajonpictosgranja}. En el tablero, aparecen representados algunos espacios picto en azul, que solo aceptan animales de la colección “\textit{Granja}” y otro espacio para la colección “\textit{Selva}”, dejando abajo el cajón de pictos con todos los animales mezclados. El objetivo, es dar la máxima flexibilidad al usuario que cree una actividad.
-
-% TODO: \usepackage{graphicx} required
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/cajonPictosGranja}
-	\caption{Boceto de actividad con cajón de pictos y hueco picto}
-	\label{fig:cajonpictosgranja}
-\end{figure}
-
-El componente \textbf{subtablero} permite desplegar un tablero de pictogramas. Los pictogramas que componen dicho tablero pueden venir dados por una colección de pictogramas creada por el usuario o indicarse en el propio componente. Su finalidad es la de añadir más pictogramas en el mismo espacio y agilizar la comunicación. La idea ha sido rescatada de Piktoplus que también permitía crear subtableros.
-
-
-Por último el componente \textbf{enlace} que permite ligar dos pictogramas diferentes. Está compuesto por dos “piezas” las cuales se asignan a dos pictogramas para ser enlazados. Su finalidad es la de crear actividades como “hacer parejas”.
-
-En la Figura \ref{fig:componenteenla} podemos ver el ejemplo del pictograma hueso y perro, a los cuales se les asignan la misma pieza identificada por un símbolo de pica con fondo verde. El motivo por el que  las piezas tienen una forma y color asociado facilita al usuario que cree la actividad identificar las piezas ya  ligadas. El usuario final al pulsar sobre los pictos permitirá hacer parejas ,y completar la actividad.
-
-% TODO: \usepackage{graphicx} required
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/componenteEnla}
-	\caption{Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura}
-	\label{fig:componenteenla}
-\end{figure}
-
-
-
-Con todos los tableros creados también es posible crear una actividad de mayor tamaño secuenciando los tableros. Se podría pasar de uno a las siguientes escenas mediante flechas, como se puede ver en la Figura \ref{fig:cuento}, que está compuesta por una fotografía y algunos pictogramas que la describen. Pero también se podrían intercalar estos tableros con otros que aporten interacción, por ejemplo podría añadirse un test mediante el cajón de pictos para comprobar si se está comprendiendo la lectura.
+Con todos los tableros creados también es posible crear una actividad de mayor mediante la secuenciación de tableros. Se podría pasar de uno a las siguientes escenas mediante flechas, como se puede ver en la Figura \ref{fig:cuento}, que está compuesta por una fotografía y algunos pictogramas que la describen. Pero también se podrían intercalar estos tableros con otros que aporten interacción. Por ejemplo podría añadirse un test mediante el cajón de pictos para comprobar si se está comprendiendo la lectura.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]

@@ -39,9 +39,9 @@
 \contentsline {section}{\numberline {4.1}Introducción}{33}{section.110}%
 \contentsline {section}{\numberline {4.2}Diseño de la aplicación}{34}{section.111}%
 \contentsline {subsection}{\numberline {4.2.1}Prototipo realizado por Alfonso}{34}{subsection.112}%
-\contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{39}{subsection.121}%
-\contentsline {section}{\numberline {4.3}Requisitos de la aplicación}{43}{section.127}%
-\contentsline {subsection}{\numberline {4.3.1}Herramientas}{43}{subsection.128}%
+\contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{38}{subsection.121}%
+\contentsline {section}{\numberline {4.3}Requisitos de la aplicación}{44}{section.127}%
+\contentsline {subsection}{\numberline {4.3.1}Herramientas}{44}{subsection.128}%
 \contentsline {subsection}{\numberline {4.3.2}Componentes}{44}{subsection.129}%
 \contentsline {chapter}{\numberline {5}Arquitectura}{47}{chapter.130}%
 \contentsline {section}{\numberline {5.1}Cuadrícula e Ítems}{47}{section.131}%
@@ -76,3 +76,4 @@
 \contentsline {chapter}{\numberline {A}Título}{81}{appendix.220}%
 \babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {B}Título}{83}{appendix.221}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{85}{appendix*.222}%
