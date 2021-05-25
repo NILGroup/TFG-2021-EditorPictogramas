@@ -20,16 +20,14 @@
 
 \section{Introducción}
 
-El propósito de la aplicación es la de solventar los problemas que otras aplicaciones traían y aunar las herramientas necesarias para facilitar la creación de tableros pictográficos. Otro objetivo es la de ofrecer interacción a los tableros, al estar éstos en un medio digital. 
+El propósito de la aplicación PictUp! es solventar problemas encontrados en otras aplicaciones similares y combinar las herramientas necesarias para facilitar la creación de tableros pictográficos. Para ello, se han estudiado las características de las distintas aplicaciones vistas en la Sección X. De esta manera, se han seleccionado las funcionalidades imprescindibles para crear un tablero pictográfico y otras atendiendo a las necesidades demandadas por los usuarios. Así se ha podido confeccionar una lista de requisitos iniciales de la aplicación y el motivo de interés. A continuación se expondrán las caracterísiticas que debería reunir PictUp!: 
 
-PictUp está ideada para que sea útil tanto para padres o profesores que son los que crearán contenido pictográfico, como para las personas que puedan beneficiarse del uso de los tableros creados. Es por ello, que se pueden distinguir dos tipos de usuarios, el editor y el alumno. 
 
-Las características que de estos han sido obtenidas del trabajo futuro de otros TFG, comentarios de los usuarios que utilizaban estas aplicaciones y sugerencias de los tutores.
 \begin{itemize}
-	\item Crear tableros con precisión.
-	\item Utilizar fotografías como material.
-	\item Agilizar el proceso buscar pictogramas que sean usados de manera recurrente.
-	\item Añadir interacción a los tableros: Como hemos visto, muchas aplicaciones son rígidas, por lo que una vez creado el tablero no se puede hacer nada más, al añadir alguna clase de componente que permita no solo interactuar al alumno, sino que además el editor pueda dar distintos usos al componente para poder crear distintas actividades con el mismo elemento.
+	\item Crear tableros con facilidad y precisión: Los pictogramas que se coloquen en el tablero deben de poder alinearse sencillamente. 
+	\item Utilizar fotografías como material: Algunos usuarios quieren complementar los tableros con imágenes que pueden ser más familiares a la persona que se beneficie del tablero. 
+	\item Agilizar el proceso buscar pictogramas que sean usados de manera recurrente: Al crear material de manera recurrente puede ser útil contar con los pictogramas más usados para no repetir la misma búsqueda repetidamente. 
+	\item Añadir interacción a los tableros: La mayoría de aplicaciones son estáticas (poner las que no y por que audio y piktoplus), por lo que una vez creado el tablero no se puede hacer nada más. Al contar con un soporte digital, se pueden extender la interacción del usuario con el tablero. Como se ha visto, esto puede darse como subtableros de piktoplus o reproducir audio, aunque esto puede aplicarse a crear juegos de distintos formatos. [REVISAR ????]
 \end{itemize}
 
 
@@ -262,11 +260,15 @@ En el segundo recuadro tendríamos las siguientes opciones:
 
 \section{Requisitos de la aplicación}
 
-Tras haber analizado los dos prototipos vimos elementos en común que deberían incluirse en la aplicación como la búsqueda de pictogramas y traducción de frase y otros elementos que, aunque no fueran comunes aportaban ciertas funcionalidades que otras aplicaciones no tenían como por ejemplo añadir al tablero iconos o tener un apartado donde poder crear listas de pictogramas.
+Tras terminar ambos prototipos, se compararon para contrastar ideas en común y estudiar posibles nuevas funcionalidades. ????
+
+A grandes rasgos, se vio que el prototipo de Alfonso era menos rígido de cara a crear material. Esto es visible en la creación de reglas, cuento o actividades en el prototipo de Jorge, donde solo hay un único formato para cada tipo de material. Por ello se ha optado por ofrecer los componentes al usuario para que éstos creen el material según su criterio. Los componentes de creación de actividades vistas en el prototipo de Alfosno también ofrecían mayor libertad al crear actividades. 
+
+Un concepto en común entre ambos prototipos es la existencia de una barra de herramientas al lado izquierdo del tablero mediante la cual se añadirían los distintos elementos al tablero. Por lo que se estableció que debían existir dos tipos de componentes en la aplicación, herramientas y elementos. A continuación se detallarán las funcionalidades que deberían desempeñar estas componentes. 
 
 \subsection{Herramientas}
 
-En este apartado se incluirán todas aquellas funcionalidades que tras el análisis se determinó que serían cruciales incluirlas de cara al desarrollo de la aplicación. Mayormente estas funcionalidades estarán relacionadas con la edición del tablero. Las funcionalidades se decidieron desarrollar fueron:
+En este apartado se incluirán todas aquellas funcionalidades que tras el análisis fueron determinadas como necesarias para desarrollo de la aplicación. Mayormente estas funcionalidades estarán relacionadas con la edición del tablero. Las funcionalidades que se decidieron desarrollar fueron:
 
 \begin{itemize}
 	\item \textbf{Búsqueda de pictogramas}: esta herramienta permitirá al usuario realizar una búsqueda a partir de una palabra y poder añadir al tablero el pictograma deseado.
@@ -284,7 +286,7 @@ En este apartado se incluirán todas aquellas funcionalidades que tras el análi
 
 En esta sección analizaremos los principales componentes que pueden colocarse sobre el tablero. 
 
-Un componente es \textbf{un elemento que puede ser añadido al tablero} e incluso añadir interacción para el usuario final. Distinguiremos dos tipos de componentes: los básicos que no añaden ninguna interacción y los componentes interactivos, que pueden ser modificados y añadir comportamientos específicos.
+Un elemento es un componente que puede ser añadido al tablero. Distinguiremos dos tipos de componentes, los básicos que no añaden ninguna interacción, y los componentes interactivos. Estos pueden ser ajustados y añadir comportamientos específicos para el usuario que utilice el tablero creado.
 
 \begin{itemize}
 	
