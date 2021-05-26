@@ -20,14 +20,15 @@
 
 \section{Introducción}
 
-El propósito de la aplicación PictUp! es solventar problemas encontrados en otras aplicaciones similares y combinar las herramientas necesarias para facilitar la creación de tableros pictográficos. Para ello, se han estudiado las características de las distintas aplicaciones vistas en la Sección X. De esta manera, se han seleccionado las funcionalidades imprescindibles para crear un tablero pictográfico y otras atendiendo a las necesidades demandadas por los usuarios. Así se ha podido confeccionar una lista de requisitos iniciales de la aplicación y el motivo de interés. A continuación se expondrán las caracterísiticas que debería reunir PictUp!: 
+El propósito de la aplicación PictUp! es solventar problemas encontrados en otras aplicaciones similares y combinar las herramientas necesarias para facilitar la creación de tableros pictográficos. Para ello, se han estudiado las características de las distintas aplicaciones vistas en la Sección \ref{cap2:tablacomparativa}. De esta manera, se han seleccionado las funcionalidades imprescindibles para crear un tablero pictográfico y otras atendiendo a las necesidades demandadas por los usuarios. Así se ha podido confeccionar una lista de requisitos iniciales de la aplicación y el motivo de interés. A continuación se expondrán las caracterísiticas que debería reunir PictUp!: 
 
 
 \begin{itemize}
-	\item Crear tableros con facilidad y precisión: Los pictogramas que se coloquen en el tablero deben de poder alinearse sencillamente. 
-	\item Utilizar fotografías como material: Algunos usuarios quieren complementar los tableros con imágenes que pueden ser más familiares a la persona que se beneficie del tablero. 
-	\item Agilizar el proceso buscar pictogramas que sean usados de manera recurrente: Al crear material de manera recurrente puede ser útil contar con los pictogramas más usados para no repetir la misma búsqueda repetidamente. 
-	\item Añadir interacción a los tableros: La mayoría de aplicaciones son estáticas (poner las que no y por que audio y piktoplus), por lo que una vez creado el tablero no se puede hacer nada más. Al contar con un soporte digital, se pueden extender la interacción del usuario con el tablero. Como se ha visto, esto puede darse como subtableros de piktoplus o reproducir audio, aunque esto puede aplicarse a crear juegos de distintos formatos. [REVISAR ????]
+	\item \textbf{Crear tableros con facilidad y precisión}: Los pictogramas que se coloquen en el tablero deben de poder alinearse sencillamente. 
+	\item \textbf{Utilizar fotografías como material}: Algunos usuarios quieren complementar los tableros con imágenes que pueden ser más familiares a la persona que se beneficie del tablero. 
+	\item \textbf{Agilizar el proceso buscar pictogramas que sean usados de manera recurrente}: Al crear material de manera recurrente puede ser útil contar con los pictogramas más usados para no repetir la misma búsqueda repetidamente. 
+	\item \textbf{Añadir interacción a los tableros}: La mayoría de las aplicaciones estudiadas son estáticas, es decir que no permiten una interacción adicional al usuario con el tablero. Algunas aplicaciones aprovechan dicho potencial como Piktoplus \ref{cap2:pkplus} mediante los subtableros emergentes o Jocomunico \ref{cap2:jocomunico} que permite reproducir la pronunciación del texto asociado a un pictograma.
+	
 \end{itemize}
 
 
@@ -260,7 +261,7 @@ En el segundo recuadro tendríamos las siguientes opciones:
 
 \section{Requisitos de la aplicación}
 
-Tras terminar ambos prototipos, se compararon para contrastar ideas en común y estudiar posibles nuevas funcionalidades. ????
+Tras terminar ambos prototipos, se analizaron para contrastar ideas en común y estudiar posibles nuevas funcionalidades.
 
 A grandes rasgos, se vio que el prototipo de Alfonso era menos rígido de cara a crear material. Esto es visible en la creación de reglas, cuento o actividades en el prototipo de Jorge, donde solo hay un único formato para cada tipo de material. Por ello se ha optado por ofrecer los componentes al usuario para que éstos creen el material según su criterio. Los componentes de creación de actividades vistas en el prototipo de Alfosno también ofrecían mayor libertad al crear actividades. 
 
@@ -284,7 +285,7 @@ En este apartado se incluirán todas aquellas funcionalidades que tras el análi
 \subsection{Elementos}
 
 
-En esta sección analizaremos los principales componentes que pueden colocarse sobre el tablero. 
+En esta sección analizaremos los principales componentes que se podrán usar en los tableros, como paso previo a su implementación.
 
 Un elemento es un componente que puede ser añadido al tablero. Distinguiremos dos tipos de componentes, los básicos que no añaden ninguna interacción, y los componentes interactivos. Estos pueden ser ajustados y añadir comportamientos específicos para el usuario que utilice el tablero creado.
 
@@ -304,12 +305,12 @@ Un elemento es un componente que puede ser añadido al tablero. Distinguiremos d
 	\item \textbf{Subtablero}: El subtablero es un componente que a simple vista parece un pictograma pero, al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto es originario de Piktoplus pero actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
 \end{itemize}
 
-Respecto a los elementos \textbf{descartados}, a continuación se detallarán los elementos que fueron descartados y sus motivos:
+Hay algunos elementos que tras el análisis de los prototipos decidimos que no iban a aportar lo suficiente en la aplicación o que incrementarían innecesariamente la complejidad. Estos elementos descartados fueron:
 
 \begin{itemize}
 	\item\textbf{Pantallas de normas y cuentos predefinidos}: El principal motivo es su falta de flexibilidad, es decir, que si la aplicación no permite crear un cuento o un listado de reglas con sus propias herramientas, tampoco permitirá crear otro tipo de material. Por ello nos hemos decantado por herramientas que ofrecieran más posibilidades al usuario. Otro motivo era que no todos los usuarios querrían por ejemplo que las normas aparecen de una misma manera, como si fuese un listado, por lo que es imprescindible ofrecer la mayor libertad posible al usuario.
 	
-	\item \textbf{Plantillas}: Tras comentarlo en las reuniones, no se centró mucha atención en este apartado, pues ya estaba muy explorado por la aplicación Pictableros.
+	\item \textbf{Plantillas}: Tras comentarlo en las reuniones, no se centró mucha atención en este apartado, pues ya estaba muy explorado por la aplicación Pictableros \ref{cap2:pictableros}.
 	
 	\item \textbf{Log In}: El principal motivo de su descarte fue el no poder garantizar en un primer momento la total seguridad de los tableros creados.
 	Otra de las características del proyecto es la inclusión de imágenes que pudiera subir el usuario, con la responsabilidad añadida de haber imágenes de menores de edad. Estos fueron los motivos por los que optamos por una modalidad sin necesidad de servidor, donde los documentos generados se guardan en el ordenador.
