@@ -30,51 +30,51 @@
 \contentsline {chapter}{\numberline {3}Tecnologías}{29}{chapter.94}%
 \contentsline {section}{\numberline {3.1}Introducción}{29}{section.95}%
 \contentsline {section}{\numberline {3.2}API Arasaac}{29}{section.96}%
-\contentsline {section}{\numberline {3.3}React}{30}{section.100}%
-\contentsline {section}{\numberline {3.4}Drag and Drop}{31}{section.101}%
-\contentsline {section}{\numberline {3.5}JSZip}{31}{section.103}%
-\contentsline {section}{\numberline {3.6}Prototipos Tecnológicos}{31}{section.105}%
-\contentsline {subsection}{\numberline {3.6.1}API ARASAAC}{31}{subsection.107}%
-\contentsline {subsection}{\numberline {3.6.2}React Drag and Drop:}{32}{subsection.108}%
-\contentsline {chapter}{\numberline {4}Requisitos y diseño}{33}{chapter.110}%
-\contentsline {section}{\numberline {4.1}Introducción}{33}{section.111}%
-\contentsline {section}{\numberline {4.2}Diseño de la aplicación}{34}{section.112}%
-\contentsline {subsection}{\numberline {4.2.1}Prototipo realizado por Alfonso}{34}{subsection.113}%
-\contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{38}{subsection.122}%
-\contentsline {section}{\numberline {4.3}Requisitos de la aplicación}{43}{section.128}%
-\contentsline {subsection}{\numberline {4.3.1}Herramientas}{44}{subsection.129}%
-\contentsline {subsection}{\numberline {4.3.2}Elementos}{44}{subsection.130}%
-\contentsline {chapter}{\numberline {5}Arquitectura}{47}{chapter.131}%
-\contentsline {section}{\numberline {5.1}Cuadrícula e Ítems}{47}{section.132}%
-\contentsline {section}{\numberline {5.2}Buscador de pictogramas}{48}{section.134}%
-\contentsline {subsection}{\numberline {5.2.1}Búsqueda}{49}{subsection.136}%
-\contentsline {subsection}{\numberline {5.2.2}Preajuste}{50}{subsection.137}%
-\contentsline {subsection}{\numberline {5.2.3}Historial de pictos}{52}{subsection.144}%
-\contentsline {subsection}{\numberline {5.2.4}PictoItem}{53}{subsection.146}%
-\contentsline {section}{\numberline {5.3}Traducir frase a pictogramas}{54}{section.151}%
-\contentsline {subsection}{\numberline {5.3.1}FraseItem}{56}{subsection.154}%
-\contentsline {subsection}{\numberline {5.3.2}NIL WS Group}{57}{subsection.158}%
-\contentsline {subsection}{\numberline {5.3.3}CORS}{58}{subsection.160}%
-\contentsline {section}{\numberline {5.4}Añadir imagen al tablero}{59}{section.165}%
-\contentsline {subsection}{\numberline {5.4.1}PhotoItem}{60}{subsection.169}%
-\contentsline {subsection}{\numberline {5.4.2}Opciones investigadas y descartadas}{61}{subsection.172}%
-\contentsline {section}{\numberline {5.5}Listas de pictogramas}{62}{section.176}%
-\contentsline {subsection}{\numberline {5.5.1}Añadir y crear a una lista}{62}{subsection.177}%
-\contentsline {subsection}{\numberline {5.5.2}Listas de Pictogramas creadas}{64}{subsection.181}%
-\contentsline {section}{\numberline {5.6}Texto}{65}{section.183}%
-\contentsline {subsection}{\numberline {5.6.1}TextoItem}{65}{subsection.185}%
-\contentsline {section}{\numberline {5.7}Iconos}{66}{section.188}%
-\contentsline {section}{\numberline {5.8}Descargar Tablero}{67}{section.193}%
-\contentsline {chapter}{\numberline {6}Patrones de diseño}{69}{chapter.196}%
-\contentsline {chapter}{\numberline {7}Evaluación}{73}{chapter.197}%
-\contentsline {section}{\numberline {7.1}Preparación de la evaluación}{73}{section.198}%
-\contentsline {section}{\numberline {7.2}Diseño de la evaluación}{74}{section.200}%
-\contentsline {section}{\numberline {7.3}Resultados de la evaluación}{76}{section.217}%
-\contentsline {section}{\numberline {7.4}Análisis de los resultados}{76}{section.218}%
-\contentsline {chapter}{\numberline {8}Conclusiones y Trabajo Futuro}{77}{chapter.219}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{79}{chapter.220}%
+\contentsline {subsection}{\numberline {3.2.1}Prototipo API ARASAAC}{31}{subsection.100}%
+\contentsline {section}{\numberline {3.3}React}{31}{section.101}%
+\contentsline {section}{\numberline {3.4}Drag and Drop}{32}{section.102}%
+\contentsline {subsection}{\numberline {3.4.1}Prototipos: React Drag and Drop:}{32}{subsection.104}%
+\contentsline {section}{\numberline {3.5}JSZip}{32}{section.106}%
+\contentsline {section}{\numberline {3.6}Prototipos Tecnológicos}{32}{section.108}%
+\contentsline {chapter}{\numberline {4}Requisitos y diseño}{35}{chapter.110}%
+\contentsline {section}{\numberline {4.1}Introducción}{35}{section.111}%
+\contentsline {section}{\numberline {4.2}Diseño de la aplicación}{36}{section.112}%
+\contentsline {subsection}{\numberline {4.2.1}Prototipo realizado por Alfonso}{36}{subsection.113}%
+\contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{40}{subsection.122}%
+\contentsline {section}{\numberline {4.3}Requisitos de la aplicación}{45}{section.128}%
+\contentsline {subsection}{\numberline {4.3.1}Herramientas}{46}{subsection.129}%
+\contentsline {subsection}{\numberline {4.3.2}Elementos}{46}{subsection.130}%
+\contentsline {chapter}{\numberline {5}Arquitectura}{49}{chapter.131}%
+\contentsline {section}{\numberline {5.1}Cuadrícula e Ítems}{49}{section.132}%
+\contentsline {section}{\numberline {5.2}Buscador de pictogramas}{50}{section.134}%
+\contentsline {subsection}{\numberline {5.2.1}Búsqueda}{51}{subsection.136}%
+\contentsline {subsection}{\numberline {5.2.2}Preajuste}{52}{subsection.137}%
+\contentsline {subsection}{\numberline {5.2.3}Historial de pictos}{54}{subsection.144}%
+\contentsline {subsection}{\numberline {5.2.4}PictoItem}{55}{subsection.146}%
+\contentsline {section}{\numberline {5.3}Traducir frase a pictogramas}{56}{section.151}%
+\contentsline {subsection}{\numberline {5.3.1}FraseItem}{58}{subsection.154}%
+\contentsline {subsection}{\numberline {5.3.2}NIL WS Group}{59}{subsection.158}%
+\contentsline {subsection}{\numberline {5.3.3}CORS}{60}{subsection.160}%
+\contentsline {section}{\numberline {5.4}Añadir imagen al tablero}{61}{section.165}%
+\contentsline {subsection}{\numberline {5.4.1}PhotoItem}{62}{subsection.169}%
+\contentsline {subsection}{\numberline {5.4.2}Opciones investigadas y descartadas}{63}{subsection.172}%
+\contentsline {section}{\numberline {5.5}Listas de pictogramas}{64}{section.176}%
+\contentsline {subsection}{\numberline {5.5.1}Añadir y crear a una lista}{64}{subsection.177}%
+\contentsline {subsection}{\numberline {5.5.2}Listas de Pictogramas creadas}{66}{subsection.181}%
+\contentsline {section}{\numberline {5.6}Texto}{67}{section.183}%
+\contentsline {subsection}{\numberline {5.6.1}TextoItem}{67}{subsection.185}%
+\contentsline {section}{\numberline {5.7}Iconos}{68}{section.188}%
+\contentsline {section}{\numberline {5.8}Descargar Tablero}{69}{section.193}%
+\contentsline {chapter}{\numberline {6}Patrones de diseño}{71}{chapter.196}%
+\contentsline {chapter}{\numberline {7}Evaluación}{75}{chapter.197}%
+\contentsline {section}{\numberline {7.1}Preparación de la evaluación}{75}{section.198}%
+\contentsline {section}{\numberline {7.2}Diseño de la evaluación}{76}{section.200}%
+\contentsline {section}{\numberline {7.3}Resultados de la evaluación}{78}{section.217}%
+\contentsline {section}{\numberline {7.4}Análisis de los resultados}{78}{section.218}%
+\contentsline {chapter}{\numberline {8}Conclusiones y Trabajo Futuro}{79}{chapter.219}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{81}{chapter.220}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{81}{appendix.221}%
+\contentsline {chapter}{\numberline {A}Título}{83}{appendix.221}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{83}{appendix.222}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{85}{appendix*.223}%
+\contentsline {chapter}{\numberline {B}Título}{85}{appendix.222}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{87}{appendix*.223}%

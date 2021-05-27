@@ -13,31 +13,53 @@
 \section{Introducción}
 Para llevar a cabo el proyecto, fue necesario investigar sobre tecnologías existentes que faciliten el desarrollo del mismo [COMPLETAR]
 \section{API Arasaac}
-ARASAAC facilita la obtención de recursos pictográficos mediante su API\footnote{\url{https://arasaac.org/developers/api}}. Dicha API está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
-Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas hechas con pictogramas. Respecto a los pictogramas, los métodos que hemos utilizado son.
-\begin{itemize}
-	\item \textbf{BestSearch}: A partir de una palabra dada retorna el identificador y otros datos como el significado o la categoría del pictograma que más se asemeje al término buscado. Además, permite buscar palabras en multitud de idiomas.
-	
-	\item \textbf{searchText}: Igual que \textit{BestSearch}, diferenciándose en que retorna todos los pictogramas en vez de uno solo.
-	
-	\item \textbf{idPictogram}: A partir del identificador obtenido anteriormente, retorna la dirección de la imagen del pictograma asociado al identificador. 
-	
+ARASAAC facilita la obtención de recursos pictográficos mediante su API\footnote{\url{https://arasaac.org/developers/api}}. 
 
+Una API es una interfaz que reúne un conjunto de funciones y métodos, accesibles para otras aplicaciones. Dicha API está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
+Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas hechas con pictogramas. Respecto a los pictogramas, los métodos que se han utilizado son:
+\begin{itemize}
+	\item \textbf{BestSearch}: Recibe una palabra y retorna un único JSON con la información del pictograma que más se ajuste a la palabra.
 	
-		
+	\item \textbf{searchText}: Igual que \textit{BestSearch}, diferenciándose en que retorna todos los pictogramas similares. En la Figura [X], se ejemplifica el resultado de introducir el mismo término en las dos funciones.
+	
+	 \begin{figure}[h!]
+	 	\centering
+	 	\includegraphics[width=0.8\linewidth]{Imagenes/Bitmap/techComparacionBusquedas}
+	 	\caption{Comparación de los resultados con ambas búsquedas}
+	 	\label{fig:compBusq}
+	 \end{figure}
+	
+	\item \textbf{idPictogram}: A partir del identificador de un pictograma, retorna la dirección de la imagen del pictograma asociado al identificador.    
 \end{itemize}
 
-La API de ARASAAC está pensada para ser utilizada por múltiples aplicaciones en distintos idiomas por lo que ofrece la posibilidad, tanto en los métodos de búsqueda como los pictogramas en sí, de seleccionar qué idioma queremos usar por defecto.
-Otro característica a destacar, es que todos aquellos métodos en los que se retornen pictogramas podrán ser modificados desde la propia llamada a la API. Podremos modificar desde el color de fondo, rasgos físicos o tiempos verbales entre otras muchas opciones. Podemos ver un ejemplo de ello en la Figura  \ref{fig:colorespicto} que muestra la edición del pictograma "Niño" dentro de la web de ARASAAC \footnote{\url{https://arasaac.org/pictograms/es/7176/niño}}
 
-	% TODO: \usepackage{graphicx} required
-\begin{figure}
+Como se ha mencionado anteriormente, la API retorna un objeto JSON que almacena toda la información de un pictograma. Los parámetros más importantes son: 
+
+
+
+\begin{itemize}
+	\item \textbf{\_id}: Número único que lo identifica, se utiliza para cargar la imagen.
+	
+	\item \textbf{keyword}: La palabra asociada al pictograma.
+	
+	\item \textbf{hasLocution}: Indica si cuenta con locución. La locución está grabada por una persona y no se trata de una voz robótica generada automáticamente.
+	
+	\item \textbf{hair}: Indica si el pictograma representado tiene pelo.En caso afirmativo, se podrá cambiar el color de éste
+	
+	\item \textbf{skin}: Indica si el pictograma representa a una persona. En caso afirmativo, se podrá cambiar el tono de piel. 
+	
+\end{itemize}
+
+Respecto a estos últimos atributos que indican una posible personalización del pictograma, como se puede ver en la Figura \ref{fig:colorespicto} la web cuenta con un mayor rango de opciones. Entre ellas la de tachar un pictograma, añadir un marco o cambiar el color de fondo. Aunque la API es más limitada y cuenta con menos opciones, éstas son: cambiar el color de pelo y piel si el pictograma  lo permite, indicar plural, tiempo verbal y dejarlo en blanco y nego. Estos cambios se hacen visibles en la imagen devuelta de la API, la cual no se obtiene del método visto anteriormente sino mediante una URL modificada. 
+
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/coloresPicto}
 	\caption{Ejemplo de cómo se puede modificar el color de pelo y tono de piel de un pictograma entre otras opciones, en la web de ARASAAC}
 	\label{fig:colorespicto}
 \end{figure}
-
+\subsection{Prototipo API ARASAAC}
+Para probar el acceso a la API se creó un sencillo buscador de pictogramas mediante el método \textit{bestSearch} para comprender el funcionamiento de la API y las posibilidades que ésta ofrece. Aunque inicialmente simplemente muestra el pictograma de una palabra introducida. Pero más adelante en el desarrollo, explotamos la posibilidad de cambiar el color de pelo y tono de piel de los pictogramas que lo permiten.
 \section{React}
 
 React es una librería de Javascript pensada para desarrollar interfaces de usuario. Esta librería fue desarrollada por Facebook buscando la creación de interfaces de una manera sencilla y con un alto rendimiento. 
@@ -49,6 +71,12 @@ Respecto a otros Frameworks como Angular, vemos que React no ofrece todas las fu
 \section{Drag and Drop}
 
 React Drag and Drop\footnote{\url{https://react-dnd.github.io/react-dnd/about}} Es una biblioteca que permite arrastrar componentes en React. Su principal uso en la aplicación, es la recolocación de los componentes del tablero de manera cuadriculada. Esto permite colocar con precisión los elementos en el tablero, lo cual era un requisito indispensable para poder hacer tableros organizados. De otra manera podrían quedar algunos componentes unos pocos píxeles por encima de otro, dando un resultado poco profesional.
+
+\subsection{Prototipos: React Drag and Drop:}
+
+Otro objetivo es el de la interacción de los componentes en una superficie cuadriculada. Tras experimentar con distintas bibliotecas de JavaScript como Interact JS \footnote{\url{https://interactjs.io/}} no obtuvimos el resultado esperado pues el desplazamiento de los objetos no era lo suficientemente preciso.
+
+React tenía la biblioteca Drag and Drop que permite desplazar los componentes. La principal diferencia entre Drag and Drop y Interact JS, es que al mover un elemento, “Interact JS”  deja unos píxeles de diferencia y “Drag and Drop.” permite mover objetos en intervalos definidos, como poder mover un objeto de 10 píxeles en 10 píxeles. [contar lo del SalesForce]
 
 \section{JSZip}
 
@@ -66,13 +94,6 @@ JSZip \footnote{\url{https://stuk.github.io/jszip/}} es una biblioteca de javasc
 
 Durante las primeras etapas del desarrollo, creamos algunos prototipos para familiarizarnos con las tecnologías imprescindibles para crear la aplicación. Estas fueron el acceso a la API de ARASAAC \footnote{\url{https://arasaac.org/developers/api}} y desplazar elementos en una aplicación web.
 
-\subsection{API ARASAAC}
-
-Para probar el acceso a la API se creó un buscador de pictogramas independiente para comprender el funcionamiento de la API y las posibilidades que ésta ofrece. Aunque inicialmente simplemente muestra el pictograma de una palabra introducida. Pero más adelante en el desarrollo, explotamos la posibilidad de cambiar el color de pelo y tono de piel de los pictogramas que lo permiten.
 
 
-\subsection{React Drag and Drop:}
 
-Otro objetivo es el de la interacción de los componentes en una superficie cuadriculada. Tras experimentar con distintas bibliotecas de JavaScript como Interact JS \footnote{\url{https://interactjs.io/}} no obtuvimos el resultado esperado pues el desplazamiento de los objetos no era lo suficientemente preciso.
-
-React tenía la biblioteca Drag and Drop que permite desplazar los componentes. La principal diferencia entre Drag and Drop y Interact JS, es que al mover un elemento, “Interact JS”  deja unos píxeles de diferencia y “Drag and Drop.” permite mover objetos en intervalos definidos, como poder mover un objeto de 10 píxeles en 10 píxeles.
