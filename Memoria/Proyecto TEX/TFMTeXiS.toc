@@ -48,33 +48,35 @@
 \contentsline {section}{\numberline {5.1}Cuadrícula e Ítems}{49}{section.132}%
 \contentsline {section}{\numberline {5.2}Buscador de pictogramas}{50}{section.134}%
 \contentsline {subsection}{\numberline {5.2.1}Búsqueda}{51}{subsection.136}%
-\contentsline {subsection}{\numberline {5.2.2}Preajuste}{52}{subsection.137}%
-\contentsline {subsection}{\numberline {5.2.3}Historial de pictos}{54}{subsection.144}%
-\contentsline {subsection}{\numberline {5.2.4}PictoItem}{55}{subsection.146}%
-\contentsline {section}{\numberline {5.3}Traducir frase a pictogramas}{56}{section.151}%
-\contentsline {subsection}{\numberline {5.3.1}FraseItem}{58}{subsection.154}%
-\contentsline {subsection}{\numberline {5.3.2}NIL WS Group}{59}{subsection.158}%
-\contentsline {subsection}{\numberline {5.3.3}CORS}{60}{subsection.160}%
-\contentsline {section}{\numberline {5.4}Añadir imagen al tablero}{61}{section.165}%
-\contentsline {subsection}{\numberline {5.4.1}PhotoItem}{62}{subsection.169}%
-\contentsline {subsection}{\numberline {5.4.2}Opciones investigadas y descartadas}{63}{subsection.172}%
-\contentsline {section}{\numberline {5.5}Listas de pictogramas}{64}{section.176}%
-\contentsline {subsection}{\numberline {5.5.1}Añadir y crear a una lista}{64}{subsection.177}%
-\contentsline {subsection}{\numberline {5.5.2}Listas de Pictogramas creadas}{66}{subsection.181}%
-\contentsline {section}{\numberline {5.6}Texto}{67}{section.183}%
-\contentsline {subsection}{\numberline {5.6.1}TextoItem}{67}{subsection.185}%
-\contentsline {section}{\numberline {5.7}Iconos}{68}{section.188}%
-\contentsline {section}{\numberline {5.8}Descargar Tablero}{69}{section.193}%
-\contentsline {chapter}{\numberline {6}Patrones de diseño}{71}{chapter.196}%
-\contentsline {chapter}{\numberline {7}Evaluación}{75}{chapter.197}%
-\contentsline {section}{\numberline {7.1}Preparación de la evaluación}{75}{section.198}%
-\contentsline {section}{\numberline {7.2}Diseño de la evaluación}{76}{section.200}%
-\contentsline {section}{\numberline {7.3}Resultados de la evaluación}{78}{section.217}%
-\contentsline {section}{\numberline {7.4}Análisis de los resultados}{78}{section.218}%
-\contentsline {chapter}{\numberline {8}Conclusiones y Trabajo Futuro}{79}{chapter.219}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{81}{chapter.220}%
+\contentsline {subsection}{\numberline {5.2.2}Preajuste}{52}{subsection.138}%
+\contentsline {subsection}{\numberline {5.2.3}Historial de pictos}{54}{subsection.145}%
+\contentsline {subsection}{\numberline {5.2.4}PictoItem}{55}{subsection.147}%
+\contentsline {subsubsection}{\numberline {5.2.4.1}Editar Picto}{56}{subsubsection.149}%
+\contentsline {subsubsection}{\numberline {5.2.4.2}Reproducir sonido}{56}{subsubsection.151}%
+\contentsline {section}{\numberline {5.3}Traducir frase a pictogramas}{57}{section.154}%
+\contentsline {subsection}{\numberline {5.3.1}FraseItem}{58}{subsection.157}%
+\contentsline {subsection}{\numberline {5.3.2}NIL WS Group}{59}{subsection.161}%
+\contentsline {subsection}{\numberline {5.3.3}CORS}{60}{subsection.163}%
+\contentsline {section}{\numberline {5.4}Añadir imagen al tablero}{61}{section.168}%
+\contentsline {subsection}{\numberline {5.4.1}PhotoItem}{62}{subsection.172}%
+\contentsline {subsection}{\numberline {5.4.2}Opciones investigadas y descartadas}{63}{subsection.175}%
+\contentsline {section}{\numberline {5.5}Listas de pictogramas}{64}{section.179}%
+\contentsline {subsection}{\numberline {5.5.1}Añadir y crear a una lista}{64}{subsection.180}%
+\contentsline {subsection}{\numberline {5.5.2}Listas de Pictogramas creadas}{65}{subsection.184}%
+\contentsline {section}{\numberline {5.6}Texto}{66}{section.186}%
+\contentsline {subsection}{\numberline {5.6.1}TextoItem}{67}{subsection.188}%
+\contentsline {section}{\numberline {5.7}Iconos}{67}{section.191}%
+\contentsline {section}{\numberline {5.8}Descargar Tablero}{69}{section.196}%
+\contentsline {chapter}{\numberline {6}Patrones de diseño}{71}{chapter.199}%
+\contentsline {chapter}{\numberline {7}Evaluación}{75}{chapter.200}%
+\contentsline {section}{\numberline {7.1}Preparación de la evaluación}{75}{section.201}%
+\contentsline {section}{\numberline {7.2}Diseño de la evaluación}{76}{section.203}%
+\contentsline {section}{\numberline {7.3}Resultados de la evaluación}{78}{section.220}%
+\contentsline {section}{\numberline {7.4}Análisis de los resultados}{78}{section.221}%
+\contentsline {chapter}{\numberline {8}Conclusiones y Trabajo Futuro}{79}{chapter.222}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{81}{chapter.223}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{83}{appendix.221}%
+\contentsline {chapter}{\numberline {A}Título}{83}{appendix.224}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{85}{appendix.222}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{87}{appendix*.223}%
+\contentsline {chapter}{\numberline {B}Título}{85}{appendix.225}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{87}{appendix*.226}%

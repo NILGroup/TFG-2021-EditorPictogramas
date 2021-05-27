@@ -31,9 +31,8 @@ A continuación se expondrá el funcionamiento de cada herramienta y el ítem qu
 
 \section{Buscador de pictogramas}
 
-Ésta herramienta muestra los distintos pictogramas que se asocian a una palabra mediante la API de \textit{ARASAAC}. 
+El buscador de pictogramas es la herramienta que muestra los distintos pictogramas que se asocian a una palabra mediante la API de \textit{ARASAAC}. Como se puede ver en la Figura \ref{fig:buscarpicto2} la componente aparte de contar con el buscador identificado mediante el icono de la lupa, también tiene un historial que almacena los pictogramas recientemente añadidos asociado al icono del reloj. Además, a la derecha del buscador se encuentra la opción de preajuste de pictogramas identificado con el icono de los engranajes. Estas dos opciones son muy convenientes de cara a añadir un pictograma al tablero. 
 
-Como se puede ver en la Figura \ref{fig:buscarpicto2} la componente no sólo es un buscador, además tiene un historial de pictogramas añadidos y la opción de preajuste de pictogramas. Dos utilidades muy convenientes de cara a añadir pictogramas al tablero. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -44,54 +43,31 @@ Como se puede ver en la Figura \ref{fig:buscarpicto2} la componente no sólo es 
 \end{figure}
 
 
-Para empezar se va a explicar cómo está estructurado el componente de búsqueda de pictogramas. En el estado del componente se almacenará: 
+Para empezar se va a explicar cómo está estructurado el componente de búsqueda de pictogramas. En la variable \texttt{state} del componente se almacenará:
 
 \begin{itemize}
 	\item La palabra de la que se quiere obtener sus pictogramas
 	\item Los pictogramas encontrados por la consulta
 	\item El preajuste de los pictos, donde se especifican cómo se van a mostrar los pictogramas.
-	\item Flags de control: Para saber si se ha completado la búsqueda, está abierto el modal o si se ha seleccionado el historial. 	
+	\item Flags de control, son para indicar si se ha completado la búsqueda, está abierto el modal, o si se ha seleccionado el historial.     
 \end{itemize}
 
-
-Este componente abarca el acceso a la API de búsqueda de pictos, gestión de eventos y los métodos de renderización. En este caso hay dos, el primero que podemos ver en la Figura \ref{fig:buscarpicto2} muestra la barra de búsqueda y sus opciones. El otro método de renderización, muestra el resultado de la consulta, debajo del espacio de búsqueda como se puede ver en la misma figura. 
-
-A continuación, analizaremos las distintas características de este componente:
+Respecto a las funciones que abarca el componente, se pueden distinguir tres tipos, las que realizan las peticiones a la API de ARASAAC, las que gestionan los resultados de las peticiones y dos métodos de renderización. El primer método se encargará de mostrar la barra de búsqueda, que cuenta con los botones mencionados anteriormente (buscar, historial, preajuste de pictogramas) que llamarán a sus funciones asociadas. El segundo método de renderización recibe como parámetro de entrada una lista de pictogramas y los mostrará junto a los botones para añadirlos a la cuadrícula o lista de pictogramas. A continuación se explicará el funcionamiento de estas funcionalidades. 
 
 
 \subsection{Búsqueda}
 
-Al pulsar sobre el icono de la lupa o pulsar intro se lanza la consulta a la API mediante Fetch o get. La URL para hacer la petición tiene dos parámetros, el idioma que por defecto es español y el término a buscar. Tras finalizar la búsqueda, se guarda la respuesta de la API para posteriormente procesarla.
+Al pulsar sobre el icono de la lupa o pulsar intro se lanza la consulta a la API de ARASAAC por el método \texttt{bestSearch} mediante Fetch\footnote{\url{https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch}}. El fetching se puede realizar y recibir peticiones en JavaScript de manera asíncrona de manera sencilla. De esta manera, hasta no recibir una respuesta en forma de JSON con la lista de pictogramas, no se enviará al método de renderización de pictogramas. 
 
+Cuando llegue dicha lista a este método, será cuando se use el preajuste para que la apariencia de los pictogramas sea de acuerdo a lo marcado por el usuario. En la Sección \ref{preajuste} se explica en detalle cómo se obtiene y modifica la URL que se muestra. Con la URL creada, se mostrarán los pictogramas devueltos por la API. El método de renderización, añade a cada pictograma dos botones: añadir a la cuadrícula y guardar en una lista de pictos. En ambos casos, se enviará el pictograma a la componente padre donde será tratado el pictograma seleccionado de maneras distintas. Respecto a cómo será tratado el pictograma al añadirlo a una lista se verá detalladamente en la Sección Lista de pictos \ref{listapictos}.
 
-Los pictogramas ya buscados, pasan a ser renderizados. Aunque antes de ello es importante explicar el contenido de un pictograma de ARASAAC. De entre todos los parámetros que incluye, destacar: 
-
-
-
-\begin{itemize}
-	\item \textbf{\_id}: Número único que lo identifica, imprescindible para cargar la imágen.
-	
-	\item \textbf{Keyword}: La palabra asociada al pictograma.
-	
-	\item \textbf{hasLocution}: Indica si cuenta con locución. La locución está grabada por una persona y no se trata de una voz robótica típica de un “text to speech”.
-	
-	\item \textbf{hair}: Indica si el pictograma tiene pelo, en caso afirmativo se puede cambiar su color. 
-	
-	\item \textbf{skin}: Indica si el pictograma es una persona, en caso afirmativo se podrá cambiar el tono de piel.
-		
-\end{itemize}
-
-Existen otros muchos parámetros, pero son éstos con los que se han trabajado a lo largo de la aplicación.
-
-En la sección Preajuste \ref{preajuste} se explica en detalle cómo se obtiene y modifica la url. Con la url creada, se mostrarán los pictogramas devueltos por la API. Cada pictograma cuenta con dos botones, uno para añadirlo a la cuadrícula y otro para guardarlo en una lista de pictos. Las listas de pictos se verán en la Sección Lista de pictos \ref{listapictos}. 
-
-En caso de añadirlo a la cuadrícula, se guardará en el historial de pictos y enviará la información de éste al componente padre. Éste recibiría el el pictograma que ha devuelto la API de ARASAAC junto a sus parámetros y el preajuste aplicado a dicho picto. Antes de ver el funcionamiento del nuevo ítem que aparecerá en la cuadrícula, es importante conocer el funcionamiento del preajuste e historial.
+En caso de añadirlo a la cuadrícula, primero guardará el pictograma en el historial de pictos y posteriormente se enviará a la componente padre (dragOnCanvas).  Éste recibiría el el pictograma que ha devuelto la API de ARASAAC junto a sus parámetros y el preajuste aplicado a dicho picto. Antes de ver el funcionamiento del nuevo ítem que aparecerá en la cuadrícula, es importante conocer el funcionamiento del preajuste e historial.
 
 
 \subsection{Preajuste}
 \label{preajuste}
 
-La manera de obtener la dirección URL de una imagen tiene dos maneras de abordarse. En un primer lugar, podría poner simplemente la url “https://api.arasaac.org/api/pictograms/” junto al identificador del pictograma. De esta manera simplemente se mostraría el pictograma pero perderíamos la valiosa posibilidad de editar un pictograma que ofrece ARASAAC. 
+La manera de obtener la dirección URL de una imagen tiene dos maneras de abordarse. En un primer lugar, podría poner simplemente la URL “https://api.arasaac.org/api/pictograms/” junto al identificador del pictograma. De esta manera simplemente se mostraría el pictograma pero perderíamos la valiosa posibilidad de editar un pictograma que ofrece ARASAAC.
 
 Para poder optar a las modificaciones, se ha de modificar la URL de una manera concreta. Desde la propia API se especifican los atributos modificables que se pueden aplicar a todos los pictogramas:  
 
@@ -100,7 +76,7 @@ Para poder optar a las modificaciones, se ha de modificar la URL de una manera c
 	\item \textbf{action}: Añade una flecha para indicar que una acción se da en el futuro o en el pasado.
 	\item \textbf{plural}: Añade un “+” en la esquina superior derecha.
 	\item \textbf{nocolor}: Muestra el pictograma en blanco y negro.
-	 	
+	
 \end{itemize}
 
 Existen otras dos modificaciones que solo son aplicables a los pictogramas cuyos parámetros “hair” y “skin” estén marcados como “true“.
@@ -108,12 +84,12 @@ Existen otras dos modificaciones que solo son aplicables a los pictogramas cuyos
 
 \begin{itemize}
 	\item \textbf{hair}: Si un pictograma tiene pelo su color puede ser uno de entre 6 colores posibles asociado a su valor hexadecimal. Moreno, rubio, pelirrojo, etc.
-
-	\item \textbf{skin}: Si el pictograma contiene una persona se puede modificar el tono de piel de entre 5 posibles, especificados mediante su valor hexadecimal. 
+	
+	\item \textbf{skin}: Si el pictograma contiene una persona se puede modificar el tono de piel de entre 5 posibles, especificados mediante su valor hexadecimal.
 	
 \end{itemize}
 
-Es aquí donde entra en acción el preajuste de pictogramas, ofreciendo al usuario una interfaz donde modificar la apariencia de los pictogramas que se buscan y posteriormente se añadan. Al pulsar sobre el botón [Dónde está] se abre el modal que se ve en la Figura \ref{fig:modalpreajustepicto}. El modal en sí, se trata de otra componente que recibe como parámetro de entrada los preajustes ya establecidos, y devuelve los nuevos preajustes. Los preajustes son los atributos vistos anteriormente: color de pelo, tono de piel, color y plural. 
+Es aquí donde entra en acción el preajuste de pictogramas, ofreciendo al usuario una interfaz donde modificar la apariencia de los pictogramas que se buscan y posteriormente se añaden. Al pulsar sobre el botón [Dónde está] se abre el modal que se ve en la Figura \ref{fig:modalpreajustepicto}. El modal en sí, se trata de otra componente que recibe como parámetro de entrada los preajustes ya establecidos, y devuelve los nuevos preajustes. Los preajustes son los atributos vistos anteriormente: color de pelo, tono de piel, color y plural.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -125,31 +101,33 @@ Es aquí donde entra en acción el preajuste de pictogramas, ofreciendo al usuar
 
 
 
-La interfaz del modal consiste en dos filas. La primera para los checkbox que marcan las opciones de plural y color, las cuales pueden estar activadas o desactivadas. La segunda fila son para elegir una de entras distintas opciones de color disponibles tanto para el tono de piel como para el color de pelo. 
+La interfaz del modal consiste en dos filas. La primera para los checkbox que marcan las opciones de plural y color, las cuales pueden estar activadas o desactivadas. La segunda fila son para elegir una de entras distintas opciones de color disponibles tanto para el tono de piel como para el color de pelo.
 
-Está dispuesto de esa manera ya que si se marca algún checkbox, los botones radiales desaparecen. Esto se debe a que no es posible tener por ejemplo, un pictograma sin color y color de pelo rubio. Previniendo así combinaciones que no estén disponibles. 
+Está dispuesto de esa manera ya que si se marca algún checkbox, los botones radiales desaparecen. Esto se debe a que no es posible tener por ejemplo, un pictograma sin color y color de pelo rubio. Previniendo así combinaciones que no estén disponibles.
 
-A la izquierda cuenta con una pre visualización para que el usuario conozca cómo afectan los atributos seleccionados al pictograma. Una vez el usuario esté conforme con los cambios, se envían al componente búsqueda de pictogramas las opciones seleccionadas. 
+A la izquierda cuenta con una pre visualización para que el usuario conozca cómo afectan los atributos seleccionados al pictograma. Una vez el usuario esté conforme con los cambios, se envían al componente búsqueda de pictogramas las opciones seleccionadas.
 
-Respecto a la construcción de las URLs se realiza de la siguiente manera. 
+Respecto a la construcción de las URLs se realiza de la siguiente manera.
 
 \begin{enumerate}
-	\item A partir de la url: https://static.arasaac.org/pictograms/id/id + \{options\} + \_500.png. En la variable \textit{options} se añadirán las opciones que modifiquen el pictograma.
+	\item Se parte de la URL \texttt{https://static.arasaac.org/pictograms/id/id + \{options\} + \_500.png}. En la variable \texttt{options} se añadirán las opciones que modifiquen al pictograma.
 	
 	
-	\item Dichas opciones deben estar  en un orden concreto utilizando los valores obtenidos del preajuste y el pictograma a crear. Por ejemplo, si se va a crear la url del  pictograma “avion”, los ajustes relacionados con el color de pelo o piel no se aplicarían, ya que el picto no lo permite y por tanto se saltaría.
+	\item Dichas opciones deben estar  en un orden concreto utilizando los valores obtenidos del preajuste y el pictograma a crear. Por ejemplo, si se va a crear la URL del  pictograma “avión”, los ajustes relacionados con el color de pelo o piel no se aplicarían, ya que el picto no lo permite.
 	
-	\item Un resultado posible sería: “\_action-future\_hair-020100\_skin-A65C17” Brevemente, cada etiqueta que se añade significa “\_action-future” que añade la flecha en la esquina superior derecha indicando futuro, “hair” y “skin” van asociados a su color hexadecimal correspondiente obtenido del preajuste. Si la etiqueta de “hair” fuera antes que la de “skin”, la url creada no funciona. De ahí la importancia del orden.
+	\item Un resultado posible para \texttt{option} sería: \texttt{\_action-future\_hair-020100\_skin-A65C17} Brevemente, cada etiqueta que se añade significa \texttt{\_action-future}, que añade la flecha en la esquina superior derecha indicando futuro y \texttt{hair} y \texttt{skin}van asociados a su color hexadecimal correspondiente obtenido del preajuste. Si la etiqueta de \texttt{hair} fuera antes que la de \texttt{skin}, la URL creada no funciona. De ahí la importancia del orden.
 	
-	\item La URL creada se usa en cada pictograma mostrado en función de los preajustes, tal y como se puede observar en la Figura \ref{fig:modalpreajustepicto}.
-		
+	\item La URL creada se usa en cada pictograma mostrado en función de los preajustes, tal y como se puede observar en la Figura \ref{fig:buscarpictopreajuste}.
+	
 \end{enumerate}
+
+
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/buscarPictoPreajuste}
-	\caption{Vista de la interfaz de búsqueda de pictogramas al aplicar un preajuste. En este caso piel morena y pelo rubio}
+	\includegraphics[width=0.9\linewidth]{Imagenes/Bitmap/buscarPictoPreajuste}
+	\caption{Ejemplos de tipos de distintas combinaciones de preajuste}
 	\label{fig:buscarpictopreajuste}
 \end{figure}
 
@@ -157,16 +135,16 @@ Respecto a la construcción de las URLs se realiza de la siguiente manera.
 
 \subsection{Historial de pictos}
 
-Al añadir un pictograma al tablero, dicho pictograma se guarda en el historial que se mantiene entre sesiones. Para ello se ha utilizado LocalStorage\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage}}, el cual almacena una lista en la variable “recentPictos”. Dicha lista está compuesta por el objeto devuelto por la API de ARASAAC parseado a string, ya que los valores almacenados en LocalStorage solo pueden estar en formato UTF-16 DOMString que utiliza dos bytes por carácter.
+Al añadir un pictograma al tablero, dicho pictograma se guarda en el historial que se mantiene entre sesiones. Para ello se ha utilizado LocalStorage\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage}}, el cual almacena una lista en la variable “recentPictos”. Dicha lista está compuesta por el objeto devuelto por la API de ARASAAC parseado a \texttt{string}, ya que los valores almacenados en LocalStorage solo pueden estar en formato \texttt{UTF-16 DOMString} que utiliza dos bytes por carácter.
 
-Al pulsar sobre el botón de historial se cargarán y mostrarán todos los pictogramas encontrados en “recentPictos”. En caso que el historial esté vacío, se mostrará un mensaje indicándolo. Al igual que la búsqueda, los pictogramas del historial se podrán añadir al tablero o a una lista, y son susceptibles del preajuste de pictogramas.
+Al pulsar sobre el botón de historial se cargarán y mostrarán todos los pictogramas encontrados en \texttt{recentPictos}. En caso que el historial esté vacío, se mostrará un mensaje indicándolo. Al igual que la búsqueda, los pictogramas del historial se podrán añadir al tablero o a una lista, y son susceptibles del preajuste de pictogramas.
 
-Es importante destacar que al realizar las pruebas no se puso un límite de pictogramas que se pudieran guardar en el historial. A partir de 300 aparecían pérdidas de rendimiento llegando a detener momentáneamente la página, motivo por el cual se redujo a 50. 
-
+Es importante destacar que al realizar las pruebas se puso un límite a los pictogramas que se pudieran guardar en el historial. A partir de 300 aparecían pérdidas de rendimiento llegando a detener momentáneamente la página, motivo por el cual se redujo a 50.
 
 \subsection{PictoItem}
 
-Al añadir el ítem a la cuadrícula, tiene un aspecto similar al de la Figura \ref{fig:modalpreajustepicto}. Éste ítem ha recibido como parámetros de entrada, el objeto de pictograma devuelto por la API de \textit{ARASAAC} y el preajuste con el que ha sido añadido. En el caso de la Figura \ref{fig:pictoitemmodificado}, ha sido el pictograma “hola” colocado con preajuste de color de pelo rubio y piel morena. 
+PictoItem es el componente asignado a representar un pictograma en la cuadrícula. En la Figura \ref{fig:modalpreajustepicto} se puede ver su representación en el tablero, la mayor parte del componente lo abarca el pictograma, debajo su nombre. Las funcionalidades que tiene este PictoItem, es la de editar el picto mediante el botón del lápiz y el de reproducir el sonido de su texto asociado mediante el botón \textit{play}. Respecto a su estructura interna, en su \texttt{state} almacena el objeto picto obtenido anteriormente de la API de ARASAAC, el preajuste asignado y \textit{flags} que indican si su modal de edición de  picto es visible o no. 
+
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -177,10 +155,10 @@ Al añadir el ítem a la cuadrícula, tiene un aspecto similar al de la Figura \
 \end{figure}
 
 
-A continuación se especificarán todas las posibilidades que ofrece un PictoItem colocado en el tablero. 
+A continuación se detallarán las funcionalidades que ofrece  PictoItem.
 
 
-\section*{Editar Picto}
+\subsubsection{Editar Picto}
 
 Tiene un funcionamiento igual al de preajuste de picto aunque se han añadido dos opciones más. Tal y como se puede ver en la Figura \ref{fig:modaleditarpicto}, éstas son el selector de tiempo verbal y  borde. El motivo de aparición de estas dos opciones en este modal y no en el preajuste es la de no abrumar al usuario. El Borde puede ser de utilidad para los usuarios que quieran resaltar el tipo de pictograma mediante un color, tal y como se vio en capítulos anteriores (Estado de la cuestión). El selector de tiempo verbal sirve para indicar si una acción toma lugar en presente, pasado o futuro.
 
@@ -193,7 +171,7 @@ Tiene un funcionamiento igual al de preajuste de picto aunque se han añadido do
 \end{figure}
 
 
-\section*{Reproducir sonido}
+\subsubsection{Reproducir sonido}
 
 
 La función del botón es la de reproducir mediante audio el nombre del pictograma. Como se ha visto anteriormente, los pictogramas devueltos por la API pueden contar con locución si se consulta el parámetro “\textit{hasLocution}”. En caso de contar con locución, se accede a la URL\footnote{\url{https://privateapi.arasaac.org/api/locutions/es/}} que contiene la pista de voz asociada y se reproduce. 

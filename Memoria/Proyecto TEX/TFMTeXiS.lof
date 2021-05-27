@@ -56,34 +56,34 @@
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Pantalla de juego en ejecución.\relax }}{45}{figure.caption.127}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Vista del componente de búsqueda de pictogramas\relax }}{51}{figure.caption.135}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Vista del modal del preajuste de pictos con las opciones color rubio y piel morena marcada.\relax }}{53}{figure.caption.138}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Vista de la interfaz de búsqueda de pictogramas al aplicar un preajuste. En este caso piel morena y pelo rubio\relax }}{54}{figure.caption.143}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Vista de un PictoItem en la cuadrícula con preajuste de pelo y piel. \relax }}{56}{figure.caption.147}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Vista de la interfaz del modal que muestra una edición de pictogramas con más opciones. En este caso, se ha seleccionado el tiempo futuro y el borde verde. \relax }}{57}{figure.caption.148}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Interfaz inicial Traducción frase a pictograma.\relax }}{57}{figure.caption.152}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Resultado de la traducción de una frase\relax }}{58}{figure.caption.153}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Vista de FraseItem en la cuadrícula\relax }}{58}{figure.caption.155}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Vista del modal de edición del FraseItem\relax }}{59}{figure.caption.156}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces FraseItem tras aplicar los cambios\relax }}{59}{figure.caption.157}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Diagrama de conexiones entre aplicaciones para traducir una frase\relax }}{61}{figure.caption.164}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Interfaz inicial al añadir una imagen al tablero\relax }}{61}{figure.caption.166}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista de la Interfaz al cargar una imagen\relax }}{62}{figure.caption.167}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Ejemplod de PhotoItem con y sin texto\relax }}{63}{figure.caption.170}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Ejemmplo de PhotoItemn si no mantuviera la proporción\relax }}{63}{figure.caption.171}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Vistas del modal con ninguna lista y al menos una, respectivamente\relax }}{65}{figure.caption.178}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Alerta tras añadir satisfactoriamente un pictograma a la lista\relax }}{65}{figure.caption.179}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Alerta de acción no permitida\relax }}{65}{figure.caption.180}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Vista de las listas de pictogramas\relax }}{66}{figure.caption.182}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Vista de la selección de fuente y campo de texto\relax }}{67}{figure.caption.184}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Representación del TextoItem en la cuadrícula\relax }}{67}{figure.caption.186}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Vista del modal para editar un TextoItem\relax }}{68}{figure.caption.187}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Vista de los botones que añaden iconos\relax }}{68}{figure.caption.189}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Ejemplo de uso de iconos sobre algunos pictogramas\relax }}{69}{figure.caption.191}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Vista del modal de edición de iconos.\relax }}{69}{figure.caption.192}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Vista del modal para descargar tablero\relax }}{70}{figure.caption.195}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Vista del modal del preajuste de pictos con las opciones color rubio y piel morena marcada.\relax }}{53}{figure.caption.139}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Ejemplos de tipos de distintas combinaciones de preajuste\relax }}{54}{figure.caption.144}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vista de un PictoItem en la cuadrícula con preajuste de pelo y piel. \relax }}{55}{figure.caption.148}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Vista de la interfaz del modal que muestra una edición de pictogramas con más opciones. En este caso, se ha seleccionado el tiempo futuro y el borde verde. \relax }}{56}{figure.caption.150}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Interfaz inicial Traducción frase a pictograma.\relax }}{57}{figure.caption.155}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Resultado de la traducción de una frase\relax }}{58}{figure.caption.156}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Vista de FraseItem en la cuadrícula\relax }}{58}{figure.caption.158}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Vista del modal de edición del FraseItem\relax }}{59}{figure.caption.159}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces FraseItem tras aplicar los cambios\relax }}{59}{figure.caption.160}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Diagrama de conexiones entre aplicaciones para traducir una frase\relax }}{61}{figure.caption.167}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Interfaz inicial al añadir una imagen al tablero\relax }}{61}{figure.caption.169}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista de la Interfaz al cargar una imagen\relax }}{62}{figure.caption.170}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ejemplod de PhotoItem con y sin texto\relax }}{63}{figure.caption.173}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Ejemmplo de PhotoItemn si no mantuviera la proporción\relax }}{63}{figure.caption.174}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Vistas del modal con ninguna lista y al menos una, respectivamente\relax }}{65}{figure.caption.181}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Alerta tras añadir satisfactoriamente un pictograma a la lista\relax }}{65}{figure.caption.182}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Alerta de acción no permitida\relax }}{65}{figure.caption.183}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Vista de las listas de pictogramas\relax }}{66}{figure.caption.185}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Vista de la selección de fuente y campo de texto\relax }}{67}{figure.caption.187}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Representación del TextoItem en la cuadrícula\relax }}{67}{figure.caption.189}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Vista del modal para editar un TextoItem\relax }}{68}{figure.caption.190}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Vista de los botones que añaden iconos\relax }}{68}{figure.caption.192}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Ejemplo de uso de iconos sobre algunos pictogramas\relax }}{69}{figure.caption.194}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Vista del modal de edición de iconos.\relax }}{69}{figure.caption.195}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Vista del modal para descargar tablero\relax }}{70}{figure.caption.198}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Ejemplo de pista en el formulario: Buscar un pictograma. \relax }}{77}{figure.caption.201}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ejemplo de pista en el formulario: Buscar un pictograma. \relax }}{77}{figure.caption.204}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {english}{}
