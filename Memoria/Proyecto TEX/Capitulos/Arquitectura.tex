@@ -1,4 +1,4 @@
-\chapter{Arquitectura}
+\chapter{PictUp! Arquitectura y diseño}
 \label{cap:arquitectura}
 
 
@@ -7,7 +7,13 @@
  En este capítulo se especificará la estructura de la aplicación a nivel interno, desde el funcionamiento de la cuadrícula, las herramientas y el ítem que estas añaden al tablero y el esquema de conexiones con funcionalidades externas. 
 \end{resumen}
 
-\section{Cuadrícula e Ítems}
+\section{Introducción}
+
+\section{Arquitectura}
+\subsection{Arquitectura interna}
+\subsection{Arquitectura externa}
+
+\section{Cuadrícula}
 
 En cuanto al funcionamiento de la cuadrícula y la cuadrícula fue clonado del proyecto dnd-a11y-patterns\footnote{\url{https://github.com/salesforce-ux/dnd-a11y-patterns}} que contaba con el material para trabajar con estos elementos. Cuenta con una licencia BSD 3-Clause que permite libertad de modificación y distribución. 
 
@@ -177,6 +183,10 @@ Tiene un funcionamiento igual al de preajuste de picto aunque se han añadido do
 La función del botón es la de reproducir mediante audio el nombre del pictograma. Como se ha visto anteriormente, los pictogramas devueltos por la API pueden contar con locución si se consulta el parámetro “\textit{hasLocution}”. En caso de contar con locución, se accede a la URL\footnote{\url{https://privateapi.arasaac.org/api/locutions/es/}} que contiene la pista de voz asociada y se reproduce. 
 En caso de no contar con locución se ha implementado mediante \textit{SpeechSynthesisUtterance}\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance}} para que haga una función similar en el resto de pictogramas. Está configurada para que sintetize la voz en español y es compatible con todos los navegadores modernos.
 
+\subsection{Reglas de diseño de usabilidad}
+
+
+
 
 \section{Traducir frase a pictogramas}
 
@@ -245,6 +255,9 @@ Al ser presionado aparecerá un nuevo modal como se ve en la Figura \ref{fig:mod
 	\caption{FraseItem tras  aplicar los cambios}
 	\label{fig:fraseitemmidificada}
 \end{figure}
+
+\subsection{Reglas de diseño de usabilidad}
+
 
 
 \subsection{NIL WS Group}
@@ -356,6 +369,8 @@ En la Figura \ref{fig:photoitemerror} se ejemplifica qué pasaría si en vez de 
 	\label{fig:photoitemerror}
 \end{figure}
 
+\subsection{Reglas de diseño de usabilidad}
+
 
 \subsection{Opciones investigadas y descartadas}
 
@@ -421,7 +436,7 @@ Para informar al usuario de las acciones tanto la de crear una nueva lista, cóm
 	
 \end{itemize}
 
-\subsection{Listas de Pictogramas creadas}
+\subsection{Gestión de listas de pictogramas}
 
 Otras funcionalidades que podemos encontrar en esta herramienta es la posibilidad de importar y exportar las listas creadas.
 Para la funcionalidad de exportar guardaremos el estado actual de las listas en un fichero con extensión “.json”. Para la generación de este documento se utilizará la función \textit{JSON.stringify()}, la cual nos permitirá crear la estructura propia de los json y posteriormente generar el documento con ese contenido.
@@ -437,6 +452,8 @@ Por último, las listas existentes se encuentran en el apartado “Mis listas de
 	\caption{Vista de las listas de pictogramas}
 	\label{fig:lisapictosel}
 \end{figure}
+
+\subsection{Reglas de diseño de usabilidad}
 
 
 \section{Texto}
@@ -483,7 +500,7 @@ Al pulsar sobre el icono del lápiz se desplegará el modal de edición de ítem
 	\label{fig:modaleditartexto}
 \end{figure}
 
-
+\subsection{Reglas de diseño de usabilidad}
 
 \section{Iconos}
 
@@ -525,6 +542,9 @@ Aunque la forma de visualizarlos se hace de manera distinta dependiendo del icon
 	\label{fig:modalpictoitem}
 \end{figure}
 
+\subsection{IconoItem}
+
+\subsection{Reglas de diseño de usabilidad}
 
 \section{Descargar Tablero}
 
@@ -539,6 +559,25 @@ Esta herramienta permite descargar la cuadrícula como imagen. Para ello se util
 	\caption{Vista del modal para descargar tablero}
 	\label{fig:modaldescargartablero}
 \end{figure}
+
+
+
+\section{Funcionalidades no implementadas}
+
+\subsection{Traducción de frase}
+
+\subsection{Añadir imagen}
+
+\subsection{Subtableros}
+
+\section{Despliegue de la aplicación}
+
+
+
+
+
+
+
 
 
 
