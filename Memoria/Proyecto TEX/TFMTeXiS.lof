@@ -64,26 +64,26 @@
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Resultado de la traducción de una frase\relax }}{58}{figure.caption.161}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Vista de FraseItem en la cuadrícula\relax }}{59}{figure.caption.163}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Vista del modal de edición del FraseItem\relax }}{59}{figure.caption.164}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces FraseItem tras aplicar los cambios\relax }}{59}{figure.caption.165}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Diagrama de conexiones entre aplicaciones para traducir una frase\relax }}{61}{figure.caption.173}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Interfaz inicial al añadir una imagen al tablero\relax }}{61}{figure.caption.175}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista de la Interfaz al cargar una imagen\relax }}{62}{figure.caption.176}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Ejemplod de PhotoItem con y sin texto\relax }}{63}{figure.caption.179}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Ejemmplo de PhotoItemn si no mantuviera la proporción\relax }}{63}{figure.caption.180}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Vistas del modal con ninguna lista y al menos una, respectivamente\relax }}{65}{figure.caption.188}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Alerta tras añadir satisfactoriamente un pictograma a la lista\relax }}{65}{figure.caption.189}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Alerta de acción no permitida\relax }}{66}{figure.caption.190}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Vista de las listas de pictogramas\relax }}{67}{figure.caption.192}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Vista de la selección de fuente y campo de texto\relax }}{67}{figure.caption.195}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Representación del TextoItem en la cuadrícula\relax }}{68}{figure.caption.197}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Vista del modal para editar un TextoItem\relax }}{68}{figure.caption.198}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Vista de los botones que añaden iconos\relax }}{68}{figure.caption.201}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Ejemplo de uso de iconos sobre algunos pictogramas\relax }}{69}{figure.caption.203}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Vista del modal de edición de iconos.\relax }}{69}{figure.caption.204}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Vista del modal para descargar tablero\relax }}{70}{figure.caption.209}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces FraseItem tras aplicar los cambios\relax }}{60}{figure.caption.165}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Diagrama de conexiones entre aplicaciones para traducir una frase\relax }}{60}{figure.caption.169}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Interfaz inicial al añadir una imagen al tablero\relax }}{61}{figure.caption.171}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista de la Interfaz al cargar una imagen\relax }}{61}{figure.caption.172}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ejemplod de PhotoItem con y sin texto\relax }}{62}{figure.caption.175}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Ejemmplo de PhotoItemn si no se mantuviera la proporción según el tamaño de la imagen\relax }}{63}{figure.caption.176}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Vistas del modal con ninguna lista y al menos una, respectivamente\relax }}{63}{figure.caption.180}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Alerta tras añadir satisfactoriamente un pictograma a la lista\relax }}{64}{figure.caption.181}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Alerta de acción no permitida\relax }}{64}{figure.caption.182}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Vista de las listas de pictogramas\relax }}{65}{figure.caption.184}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Vista de la selección de fuente y campo de texto\relax }}{65}{figure.caption.187}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Representación del TextoItem en la cuadrícula\relax }}{66}{figure.caption.189}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Vista del modal para editar un TextoItem\relax }}{66}{figure.caption.190}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Vista de los botones que añaden iconos\relax }}{67}{figure.caption.193}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Ejemplo de uso de iconos sobre algunos pictogramas\relax }}{68}{figure.caption.195}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Vista del modal de edición de iconos.\relax }}{68}{figure.caption.196}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Vista del modal para descargar tablero\relax }}{69}{figure.caption.201}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Ejemplo de pista en el formulario: Buscar un pictograma. \relax }}{77}{figure.caption.220}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ejemplo de pista en el formulario: Buscar un pictograma. \relax }}{79}{figure.caption.225}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {english}{}

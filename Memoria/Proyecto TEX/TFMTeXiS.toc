@@ -60,39 +60,38 @@
 \contentsline {subsection}{\numberline {5.4.5}Reglas de diseño de usabilidad}{57}{subsection.158}%
 \contentsline {section}{\numberline {5.5}Traducir frase a pictogramas}{57}{section.159}%
 \contentsline {subsection}{\numberline {5.5.1}FraseItem}{58}{subsection.162}%
-\contentsline {subsection}{\numberline {5.5.2}Reglas de diseño de usabilidad}{60}{subsection.166}%
-\contentsline {subsection}{\numberline {5.5.3}NIL WS Group}{60}{subsection.167}%
-\contentsline {subsection}{\numberline {5.5.4}CORS}{60}{subsection.169}%
-\contentsline {section}{\numberline {5.6}Añadir imagen al tablero}{61}{section.174}%
-\contentsline {subsection}{\numberline {5.6.1}PhotoItem}{63}{subsection.178}%
-\contentsline {subsection}{\numberline {5.6.2}Reglas de diseño de usabilidad}{64}{subsection.181}%
-\contentsline {subsection}{\numberline {5.6.3}Opciones investigadas y descartadas}{64}{subsection.182}%
-\contentsline {section}{\numberline {5.7}Listas de pictogramas}{64}{section.186}%
-\contentsline {subsection}{\numberline {5.7.1}Añadir y crear a una lista}{65}{subsection.187}%
-\contentsline {subsection}{\numberline {5.7.2}Gestión de listas de pictogramas}{66}{subsection.191}%
-\contentsline {subsection}{\numberline {5.7.3}Reglas de diseño de usabilidad}{66}{subsection.193}%
-\contentsline {section}{\numberline {5.8}Texto}{66}{section.194}%
-\contentsline {subsection}{\numberline {5.8.1}TextoItem}{67}{subsection.196}%
-\contentsline {subsection}{\numberline {5.8.2}Reglas de diseño de usabilidad}{68}{subsection.199}%
-\contentsline {section}{\numberline {5.9}Iconos}{68}{section.200}%
-\contentsline {subsection}{\numberline {5.9.1}IconoItem}{70}{subsection.205}%
-\contentsline {subsection}{\numberline {5.9.2}Reglas de diseño de usabilidad}{70}{subsection.206}%
-\contentsline {section}{\numberline {5.10}Descargar Tablero}{70}{section.207}%
-\contentsline {section}{\numberline {5.11}Funcionalidades no implementadas}{70}{section.210}%
-\contentsline {subsection}{\numberline {5.11.1}Traducción de frase}{70}{subsection.211}%
-\contentsline {subsection}{\numberline {5.11.2}Añadir imagen}{70}{subsection.212}%
-\contentsline {subsection}{\numberline {5.11.3}Subtableros}{70}{subsection.213}%
-\contentsline {section}{\numberline {5.12}Despliegue de la aplicación}{70}{section.214}%
-\contentsline {chapter}{\numberline {6}Patrones de diseño}{71}{chapter.215}%
-\contentsline {chapter}{\numberline {7}Evaluación}{75}{chapter.216}%
-\contentsline {section}{\numberline {7.1}Preparación de la evaluación}{75}{section.217}%
-\contentsline {section}{\numberline {7.2}Diseño de la evaluación}{76}{section.219}%
-\contentsline {section}{\numberline {7.3}Resultados de la evaluación}{78}{section.236}%
-\contentsline {section}{\numberline {7.4}Análisis de los resultados}{78}{section.237}%
-\contentsline {chapter}{\numberline {8}Conclusiones y Trabajo Futuro}{79}{chapter.238}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{81}{chapter.239}%
+\contentsline {subsection}{\numberline {5.5.2}Reglas de diseño de usabilidad}{59}{subsection.166}%
+\contentsline {section}{\numberline {5.6}Añadir imagen al tablero}{60}{section.170}%
+\contentsline {subsection}{\numberline {5.6.1}PhotoItem}{62}{subsection.174}%
+\contentsline {subsection}{\numberline {5.6.2}Reglas de diseño de usabilidad}{62}{subsection.177}%
+\contentsline {section}{\numberline {5.7}Listas de pictogramas}{62}{section.178}%
+\contentsline {subsection}{\numberline {5.7.1}Añadir y crear a una lista}{62}{subsection.179}%
+\contentsline {subsection}{\numberline {5.7.2}Gestión de listas de pictogramas}{64}{subsection.183}%
+\contentsline {subsection}{\numberline {5.7.3}Reglas de diseño de usabilidad}{65}{subsection.185}%
+\contentsline {section}{\numberline {5.8}Texto}{65}{section.186}%
+\contentsline {subsection}{\numberline {5.8.1}TextoItem}{66}{subsection.188}%
+\contentsline {subsection}{\numberline {5.8.2}Reglas de diseño de usabilidad}{67}{subsection.191}%
+\contentsline {section}{\numberline {5.9}Iconos}{67}{section.192}%
+\contentsline {subsection}{\numberline {5.9.1}IconoItem}{68}{subsection.197}%
+\contentsline {subsection}{\numberline {5.9.2}Reglas de diseño de usabilidad}{68}{subsection.198}%
+\contentsline {section}{\numberline {5.10}Descargar Tablero}{68}{section.199}%
+\contentsline {section}{\numberline {5.11}Funcionalidades no implementadas}{68}{section.202}%
+\contentsline {subsection}{\numberline {5.11.1}Traducción de frase}{69}{subsection.203}%
+\contentsline {subsection}{\numberline {5.11.2}NIL-WS-API}{69}{subsection.204}%
+\contentsline {subsection}{\numberline {5.11.3}CORS}{70}{subsection.206}%
+\contentsline {subsection}{\numberline {5.11.4}Añadir imagen}{70}{subsection.209}%
+\contentsline {subsection}{\numberline {5.11.5}Subtableros}{71}{subsection.213}%
+\contentsline {section}{\numberline {5.12}Despliegue de la aplicación}{71}{section.214}%
+\contentsline {chapter}{\numberline {6}Patrones de diseño}{73}{chapter.220}%
+\contentsline {chapter}{\numberline {7}Evaluación}{77}{chapter.221}%
+\contentsline {section}{\numberline {7.1}Preparación de la evaluación}{77}{section.222}%
+\contentsline {section}{\numberline {7.2}Diseño de la evaluación}{78}{section.224}%
+\contentsline {section}{\numberline {7.3}Resultados de la evaluación}{80}{section.241}%
+\contentsline {section}{\numberline {7.4}Análisis de los resultados}{80}{section.242}%
+\contentsline {chapter}{\numberline {8}Conclusiones y Trabajo Futuro}{81}{chapter.243}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{83}{chapter.244}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{83}{appendix.240}%
+\contentsline {chapter}{\numberline {A}Título}{85}{appendix.245}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{85}{appendix.241}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{87}{appendix*.242}%
+\contentsline {chapter}{\numberline {B}Título}{87}{appendix.246}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{89}{appendix*.247}%

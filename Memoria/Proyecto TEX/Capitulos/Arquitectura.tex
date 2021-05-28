@@ -190,9 +190,9 @@ En caso de no contar con locución se ha implementado mediante \textit{SpeechSyn
 
 \section{Traducir frase a pictogramas}
 
-La herramienta de traducción de frase a pictograma, se encuentra en la segunda pestaña que agrupa las herramientas para añadir pictogramas e imágenes. Cuenta con un ítem propio llamado FraseItem, que agrupa los pictogramas de la traducción para ser desplazados con facilidad  por la cuadrícula.
+La herramienta de traducción de frase a pictograma se encuentra en la segunda pestaña que agrupa las herramientas para añadir pictogramas e imágenes, tal y como se puede ver en la Figura \ref{fig:traducirfraseinicial}. Cuenta con un ítem propio llamado FraseItem, que agrupa los pictogramas de la traducción para ser desplazados en bloque por la cuadrícula.
 
-La traducción de frase a pictogramas, como su nombre indica ofrece una interfaz que permite al usuario escribir una frase y recibir la traducción en pictogramas. En la Figura \ref{fig:traducirfraseinicial} se puede ver la interfaz inicial de la traducción a frase, muy similar a la vista en la búsqueda de picto en la Figura \ref{fig:buscarpicto2}. 
+La traducción de frase a pictogramas, como su nombre indica, ofrece una interfaz que permite al usuario escribir una frase y recibir la traducción en pictogramas. Nuevamente, en la Figura \ref{fig:traducirfraseinicial} se puede ver la interfaz inicial de la traducción a frase, muy similar a la vista en la búsqueda de picto en la Figura \ref{fig:buscarpicto2}. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -203,16 +203,11 @@ La traducción de frase a pictogramas, como su nombre indica ofrece una interfaz
 \end{figure}
 
 
-La traducción es realizada mediante la API de \textit{ARASAAC} o NIL Group.
+La traducción es realizada mediante la API de ARASAAC o NIL Group. Aunque no cuenta con una traducción dedicada a frases, por ello se traduce el texto palabra a palabra de la frase escrita. Por cada palabra devolverá entre 0 o más pictogramas. Inicialmente la traducción se iba a realizar mediante la API de accesibilidad del grupo NIL, que cuenta con una función dedicada a la traducción de frases a pictogramas. En la Sección \ref{cap5:sec:nilgroup} se explicará por qué no ha sido utilizada. 
 
-
-\begin{itemize}
-	\item \textbf{API de ARASAAC}: Su API no cuenta con una traducción dedicada a frases, por ello se traduce el texto palabra a palabra de la frase escrita. Por cada palabra devolverá entre 0 o más pictogramas.
-	\item \textbf{NIL WS API}:  Cuenta con una función dedicada a la traducción de frases a pictogramas. La traducción resulta mucho más fiel a nivel sintáctico que la planteada  mediante la API de ARASAAC. Las características de NIL WS API será vista más adelante en la Sección \ref{cap5:sec:nilgroup}.
-\end{itemize}
 
 El resultado de la traducción no está fijado a un pictograma concreto por palabra, sino que puede haber varios. Es por ello que ambas APIs devuelven de un modo u otro varios pictogramas posibles por cada palabra de la frase.  En la Figura \ref{fig:traducirfraseinicial} se puede ver cómo la interfaz permite navegar entre los pictogramas alternativos mediante dos botones.
-Estos botones permiten avanzar y retroceder entre los pictogramas alternativos que se muestran por cada palabra. Por último destacar que el botón “Colocar al tablero” no se activa hasta que no hay una frase traducida, como se puede ver en las figuras \ref{fig:traducirfraseinicial} y \ref{fig:traduccionpicto}. 
+Estos botones permiten avanzar y retroceder entre los pictogramas alternativos que se muestran por cada palabra. Por último destacar que el botón “Colocar al tablero” no se activa hasta que no hay una frase traducida, como se puede ver en las figuras \ref{fig:traduccionpicto} y \ref{fig:traduccionpicto}. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -223,11 +218,11 @@ Estos botones permiten avanzar y retroceder entre los pictogramas alternativos q
 \end{figure}
 
 
-Antes de añadir la frase a la cuadrícula, es posible añadir los pictogramas en forma individual. En caso que se pulse sobre “Colocar al tablero”, se colocarán en el tablero todos los pictogramas juntos en un único elemento FraseItem. 
+El componente también permite añadir los pictogramas de manera individual al pulsar sobre el botón "+", tal y como sucedía en búsqueda de pictograma. En caso que se pulse sobre “Colocar al tablero”, se colocarán en el tablero todos los pictogramas juntos en un único elemento FraseItem. 
 
 \subsection{FraseItem}
 
-Como se puede ver en la Figura \ref{fig:fraseitemoriginal}, el ítem agrupa todos los pictogramas recibidos de la traducción. De esta manera el usuario para desplazarlo por el tablero no tiene que mover cada pictograma de manera individual. Este ítem, cuenta con la posibilidad de ocultar pictogramas ya que el usuario podría no querer que se muestre alguno. Para ello se ha de presionar en el botón de edición con el icono del lápiz. 
+Como se puede ver en la Figura \ref{fig:fraseitemoriginal} este tipo de  ítem agrupa todos los pictogramas recibidos de la traducción. De esta manera el usuario para desplazarlo por el tablero no tiene que mover cada pictograma de manera individual. Este ítem, cuenta con la posibilidad de ocultar pictogramas ya que el usuario podría no querer que se muestre alguno. Para ello se ha de presionar en el botón de edición con el icono del lápiz. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -238,7 +233,8 @@ Como se puede ver en la Figura \ref{fig:fraseitemoriginal}, el ítem agrupa todo
 \end{figure}
 
 
-Al ser presionado aparecerá un nuevo modal como se ve en la Figura \ref{fig:modaleditarfraseitem}. Está compuesto por una previsualización de la frase, los pictogramas que componen la frase junto al botón que permite esconderlo o mostrarlo. Al presionar alguno de ellos, se actualiza la previsualización. En la parte inferior cuenta con un campo de texto para modificar la frase que se muestra en el ítem. En la Figura \ref{fig:fraseitemmidificada} se puede ver un ejemplo de cómo quedaría el ítem tras aplicar los cambios. 
+Al ser presionado aparecerá un nuevo modal como se ve en la Figura \ref{fig:modaleditarfraseitem}. Está compuesto por una previsualización de la frase en la parte superior, y en la parte inferior los pictogramas que componen la frase junto al botón que permite esconderlos o mostrarlos. Dicho botón cambiará de apariencia según el estado de visualización del pictograma, si es visible el botón representa un ojo en azulen caso contrario se representará mediante un ojo tachado en rojo ocultando el pictograma de la previsialización superior. Al presionar alguno de ellos, se actualiza la previsualización. Por último, debajo existe un campo de texto donde se puede editar el contenido de la frase.
+En la Figura \ref{fig:fraseitemmidificada} se puede ver un ejemplo de cómo quedaría el ítem tras aplicar los cambios. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -260,25 +256,6 @@ Al ser presionado aparecerá un nuevo modal como se ve en la Figura \ref{fig:mod
 
 
 
-\subsection{NIL WS Group}
-\label{cap5:sec:nilgroup}
-
-NIL Word Search \footnote{\url{https://holstein.fdi.ucm.es/nil-ws-api/}} es una API que devuelve información relativa a palabras y textos. Respecto al tratamiento de palabras, permite buscar sinónimos, antónimos, emoción, etc. Para el tratamiento de textos, permite  traducir un texto a pictogramas, listar las emociones de un texto o resumir. 
-
-Originalmente la traducción de pictogramas en esta aplicación fue creada específicamente para trabajar con esta API. No obstante también ha causado varios inconvenientes, relativos a los pictogramas que usa la API y los errores causados por CORS. 
-
-La API cuenta con una base de datos propia con una gran cantidad de pictogramas. Pero al traducir un texto a pictogramas. Ésta devuelve por cada palabra o lema, una lista de identificadores. En su mayoría dichos identificadores coinciden con los de los pictogramas de ARASAAC, pero existen otros que no. Estos pictogramas que no comparten identificador con los de ARASAAC por lo que no se puede obtener toda la información deseada, como por ejemplo el texto, audio y modificaciones. Es por ello que PictoItem se modificó para incluir estos pictogramas suprimiendo la posibilidad de personalizar o reproducir el audio.
-
-
-\subsection{CORS}
-
-Cross Origin Resource Sharing\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS}}  , es un mecanismo de cabeceras http que permite a un servidor dar permiso a otros dominios para cargar recursos del mismo. Por razones de seguridad los navegadores restringen las peticiones de dominio cruzado desde los scripts del navegador. 
-
-
-Como el proyecto de la web sigue operativo pero descontinuado, no cuenta con la configuración CORS y por tanto no puede recibir peticiones POST de otras webs desde el frontend. Después de comprender el problema se estudió que la solución es crear un backend para la aplicación. Dicho backend está creado exclusivamente para resolver esta petición. El componente de traducción envía la petición al backend, el cual la resolverá gestionando los CORS. En la próxima Sección \ref{backend} se explicará cómo fue creado. 
-
-
-Después de crear y configurar el backend de manera local y ver que el componente funcionaba sin complicaciones apareció otro error con la biblioteca html2canvas, encargada de crear una imagen a partir de la cuadrícula y sus ítems. Debido a que las imágenes que retorna la API de NIL son un recurso externo y la biblioteca htm2canvas desconoce su fuente. Por ello al descargar la imagen del tablero estos pictogramas no aparecían representados dejando un hueco en blanco.
 
 \section*{Backend}
 \label{backend}
@@ -316,8 +293,8 @@ Al cargar la imagen correctamente, tal y como se puede ver en la Figura \ref{fig
 
 \begin{itemize}
 	\item Una previsualización de la imagen.
-	\item El campo de texto para añadirlo debajo de la imagen.
-	\item Botón para añadir la imagen a la cuadrícula.
+	\item Un campo de texto para añadirlo debajo de la imagen.
+	\item Un Botón para añadir la imagen a la cuadrícula.
 \end{itemize}
 
 % TODO: \usepackage{graphicx} required
@@ -330,25 +307,23 @@ Al cargar la imagen correctamente, tal y como se puede ver en la Figura \ref{fig
 
 
 
-Al presionar el botón de añadir, antes de enviar la información de la foto, se obtiene su valor de alto y ancho en píxeles. Estos datos serán utilizados para conocer la proporción de la imágen. Respecto al valor de la foto seguarda en una URL que funciona únicamente en la sesión vigente mediante “URL.createObjectURL” \footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL}}.
+Al presionar el botón de añadir, antes de enviar la información de la foto, se obtiene su valor de alto y ancho en píxeles. Estos datos serán utilizados para conocer la proporción de la imagen. Respecto al acceso a los datos de la foto, se realiza por una URL que funciona únicamente en la sesión vigente generada mediante \texttt{URL.createObjectURL} \footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL}}.
 
 Al enviar la información de la foto a la capa superior se envían los siguientes parámetros: 
 
 \begin{itemize}
 	\item URL de la imagen.
 	\item Ancho y alto en píxeles.
-	\item Texto inferior, en caso de no haber sido escrito nada se enviará vacío.
+	\item Texto inferior. En caso de no haber sido escrito nada, se enviará vacío.
 \end{itemize}
 
-
-
-Al tratar con imágenes y éstas al poder contener material muy sensible, como fotografías personales. Es por este motivo que todos los archivos que pueda cargar el usuario son tratados en el lado del cliente. 
+Se estudiaron otras maneras de cargar las imágenes, como importarlas desde Google Drive o un archivo zip. Sin embargo fueron descartadas, en la Sección \ref{cap5:addImageCut} se especificarán los motivos. 
 
 \subsection{PhotoItem}
 
 Su representación en el tablero es la imagen dentro del ítem. El ancho y alto del ítem es proporcional a la imagen original, como se calculó anteriormente. 
 
-Respecto al texto inferior, se puede ver en la Figura \ref{fig:photoitemtexto} puede aparecer o no. Si se ha recibido un texto inferior, éste aparecerá en un espacio reservado para él debajo de la imagen. En caso contrario la imagen abarcará la totalidad del ítem.
+Respecto al texto inferior, se puede ver en la Figura \ref{fig:photoitemtexto} que puede aparecer o no. Si se ha recibido un texto inferior, éste aparecerá en un espacio reservado para él debajo de la imagen. En caso contrario la imagen abarcará la totalidad del ítem.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -365,25 +340,11 @@ En la Figura \ref{fig:photoitemerror} se ejemplifica qué pasaría si en vez de 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/photoItemError}
-	\caption{Ejemmplo de PhotoItemn si no mantuviera la proporción}
+	\caption{Ejemmplo de PhotoItemn si no se mantuviera la proporción según el tamaño de la imagen}
 	\label{fig:photoitemerror}
 \end{figure}
 
 \subsection{Reglas de diseño de usabilidad}
-
-
-\subsection{Opciones investigadas y descartadas}
-
-Originalmente hubo dos aproximaciones hacia cómo cargar imágenes. La primera consistía en poder cargar un archivo comprimido zip y mediante la librería JSZip\footnote{\url{https://stuk.github.io/jszip/}} que contaba con funciones para descomprimir archivos. El objetivo era automatizar la colocación de imágenes sobre el tablero, mediante un zip que almacenara éstas junto a un documento con la información de cada una. Dicho documento incluiría el nombre, la posición y el tamaño de cada imagen colocada en la cuadrícula. Descomprimiendo dicho zip, las imágenes volverían a ser colocadas a la posición original.
-
-La otra aproximación ofrecía la posibilidad de conectarse mediante la API de Google Drive\footnote{\url{https://developers.google.com/drive/api/v3/about-sdk }} para que el usuario pudiese acceder a sus fotos almacenadas en su cuenta. 
-
-Pese a haber dedicado varias semanas a cada una de estas opciones en proyectos independientes, fueron abandonadas por no obtener resultados satisfactorios. En el caso de JSZip, aunque la compresión de las fotos y descarga del zip funcionara correctamente, surgieron problemas con la librería a la hora de descomprimir los archivos. Respecto a la API de Google Drive, debido a la falta de documentación sobre cómo usarla en React, apenas se logró un prototipo funcional en el tiempo establecido. 
-
-Hubo una última opción que se planteó. Realizar un historial de imágenes cargadas muy similar al historial de pictogramas visto anteriormente. Sin embargo, LocalStorage apenas permitía unos pocos megabytes de almacenamiento. La alternativa a LocalStorage fue indexedDB. 
-
-IndexedDB\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API}}   es una API que permite almacenar información en el cliente, en este caso el ordenador del usuario. En ella se pueden crear bases de datos con la capacidad de almacenar archivos de gran tamaño como en este caso imágenes y fotos. Al final fue descartado por falta de tiempo.
-
 
 
 
@@ -563,16 +524,58 @@ Esta herramienta permite descargar la cuadrícula como imagen. Para ello se util
 
 
 \section{Funcionalidades no implementadas}
+Durante el desarrollo de PictUp! se abandonaron algunas funcionalidades debido principalmente a la falta de tiempo o problemas con su integración en la aplicación. A continuación se detallarán los problemas surgidos por cada funcionalidad. 
+
 
 \subsection{Traducción de frase}
+Se trata de la funcionalidad más problemática pues se invirtieron varias semanas en solventarlas sin éxito. Una prioridad era la utilización de la NIL-WS-API, pes ofrece una traducciones muy acertadas. A continuación se explicarán los distintos problemas que surgieron durante su implementación.  
+
+\subsection{NIL-WS-API}
+\label{cap5:sec:nilgroup}
+
+NIL Web Service \footnote{\url{https://holstein.fdi.ucm.es/nil-ws-api/}} es una API que devuelve información relativa a palabras y textos orientada a resolver problemas de accesibilidad a través del lenguaje. Respecto al tratamiento de palabras, permite buscar sinónimos, antónimos, emociones de las palabras, etc. Para el tratamiento de textos, permite  traducir un texto a pictogramas, listar las emociones de un texto o resumir, entre otras funcionalidades. 
+
+Originalmente la traducción de pictogramas en esta aplicación fue creada específicamente para trabajar con esta API. No obstante también ha causado varios inconvenientes, relativos a los pictogramas que usa la API y los errores causados por CORS. 
+
+La API cuenta con una base de datos propia con una gran cantidad de pictogramas. Pero al traducir un texto a pictogramas, esta devuelve por cada palabra o lema, una lista de identificadores. En su mayoría dichos identificadores coinciden con los de los pictogramas de ARASAAC, pero existen otros que no. Estos pictogramas que no comparten identificador con los de ARASAAC suponen un problema, ya que no se puede obtener toda la información deseada, como por ejemplo el texto, audio y modificaciones. Es por ello que PictoItem se modificó para incluir estos pictogramas suprimiendo la posibilidad de personalizar o reproducir el audio.
+
+
+\subsection{CORS}
+
+Cross Origin Resource Sharing\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS}}  , es un mecanismo de cabeceras http que permite a un servidor dar permiso a otros dominios para cargar recursos del mismo. Por razones de seguridad los navegadores restringen las peticiones de dominio cruzado desde los scripts del navegador. 
+
+
+Como el servicio de traducción de NIL-WS-API sigue operativo pero descontinuado, no cuenta con la configuración CORS y por tanto no puede recibir peticiones POST de otras webs. Después de comprender el problema se estudió que la solución es crear un backend para PictUp!. Dicho backend está creado exclusivamente para resolver esta petición. El componente de traducción envía la petición al backend, el cual la resolverá gestionando los CORS. En la próxima Sección \ref{backend} se explicará cómo fue creado. 
+
+
+Después de crear y configurar el backend de manera local, y ver que el componente funcionaba sin complicaciones, apareció otro error con la biblioteca html2canvas\footnote{\url{https://html2canvas.hertzen.com/}}, encargada de crear una imagen a partir de la cuadrícula y sus ítems. Esto es debido a que las imágenes que retorna NIL-WS-API son un recurso externo y la biblioteca htm2canvas desconoce su fuente. Por ello al descargar la imagen del tablero estos pictogramas no aparecían representados dejando un hueco en blanco.
+
 
 \subsection{Añadir imagen}
+\label{cap5:addImageCut}
+
+Originalmente hubo dos aproximaciones sobre la inserción de imágenes. La primera consistía en poder cargar un archivo comprimido zip mediante la librería JSZip\footnote{\url{https://stuk.github.io/jszip/}} que contaba con funciones para descomprimir archivos. El objetivo era automatizar la colocación de imágenes sobre el tablero, mediante un zip que almacenara éstas junto a un documento con la información de cada una. Dicho documento incluiría el nombre, la posición y el tamaño de cada imagen colocada en la cuadrícula. Descomprimiendo dicho zip, las imágenes volverían a ser colocadas a la posición original.
+
+La otra aproximación ofrecía la posibilidad de conectarse mediante la API de Google Drive\footnote{\url{https://developers.google.com/drive/api/v3/about-sdk }} para que el usuario pudiese acceder a sus fotos almacenadas en su cuenta. 
+
+Pese a haber dedicado varias semanas a cada una de estas opciones en proyectos independientes, fueron abandonadas por no obtener resultados satisfactorios. En el caso de JSZip, aunque la compresión de las fotos y descarga del zip funcionara correctamente, surgieron problemas con la librería a la hora de descomprimir los archivos. Respecto a la API de Google Drive, debido a la falta de documentación sobre cómo usarla en React, apenas se logró un prototipo funcional en el tiempo establecido. 
+
+Hubo una última opción que se planteó: realizar un historial de imágenes cargadas muy similar al historial de pictogramas visto anteriormente. Sin embargo, LocalStorage apenas permitía unos pocos megabytes de almacenamiento. La alternativa a LocalStorage fue indexedDB. 
+
+IndexedDB\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API}}   es una API que permite almacenar información en el cliente, en este caso el ordenador del usuario. En ella se pueden crear bases de datos con la capacidad de almacenar archivos de gran tamaño como en este caso imágenes y fotos. Al final fue descartado por falta de tiempo, pero queda como trabajo futuro para ampliar la aplicación.
+
 
 \subsection{Subtableros}
 
 \section{Despliegue de la aplicación}
 
+De cara al despliegue, React cuenta con el comando \texttt{npm build}\footnote{\url{https://create-react-app.dev/docs/production-build/}}, el cual crea un directorio \texttt{Build} dentro del proyecto que incluye todos los archivos js y css necesarios para hacer funcionar la aplicación. Para subir los archivos al contenedor ofrecido por la Universidad Complutense de Madrid, se utilizó la aplicación Bitvise\footnote{\url{https://www.bitvise.com/}}. Se trata de un programa que mediante una interfaz gráfica permite conectarse al contenedor mediante SSH y transferir los archivos con facilidad. 
 
+Una vez subida la carpeta \texttt{Build} en al servidor,se instaló \texttt{}node.js y npm para hacer funcionar la aplicación de React. El despliegue de la aplicación se realizó mediante \texttt{serve} \footnote{\url{https://github.com/vercel/serve}}. Según la documentación de React \footnote{\url{https://create-react-app.dev/docs/deployment/}} se trata de la manera más sencilla de desplegar una aplicación compuesta por una única página estática tal y como es el caso. 
+
+Mencionar que el servicio de traducción de pictogramas (pictar), pese a encontrarse en el mismo servidor, al realizar una petición de traducción aunque no provocara un error de CORS visto anteriormente, tampoco retornaba ninguna respuesta. 
+
+La aplicación es accesible desde mediante la siguiente \textbf{URL} \footnote{\url{https://holstein.fdi.ucm.es/tfg/2021/pictup/}}.I
 
 
 
