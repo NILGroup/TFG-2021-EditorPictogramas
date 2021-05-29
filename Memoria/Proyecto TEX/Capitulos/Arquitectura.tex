@@ -35,6 +35,10 @@ Visto cómo funciona a nivel interno la aplicación, podemos pasar a ver el func
 
 A continuación se expondrá el funcionamiento de cada herramienta y el ítem que genera en la cuadrícula.
 
+\section*{Funcionalidades de PictUp!}
+
+A continuación se explicarán las funcionalidades que podemos encontrar en la aplicación, su representación en caso de contar con un item y que reglas de diseño son utilizadas.
+
 \section{Buscador de pictogramas}
 
 El buscador de pictogramas es la herramienta que muestra los distintos pictogramas que se asocian a una palabra mediante la API de \textit{ARASAAC}. Como se puede ver en la Figura \ref{fig:buscarpicto2} la componente aparte de contar con el buscador identificado mediante el icono de la lupa, también tiene un historial que almacena los pictogramas recientemente añadidos asociado al icono del reloj. Además, a la derecha del buscador se encuentra la opción de preajuste de pictogramas identificado con el icono de los engranajes. Estas dos opciones son muy convenientes de cara a añadir un pictograma al tablero. 
@@ -184,8 +188,23 @@ La función del botón es la de reproducir mediante audio el nombre del pictogra
 En caso de no contar con locución se ha implementado mediante \textit{SpeechSynthesisUtterance}\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance}} para que haga una función similar en el resto de pictogramas. Está configurada para que sintetize la voz en español y es compatible con todos los navegadores modernos.
 
 \subsection{Reglas de diseño de usabilidad}
+ Las reglas de diseño utilizadas en esta funcionalidad han sido:
 
-
+\begin{itemize}
+	\item \textbf{Coherencia}: esta herramienta hace usos de iconos para ayudar al usuario de una manera visual a saber que acción va a realizar. Los iconos utilizados son: una lupa para realizar la búsqueda, un icono al lado de la lupa para ver el historial de búsqueda y unos engranajes en la parte de la derecha para realizar el preajuste de los pictogramas.
+	
+	También se utilizan los iconos de “+” para añadir el pictograma al tablero y el icono de la carpeta para añadir el pictograma a una nueva lista o a una ya creada.
+	
+	En PictoItem también se utilizan iconos que representarán distintas funcionalidades sobre el pictograma. Por ejemplo, en la esquina superior derecha hay una “x” para eliminar el pictograma y en la parte inferior iconos de un lápiz para editar el pictograma y un icono de un triángulo para reproducir la palabra. Algunos iconos como la “x” o el icono del lápiz también será utilizados por otros ítems y estarán en las mismas posiciones y harán funciones similares, esto se hace para crear uniformidad y ayudar al usuario a familiarizarse con la aplicación.
+	
+	
+	\item \textbf{Usabilidad universal}: el principio de usabilidad reconoce las necesidades de los distintos tipos de usuarios ya sean nuevos o expertos en la aplicación. Esto queda reflejado en el apartado de búsqueda de pictogramas con la opción de preajuste de pictogramas. Por ejemplo, un usuario en la aplicación añadiría un pictograma al tablero y después lo editaría, pero mediante el preajuste permite añadir varios pictogramas sin tener que editarlos individualmente.
+	
+	\item \textbf{Retroalimentación informativa}: el usuario tras realizar la búsqueda verá visualmente todos los pictogramas cuyo significado coincide con la palabra a buscar. También tras pulsar el botón “+” sobre un pictograma, este automáticamente se añadirá al tablero.
+	
+	
+	\item \textbf{Permitir deshacer acciones de forma fácil}: en caso de escribir mal la palabra al realizar la búsqueda el usuario podrá borrarla y volver a escribirla correctamente para buscar los pictogramas que correspondan con esa palabra.
+\end{itemize}
 
 
 \section{Traducir frase a pictogramas}
@@ -253,27 +272,22 @@ En la Figura \ref{fig:fraseitemmidificada} se puede ver un ejemplo de cómo qued
 \end{figure}
 
 \subsection{Reglas de diseño de usabilidad}
+ Las reglas de diseño utilizadas en esta funcionalidad han sido:
+ 
+\begin{itemize}
+	\item \textbf{Coherencia}: al igual que en el buscador de pictogramas se utiliza el icono de la lupa para realizar la traducción de la frase. También se utilizan unas flechas como iconos para ver todos los pictogramas asociados a cada palabra y al igual que en el buscador de pictogramas se incluye el icono “+” para añadir individualmente un pictograma.
+	
+	\item \textbf{Retroalimentación informativa}: tras pulsar el botón para realizar la traducción de la frase se le mostrará al usuario todos los pictogramas asociados a las palabras de la frase.  También si el usuario pulsa sobre las flechas de un pictograma se le mostrará otros pictogramas con un significado similar permitiendo así escoger el que más le guste al usuario. Por último, tras haber realizado una traducción de una frase y al pulsar sobre el botón para colocarla en el tablero la frase se añadirá al tablero informando de esta manera que la acción se ha realizado correctamente.
+	
+	\item \textbf{Prevenir errores}: para evitar que el usuario añada una frase vacía al tablero, el botón de “Colocar al tablero” se habilitará cuando se haya realizado una traducción. Tras borrar la frase en el campo de texto el botón se volverá a deshabilitar.
+	
+	
+	\item \textbf{Permitir deshacer acciones de forma fácil}: si el usuario escribe mal la frase a traducir siempre podrá corregir los errores de escritura y realizar la traducción de la frase. También podrá eliminar la fraseItem del tablero pulsando sobre el icono "x" de su interior.
+	
+\end{itemize}
 
 
 
-
-\section*{Backend}
-\label{backend}
-
-El backend fue creado mediante Express\footnote{\url{http://expressjs.com/en/starter/installing.html}}. Se trata de un framework de Node.js que permite gestionar llamadas a API de manera sencilla. Express cuenta con una dependencia que gestiona los CORS\footnote{\url{https://www.npmjs.com/package/cors }}, la cual fue usada para realizar el método post a la API de NIL. 
-
-Para esquematizar cómo se obtienen los pictogramas de la API de NIL, se puede ver en la Figura \ref{fig:diagramaconexiones} un diagrama de las llamadas que se realizan entre las aplicaciones. 
-
-% TODO: \usepackage{graphicx} required
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/diagramaConexiones}
-	\caption{Diagrama de conexiones entre aplicaciones para traducir una frase}
-	\label{fig:diagramaconexiones}
-\end{figure}
-
-
-Después de varias semanas investigando todos estos problemas, finalmente se detuvo el desarrollo de este componente ya que la fecha para mostrar la web a los usuarios se acercaba. Al tener un prototipo funcional de traducción mediante API de ARASAAC, asumiendo la baja calidad sintáctica de ésta serviría para estudiar la facilidad de uso de la interfaz por parte de los usuarios.
 
 
 \section{Añadir imagen al tablero}
@@ -346,6 +360,17 @@ En la Figura \ref{fig:photoitemerror} se ejemplifica qué pasaría si en vez de 
 
 \subsection{Reglas de diseño de usabilidad}
 
+ Las reglas de diseño utilizadas en esta funcionalidad han sido:
+\begin{itemize}
+	\item \textbf{Coherencia}: como en las otras herramientas, se hace uso de iconos para proporcionar al usuario de una manera más simple y visual que acción va a realizar. Un ejemplo de los iconos utilizados es en el botón para cargar una imagen o el botón con el “+” para añadir la imagen al tablero. Al igual que en otros items como PictoItem o FraseItem el componente PhotoItem también tiene un icono “x” para poder ser eliminado del tablero.
+	
+	\item \textbf{Retroalimentación informativa}: tras pulsar sobre el botón “Cargar foto” y seleccionar una imagen, se mostrará en la parte de abajo una previsualización de la imagen. Esto permite al usuario ver si la imagen seleccionada es la correcta.
+	También podemos ver que esta regla se cumple al pulsar sobre el botón con el icono “+”, el cual añadirá al tablero la imagen seleccionada.
+	
+	
+	\item \textbf{Permitir deshacer acciones de forma fácil}:  tras cargar una imagen y no ser la deseada por el usuario, este podrá volver a seleccionar una nueva imagen que posteriormente se previsualizará. También se podrá eliminar un PhotoItem que ya esté añadido en el tablero pulsado sobre el icono "x" de su interior.
+	
+\end{itemize}
 
 
 
@@ -416,6 +441,19 @@ Por último, las listas existentes se encuentran en el apartado “Mis listas de
 
 \subsection{Reglas de diseño de usabilidad}
 
+Las reglas de diseño utilizadas en esta funcionalidad han sido:
+\begin{itemize}
+	\item \textbf{Coherencia}: se ha utilizado el icono de una carpeta para todas las acciones que tiene que ver con las listas de pictogramas. Este icono aparece tanto en los pictogramas devueltos tras realizar una búsqueda simple como en el apartado “Mis listas de pictogramas”.  También se utilizan iconos similares en los botones de los modales como por ejemplo en el botón para añadir una nueva lista cuyo icono es una carpeta con un más dentro o en el apartado añadir a una lista existente donde el icono es una flecha señalando a un documento, haciendo alusión a que se va a incluir en la lista indicada previamente.
+	
+	\item \textbf{Retroalimentación informativa}: para informar al usuario de si una acción se ha podido realizar correctamente o no se han utilizado las alerts. Las alerts utilizadas pueden ser de dos tipos: verdes para las acciones realizadas correctamente y las rojas para las acciones que han dado algún tipo de error como crear dos listas con el mismo nombre. Éstas aparecen siempre en la parte superior de la pantalla junto con un texto descriptivo de la acción que se ha realizado para asegurar que sean vistas con facilidad.
+	
+	\item \textbf{Prevenir errores}: la aplicación está diseñada para prevenir que el usuario cometa un error y en caso de error sea detectado e informe con un breve mensaje describiendolo. Este tipo de patrón se aplica en todas las acciones correspondientes a las listas de pictogramas a la hora de crear una lista, donde se comprueba que la lista tenga un nombre y no se repita con otra existente, y al añadir un pictograma a una lista donde se verifica que no se haya añadido anteriormente. En caso de error se utilizarán las alerts con un mensaje informando del problema.
+	
+	
+	\item \textbf{Permitir deshacer acciones de forma fácil}: en caso de que el usuario cree una lista por error la podrá borrar desde el apartado “Mis listas de pictogramas” donde deberá seleccionar la lista creada y pulsar sobre el botón de borrar lista.
+	
+\end{itemize}
+
 
 \section{Texto}
 
@@ -463,9 +501,22 @@ Al pulsar sobre el icono del lápiz se desplegará el modal de edición de ítem
 
 \subsection{Reglas de diseño de usabilidad}
 
+ Las reglas de diseño utilizadas en esta funcionalidad han sido:
+\begin{itemize}
+	\item \textbf{Coherencia}:  un TextoItem añadido al tablero contará con múltiples botones, en la parte superior derecha tendrá una “x” para eliminar el texto del tablero y en la parte inferior dos iconos de unas lupas para ampliar o reducir la fuente del texto y un icono de un lápiz para poder editar el contenido.
+	
+	\item \textbf{Retroalimentación informativa}: en el apartado de “Personalización del tablero” el usuario podrá seleccionar distintos tipos de fuentes de letras donde verá al instante un ejemplo de la fuente seleccionada. Además, cuando el usuario pulse sobre el botón de “+Texto” verá de manera instantánea el texto en el tablero de la aplicación, de esta manera se le informa al usuario de que la acción se ha realizado correctamente. También afecta a la acción de borrar el texto del tablero, ya que cuando el usuario pulse sobre el icono “x” automáticamente se borrará del tablero.
+	
+	
+	\item \textbf{Permitir deshacer acciones de forma fácil}: en caso de haber añadido el texto al tablero con una falta de ortografía el usuario podrá editar el contenido del TextoItem pulsando sobre el icono del lápiz. También podrá eliminar el texto del tablero en caso de que haya sido añadido por error, para esto deberá pulsar sobre el icono “x” situado en la esquina superior derecha.
+	
+\end{itemize}
+
+
+
 \section{Iconos}
 
-La componente iconos permite añadir a la cuadrícula iconos y personalizarlos. Los iconos disponibles son: cuadrado, tick, barra y corazón, como se muestra en la Figura \ref{fig:herramientaitems}. La componente está formada por una estructura donde se guarda el tipo de icono, el color y la opacidad. Al ser añadidos a la cuadrícula tiene un color por defecto en función del tipo de icono, verde para el tick y rojo para la barra y el corazón.
+La componente iconos permite añadir a la cuadrícula iconos y personalizarlos. Los iconos disponibles son: cuadrado, tick, barra y corazón, como se muestra en la Figura \ref{fig:herramientaitems}. La componente está formada por una estructura donde se guarda el tipo de icono, el color y la opacidad.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -505,7 +556,23 @@ Aunque la forma de visualizarlos se hace de manera distinta dependiendo del icon
 
 \subsection{IconoItem}
 
+Cuando un icono se añade al tablero de la aplicación este tendrá una opacidad y color por defecto. A los iconos corazón y barra tendrá por defecto el color rojo y una opacidad al 50\%, el icono del tick su color por defecto será el verde y una opacidad del 50\% y el icono del cuadrado por defecto su color será en negro y la opacidad será del 100\%.
+
+En el IconoItem se incluyen dos botones, una “x” en la esquina superior derecha que sirve para eliminar el icono del tablero y un icono de un lápiz en la parte inferior que permite editar el icono. Para poder editar un icono añadido a la cuadrícula tendremos que pulsar sobre el icono del lápiz, al pulsarlo aparecerá un modal, como el de la Figura \ref{fig:modalpictoitem} donde se podrá modificar el color y la opacidad del icono.
+
 \subsection{Reglas de diseño de usabilidad}
+ Las reglas de diseño utilizadas en esta funcionalidad han sido:
+\begin{itemize}
+	\item \textbf{Coherencia}: en el apartado “Personalización del tablero” se muestran todos los iconos disponibles que se pueden añadir al tablero, permitiendo de esta manera mostrar al usuario como son esos iconos antes de ser añadidos. El IconoItem cuenta con un botón en la esquina superior derecha para eliminarlo y un botón con el icono de un lápiz para poder editarlo, al igual que otros items.
+	
+	
+	\item \textbf{Retroalimentación informativa}: al pulsar sobre uno de los botones con iconos en el apartado “Personalización del tablero” automáticamente se añadirá al tablero, de esta manera se informa al usuario de que la acción para añadir un icono se ha realizado correctamente. Para la acción contraria de eliminar un IconoItem simplemente se eliminará del tablero dando a entender al usuario que el icono se ha podido eliminar correctamente. Otra acción que se ve reflejada en esta regla es que tras editar un icono y cerrar el modal, se le asignará al icono el nuevo color y opacidad visualizando el nuevo resultado al instante.
+	
+	
+	\item \textbf{Permitir deshacer acciones de forma fácil}: en caso de añadir un icono por error el usuario podrá eliminarlo desde el tablero. También se permite al usuario volver a cambiar el color o la opacidad de un icono las veces que desee.
+	
+\end{itemize}
+
 
 \section{Descargar Tablero}
 
@@ -538,6 +605,25 @@ NIL Web Service \footnote{\url{https://holstein.fdi.ucm.es/nil-ws-api/}} es una 
 Originalmente la traducción de pictogramas en esta aplicación fue creada específicamente para trabajar con esta API. No obstante también ha causado varios inconvenientes, relativos a los pictogramas que usa la API y los errores causados por CORS. 
 
 La API cuenta con una base de datos propia con una gran cantidad de pictogramas. Pero al traducir un texto a pictogramas, esta devuelve por cada palabra o lema, una lista de identificadores. En su mayoría dichos identificadores coinciden con los de los pictogramas de ARASAAC, pero existen otros que no. Estos pictogramas que no comparten identificador con los de ARASAAC suponen un problema, ya que no se puede obtener toda la información deseada, como por ejemplo el texto, audio y modificaciones. Es por ello que PictoItem se modificó para incluir estos pictogramas suprimiendo la posibilidad de personalizar o reproducir el audio.
+
+
+\subsection{Backend}
+\label{backend}
+
+El backend fue creado mediante Express\footnote{\url{http://expressjs.com/en/starter/installing.html}}. Se trata de un framework de Node.js que permite gestionar llamadas a API de manera sencilla. Express cuenta con una dependencia que gestiona los CORS\footnote{\url{https://www.npmjs.com/package/cors }}, la cual fue usada para realizar el método post a la API de NIL. 
+
+Para esquematizar cómo se obtienen los pictogramas de la API de NIL, se puede ver en la Figura \ref{fig:diagramaconexiones} un diagrama de las llamadas que se realizan entre las aplicaciones. 
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/diagramaConexiones}
+	\caption{Diagrama de conexiones entre aplicaciones para traducir una frase}
+	\label{fig:diagramaconexiones}
+\end{figure}
+
+
+Después de varias semanas investigando todos estos problemas, finalmente se detuvo el desarrollo de este componente ya que la fecha para mostrar la web a los usuarios se acercaba. Al tener un prototipo funcional de traducción mediante la API de ARASAAC, aunque asumiendo la baja calidad sintáctica de ésta se consideró suficiente para estudiar la facilidad de uso de la interfaz por parte de los usuarios.
 
 
 \subsection{CORS}
