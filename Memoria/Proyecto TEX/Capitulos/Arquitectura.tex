@@ -11,29 +11,89 @@
 
 \section{Arquitectura}
 \subsection{Arquitectura interna}
+La aplicación está compuesta principalmente por componentes\footnote{\url{https://reactjs.org/docs/react-component.html\#gatsby-focus-wrapper}} de React, los cuales son clases que deben contar obligatoriamente con un método \texttt{render()} y de manera opcional puede contar con el objeto \texttt{state} \footnote{\url{https://reactjs.org/docs/faq-state.html\#what-does-setstate-do}}. La principal característica del objeto \texttt{state} es que al actualizarse su valor, vuelve a renderizarse el componente, para actualizar el \texttt{state} del componente, ha de realizarse mediante el método \texttt{setState()}. 
+
+El método \texttt{render()}\footnote{\url{https://es.reactjs.org/docs/rendering-elements.html }} se encarga de renderizar el html del componente. Dentro del render se podrán incluir los atributos que se hayan definido en el state u otros elementos como botones, selectores o campos de texto. 
+La característica principal que ofrece este método de react es que si se modifica un atributo del \texttt{state} del componente automáticamente se mostrará en el navegador en nuevo valor que haya tomado. Otra característica que ofrece react es poder llamar desde el render a funciones externas dentro del componente que se encargan de devolver el fragmento html deseado esto sirve para organizar mejor el contenido y crear render condicionales, es decir,mostrar un contenido u otro en función de los valores que tomen un atributo del \texttt{state}.
+Además también se puede incluir dentro de la función render otros componentes de React, que pasará a ser la componente hija donde la cual puede recibir parámetros de entrada o salida mediante \texttt{props}. Las \texttt{porps} son atributos de react que permiten enviar información entre componentes padres e hijos. Para acceder a los parámetros enviados desde la componente padre se hará utilizando \texttt{this.props}\footnote{\url{https://es.reactjs.org/docs/components-and-props.html }}.
+
+
 \subsection{Arquitectura externa}
+
+Una vez vista la estructura de un componente, se puede ver en la Imagen \ref{fig:pantallaprincipal} la pantalla principal de PictUp! . Como se puede ver se distinguen tres zonas bien diferenciadas. 
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{Imagenes/Bitmap/pantallaprincipal}
+	\caption{Vista inicial de PictUp!
+	}
+	\label{fig:pantallaprincipal}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Navbar}: se encuentra en la zona superior y en ella vemos el nombre de la aplicación junto con su imagen, también se incluyen botones de contacto.
+	
+	
+	\item \textbf{Barra de Herramientas}: en la zona izquierda de la aplicación se agrupan todas las herramientas disponibles.
+	
+	\item \textbf{Tablero}: la componente que mayor espacio abarca de la página, es la zona donde se desplazarán los elementos generados por las herramientas. 	
+	
+\end{itemize}
+
+\begin{itemize}
+	\item \textbf{Main}: es el principal componente de la aplicación muestra los componentes de herramientas, navbar y la cuadrícula junto a los elementos que aparezcan en ella. Las herramientas pueden retornar elementos con representación en la cuadrícula, los cuales serán denominados como ítems. Cada uno de estos ítems serán almacenados en una lista diferente según su tipo, para posteriormente ser representados en el tablero.
+	
+	
+	\item \textbf{Herramientas}: son componentes que ofrecen una interfaz al usuario para añadir elementos a la cuadrícula. Algunas de estas herramientas cuentan con pantallas auxiliares en forma de modal, como es el caso de búsqueda de pictogramas o la función de descargar tablero. La información que envíen será almacenada en la componente main. 
+	
+	\item \textbf{Cuadrícula}: representa una cuadrícula donde se sitúan los distintos ítems disponibles. Recibe las listas de ítems almacenadas en main para representar los distintos tipos de ítems. 
+	\begin{itemize}
+		\item \textbf{Ítems}: son los elementos que pueden colocarse sobre la cuadrícula. Generalmente cada herramienta crea un ítem distinto que se amolda a las características que se quieren representar. Como se puede ver en la Imagen X se pueden ver distintos tipos de ítem, en este caso de pictograma, texto e icono. Cada ítem está adecuado en función del tipo de contenido que se vaya a mostrar, como imágenes, texto o iconos. Asimismo, los ítems cuentan con funcionalidades que les permiten cambiar sus propiedades. Estas propiedades dependen del ítem, por ejemplo el que representa texto podrán modificar el tamaño de letra y contenido.
+		
+	\end{itemize}
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/items}
+	\caption{}
+	\label{fig:items}
+\end{figure}
+	
+\end{itemize}
+
+Para esquematizar cómo interactúan la distintas componentes, el Diagrama \ref{fig:diagramaarquitectura} representa 
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/diagramaarquitectura}
+	\caption{Diagrama de las componentes de la aplicación.}
+	\label{fig:diagramaarquitectura}
+\end{figure}
+
+
 
 \section{Cuadrícula}
 
-En cuanto al funcionamiento de la cuadrícula y la cuadrícula fue clonado del proyecto dnd-a11y-patterns\footnote{\url{https://github.com/salesforce-ux/dnd-a11y-patterns}} que contaba con el material para trabajar con estos elementos. Cuenta con una licencia BSD 3-Clause que permite libertad de modificación y distribución. 
+En esta sección se explicará el funcionamiento en detalle de la cuadrícula. 
 
-Empezar desde este proyecto facilitó el  tratamiento de eventos de desplazamiento (Drag and Drop),  pues ya están integrados en estos componentes. Además de gestionar estos eventos, cuentan con muchos parámetros que han sido modificados. 
+Para facilitar la tarea de desplazar elementos en un espacio, el proyecto de la cuadrícula fue clonado del proyecto:  dnd-a11y-patterns\footnote{\url{https://github.com/salesforce-ux/dnd-a11y-patterns}} que contaba con componentes que permitían desplazarse de distintas maneras. Cuenta con una licencia BSD 3-Clause que permite libertad de modificación y distribución.
 
-La cuadrícula o canvas a es una cuadrícula, de la cual se puede modificar su tamaño, mediante la cantidad e intervalo. Siendo la cantidad, el número de filas y columnas que se representan. Y el intervalo, la distancia en píxeles entre cada fila y columna. Está ajustado para que abarque el mayor ancho y alto posible, dejando espacio para la barra de herramientas. 
 
-Los ítems son los elementos que se pueden colocar y desplazar por la cuadrícula, es sobre ellos donde se representarán los distintos elementos de la aplicación. 
+Al empezar desde este proyecto facilitó el  tratamiento de eventos de desplazamiento (Drag and Drop), los cuales iban a ser de gran importancia para mover los distintos ítems de la aplicación. Además de gestionar estos eventos, cuentan con muchos parámetros que han sido modificados, como el ancho y alto inicial de cada ítem o la posibilidad de mantener la proporción de un ítem al ser redimensionado.
 
-Los ítems, al ser una clase que hereda de la cuadrícula, toman los valores del intervalo para desplazarse en consecuencia. Por ejemplo, al aplicar un evento de desplazamiento, el ítem se desplazará en función del tamaño del intervalo. Dando así una sensación de control al usuario, ya que al hacer movimientos cortos sabrá que el ítem se desplazará una casilla en una dirección. Este mismo principio se aplica al modificar el tamaño del ítem, modificando la anchura y altura en función del intervalo de la cuadrícula. El proyecto incluye dos botones dentro de los ítems que al ser pulsados, permite al usuario desplazar y redimensionar un ítem mediante las teclas direccionales. De esta manera el usuario tiene un control más preciso de la aplicación, por cada pulsación el ítem se mueve exactamente en una fila o columna de la cuadrícula.
+El componente de cuadrícula o canvas es una cuadrícula de la cual se puede modificar su tamaño mediante la cantidad de filas y columnas y el intervalo en píxeles entre estas. El tamaño de la cuadrícula fue ajustado para que abarque el mayor ancho y alto posible teniendo en cuenta el espacio reservado para la barra de herramientas. Sobre esta componente canvas se colocarán otras componentes, que serán los ítems. 
 
-Otro ajuste muy útil es el parámetro que permite mantener la proporción de un ítem. Esto ha servido para que la acción de modificar el tamaño de un ítem no resulte frustrante, pues al modificar varios ítems algunos acababan con un ancho o alto diferente al resto.
+[TODO repasar ???]Los ítems son los elementos que se pueden colocar, desplazar y redimensionar por la cuadrícula fácilmente, y es sobre ellos donde se representarán los distintos ítems vistos anteriormente. Los ítems, al ser una clase hija de la cuadrícula, toman los valores del intervalo para desplazarse en consecuencia. Al aplicar un evento de desplazamiento, el ítem se desplazará en función del tamaño del intervalo de la cuadrícula. Dando así una sensación de control y precisión al usuario, ya que al hacer movimientos cortos sabrá que el ítem se desplazará una fila o columna de la cuadrícula. Este mismo principio se aplica al redimensionar el ítem, modificando la anchura y altura del ítem en función del intervalo de la cuadrícula. 
 
-Retomando con la sección anterior, la información de los pictogramas añadidos se guarda en una lista que es posteriormente renderizada en la cuadrícula en forma de ítem. Al existir distintos elementos que se pueden colocar (Pictos, fotos, figuras, texto...), cada uno cuenta con su propio  ítem que los representa en la cuadrícula(PictoItem, FotoItem, FigutrItem...). 
+Retomando con la sección anterior, la información de los pictogramas añadidos se guarda en una lista que es posteriormente renderizada en la cuadrícula en forma de ítem. Al existir distintos elementos que se pueden colocar (pictos, fotos, figuras, texto, etc), cada uno cuenta con su propio  ítem que los representa en la cuadrícula(PictoItem, FotoItem, FigutreItem, etc).
 
-Cada ítem cuenta con un renderizado y funcionalidades adecuadas para cada elemento. La mayoría de estos ítems tienen en común los botones vistos anteriormente de desplazar y redimensionar, a los cuales se ha añadido otro botón en la esquina superior derecha para eliminar el pictograma de la cuadrícula. Cuando se pulsa, se envía al componente padre, quien gestiona los elementos que aparecen en la cuadrícula el identificador del ítem a eliminar. Al recibirlo, se quita de la lista donde está guardado el elemento y desaparece de la cuadrícula.
+Cada ítem cuenta con un renderizado y funcionalidades adecuadas para cada elemento. La mayoría de estos ítems tienen en común los botones vistos anteriormente de desplazar y redimensionar, a los cuales se ha añadido otro botón en la esquina superior derecha para eliminar el pictograma de la cuadrícula. Cuando se pulsa, se envía al componente padre el item seleccionado para ser eliminado de la lista donde se encuentre.
 
-Visto cómo funciona a nivel interno la aplicación, podemos pasar a ver el funcionamiento de las distintas herramientas, el ítem que genera en la cuadrícula y las posibilidades que ofrecen. 
+Visto cómo funciona a nivel interno la aplicación, se procederá a explicar a ver el funcionamiento de las distintas herramientas y las posibilidades que ofrecen. En caso que una herramienta cree un ítem en la cuadrícula se explicarán asimismo sus posibilidades. 
 
-A continuación se expondrá el funcionamiento de cada herramienta y el ítem que genera en la cuadrícula.
 
 \section*{Funcionalidades de PictUp!}
 
