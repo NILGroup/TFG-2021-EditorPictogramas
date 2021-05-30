@@ -9,7 +9,14 @@
 
 \section{Introducción}
 
+Una vez especificados las características y requisitos a implementar, se pudo empezar a desarrollar la arquitectura de la aplicación y la implementación de dichas características. Desde un primer momento, se determinó que la aplicación tendrá una barra de herramientas donde se incluirán distintas funcionalidades como buscar pictogramas o realizar traducción de frases. Asimismo se incluirá una cuadrícula donde se podrán poner sobre ella distintos elementos. El conjunto de estas funcionalidades permitirá crear tableros pictográficos. A continuación se explicará la jerarquía utilizada en la aplicación, las funcionalidades y los ítems disponibles. 
+
 \section{Arquitectura}
+
+PictUp! cuenta con una arquitectura organizada a dos niveles. A nivel interno, está desarrollado en React mediante componentes, éstos cuentan con una estructura similar en todo el proyecto. En la arquitectura interna, se explicará las características y funcionalidades de un componente de React. La arquitectura externa, esquematiza cómo se han organizado las componentes y cómo interacción entre ellas. 
+
+
+
 \subsection{Arquitectura interna}
 La aplicación está compuesta principalmente por componentes\footnote{\url{https://reactjs.org/docs/react-component.html\#gatsby-focus-wrapper}} de React, los cuales son clases que deben contar obligatoriamente con un método \texttt{render()} y de manera opcional puede contar con el objeto \texttt{state} \footnote{\url{https://reactjs.org/docs/faq-state.html\#what-does-setstate-do}}. La principal característica del objeto \texttt{state} es que al actualizarse su valor, vuelve a renderizarse el componente, para actualizar el \texttt{state} del componente, ha de realizarse mediante el método \texttt{setState()}. 
 
@@ -49,7 +56,7 @@ Una vez vista la estructura de un componente, se puede ver en la Imagen \ref{fig
 	
 	\item \textbf{Cuadrícula}: representa una cuadrícula donde se sitúan los distintos ítems disponibles. Recibe las listas de ítems almacenadas en main para representar los distintos tipos de ítems. 
 	\begin{itemize}
-		\item \textbf{Ítems}: son los elementos que pueden colocarse sobre la cuadrícula. Generalmente cada herramienta crea un ítem distinto que se amolda a las características que se quieren representar. Como se puede ver en la Imagen X se pueden ver distintos tipos de ítem, en este caso de pictograma, texto e icono. Cada ítem está adecuado en función del tipo de contenido que se vaya a mostrar, como imágenes, texto o iconos. Asimismo, los ítems cuentan con funcionalidades que les permiten cambiar sus propiedades. Estas propiedades dependen del ítem, por ejemplo el que representa texto podrán modificar el tamaño de letra y contenido.
+		\item \textbf{Ítems}: son los elementos que pueden colocarse sobre la cuadrícula. Generalmente cada herramienta crea un ítem distinto que se amolda a las características que se quieren representar. Como se puede ver en la Imagen \ref{fig:items} se pueden ver distintos tipos de ítem, en este caso de pictograma, texto e icono. Cada ítem está adecuado en función del tipo de contenido que se vaya a mostrar, como imágenes, texto o iconos. Asimismo, los ítems cuentan con funcionalidades que les permiten cambiar sus propiedades. Estas propiedades dependen del ítem, por ejemplo el que representa texto podrán modificar el tamaño de letra y contenido.
 		
 	\end{itemize}
 
@@ -68,7 +75,7 @@ Para esquematizar cómo interactúan la distintas componentes, el Diagrama \ref{
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/diagramaarquitectura}
+	\includegraphics[width=\linewidth]{Imagenes/Bitmap/diagramaarquitectura}
 	\caption{Diagrama de las componentes de la aplicación.}
 	\label{fig:diagramaarquitectura}
 \end{figure}
@@ -86,7 +93,7 @@ Al empezar desde este proyecto facilitó el  tratamiento de eventos de desplazam
 
 El componente de cuadrícula o canvas es una cuadrícula de la cual se puede modificar su tamaño mediante la cantidad de filas y columnas y el intervalo en píxeles entre estas. El tamaño de la cuadrícula fue ajustado para que abarque el mayor ancho y alto posible teniendo en cuenta el espacio reservado para la barra de herramientas. Sobre esta componente canvas se colocarán otras componentes, que serán los ítems. 
 
-[TODO repasar ???]Los ítems son los elementos que se pueden colocar, desplazar y redimensionar por la cuadrícula fácilmente, y es sobre ellos donde se representarán los distintos ítems vistos anteriormente. Los ítems, al ser una clase hija de la cuadrícula, toman los valores del intervalo para desplazarse en consecuencia. Al aplicar un evento de desplazamiento, el ítem se desplazará en función del tamaño del intervalo de la cuadrícula. Dando así una sensación de control y precisión al usuario, ya que al hacer movimientos cortos sabrá que el ítem se desplazará una fila o columna de la cuadrícula. Este mismo principio se aplica al redimensionar el ítem, modificando la anchura y altura del ítem en función del intervalo de la cuadrícula. 
+Los ítems son elementos que se pueden colocar sobre la cuadrícula de la aplicación y permiten ser desplazados y redimensionados. Al haber distintos tipos de ítems cada uno de ellos mostrará el contenido de distintas maneras, por ejemplo, los PictoItem tendrán en su interior una imagen del pictograma mientras que el TextoItem simplemente tendrá un texto. Dado que los ítems se encuentran dentro de la clase cuadrícula recibe atributos tales como el intervalo de la cuadrícula. Esto permitirá a los ítems desplazarse en función de dicho intervalo, ayudando al usuario a mover y redimensionar los ítems con mayor precisión. 
 
 Retomando con la sección anterior, la información de los pictogramas añadidos se guarda en una lista que es posteriormente renderizada en la cuadrícula en forma de ítem. Al existir distintos elementos que se pueden colocar (pictos, fotos, figuras, texto, etc), cada uno cuenta con su propio  ítem que los representa en la cuadrícula(PictoItem, FotoItem, FigutreItem, etc).
 
@@ -219,7 +226,7 @@ PictoItem es el componente asignado a representar un pictograma en la cuadrícul
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/pictoItemModificado}
+	\includegraphics[width=0.4\linewidth]{Imagenes/Bitmap/pictoItemModificado}
 	\caption{Vista de un PictoItem en la cuadrícula con preajuste de pelo y piel. }
 	\label{fig:pictoitemmodificado}
 \end{figure}
@@ -230,7 +237,7 @@ A continuación se detallarán las funcionalidades que ofrece  PictoItem.
 
 \subsubsection{Editar Picto}
 
-Tiene un funcionamiento igual al de preajuste de picto aunque se han añadido dos opciones más. Tal y como se puede ver en la Figura \ref{fig:modaleditarpicto}, éstas son el selector de tiempo verbal y  borde. El motivo de aparición de estas dos opciones en este modal y no en el preajuste es la de no abrumar al usuario. El Borde puede ser de utilidad para los usuarios que quieran resaltar el tipo de pictograma mediante un color, tal y como se vio en capítulos anteriores (Estado de la cuestión). El selector de tiempo verbal sirve para indicar si una acción toma lugar en presente, pasado o futuro.
+Tiene un funcionamiento igual al de preajuste de picto aunque se han añadido dos opciones más. Tal y como se puede ver en la Figura \ref{fig:modaleditarpicto}, éstas son el selector de tiempo verbal y  borde. El motivo de aparición de estas dos opciones en este modal y no en el preajuste es la de no abrumar al usuario. El Borde puede ser de utilidad para los usuarios que quieran resaltar el tipo de pictograma mediante un color. El selector de tiempo verbal sirve para indicar si una acción toma lugar en presente, pasado o futuro.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -616,7 +623,7 @@ Aunque la forma de visualizarlos se hace de manera distinta dependiendo del icon
 
 \subsection{IconoItem}
 
-Cuando un icono se añade al tablero de la aplicación este tendrá una opacidad y color por defecto. A los iconos corazón y barra tendrá por defecto el color rojo y una opacidad al 50\%, el icono del tick su color por defecto será el verde y una opacidad del 50\% y el icono del cuadrado por defecto su color será en negro y la opacidad será del 100\%.
+Cuando un icono se añade al tablero de la aplicación este tendrá una opacidad y color por defecto. A los iconos corazón y barra tendrá por defecto el color rojo y una opacidad al 50\%, el icono del tick su color por defecto será el verde y una opacidad del 50\%. El hecho de que los iconos tengan por defecto esa opacidad es debido a que están planteados para estar superpuestos encima de los pictogramas, por lo que han de ser translúcidos para ver el pictograma que se encuentra debajo del icono. Por último, el icono del cuadrado por defecto su color será en negro y la opacidad será del 100\% ya que están planteados para ser opacos.
 
 En el IconoItem se incluyen dos botones, una “x” en la esquina superior derecha que sirve para eliminar el icono del tablero y un icono de un lápiz en la parte inferior que permite editar el icono. Para poder editar un icono añadido a la cuadrícula tendremos que pulsar sobre el icono del lápiz, al pulsarlo aparecerá un modal, como el de la Figura \ref{fig:modalpictoitem} donde se podrá modificar el color y la opacidad del icono.
 
@@ -711,7 +718,9 @@ Hubo una última opción que se planteó: realizar un historial de imágenes car
 IndexedDB\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API}}   es una API que permite almacenar información en el cliente, en este caso el ordenador del usuario. En ella se pueden crear bases de datos con la capacidad de almacenar archivos de gran tamaño como en este caso imágenes y fotos. Al final fue descartado por falta de tiempo, pero queda como trabajo futuro para ampliar la aplicación.
 
 
-\subsection{Subtableros}
+\subsection{Subtableros y cajón de pictogramas}
+
+Los componentes que se plantearon inicialmente que ofrecían interacción con el usuario no han sido implementados principalmente por la falta de tiempo para su desarrollo. En consecuencia, la aplicación se enfocó hacia la creación de material pictográfico sin interacción para ser descargado, impreso o guardado como imagen. 
 
 \section{Despliegue de la aplicación}
 
@@ -721,7 +730,18 @@ Una vez subida la carpeta \texttt{Build} en al servidor,se instaló \texttt{}nod
 
 Mencionar que el servicio de traducción de pictogramas (pictar), pese a encontrarse en el mismo servidor, al realizar una petición de traducción aunque no provocara un error de CORS visto anteriormente, tampoco retornaba ninguna respuesta. 
 
-La aplicación es accesible desde mediante la siguiente \textbf{URL} \footnote{\url{https://holstein.fdi.ucm.es/tfg/2021/pictup/}}.I
+La aplicación es accesible desde mediante la siguiente URL\footnote{\url{https://holstein.fdi.ucm.es/tfg/2021/pictup/}}.
+
+Como se había mencionado anteriormente, la web cuenta con la opción de ser instalada ya que ha sido configurada para ser una PWA. En la Figura \ref{fig:pwa} podemos ver la instalación, el acceso directo y la vista de la aplicación en los distintos dispositivos. Tras probar la aplicación en distintos dispositivo se comprobó que la usabilidad se veía afectada en dispositivos con pantallas inferiores a siete pulgadas. Por eso se recomienda la utilización de PictUp! en ordenadores o tablets.
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{Imagenes/Bitmap/pwa}
+	\caption{Esquema de instalación y uso de PWA. }
+	\label{fig:pwa}
+\end{figure}
+
 
 
 
