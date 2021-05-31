@@ -4,7 +4,8 @@
 
 
 \begin{resumen} 
- En este capítulo se especificará la estructura de la aplicación a nivel interno, desde el funcionamiento de la cuadrícula, las herramientas y el ítem que estas añaden al tablero y el esquema de conexiones con funcionalidades externas. 
+La arquitectura de la aplicación (Sección \ref{cap5:arquitectura}), funcionamiento de la cuadrícula (Sección \ref{cap5:cuadricula} ), el desarrollo de las funcionalidades implementadas (Secciones de \ref{cap5:buscador} a \ref{cap5:descargar}), las funcionalidades no implementadas (Sección \ref{cap5:noimplementadas} ) y el despliegue (Sección \ref{cap5:despliegue}). Por último se explicará cómo se ha organizado el desarrollo y control de versiones de PictUp! (Sección \ref{cap5:controlversiones} ) 
+
 \end{resumen}
 
 \section{Introducción}
@@ -12,6 +13,7 @@
 Una vez especificados las características y requisitos a implementar, se pudo empezar a desarrollar la arquitectura de la aplicación y la implementación de dichas características. Desde un primer momento, se determinó que la aplicación tendrá una barra de herramientas donde se incluirán distintas funcionalidades como buscar pictogramas o realizar traducción de frases. Asimismo se incluirá una cuadrícula donde se podrán poner sobre ella distintos elementos. El conjunto de estas funcionalidades permitirá crear tableros pictográficos. A continuación se explicará la jerarquía utilizada en la aplicación, las funcionalidades y los ítems disponibles. 
 
 \section{Arquitectura}
+\label{cap5:arquitectura}
 
 PictUp! cuenta con una arquitectura organizada a dos niveles. A nivel interno, está desarrollado en React mediante componentes, éstos cuentan con una estructura similar en todo el proyecto. En la arquitectura interna, se explicará las características y funcionalidades de un componente de React. La arquitectura externa, esquematiza cómo se han organizado las componentes y cómo interacción entre ellas. 
 
@@ -83,6 +85,7 @@ Para esquematizar cómo interactúan la distintas componentes, el Diagrama \ref{
 
 
 \section{Cuadrícula}
+\label{cap5:cuadricula}
 
 En esta sección se explicará el funcionamiento en detalle de la cuadrícula. 
 
@@ -107,7 +110,7 @@ Visto cómo funciona a nivel interno la aplicación, se procederá a explicar a 
 A continuación se explicarán las funcionalidades que podemos encontrar en la aplicación, su representación en caso de contar con un item y que reglas de diseño son utilizadas.
 
 \section{Buscador de pictogramas}
-
+\label{cap5:buscador}
 El buscador de pictogramas es la herramienta que muestra los distintos pictogramas que se asocian a una palabra mediante la API de \textit{ARASAAC}. Como se puede ver en la Figura \ref{fig:buscarpicto2} la componente aparte de contar con el buscador identificado mediante el icono de la lupa, también tiene un historial que almacena los pictogramas recientemente añadidos asociado al icono del reloj. Además, a la derecha del buscador se encuentra la opción de preajuste de pictogramas identificado con el icono de los engranajes. Estas dos opciones son muy convenientes de cara a añadir un pictograma al tablero. 
 
 
@@ -642,10 +645,11 @@ En el IconoItem se incluyen dos botones, una “x” en la esquina superior dere
 
 
 \section{Descargar Tablero}
+\label{cap5:descargar}
 
+Esta herramienta permite descargar la cuadrícula como imagen. Para ello se utiliza la librería html2tocanvas\footnote{\url{https://html2canvas.hertzen.com/}}. Ésta librería además permite seleccionar la calidad de descarga de la imagen. Por ello que se ha creado un modal como se puede ver en la Figura \ref{fig:modaldescargartablero} donde el usuario puede elegir la calidad deseada, siendo la calidad alta la elegida por defecto. 
 
-Esta herramienta permite descargar la cuadrícula como imagen. Para ello se utiliza la librería html2tocanvas\footnote{\url{https://html2canvas.hertzen.com/ }}. Ésta librería además permite seleccionar la calidad de descarga de la imagen. Por ello que se ha creado un modal como se puede ver en la Figura \ref{fig:modaldescargartablero} donde el usuario puede elegir la calidad deseada, siendo la calidad alta la elegida por defecto. 
-
+Inicialmente se planteó la posibilidad de descargar estos tableros como PDF pero esta opción no se implementó por falta de tiempo.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -658,6 +662,8 @@ Esta herramienta permite descargar la cuadrícula como imagen. Para ello se util
 
 
 \section{Funcionalidades no implementadas}
+\label{cap5:noimplementadas}
+
 Durante el desarrollo de PictUp! se abandonaron algunas funcionalidades debido principalmente a la falta de tiempo o problemas con su integración en la aplicación. A continuación se detallarán los problemas surgidos por cada funcionalidad. 
 
 
@@ -723,6 +729,7 @@ IndexedDB\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/Indexed
 Los componentes que se plantearon inicialmente que ofrecían interacción con el usuario no han sido implementados principalmente por la falta de tiempo para su desarrollo. En consecuencia, la aplicación se enfocó hacia la creación de material pictográfico sin interacción para ser descargado, impreso o guardado como imagen. 
 
 \section{Despliegue de la aplicación}
+\label{cap5:despliegue}
 
 De cara al despliegue, React cuenta con el comando \texttt{npm build}\footnote{\url{https://create-react-app.dev/docs/production-build/}}, el cual crea un directorio \texttt{Build} dentro del proyecto que incluye todos los archivos js y css necesarios para hacer funcionar la aplicación. Para subir los archivos al contenedor ofrecido por la Universidad Complutense de Madrid, se utilizó la aplicación Bitvise\footnote{\url{https://www.bitvise.com/}}. Se trata de un programa que mediante una interfaz gráfica permite conectarse al contenedor mediante SSH y transferir los archivos con facilidad. 
 
@@ -744,7 +751,12 @@ Como se había mencionado anteriormente, la web cuenta con la opción de ser ins
 
 
 
+\section{Control de versiones y organización del desarrollo de PictUp!}
+\label{cap5:controlversiones}
 
+Para gestionar el desarrollo de la aplicación de PictUp!, el código de esta se encuentra en el repositorio de GitHub de NIL Group \footnote{\url{https://github.com/NILGroup/TFG-2021-EditorPictogramas}}. Gestionar de esta manera el proyecto ayudó a poder tener un mejor control de versiones y ver qué modificaciones se habían realizado en cada versión.
+
+Para facilitar el reparto de tareas entre los dos integrantes, se utilizó un Kanban donde se especifican las funcionalidades a implementar. Cuenta con cuatro columnas, dependiendo del estado del desarrollo de cada funcionalidad: pendiente, en desarrollo, pruebas y completado. Tras acabar todas las funcionalidades principales, se creó otro Kanban donde se detallaron errores que dificultan la interacción y usabilidad de cara a una futura evaluación con usuarios. 
 
 
 

@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {4.2.1}Prototipo realizado por Alfonso}{36}{subsection.115}%
 \contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{40}{subsection.124}%
 \contentsline {section}{\numberline {4.3}Requisitos de la aplicación}{45}{section.130}%
-\contentsline {subsection}{\numberline {4.3.1}Herramientas}{46}{subsection.131}%
+\contentsline {subsection}{\numberline {4.3.1}Herramientas}{45}{subsection.131}%
 \contentsline {subsection}{\numberline {4.3.2}Elementos}{46}{subsection.132}%
 \contentsline {chapter}{\numberline {5}PictUp! Arquitectura y diseño}{49}{chapter.133}%
 \contentsline {section}{\numberline {5.1}Introducción}{49}{section.134}%
@@ -83,15 +83,16 @@
 \contentsline {subsection}{\numberline {5.11.5}Añadir imagen}{77}{subsection.219}%
 \contentsline {subsection}{\numberline {5.11.6}Subtableros y cajón de pictogramas}{78}{subsection.223}%
 \contentsline {section}{\numberline {5.12}Despliegue de la aplicación}{78}{section.224}%
-\contentsline {chapter}{\numberline {6}Evaluación}{81}{chapter.231}%
-\contentsline {section}{\numberline {6.1}Preparación de la evaluación}{81}{section.232}%
-\contentsline {section}{\numberline {6.2}Diseño de la evaluación}{82}{section.234}%
-\contentsline {section}{\numberline {6.3}Resultados de la evaluación}{84}{section.251}%
-\contentsline {section}{\numberline {6.4}Análisis de los resultados}{84}{section.252}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{85}{chapter.253}%
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{87}{chapter.254}%
+\contentsline {section}{\numberline {5.13}Control de versiones y organización del desarrollo de PictUp!}{79}{section.231}%
+\contentsline {chapter}{\numberline {6}Evaluación}{81}{chapter.233}%
+\contentsline {section}{\numberline {6.1}Preparación de la evaluación}{81}{section.234}%
+\contentsline {section}{\numberline {6.2}Diseño de la evaluación}{82}{section.236}%
+\contentsline {section}{\numberline {6.3}Resultados de la evaluación}{84}{section.253}%
+\contentsline {section}{\numberline {6.4}Análisis de los resultados}{84}{section.254}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{85}{chapter.255}%
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{87}{chapter.256}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{89}{appendix.255}%
+\contentsline {chapter}{\numberline {A}Título}{89}{appendix.257}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{91}{appendix.256}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{93}{appendix*.257}%
+\contentsline {chapter}{\numberline {B}Título}{91}{appendix.258}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{93}{appendix*.259}%
