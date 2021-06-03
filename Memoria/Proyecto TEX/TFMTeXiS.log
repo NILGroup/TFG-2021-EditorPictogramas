@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.1)  31 MAY 2021 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.1)  3 JUN 2021 16:57
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -1788,64 +1788,91 @@ Overfull \hbox (56.44905pt too wide) in paragraph at lines 66--66
 cles / 360039474571-[]System-[]Usability-[]Scale-[]SUS-[]$[]| 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\T1/cmr/m/n/10.95 Puntuación
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\T1/cmr/m/n/10.95 Desviación
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\T1/cmr/m/n/10.95 Puntuación
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+[]|\T1/cmr/m/n/10.95 Desviación
+ []
+
 )
+Overfull \hbox (60.833pt too wide) in paragraph at lines 93--154
+[][] 
+ []
+
 LaTeX Info: Redefining \. on input line 154.
 LaTeX Info: Redefining \% on input line 154.
- [84]
+[84]
+LaTeX Info: Redefining \. on input line 154.
+LaTeX Info: Redefining \% on input line 154.
+ [85]
 \openout2 = `Capitulos/ConclusionesTrabajoFuturo.aux'.
 
- (Capitulos/ConclusionesTrabajoFuturo.tex
-Cap\'itulo 7.
-) [85
+ (Capitulos/ConclusionesTrabajoFuturo.tex [86
 
 
 
 ]
+Cap\'itulo 7.
+) [87]
 \openout2 = `Capitulos/ConclusionsFutureWork.aux'.
 
- (Capitulos/ConclusionsFutureWork.tex [86
+ (Capitulos/ConclusionsFutureWork.tex [88
 
 
 
 ]
 Chapter 7.
-) [87]
+) [89]
 LaTeX Info: Redefining \. on input line 164.
 LaTeX Info: Redefining \% on input line 164.
 \openout2 = `Apendices/appendixA.aux'.
 
- (Apendices/appendixA.tex [88
+ (Apendices/appendixA.tex [90
 
 
 
 ]
 Ap\'{e}ndice A.
-) [89]
+) [91]
 \openout2 = `Apendices/appendixB.aux'.
 
- (Apendices/appendixB.tex [90
+ (Apendices/appendixB.tex [92
 
 
 
 ]
 Ap\'{e}ndice B.
-) [91] [92
+) [93] [94
 
 
 ]
 \openout2 = `Cascaras/bibliografia.aux'.
 
- (Cascaras/bibliografia.tex (TFMTeXiS.bbl)) [93
+ (Cascaras/bibliografia.tex (TFMTeXiS.bbl)) [95
 
 
 ]
 \openout2 = `Cascaras/fin.aux'.
 
  (Cascaras/fin.tex
-[94
+[96
 
 
-] [95])
+] [97])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
  (TFMTeXiS.aux (Cascaras/cover.aux)
@@ -1879,10 +1906,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 15057 strings out of 481199
- 251187 string characters out of 2915349
- 698569 words of memory out of 3000000
- 29514 multiletter control sequences out of 15000+200000
+ 15060 strings out of 481199
+ 251222 string characters out of 2915349
+ 701569 words of memory out of 3000000
+ 29515 multiletter control sequences out of 15000+200000
  558041 words of font info for 68 fonts, out of 3000000 for 9000
  1380 hyphenation exceptions out of 8191
  61i,15n,57p,979b,732s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1908,9 +1935,9 @@ ers\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk>
 <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx207
 4.pk><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
 iles/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on TFMTeXiS.pdf (119 pages, 9228267 bytes).
+Output written on TFMTeXiS.pdf (121 pages, 9230880 bytes).
 PDF statistics:
- 2472 PDF objects out of 2487 (max. 8388607)
- 387 named destinations out of 1000 (max. 500000)
+ 2482 PDF objects out of 2487 (max. 8388607)
+ 389 named destinations out of 1000 (max. 500000)
  1151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
