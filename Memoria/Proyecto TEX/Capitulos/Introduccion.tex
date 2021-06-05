@@ -3,18 +3,17 @@
 
 \chapterquote{La inteligencia es la habilidad de adaptarse a los cambios}{Stephen Hawking}
 
-\begin{resumen} En este capítulo se explicará la motivación de este trabajo (Sección \ref{cap1:sec:Motivacion}), los objetivos que se quieren lograr (Sección \ref{cap1:sec:Objetivos}) y la estructura de esta memoria (Sección \ref{cap1:sec:Estructura}). 
-\end{resumen}
+%\begin{resumen} En este capítulo se explicará la motivación de este trabajo (Sección %\ref{cap1:sec:Motivacion}), los objetivos que se quieren lograr (Sección %\ref{cap1:sec:Objetivos}) y la estructura de esta memoria (Sección \ref{cap1:sec:Estructura}). 
+%\end{resumen}
+
 \section{Motivación}
 \label{cap1:sec:Motivacion}
+Los seres humanos siempre hemos tenido la necesidad inherente de comunicarnos y la población con dificultades en el lenguaje oral no debe quedar excluida. Como es el caso de las personas con trastornos del espectro autista, parálisis cerebral, esclerosis múltiple o parkinson, entre otros. 
 
-Los seres humanos siempre hemos tenido la necesidad inherente de comunicarnos, y quien no es capaz de hacerlo generalmente acaba excluido. Y esa es la palabra clave, comunicación. Su origen proviene del latín, “\textit{communicare}” difundir, y este de “\textit{communis}” común. Gracias a ello, hemos podido llegar hasta donde estamos actualmente, una era donde todos pueden tener una voz. Por eso es más importante que nunca no olvidarse de los que tienen dificultades. Eliminar la barrera de la comunicación a la que estamos acostumbrados como es el habla o el lenguaje natural, y hacerla comprensible para todos es un reto que se ha ido superando. \textcolor{blue}{[Quiero que darle un par de vueltas a esto]}
+Para facilitar la comunicación de estos colectivos se utilizan medios de comunicación
+alternativos al lenguaje oral como los sistemas pictográficos compuestos por pictogramas, los cuales son imágenes que representan ideas y conceptos.
+La  manera más común de utilizar estos sistemas es mediante tableros de comunicación. Estos tableros son superficies  compuestas por una selección de pictogramas que permiten al usuario con dificultades de comunicación formar mensajes. Un ejemplo de tablero es el que vemos en la Figura  \ref{fig:tablerofisico}  con el cual el usuario puede señalar un pictograma con el dedo para indicar un objeto u acción. Aparte de en los tableros, los pictogramas pueden ser utilizados de otras muchas maneras, como calendarios, agendas, listas de normas, etc.
 
-Sin embargo, en las últimas décadas ha habido un avance sin precedentes en el estudio e investigación sobre las discapacidades comunicativas. Estos avances vinieron acompañados de herramientas y sistemas para facilitar la comunicación muchos de los cuales siguen vigentes a día de hoy. Uno de los principales perfiles que utilizan estos sistemas son las  personas con Trastorno del Espectro Autista (TEA)
-
-Sin entrar en gran detalle, podemos encontrar que la gente con \textit{TEA} tienen dificultades en la comunicación verbal, pues a menudo la comunicación no es recíproca o no se realiza en el contexto social adecuado. Respecto a la comunicación no verbal, también sufren dificultades al entender el significado de gestos faciales o expresión corporal de otras personas. Todo esto causa a menudo malentendidos, pues generalmente no se comprende correctamente el contexto y se dificulta la comunicación. 
-
-Para facilitar la comunicación de estos colectivos se utilizan otros medios alternativos como los sistemas pictográficos, que permiten comunicarse mediante imágenes. Estos sitemas pictográficos, al estar compuestos por cientos de pictogramas habitualmente, están agrupados en \textbf{tableros pictográficos}. Estos tableros son superficies donde se colocan pictogramas para formar mensajes. Un ejemplo de tablero es el que vemos en la Figura \ref{fig:tablerofisico}. Hasta hace poco, dichos tableros eran creados a mano recortando y pegando los pictogramas pero con el tiempo se han desarrollado herramientas informáticas enfocadas a trabajar con tableros y pictogramas.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -24,11 +23,12 @@ Para facilitar la comunicación de estos colectivos se utilizan otros medios alt
 	\label{fig:tablerofisico}
 \end{figure}
 
-Todas estas herramientas suelen tener cada una  sus características y funcionalidades únicas. Aun así no existe una alternativa clara que reúna las herramientas necesarias para poder realizar materiales con amplia libertad. A menudo se abusan de tableros de tamaño fijo que limitan la creatividad de quienes crean estos materiales. Por ejemplo, en las aplicaciones mencionadas previamente podemos ver que falta algún tipo de cuadrícula en el tablero para que a la hora de insertar los pictogramas estos queden perfectamente colocados y el tablero tenga una mejor apariencia visual.
 
-En este contexto, la finalidad es crear una herramienta que unifique las mejores características de cada aplicación, además de permitir crear y editar tableros en un mismo lugar con la mayor facilidad y libertad posible. Afortunadamente, ya existe una base sobre la que apoyarse, gracias a proyectos anteriores.
+Los tableros de comunicación a menudo eran creados a mano, recortando y pegando los pictogramas en una cartulina. Con el tiempo se implementaron soluciones tecnológicas enfocadas a facilitar esta tarea. 
 
+Existen multitud de aplicaciones que permiten crear material, pero generalmente están limitadas a un formato concreto y ofrecen poca libertad al usuario para crear material. Además cada una de estas aplicaciones cuentan con opciones y facilidades diferentes, como traducir una frase a pictogramas, un tablero donde se puedan colocar los pictogramas donde se desee, añadir figuras al tablero, etc. Pero no existe ninguna aplicación que englobe todas estas opciones. 
 
+Es por ello que la finalidad de este trabajo es la de crear una aplicación web que permita crear material pictográfico de manera rápida y sencilla, ofreciendo la mayor libertad posible al usuario junto a las opciones más utilizadas y demandadas por los usuarios en una única herramienta. 
 
 
 
@@ -37,15 +37,15 @@ En este contexto, la finalidad es crear una herramienta que unifique las mejores
 \section{Objetivos}
 \label{cap1:sec:Objetivos}
 
-Teniendo en cuenta todos los temas que hemos tratado en la introducción, el objetivo principal de este trabajo es desarrollar una aplicación web multiplataforma que permitirá la creación y edición de tableros interactivos. En la aplicación también se incorporarán herramientas de búsquedas de pictogramas por palabras y traducción de texto a pictograma. 
 
-Respecto a la interacción con los tableros, se hará por medio de componentes configurables, los cuales aportarán algún tipo de interacción con el usuario final, como desplegar un tablero de pictogramas o colocar un pictograma en un hueco.
+El objetivo del trabajo es el de desarrollar una aplicación web que permita a los usuarios crear material pictográfico reuniendo las funcionalidades más utilizadas y pedidas por los usuarios. La aplicación debe contar con un tablero que permita desplazar los pictogramas y otros elementos con precisión.
 
-Para poder cumplir todos los objetivos mencionados se tendrá como referencia los TFG y TFM de Pictar y PicTableros. También se hará una labor de investigación en busca de nuevas tecnologías y herramientas con las que trabajar para desarrollar la aplicación. 
+Para ello, se investigarán las distintas aplicaciones existentes y cuáles son las funcionalidades más reclamadas por los usuarios. También se investigarán y ampliarán conocimientos sobre distintas tecnologías web actuales. 
 
-La forma en la que se comprobará el estado de los objetivos y su evolución será por medio de reuniones con los directores del TFG donde se analizará el trabajo realizado para ver el progreso, la forma en la que se implementan los objetivos, y sugerencias para no pausar el progreso.
+Otro objetivo es la de crear una interfaz sencilla e intuitiva para el usuario, y pueda ser utilizada en el mayor número de dispositivos posible. Para contrastar los objetivos del trabajo, se realizará una evaluación donde se compruebe la usabilidad y la facilidad de uso de la aplicación. 
 
-\textcolor{blue}{¿Podemos poner el inestimable apoyo que nos proporcionáis para animarnos a continuar?}
+
+
 
 
 
@@ -54,10 +54,21 @@ La forma en la que se comprobará el estado de los objetivos y su evolución ser
 \section{Estructura de la memoria}
 \label{cap1:sec:Estructura}
 
-La estructura para memoria se encuentra dividida en [x] capítulos, a continuación se explicará brevemente su contenido. --según avancemos habrá que ir completándolo--
+La estructura para memoria se encuentra dividida en 8 capítulos, a continuación se explicará brevemente su contenido. 
 \begin{itemize}
-	\item En los capítulos 1 y 2 se expondrá el contexto bajo el cual se ha realizado el trabajo junto a la motivación y objetivos para realizarlo.
-	\item En el capítulo 3 se explicará qué es un pictograma y los distintos sistemas de comunicación basados en ellos. Además se analizarán las distintas herramientas relacionadas con pictogramas haciendo énfasis en la edición de tableros.
+	\item En los capítulos uno y dos se expondrá el contexto bajo el cual se ha realizado el trabajo junto a la motivación y objetivos para realizarlo.
+	
+	\item En el capítulo tres se explicará qué es un pictograma y los distintos sistemas de comunicación basados en ellos. Además se analizarán las distintas herramientas relacionadas con pictogramas haciendo énfasis en la edición de tableros.
+	
+	\item En el capítulo cuatro se especificarán los requisitos y explicarán los prototipos creados.
+	
+	\item En el capítulo cinco se explicará en detalle la arquitectura y diseño de la aplicación.
+	
+	\item El capítulo seis mostrará el diseño, resultado y análisis de la evaluación realizada por los usuarios. 
+	
+	\item En el capítulo siete, se presentarán las conclusiones finales y se especificará el trabajo futuro a realizar.
+	
+	\item En el capítulo ocho se detallarán las tareas realizadas de los dos integrantes del trabajo.
 \end{itemize}	
 
 
