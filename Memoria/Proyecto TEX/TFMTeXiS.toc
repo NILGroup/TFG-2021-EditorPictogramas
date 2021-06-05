@@ -32,15 +32,15 @@
 \contentsline {section}{\numberline {3.2}API Arasaac}{29}{section.97}%
 \contentsline {subsection}{\numberline {3.2.1}Prototipo API ARASAAC}{31}{subsection.101}%
 \contentsline {section}{\numberline {3.3}React}{31}{section.102}%
-\contentsline {section}{\numberline {3.4}Drag and Drop}{32}{section.103}%
-\contentsline {subsection}{\numberline {3.4.1}Prototipos: React Drag and Drop:}{32}{subsection.105}%
-\contentsline {section}{\numberline {3.5}JSZip}{32}{section.107}%
-\contentsline {section}{\numberline {3.6}Progresive Web Application}{33}{section.109}%
+\contentsline {subsection}{\numberline {3.3.1}Drag and Drop}{32}{subsection.103}%
+\contentsline {subsection}{\numberline {3.3.2}Prototipos: React Drag and Drop:}{32}{subsection.105}%
+\contentsline {section}{\numberline {3.4}JSZip}{32}{section.107}%
+\contentsline {section}{\numberline {3.5}Progresive Web Application}{32}{section.109}%
 \contentsline {chapter}{\numberline {4}Requisitos y diseño}{35}{chapter.112}%
 \contentsline {section}{\numberline {4.1}Introducción}{35}{section.113}%
 \contentsline {section}{\numberline {4.2}Diseño de la aplicación}{36}{section.114}%
 \contentsline {subsection}{\numberline {4.2.1}Prototipo realizado por Alfonso}{36}{subsection.115}%
-\contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{40}{subsection.124}%
+\contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{41}{subsection.124}%
 \contentsline {section}{\numberline {4.3}Requisitos de la aplicación}{45}{section.130}%
 \contentsline {subsection}{\numberline {4.3.1}Herramientas}{45}{subsection.131}%
 \contentsline {subsection}{\numberline {4.3.2}Elementos}{46}{subsection.132}%

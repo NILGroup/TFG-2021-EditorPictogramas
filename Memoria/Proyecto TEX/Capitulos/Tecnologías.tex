@@ -12,18 +12,18 @@
 
 \section{Introducción}
 
-La finalidad de PictUp! es crear una aplicación web accesible desde el ordenador que permita crear tableros pictográficos. La aplicación se ha desarrollado en React y para facilitar la maquetación de la misma se ha utilizado Boostrap 5\footnote{\url{https://getbootstrap.com/docs/5.0/getting-started/introduction/}}. 
-A continuación se describirán las tecnologías estudiadas de cara al desarrollo de PictUp!.
+La finalidad de PictUp! es crear una aplicación web accesible desde el ordenador que permita crear materiales pictográficos. La aplicación se ha desarrollado en React y para facilitar la maquetación de la misma se ha utilizado Boostrap 5\footnote{\url{https://getbootstrap.com/docs/5.0/getting-started/introduction/}}. 
+A continuación se describirán estas y otras tecnologías estudiadas de cara al desarrollo de PictUp!.
 
 
 \section{API Arasaac}
-ARASAAC facilita la obtención de recursos pictográficos mediante su API\footnote{\url{https://arasaac.org/developers/api}}. Una API es una interfaz que reúne un conjunto de funciones y métodos, accesibles para otras aplicaciones. En el caso de la API de ARASAAC está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
-Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas creados por usuarios haciendo uso de los pictogramas de ARASAAC. Respecto a los pictogramas, los métodos que se han utilizado son:
+ARASAAC facilita la obtención de recursos pictográficos mediante su API\footnote{\url{https://arasaac.org/developers/api}}. Una API es una interfaz que reúne un conjunto de funciones y métodos, accesibles para otras aplicaciones. En el caso de la API de ARASAAC, esta está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
+Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas creados por usuarios haciendo uso de los pictogramas de ARASAAC. Respecto a los pictogramas, los métodos que se han utilizado en este trabajo son:
 
 \begin{itemize}
-	\item \textbf{BestSearch}: recibe una palabra y retorna un único JSON con la información del pictograma que más se ajuste a la palabra.
+	\item \textbf{bestSearch}: recibe una palabra y retorna un único JSON con la información del pictograma que más se ajuste a la palabra.
 	
-	\item \textbf{searchText}: igual que \textit{BestSearch}, diferenciándose en que retorna todos los pictogramas similares. En la Figura \ref{fig:compBusq}, se ejemplifica el resultado de introducir el mismo término en las dos funciones.
+	\item \textbf{searchText}: igual que \textit{bestSearch}, diferenciándose en que retorna todos los pictogramas similares. En la Figura \ref{fig:compBusq}, se ejemplifica el resultado de introducir el mismo término en las dos funciones.
 	
 	 \begin{figure}[h!]
 	 	\centering
@@ -47,7 +47,7 @@ Como se ha mencionado anteriormente, la API de ARASAAC retorna un objeto JSON qu
 	
 	\item \textbf{hasLocution}: indica si cuenta con locución. La locución está grabada por una persona y no se trata de una voz robótica generada automáticamente.
 	
-	\item \textbf{hair}: indica si el pictograma representado tiene pelo. En caso afirmativo, se podrá cambiar el color de éste
+	\item \textbf{hair}: indica si el pictograma representado tiene pelo. En caso afirmativo, se podrá cambiar el color de éste.
 	
 	\item \textbf{skin}: indica si el pictograma representa a una persona. En caso afirmativo, se podrá cambiar el tono de piel. 
 	
@@ -58,7 +58,7 @@ Los pictogramas pueden ser personalizados, como se puede ver en la Figura \ref{f
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/coloresPicto}
-	\caption{Ejemplo de cómo se puede modificar el color de pelo y tono de piel de un pictograma entre otras opciones, desde la web de ARASAAC.}
+	\caption{Ejemplo de cómo se puede modificar el color de pelo y tono de piel de un pictograma, entre otras opciones, en este caso desde la web de ARASAAC.}
 	\label{fig:colorespicto}
 \end{figure}
 \subsection{Prototipo API ARASAAC}
@@ -68,16 +68,15 @@ Para probar el acceso a la API se creó un sencillo buscador de pictogramas util
 
 React es una librería de Javascript pensada para desarrollar interfaces de usuario. Esta librería fue desarrollada por Facebook buscando la creación de interfaces de una manera sencilla y con un alto rendimiento. 
 React permite desarrollar tanto aplicaciones web como aplicaciones móviles de una manera ordenada y con menos líneas de código respecto a otros lenguajes como Javascript. El hecho de que React permita estructurar los distintos componentes de una aplicación ayuda tanto al desarrollo como mantenimiento de esta.
-Otra característica importante de React es que ya tiene implementado muchas funcionalidades por lo que puede ayudar a reducir el tiempo de desarrollo de la aplicación, un ejemplo de esto es el hecho de tener las vistas asociadas a los datos. Esto permite que los datos mostrados se actualicen automáticamente sin necesidad de escribir nuevos fragmentos de código.
+Otra característica importante de React es que ya tiene implementadas muchas funcionalidades, por lo que puede ayudar a reducir el tiempo de desarrollo de la aplicación. Un ejemplo de esto es el hecho de tener las vistas asociadas a los datos, que permite que los datos mostrados se actualicen automáticamente sin necesidad de escribir nuevos fragmentos de código.
 
 Respecto a otros Frameworks como Angular, vemos que React no ofrece todas las funcionalidades de un framework completo. Esto no supone ningún impedimento para desarrollar la aplicación con React pero habrá que adaptar nuestro código al ecosistema que ofrece.
 
 
-\textcolor{red}{No sabemos si el apartado 3.4 tiene que ir aquí o en la sección de arquitectura, donde se cuenta la parte de la cuadrícula.}
 
-\section{Drag and Drop}
+\subsection{Drag and Drop}
 
-React Drag and Drop\footnote{\url{https://react-dnd.github.io/react-dnd/about}} Es una biblioteca que permite arrastrar componentes en React. Su principal uso en la aplicación, es la recolocación de los componentes del tablero de manera cuadriculada. Esto permite colocar con precisión los elementos en el tablero, lo cual era un requisito indispensable para poder hacer tableros organizados. De otra manera podrían quedar algunos componentes unos pocos píxeles por encima de otro, dando un resultado poco profesional.
+React Drag and Drop\footnote{\url{https://react-dnd.github.io/react-dnd/about}} es una biblioteca que permite arrastrar componentes en React. Su principal uso en la aplicación es la recolocación de los componentes del tablero de manera cuadriculada. Esto permite colocar con precisión los elementos en el tablero, lo cual era un requisito indispensable para poder hacer tableros organizados. De otra manera podrían quedar algunos componentes unos pocos píxeles por encima de otros, dando un resultado sin alinear y poco profesional.
 
 \subsection{Prototipos: React Drag and Drop:}
 
@@ -97,9 +96,9 @@ JSZip\footnote{\url{https://stuk.github.io/jszip/}} es una biblioteca de Javascr
 \section{Progresive Web Application}
 
 
-Las aplicaciones Web Progresivas (PWA)\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}} son aplicaciones instalables en ordenador o dispositivos Android. Está a medio camino entre una aplicación nativa\footnote{\url{https://web.dev/what-are-pwas/}}  y una web, pues ofrece más posibilidades que una web convencional y no requiere de instaladores o ser descargadas de tiendas de aplicaciones.
+Las aplicaciones web progresivas (PWA)\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}} son aplicaciones instalables en ordenador o dispositivos Android. Están a medio camino entre una aplicación nativa\footnote{\url{https://web.dev/what-are-pwas/}}  y una web, pues ofrecen más posibilidades que una web convencional y no requiere de instaladores o ser descargadas de tiendas de aplicaciones.
     
-Entre otras ventajas que se pueden encontrar:
+Entre otras ventajas que se ofrecen:
 
 \begin{itemize}
 	\item Los tiempos de carga son reducidos al contar con los componentes precargados.
@@ -107,11 +106,11 @@ Entre otras ventajas que se pueden encontrar:
 	
 	\item Son fáciles de instalar.
 	
-	\item Añade un icono a la pantalla de inicio del móvil o un acceso directo en el escritorio donde se instala. Aumentando las posibilidades que el usuario vuelva a acceder a la aplicación. Debido a que una web puede ser muy difícil de encontrar en motores de búsqueda, el usuario puede ser dependiente de tener el enlace a su alcance.
+	\item Añade un icono a la pantalla de inicio del móvil o un acceso directo en el escritorio donde se instala, aumentando las posibilidades que el usuario vuelva a acceder a la aplicación. Debido a que una web puede ser muy difícil de encontrar en motores de búsqueda, el usuario puede ser dependiente de tener el enlace a su alcance.
 	
 	\item Ahorra el desarrollo de una aplicación nativa para Android. 
 	
-	\item Rápido y fácil de implementar.
+	\item Son rápidas y fáciles de implementar.
 	
 \end{itemize}
 
