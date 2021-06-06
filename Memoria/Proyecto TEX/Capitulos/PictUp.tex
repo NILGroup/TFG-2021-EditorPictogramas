@@ -12,8 +12,7 @@
 
 
 \section{Introducción}
-
-El propósito de la aplicación PictUp! \textcolor{red}{HACER REFERENCIA} es solventar problemas encontrados en otras aplicaciones similares y combinar las herramientas necesarias para facilitar la creación de materiales pictográficos. Para ello, se han estudiado las características de las distintas aplicaciones vistas en la Sección \ref{cap2:tablacomparativa}. De esta manera, se han seleccionado las funcionalidades imprescindibles para crear un tablero pictográfico y otras atendiendo a las necesidades demandadas por los usuarios. Así se ha podido confeccionar una lista de requisitos iniciales de la aplicación y el motivo de su interés. A continuación, se expondrán las caracterísiticas que debería reunir PictUp!: 
+De ahora en adelante se referirá a la aplicación como PictUp!. El propósito de la aplicación PictUp! es solventar problemas encontrados en otras aplicaciones similares y combinar las herramientas necesarias para facilitar la creación de materiales pictográficos. Para ello, se han estudiado las características de las distintas aplicaciones vistas en la Sección \ref{cap2:tablacomparativa}. De esta manera, se han seleccionado las funcionalidades imprescindibles para crear un tablero pictográfico y otras atendiendo a las necesidades demandadas por los usuarios. Así se ha podido confeccionar una lista de requisitos iniciales de la aplicación y el motivo de su interés. A continuación, se expondrán las caracterísiticas que debería reunir PictUp!: 
 
 
 \begin{itemize}
@@ -254,10 +253,7 @@ Tras terminar ambos prototipos, se analizaron para contrastar ideas en común y 
 A grandes rasgos, se vio que el prototipo de Alfonso era menos rígido de cara a crear material. Esto es visible en la creación de reglas, cuento o actividades en el prototipo de Jorge, donde solo hay un único formato para cada tipo de material. Por ello se ha optado por ofrecer los componentes al usuario para que este cree el material según su criterio. Los componentes de creación de actividades vistas en el prototipo de Alfonso también ofrecían mayor libertad al crear actividades. 
 
 Un concepto en común entre ambos prototipos es la existencia de una barra de herramientas al lado izquierdo del tablero mediante la cual se añadirían los distintos elementos al tablero. Además, se estableció que debían existir dos tipos de componentes en la aplicación: herramientas y elementos.
-A continuación se detallarán las funcionalidades que deberían desempeñar estas componentes. 
-
-\textcolor{red}{COMPLETAR CON LO DICHO POR RAQUEL}
-
+A continuación se detallarán las funcionalidades que deberían desempeñar estas componentes. El resto de ideas vistas en ambos prototipos sirvieron para crear una visión general de la posible aplicación, por lo que muchas de estas ideas no fueron desarrolladas.  
 
 \subsection{Herramientas}
 
@@ -270,10 +266,16 @@ En este apartado se incluirán todas aquellas funcionalidades que tras el análi
 	
 	\item \textbf{Colecciones}: la herramienta colecciones ofrecen al usuario la opción de poder tener varias agrupaciones de los pictogramas que desee, según su conveniencia. Éstas están compuestas por un nombre que lo identifique y uno o varios pictogramas que el usuario elija según su criterio.
 	
+	\item \textbf{Importar imágenes}: esta herramienta permite al usuario importar sus imágenes y fotografías y añadirlas al tablero. 
+	
+	\item \textbf{Añadir texto}: la herramienta de texto permitirá añadir una frase introducida por el usuario al tablero. 
+	
+	\item \textbf{Añadir icono}: esta herramienta permite añadir al tablero iconos para complementar a los pictogramas, textos o imágenes.
+	
 	\item \textbf{Importar y exportar}: estas herramientas ayudarán al usuario a poder guardar el estado de la página y poder editarlo posteriormente. 
+	
+	
 \end{itemize}
-
-\textcolor{red}{COMPLETAR CON LO DICHO POR RAQUEL}
 
 \subsection{Elementos}
 
@@ -292,18 +294,18 @@ Hemos considerado que un elemento es un componente que puede ser añadido al tab
 	\item \textbf{Figuras}: las figuras sirven para ordenar, enfatizar o decorar el tablero. Por ejemplo,  una línea puede ser usada para dividir el espacio de trabajo en secciones, relacionar dos pictogramas o incluso marcar un espacio donde escribir una respuesta si se va a imprimir el tablero. Pese a la simplicidad de las figuras, sus posibilidades son muy amplias según  la creatividad de quien crea el tablero.
 	
 	\item \textbf{Campos de texto}: Los campos de texto podrán ser insertados en el tablero de la aplicación. Estos campos de texto podrán ser editados permitiendo cambiar el color del texto y aumentar la fuente.
-	
-	\textcolor{red}{COMPLETAR CON LO DICHO POR RAQUEL}
-	
-	\item \textbf{Cajón de pictogramas}: El cajón de pictos es un apartado al margen del tablero donde aparecen un conjunto de pictogramas que el usuario debe mover a alguna posición. El hueco donde vayan los pictogramas que se encuentren en el cajón de pictogramas puede ser modificado y aceptar unos u otros. Esto puede ser utilizado como test sencillo de hacer y usar.
-	
-	\item \textbf{Subtablero}: El subtablero es un componente que a simple vista parece un pictograma pero, al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto es originario de Piktoplus pero actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
+		
 \end{itemize}
 
 Hay algunos elementos que tras el análisis de los prototipos decidimos que no iban a aportar lo suficiente en la aplicación o que incrementarían innecesariamente la complejidad. Estos elementos descartados fueron:
 
 \begin{itemize}
 	\item\textbf{Pantallas de normas y cuentos predefinidos}: El principal motivo es su falta de flexibilidad, es decir, que si la aplicación no permite crear un cuento o un listado de reglas con sus propias herramientas, tampoco permitirá crear otro tipo de material. Por ello nos hemos decantado por herramientas que ofrecieran más posibilidades al usuario. Otro motivo era que no todos los usuarios querrían por ejemplo que las normas aparecen de una misma manera, como si fuese un listado, por lo que es imprescindible ofrecer la mayor libertad posible al usuario.
+	
+		
+	\item \textbf{Cajón de pictogramas}: El cajón de pictos es un apartado al margen del tablero donde aparecen un conjunto de pictogramas que el usuario debe mover a alguna posición. El hueco donde vayan los pictogramas que se encuentren en el cajón de pictogramas puede ser modificado y aceptar unos u otros. Esto puede ser utilizado como test sencillo de hacer y usar.
+	
+	\item \textbf{Subtablero}: El subtablero es un componente que a simple vista parece un pictograma pero, al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto es originario de Piktoplus pero actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
 	
 	\item \textbf{Plantillas}: Tras comentarlo en las reuniones, no se centró mucha atención en este apartado, pues ya estaba muy explorado por la aplicación Pictableros (Sección \ref{cap2:pictableros}).
 	
@@ -315,7 +317,27 @@ Hay algunos elementos que tras el análisis de los prototipos decidimos que no i
 \end{itemize}
 
 
+\section{Reglas de diseño}
+Para asegurar un correcto desarrollo de las distintas funcionalidades que se encuentren en la aplicación, se tendrá en cuenta las ocho reglas de oro de Ben Shneiderman\footnote{\url{https://www.interaction-design.org/literature/article/shneiderman-s-eight-golden-rules-will-help-you-design-better-interfaces}}. A continuación serán enumeradas: 
 
 
+\begin{itemize}
+	
+	\item \textbf{Coherencia}: se ha de utilizar los mismos tipos de patrones de diseños en toda la aplicación. Esto incluye los colores, el tipo de letra utilizado, la posición de los botones, etc. Esta regla es de vital importancia ya que facilita al usuario familiarizarse con la interfaz.
+	
+	\item \textbf{Usabilidad universal}: ha de tenerse en cuenta que la aplicación la pueden utilizar distintos tipos de usuario. A los usuarios más avanzados se les ha de dar la oportunidad de utilizar funciones más complejas frente a los usuarios principiantes. 
+	
+	\item \textbf{Retroalimentación} informativa: se ha de informar a los usuarios en todo momento de las acciones realizadas de manera visual, por ejemplo mediante cuadros de diálogo.
+	
+	\item \textbf{Diseñar diálogos para conducir la finalización}: las acciones que requieran de unas ciertas secuencias deberán estar bien organizadas para informar al usuario sobre el momento del proceso en el que se encuentra.  Es importante que tengan una etapa de comienzo, otra de desarrollo y por último una de finalización.
+	\item \textbf{Prevenir errores}: se ha de diseñar la interfaz de la aplicación de tal manera que los usuarios cometan el menor número de errores posible. Un ejemplo recurrente es deshabilitar botones o menús. En caso de que ocurra un error se deberá informar al usuario indicando el fallo y las posibles soluciones. 
+	
+	\item \textbf{Permitir deshacer acciones de forma fácil}: todas las acciones que se realicen en la aplicación deben de ser reversibles. Esto permite a los usuarios realizar acciones sin temor a no poder revertir los cambios realizados.
+	
+	\item \textbf{Maximizar la sensación de control}:  las acciones no deberían de superar los tres clics. No hay problema si el número es superior siempre y cuando el usuario sepa en todo momento las acciones que está realizando. 
+	
+	\item \textbf{Reducir la carga de memoria a corto plazo}: es importante que la información que se muestre al usuario sea breve y concisa. Además también es importante agrupar todas aquellas funcionalidades similares para reducir la carga de memoria del usuario.
+	
+\end{itemize}
 
 

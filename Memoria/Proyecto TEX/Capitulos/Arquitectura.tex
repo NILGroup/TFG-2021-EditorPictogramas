@@ -14,9 +14,7 @@ Una vez especificados las características y requisitos a implementar, se pudo e
 \section{Arquitectura}
 \label{cap5:arquitectura}
 
-\textcolor{red}{REESCRIBIR}
-
-PictUp! cuenta con una arquitectura organizada a dos niveles. A nivel interno, está desarrollado en React mediante componentes que cuentan con una estructura similar en todo el proyecto. En la arquitectura interna, se explicará las características y funcionalidades de un componente de React. La arquitectura externa esquematiza cómo se han organizado las componentes y cómo interacción entre ellas. 
+La arquitectura de PictUp! puede distinguirse a dos niveles. A nivel interno se especificará la arquitectura de un componente de React, pues todas las ellos cuentan con un diseño similar. A nivel externo, se especificará cómo las distintas componentes desarrolladas interactúan entre ellas y se verá un esquema de la jerarquía de éstas. 
 
 
 \subsection{Arquitectura interna}
@@ -24,16 +22,17 @@ PictUp! cuenta con una arquitectura organizada a dos niveles. A nivel interno, e
 \textcolor{red}{DEJAR MÁS CLARO QUE ES EL STATE}
 
 
-La aplicación está compuesta principalmente por componentes\footnote{\url{https://reactjs.org/docs/react-component.html\#gatsby-focus-wrapper}} de React, los cuales son clases que deben contar obligatoriamente con un método \texttt{render()} y de manera opcional puede contar con el objeto \texttt{state}\footnote{\url{https://reactjs.org/docs/faq-state.html\#what-does-setstate-do}}. La principal característica del objeto \texttt{state} es que al actualizarse su valor vuelve a renderizarse el componente. Para actualizar el \texttt{state} del componente, ha de realizarse mediante el método \texttt{setState()}. 
+La aplicación está compuesta principalmente por componentes\footnote{\url{https://reactjs.org/docs/react-component.html\#gatsby-focus-wrapper}} de React, los cuales son clases que deben contar obligatoriamente con un método \texttt{render()} y de manera opcional puede contar con el objeto \texttt{state}\footnote{\url{https://reactjs.org/docs/faq-state.html\#what-does-setstate-do}}. El objeto \texttt{state} permite almacenar distintas variables. La principal característica de este objeto es que al actualizar el valor de cualquiera de sus variables definidas en su interior, el componente vuelve a renderizarse. Para actualizar el valor de cualquier variable del \texttt{state}, ha de realizarse mediante el método \texttt{setState()}. Este método se realiza de manera asíncrona, por lo que los valores de \texttt{state} generalmente van ligados a datos que serán mostrados en el método renderización. De esta manera,  \texttt{state} será de gran ayuda para actualizar la interfaz con la que interactúa el usuario. 
+Los componentes pueden tener variables fuera del objeto \texttt{state} si no se va a utilizar para la renderización.  
 
-El método \texttt{render()}\footnote{\url{https://es.reactjs.org/docs/rendering-elements.html }} se encarga de renderizar el html del componente. Dentro del render se podrán incluir los atributos que se hayan definido en el state u otros elementos como botones, selectores o campos de texto. 
+
+El método \texttt{render()}\footnote{\url{https://es.reactjs.org/docs/rendering-elements.html }} se encarga de renderizar el html del componente. Dentro del render se podrán incluir los atributos que se hayan definido en el \texttt{state} u otros elementos como botones, selectores o campos de texto. 
 La característica principal que ofrece este método de React es que si se modifica un atributo del \texttt{state} del componente, automáticamente se mostrará en el navegador en nuevo valor que haya tomado. Otra característica que ofrece React es poder llamar desde el render a funciones externas dentro del componente que se encargan de devolver el fragmento html deseado. Esto sirve para organizar mejor el contenido y crear render condicionales, es decir, mostrar un contenido u otro en función de los valores que tomen un atributo del \texttt{state}.
 Además también se puede incluir dentro de la función render otros componentes de React, que pasará a ser la componente hija que puede recibir parámetros de entrada o salida mediante \texttt{props}. Las \texttt{props} son atributos de React que permiten enviar información entre componentes padres e hijos. Para acceder a los parámetros enviados desde la componente padre se hará utilizando \texttt{this.props}\footnote{\url{https://es.reactjs.org/docs/components-and-props.html }}.
 
-
 \subsection{Arquitectura externa}
 
-Una vez vista la estructura de un componente, se puede ver en la Figura \ref{fig:pantallaprincipal} la pantalla principal de PictUp! . Como se puede ver se distinguen tres zonas bien diferenciadas. 
+Una vez vista la estructura de un componente, se puede ver en la Figura \ref{fig:pantallaprincipal} la pantalla principal de PictUp!, la cual está compuesta por multitud de componentes. Estos son agrupados y gestionados mediante el componente Main. Como se puede ver en dicha Figura, se pueden distinguir varios apartados bien diferenciados: 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -45,40 +44,27 @@ Una vez vista la estructura de un componente, se puede ver en la Figura \ref{fig
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Navbar}: se encuentra en la zona superior y en ella vemos el nombre de la aplicación junto con su imagen. También se incluyen algunos botones de contacto.
+	\item \textbf{Navbar}: se encuentra en la zona superior y en ella vemos el nombre de la aplicación junto con su imagen. También se incluye información de contacto.
 	
 	
-	\item \textbf{Barra de Herramientas}: en la zona izquierda de la aplicación se agrupan todas las herramientas disponibles.
+	\item \textbf{Barra de Herramientas}: en la zona izquierda de la aplicación se agrupan todas las herramientas disponibles. 
+	Esats son componentes que ofrecen una interfaz al usuario para añadir elementos a la cuadrícula. Algunas de estas herramientas cuentan con pantallas auxiliares en forma de modal, como es el caso de búsqueda de pictogramas o la función de descargar tablero. Cada una de las herramientas pueden retornar elementos con representación en la cuadrícula, los cuales serán denominados ítems. La información asociada a cada uno de estos ítems serán almacenados en el \texttt{state} de Main dependiendo de su tipo.
 	
-	\item \textbf{Tablero}: la componente que mayor espacio abarca de la página es la zona donde se desplazarán los elementos generados por las herramientas. El tablero se muestra en forma de cuadricula.
+	\item \textbf{Tablero}: es el componente que mayor espacio abarca de la página, siendo la zona donde se desplazarán los elementos generados por las herramientas. El tablero se muestra en forma de cuadrícula. Sobre ésta se colocarán los ítems que tenga almacenados Main en su \texttt{state}.  Como se puede ver en la Figura \ref{fig:items} existen distintos tipos de ítem, como pictograma, texto o icono. Cada ítem está adecuado en función del tipo de contenido que se vaya a mostrar. Asimismo, los ítems cuentan con funcionalidades que les permiten cambiar sus propiedades. Por ejemplo, el que representa texto podrá modificar el tamaño de letra y contenido.  
 	
 \end{itemize}
 
-\textcolor{red}{NO QUEDA CLARO COMO ESTÁ}
 
-
-
-\begin{itemize}
-	\item \textbf{Main}: es el principal componente de la aplicación. Muestra los componentes de herramientas, navbar y la cuadrícula junto a los elementos que aparezcan en ella. Las herramientas pueden retornar elementos con representación en la cuadrícula, los cuales serán denominados ítems. Cada uno de estos ítems será almacenado en una lista diferente según su tipo, para posteriormente ser representados en el tablero.
-	
-	
-	\item \textbf{Herramientas}: son componentes que ofrecen una interfaz al usuario para añadir elementos a la cuadrícula. Algunas de estas herramientas cuentan con pantallas auxiliares en forma de modal, como es el caso de búsqueda de pictogramas o la función de descargar tablero. La información que envíen será almacenada en la componente Main. 
-	
-	\item \textbf{Cuadrícula}: representa una cuadrícula donde se sitúan los distintos ítems disponibles. Recibe las listas de ítems almacenadas en Main para representar los distintos tipos de ítems. 
-	
-	\item \textbf{Ítems}: son los elementos que pueden colocarse sobre la cuadrícula. Generalmente cada herramienta crea un ítem distinto que se amolda a las características que se quieren representar. Como se puede ver en la Figura \ref{fig:items} se pueden ver distintos tipos de ítem, en este caso de pictograma, texto e icono. Cada ítem está adecuado en función del tipo de contenido que se vaya a mostrar. Asimismo, los ítems cuentan con funcionalidades que les permiten cambiar sus propiedades. Estas propiedades dependen del ítem. Por ejemplo, el que representa texto podrá modificar el tamaño de letra y contenido.
-	
 	
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/items}
-	\caption{}
+	\caption{Ejemplos de Ítems}
 	\label{fig:items}
 \end{figure}
 	
-\end{itemize}
 
 Para esquematizar cómo interactúan la distintas componentes, el Diagrama \ref{fig:diagramaarquitectura} representa la estructura interna de las componentes.
 
