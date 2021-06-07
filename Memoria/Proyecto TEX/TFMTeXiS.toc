@@ -17,86 +17,87 @@
 \contentsline {subsection}{\numberline {2.2.4}Mulberry Symbols}{11}{subsection.35}%
 \contentsline {subsection}{\numberline {2.2.5}Minspeak}{12}{subsection.42}%
 \contentsline {subsection}{\numberline {2.2.6}ARASAAC}{13}{subsection.47}%
-\contentsline {section}{\numberline {2.3}Aplicaciones basadas en pictogramas}{15}{section.52}%
-\contentsline {subsection}{\numberline {2.3.1}Pictoselector}{16}{subsection.57}%
-\contentsline {subsection}{\numberline {2.3.2}Editor ARASAAC}{18}{subsection.62}%
-\contentsline {subsection}{\numberline {2.3.3}Piktoplus}{20}{subsection.68}%
-\contentsline {subsection}{\numberline {2.3.4}Pictar}{21}{subsection.73}%
-\contentsline {subsection}{\numberline {2.3.5}PicTableros}{23}{subsection.78}%
-\contentsline {subsection}{\numberline {2.3.6}Symbo Talk}{24}{subsection.82}%
-\contentsline {subsection}{\numberline {2.3.7}LetMe Talk}{26}{subsection.85}%
-\contentsline {subsection}{\numberline {2.3.8}Jocomunico}{27}{subsection.88}%
-\contentsline {section}{\numberline {2.4}Comparativa de las herramientas analizadas}{27}{section.91}%
-\contentsline {chapter}{\numberline {3}Tecnologías}{29}{chapter.93}%
-\contentsline {section}{\numberline {3.1}Introducción}{29}{section.94}%
-\contentsline {section}{\numberline {3.2}API Arasaac}{29}{section.96}%
-\contentsline {subsection}{\numberline {3.2.1}Prototipo API ARASAAC}{31}{subsection.100}%
-\contentsline {section}{\numberline {3.3}React}{31}{section.101}%
-\contentsline {subsection}{\numberline {3.3.1}Drag and Drop}{32}{subsection.102}%
-\contentsline {subsection}{\numberline {3.3.2}Prototipos: React Drag and Drop:}{32}{subsection.104}%
-\contentsline {section}{\numberline {3.4}JSZip}{32}{section.106}%
-\contentsline {section}{\numberline {3.5}Progresive Web Application}{32}{section.108}%
-\contentsline {chapter}{\numberline {4}Requisitos y diseño}{35}{chapter.111}%
-\contentsline {section}{\numberline {4.1}Introducción}{35}{section.112}%
-\contentsline {section}{\numberline {4.2}Diseño de la aplicación}{36}{section.113}%
-\contentsline {subsection}{\numberline {4.2.1}Prototipo realizado por Alfonso}{36}{subsection.114}%
-\contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{41}{subsection.123}%
-\contentsline {section}{\numberline {4.3}Requisitos de la aplicación}{45}{section.129}%
-\contentsline {subsection}{\numberline {4.3.1}Herramientas}{45}{subsection.130}%
-\contentsline {subsection}{\numberline {4.3.2}Elementos}{46}{subsection.131}%
-\contentsline {section}{\numberline {4.4}Reglas de diseño}{48}{section.132}%
-\contentsline {chapter}{\numberline {5}PictUp! Arquitectura e implementación}{51}{chapter.134}%
-\contentsline {section}{\numberline {5.1}Introducción}{51}{section.135}%
-\contentsline {section}{\numberline {5.2}Arquitectura}{51}{section.136}%
-\contentsline {subsection}{\numberline {5.2.1}Arquitectura interna}{51}{subsection.137}%
-\contentsline {subsection}{\numberline {5.2.2}Arquitectura externa}{52}{subsection.142}%
-\contentsline {subsection}{\numberline {5.2.3}Cuadrícula}{53}{subsection.146}%
-\contentsline {section}{\numberline {5.3}Buscador de pictogramas}{56}{section.149}%
-\contentsline {subsection}{\numberline {5.3.1}Búsqueda}{57}{subsection.151}%
-\contentsline {subsection}{\numberline {5.3.2}Preajuste}{57}{subsection.153}%
-\contentsline {subsection}{\numberline {5.3.3}Historial de pictos}{59}{subsection.160}%
-\contentsline {subsection}{\numberline {5.3.4}PictoItem}{60}{subsection.162}%
-\contentsline {subsubsection}{\numberline {5.3.4.1}Editar Picto}{60}{subsubsection.164}%
-\contentsline {subsubsection}{\numberline {5.3.4.2}Reproducir sonido}{62}{subsubsection.166}%
-\contentsline {subsection}{\numberline {5.3.5}Reglas de diseño de usabilidad}{62}{subsection.169}%
-\contentsline {section}{\numberline {5.4}Traducir frase a pictogramas}{63}{section.170}%
-\contentsline {subsection}{\numberline {5.4.1}FraseItem}{64}{subsection.173}%
-\contentsline {subsection}{\numberline {5.4.2}Reglas de diseño de usabilidad}{65}{subsection.177}%
-\contentsline {section}{\numberline {5.5}Añadir imagen al tablero}{66}{section.178}%
-\contentsline {subsection}{\numberline {5.5.1}PhotoItem}{67}{subsection.182}%
-\contentsline {subsection}{\numberline {5.5.2}Reglas de diseño de usabilidad}{68}{subsection.185}%
-\contentsline {section}{\numberline {5.6}Listas de pictogramas}{69}{section.186}%
-\contentsline {subsection}{\numberline {5.6.1}Añadir y crear a una lista}{69}{subsection.187}%
-\contentsline {subsection}{\numberline {5.6.2}Gestión de listas de pictogramas}{70}{subsection.191}%
-\contentsline {subsection}{\numberline {5.6.3}Reglas de diseño de usabilidad}{71}{subsection.193}%
-\contentsline {section}{\numberline {5.7}Texto}{72}{section.194}%
-\contentsline {subsection}{\numberline {5.7.1}TextoItem}{73}{subsection.196}%
-\contentsline {subsection}{\numberline {5.7.2}Reglas de diseño de usabilidad}{73}{subsection.199}%
-\contentsline {section}{\numberline {5.8}Iconos}{74}{section.200}%
-\contentsline {subsection}{\numberline {5.8.1}IconoItem}{76}{subsection.205}%
-\contentsline {subsection}{\numberline {5.8.2}Reglas de diseño de usabilidad}{76}{subsection.206}%
-\contentsline {section}{\numberline {5.9}Descargar Tablero}{77}{section.207}%
-\contentsline {section}{\numberline {5.10}Funcionalidades no implementadas}{77}{section.210}%
-\contentsline {subsection}{\numberline {5.10.1}Traducción de frase}{77}{subsection.211}%
-\contentsline {subsection}{\numberline {5.10.2}CORS}{78}{subsection.213}%
-\contentsline {subsection}{\numberline {5.10.3}Backend}{78}{subsection.216}%
-\contentsline {subsection}{\numberline {5.10.4}Añadir imagen}{79}{subsection.220}%
-\contentsline {subsection}{\numberline {5.10.5}Subtableros y cajón de pictogramas}{80}{subsection.224}%
-\contentsline {section}{\numberline {5.11}Despliegue de la aplicación}{80}{section.225}%
-\contentsline {section}{\numberline {5.12}Control de versiones y organización del desarrollo de PictUp!}{81}{section.232}%
-\contentsline {chapter}{\numberline {6}Evaluación}{83}{chapter.234}%
-\contentsline {section}{\numberline {6.1}Preparación de la evaluación}{83}{section.235}%
-\contentsline {section}{\numberline {6.2}Diseño de la evaluación}{84}{section.237}%
-\contentsline {section}{\numberline {6.3}Resultados de la evaluación}{86}{section.254}%
-\contentsline {subsection}{\numberline {6.3.1}Resultados del cuestionario ASQ}{87}{subsection.256}%
-\contentsline {subsection}{\numberline {6.3.2}Resultados del cuestionario SUS}{87}{subsection.261}%
-\contentsline {subsection}{\numberline {6.3.3}Observaciones de los usuarios}{87}{subsection.264}%
-\contentsline {section}{\numberline {6.4}Análisis de los resultados}{94}{section.265}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{97}{chapter.267}%
-\contentsline {section}{\numberline {7.1}Conclusiones}{97}{section.268}%
-\contentsline {section}{\numberline {7.2}Trabajo futuro}{98}{section.269}%
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{101}{chapter.270}%
+\contentsline {section}{\numberline {2.3}Aplicaciones basadas en pictogramas}{15}{section.54}%
+\contentsline {subsection}{\numberline {2.3.1}Pictoselector}{17}{subsection.59}%
+\contentsline {subsection}{\numberline {2.3.2}Editor ARASAAC}{18}{subsection.64}%
+\contentsline {subsection}{\numberline {2.3.3}Piktoplus}{20}{subsection.70}%
+\contentsline {subsection}{\numberline {2.3.4}Pictar}{21}{subsection.75}%
+\contentsline {subsection}{\numberline {2.3.5}PicTableros}{23}{subsection.80}%
+\contentsline {subsection}{\numberline {2.3.6}Symbo Talk}{25}{subsection.84}%
+\contentsline {subsection}{\numberline {2.3.7}LetMe Talk}{26}{subsection.87}%
+\contentsline {subsection}{\numberline {2.3.8}Jocomunico}{27}{subsection.90}%
+\contentsline {section}{\numberline {2.4}Comparativa de las herramientas analizadas}{27}{section.93}%
+\contentsline {chapter}{\numberline {3}Tecnologías}{31}{chapter.95}%
+\contentsline {section}{\numberline {3.1}Introducción}{31}{section.96}%
+\contentsline {section}{\numberline {3.2}API Arasaac}{31}{section.98}%
+\contentsline {subsection}{\numberline {3.2.1}Prototipo API ARASAAC}{33}{subsection.102}%
+\contentsline {section}{\numberline {3.3}React}{33}{section.103}%
+\contentsline {subsection}{\numberline {3.3.1}Drag and Drop}{34}{subsection.104}%
+\contentsline {subsection}{\numberline {3.3.2}Prototipos: React Drag and Drop:}{34}{subsection.106}%
+\contentsline {section}{\numberline {3.4}JSZip}{34}{section.108}%
+\contentsline {section}{\numberline {3.5}Progresive Web Application}{34}{section.110}%
+\contentsline {chapter}{\numberline {4}Requisitos y diseño}{37}{chapter.113}%
+\contentsline {section}{\numberline {4.1}Introducción}{37}{section.114}%
+\contentsline {section}{\numberline {4.2}Diseño de la aplicación}{38}{section.115}%
+\contentsline {subsection}{\numberline {4.2.1}Prototipo realizado por Alfonso}{38}{subsection.116}%
+\contentsline {subsection}{\numberline {4.2.2}Prototipo realizado por Jorge}{43}{subsection.125}%
+\contentsline {section}{\numberline {4.3}Requisitos de la aplicación}{47}{section.131}%
+\contentsline {subsection}{\numberline {4.3.1}Herramientas}{47}{subsection.132}%
+\contentsline {subsection}{\numberline {4.3.2}Elementos}{48}{subsection.133}%
+\contentsline {section}{\numberline {4.4}Reglas de diseño}{50}{section.134}%
+\contentsline {chapter}{\numberline {5}PictUp! Arquitectura e implementación}{53}{chapter.136}%
+\contentsline {section}{\numberline {5.1}Introducción}{53}{section.137}%
+\contentsline {section}{\numberline {5.2}Arquitectura}{53}{section.138}%
+\contentsline {subsection}{\numberline {5.2.1}Arquitectura interna}{53}{subsection.139}%
+\contentsline {subsection}{\numberline {5.2.2}Arquitectura externa}{54}{subsection.144}%
+\contentsline {subsection}{\numberline {5.2.3}Cuadrícula}{55}{subsection.148}%
+\contentsline {section}{\numberline {5.3}Buscador de pictogramas}{58}{section.151}%
+\contentsline {subsection}{\numberline {5.3.1}Búsqueda}{59}{subsection.153}%
+\contentsline {subsection}{\numberline {5.3.2}Preajuste}{59}{subsection.155}%
+\contentsline {subsection}{\numberline {5.3.3}Historial de pictos}{61}{subsection.162}%
+\contentsline {subsection}{\numberline {5.3.4}PictoItem}{62}{subsection.164}%
+\contentsline {subsubsection}{\numberline {5.3.4.1}Editar Picto}{62}{subsubsection.166}%
+\contentsline {subsubsection}{\numberline {5.3.4.2}Reproducir sonido}{63}{subsubsection.168}%
+\contentsline {subsection}{\numberline {5.3.5}Reglas de diseño de usabilidad}{64}{subsection.171}%
+\contentsline {section}{\numberline {5.4}Traducir frase a pictogramas}{65}{section.172}%
+\contentsline {subsection}{\numberline {5.4.1}FraseItem}{66}{subsection.175}%
+\contentsline {subsection}{\numberline {5.4.2}Reglas de diseño de usabilidad}{67}{subsection.179}%
+\contentsline {section}{\numberline {5.5}Añadir imagen al tablero}{68}{section.180}%
+\contentsline {subsection}{\numberline {5.5.1}PhotoItem}{69}{subsection.184}%
+\contentsline {subsection}{\numberline {5.5.2}Reglas de diseño de usabilidad}{70}{subsection.187}%
+\contentsline {section}{\numberline {5.6}Listas de pictogramas}{71}{section.188}%
+\contentsline {subsection}{\numberline {5.6.1}Añadir y crear a una lista}{71}{subsection.189}%
+\contentsline {subsection}{\numberline {5.6.2}Gestión de listas de pictogramas}{72}{subsection.193}%
+\contentsline {subsection}{\numberline {5.6.3}Reglas de diseño de usabilidad}{73}{subsection.195}%
+\contentsline {section}{\numberline {5.7}Texto}{74}{section.196}%
+\contentsline {subsection}{\numberline {5.7.1}TextoItem}{74}{subsection.198}%
+\contentsline {subsection}{\numberline {5.7.2}Reglas de diseño de usabilidad}{75}{subsection.201}%
+\contentsline {section}{\numberline {5.8}Iconos}{76}{section.202}%
+\contentsline {subsection}{\numberline {5.8.1}IconoItem}{77}{subsection.207}%
+\contentsline {subsection}{\numberline {5.8.2}Reglas de diseño de usabilidad}{78}{subsection.208}%
+\contentsline {section}{\numberline {5.9}Descargar Tablero}{78}{section.209}%
+\contentsline {section}{\numberline {5.10}Funcionalidades no implementadas}{79}{section.212}%
+\contentsline {subsection}{\numberline {5.10.1}Traducción de frase}{79}{subsection.213}%
+\contentsline {subsection}{\numberline {5.10.2}CORS}{80}{subsection.215}%
+\contentsline {subsection}{\numberline {5.10.3}Backend}{80}{subsection.218}%
+\contentsline {subsection}{\numberline {5.10.4}Añadir imagen}{81}{subsection.222}%
+\contentsline {subsection}{\numberline {5.10.5}Subtableros y cajón de pictogramas}{82}{subsection.226}%
+\contentsline {section}{\numberline {5.11}Despliegue de la aplicación}{82}{section.227}%
+\contentsline {section}{\numberline {5.12}Control de versiones y organización del desarrollo de PictUp!}{83}{section.234}%
+\contentsline {chapter}{\numberline {6}Evaluación}{85}{chapter.236}%
+\contentsline {section}{\numberline {6.1}Preparación de la evaluación}{85}{section.237}%
+\contentsline {section}{\numberline {6.2}Diseño de la evaluación}{86}{section.239}%
+\contentsline {section}{\numberline {6.3}Resultados de la evaluación}{88}{section.256}%
+\contentsline {subsection}{\numberline {6.3.1}Resultados del cuestionario ASQ}{89}{subsection.258}%
+\contentsline {subsection}{\numberline {6.3.2}Resultados del cuestionario SUS}{89}{subsection.263}%
+\contentsline {subsection}{\numberline {6.3.3}Observaciones de los usuarios}{89}{subsection.266}%
+\contentsline {section}{\numberline {6.4}Análisis de los resultados}{96}{section.267}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{99}{chapter.269}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{99}{section.270}%
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{100}{section.271}%
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{103}{chapter.272}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{103}{appendix.271}%
+\contentsline {chapter}{\numberline {A}Título}{105}{appendix.273}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{105}{appendix.272}%
+\contentsline {chapter}{\numberline {B}Título}{107}{appendix.274}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{109}{appendix*.275}%

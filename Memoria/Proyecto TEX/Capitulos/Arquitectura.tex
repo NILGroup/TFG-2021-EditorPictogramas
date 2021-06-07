@@ -19,9 +19,6 @@ La arquitectura de PictUp! puede distinguirse a dos niveles. A nivel interno se 
 
 \subsection{Arquitectura interna}
 
-\textcolor{red}{DEJAR MÁS CLARO QUE ES EL STATE}
-
-
 La aplicación está compuesta principalmente por componentes\footnote{\url{https://reactjs.org/docs/react-component.html\#gatsby-focus-wrapper}} de React, los cuales son clases que deben contar obligatoriamente con un método \texttt{render()} y de manera opcional puede contar con el objeto \texttt{state}\footnote{\url{https://reactjs.org/docs/faq-state.html\#what-does-setstate-do}}. El objeto \texttt{state} permite almacenar distintas variables. La principal característica de este objeto es que al actualizar el valor de cualquiera de sus variables definidas en su interior, el componente vuelve a renderizarse. Para actualizar el valor de cualquier variable del \texttt{state}, ha de realizarse mediante el método \texttt{setState()}. Este método se realiza de manera asíncrona, por lo que los valores de \texttt{state} generalmente van ligados a datos que serán mostrados en el método renderización. De esta manera,  \texttt{state} será de gran ayuda para actualizar la interfaz con la que interactúa el usuario. 
 Los componentes pueden tener variables fuera del objeto \texttt{state} si no se va a utilizar para la renderización.  
 
@@ -101,7 +98,7 @@ Cada ítem cuenta con un renderizado y funcionalidades adecuadas para cada eleme
 \end{figure}
 
 
-Una vez explicado cómo funciona a nivel interno la aplicación, se procederá a explicar a ver el funcionamiento de las distintas herramientas y las posibilidades que ofrecen. En caso de que una herramienta cree un ítem en la cuadrícula, se explicarán asimismo sus opciones y posibilidades. 
+Una vez explicado cómo funciona a nivel interno la aplicación, se procederá a explicar a ver el funcionamiento de las distintas herramientas y las posibilidades que ofrecen. En caso de que una herramienta cree un ítem en la cuadrícula, se explicarán sus opciones y posibilidades. Asimismo se especificarán las reglas de diseño utilizadas en cada una de ellas.
 
 
 
@@ -255,7 +252,6 @@ Tiene un funcionamiento igual al de preajuste de picto aunque se han añadido do
 La función del botón es la de reproducir mediante audio el nombre del pictograma. Como se ha visto anteriormente, los pictogramas devueltos por la API pueden contar con locución si se consulta el parámetro “\textit{hasLocution}”. En caso de contar con locución, se accede a la URL\footnote{\url{https://privateapi.arasaac.org/api/locutions/es/}} que contiene la pista de voz asociada y se reproduce. 
 En caso de no contar con locución se ha usado \textit{SpeechSynthesisUtterance}\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance}} para que haga una función similar en el resto de pictogramas. Está configurada para que sintetize la voz en español y es compatible con todos los navegadores modernos.
 
- \textcolor{red}{Meter una intro ya que no se ha dicho nunca que se iba a hacer esto y contar las raglas en un capitulo, el de herramientas???}
 \subsection{Reglas de diseño de usabilidad}
  Las reglas de diseño utilizadas en esta funcionalidad han sido:
 
