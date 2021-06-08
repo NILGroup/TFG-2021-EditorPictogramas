@@ -45,17 +45,19 @@ class NILtraductor extends Component {
 
         console.log(query)
 
-        fetch('http://localhost:5000/frase2picto', {
+        fetch('https://holstein.fdi.ucm.es/nil-ws-api/v1/texto/pictogramas', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: [
+                ["Content-Type", "application/json"],
+                ["Content-Type", "text/plain"]
+            ],
+            credentials: "include",
             body: JSON.stringify({ texto: query })
         })
             .then(response => response.json())
             .then(result => {
-                this.setState({ tradPic: result.traduccion }, () => this.parseFrase(result))
-                //console.log(result)
+                //this.setState({ tradPic: result.traduccion }, () => this.parseFrase(result))
+                console.log("NIL:", result)
 
             }
             )
@@ -197,14 +199,14 @@ class NILtraductor extends Component {
 
 
         if (dir === -1) {
-            console.log("atras",selAux[pos])
+            console.log("atras", selAux[pos])
             if (selPosItem != 0) {
                 selAux[pos] = selAux[pos] - 1
             }
             else if (selPosItem == 0) {
                 selAux[pos] = item.length - 1
             }
-            console.log("atras",selAux[pos])
+            console.log("atras", selAux[pos])
         }
 
         this.setState({
@@ -244,6 +246,9 @@ class NILtraductor extends Component {
     }
 
     tradARASAAC = (frase) => {
+
+        this.postNIL(frase)
+
         const promises = frase.map(item => {
             return fetch(`https://api.arasaac.org/api/pictograms/es/search/` + item)
                 .then(response => {

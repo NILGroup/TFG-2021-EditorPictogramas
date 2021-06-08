@@ -29,20 +29,18 @@ class Upload extends React.Component {
 
   }
 
-  sendPhoto = (e) => {
+  sendPhoto = (inputImage) => {
     const img = new Image();
-    img.src = window.URL.createObjectURL(e);
+    img.src = window.URL.createObjectURL(inputImage);
     img.addEventListener('load', () => {
       var file = {
-        url: URL.createObjectURL(e),
+        url: URL.createObjectURL(inputImage),
         width: img.width,
         height: img.height,
         text: this.state.text,
       }
       this.props.sendData(file);
     });
-
-    //this.props.sendData(e);
   }
 
   drag_and_dropFile = (loadedFiles) => {

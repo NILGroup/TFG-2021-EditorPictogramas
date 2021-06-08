@@ -1,8 +1,8 @@
 {
-  "name": "dnd-a11y-patterns",
+  "name": "pictup",
   "version": "0.1.1",
   "private": true,
-  "homepage": "https://salesforce-ux.github.io/dnd-a11y-patterns",
+  "homepage": "https://holstein.fdi.ucm.es/tfg/2021/pictup",
   "dependencies": {
     "@salesforce-ux/design-system": "^2.4.1",
     "axios": "^0.21.1",
@@ -43,7 +43,6 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
       "not op_mini all"
     ],
     "development": [
