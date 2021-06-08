@@ -17,6 +17,7 @@ A continuación se describirán estas y otras tecnologías estudiadas de cara al
 
 
 \section{API Arasaac}
+\label{cap3:sec:apiarasaac}
 ARASAAC facilita la obtención de recursos pictográficos mediante su API\footnote{\url{https://arasaac.org/developers/api}}. Una API es una interfaz que reúne un conjunto de funciones y métodos, accesibles para otras aplicaciones. En el caso de la API de ARASAAC, esta está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
 Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas creados por usuarios haciendo uso de los pictogramas de ARASAAC. Respecto a los pictogramas, los métodos que se han utilizado en este trabajo son:
 
@@ -78,14 +79,14 @@ Respecto a otros Frameworks como Angular, vemos que React no ofrece todas las fu
 
 React Drag and Drop\footnote{\url{https://react-dnd.github.io/react-dnd/about}} es una biblioteca que permite arrastrar componentes en React. Su principal uso en la aplicación es la recolocación de los componentes del tablero de manera cuadriculada. Esto permite colocar con precisión los elementos en el tablero, lo cual era un requisito indispensable para poder hacer tableros organizados. De otra manera podrían quedar algunos componentes unos pocos píxeles por encima de otros, dando un resultado sin alinear y poco profesional.
 
-\subsection{Prototipos: React Drag and Drop:}
+\subsection{Prototipos}
 
 Otro objetivo es el de la interacción de los componentes en una superficie cuadriculada. Tras experimentar con distintas bibliotecas de JavaScript como Interact JS \footnote{\url{https://interactjs.io/}} no obtuvimos el resultado esperado pues el desplazamiento de los objetos no era lo suficientemente preciso.
 
 React tenía la biblioteca Drag and Drop que permite desplazar los componentes. La principal diferencia entre Drag and Drop y Interact JS, es que al mover un elemento, “Interact JS”  deja unos píxeles de diferencia y “Drag and Drop.” permite mover objetos en intervalos definidos, como poder mover un objeto de 10 píxeles en 10 píxeles.
 
 \section{JSZip}
-
+\label{cap3:sec:jszip}
 JSZip\footnote{\url{https://stuk.github.io/jszip/}} es una biblioteca de Javascript que mediante una API permite crear y cargar archivos comprimidos en formato \textit{ZIP}. Será el método para importar y exportar elementos de la aplicación.
 \begin{itemize}
 	\item \textbf{Generar ZIP}: Crea un zip con todo lo que haya creado el usuario, como las fotos que haya subido, la posición de los pictogramas colocados y su información asociada.
@@ -93,8 +94,8 @@ JSZip\footnote{\url{https://stuk.github.io/jszip/}} es una biblioteca de Javascr
 \end{itemize}	
 
 
-\section{Progresive Web Application}
-
+\section{Progressive Web Application}
+\label{cap3:sec:pwa}
 
 Las aplicaciones web progresivas (PWA)\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}} son aplicaciones instalables en ordenador o dispositivos Android. Están a medio camino entre una aplicación nativa\footnote{\url{https://web.dev/what-are-pwas/}}  y una web, pues ofrecen más posibilidades que una web convencional y no requiere de instaladores o ser descargadas de tiendas de aplicaciones.
     
