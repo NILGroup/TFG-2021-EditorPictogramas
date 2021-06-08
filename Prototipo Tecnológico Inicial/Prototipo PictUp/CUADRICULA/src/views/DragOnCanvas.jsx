@@ -792,7 +792,6 @@ export class DragOnCanvasExample extends React.Component {
                     <Tab>Busqueda simple</Tab>
                     <Tab>Traducción de frase</Tab>
                     <Tab>Añadir imagen</Tab>
-                    <Tab>Lista de pictos</Tab>
                   </TabList>
 
                   <TabPanel>
@@ -805,26 +804,6 @@ export class DragOnCanvasExample extends React.Component {
                   <TabPanel>
                     <UploadPhoto sendData={this.addPictoFromPhoto} />
                   </TabPanel>
-                  <TabPanel>
-
-                          <div className="row">
-                          <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
-                            <div className="col-8">
-                              <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
-                                <option value={"---"}>{ }</option>
-                                {optionColection}
-                              </select>
-                            </div>
-                            <div className="col-4 mt-3 mb-2">
-                              {this.mostrarBorrar()}
-                            </div>
-                          </div>
-                          {this.mostrarColecciones()}
-
-                  </TabPanel>
-
-
-
                 </Tabs>
               </div>
 
@@ -944,7 +923,27 @@ export class DragOnCanvasExample extends React.Component {
 
               {this.mostrarAletrsBorrado()}
 
+              <div className="card mt-4 mb-3 ml-3" >
+                <h5 className="card-header" style={{ backgroundColor: '#ADD8E6', fontSize: '18px' }}> <strong><i className="fas fa-folder-open"></i> Mis listas de pictogramas</strong></h5>
+                <div className="card-body">
+                  <h6 className="card-subtitle mt-3 mb-2 text-muted"><Collection sendColeccion={this.importarColecciones} coleccionesActuales={this.state.colection} /></h6>
+                  <div className="card-text">
+                    <div className="row">
+                      <div className="col-8">
+                        <select className="form-control mt-3 mb-2" value={this.state.value} onChange={this.coleccionToShow}>
+                          <option value={"---"}>{ }</option>
+                          {optionColection}
+                        </select>
+                      </div>
+                      <div className="col-4 mt-3 mb-2">
+                        {this.mostrarBorrar()}
+                      </div>
+                    </div>
+                    {this.mostrarColecciones()}
 
+                  </div>
+                </div>
+              </div>
 
 
             </div>
@@ -968,7 +967,7 @@ export class DragOnCanvasExample extends React.Component {
                   this.state.photoArray.map((photo, index) => {
                     return (
 
-                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15} height={15} minWidth={3} minHeight={3} key={photo.id}
+                      <CanvasImage label={photo.body} idPicto={photo.id} x={10} y={2} width={15 * photo.scale} height={photo.height} minWidth={3} minHeight={3} key={photo.id}
                         imageURL={photo.url}
                         sendData={this.handleDeleteImage}
                       />

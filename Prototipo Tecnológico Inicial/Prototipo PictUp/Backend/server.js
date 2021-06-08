@@ -14,9 +14,21 @@ app.use(express.json());
 
 const requestEndpoint = "http://hypatia.fdi.ucm.es:5223/PICTAR/traducir/hola buenos dias a todos";
 const tradPicto = "https://holstein.fdi.ucm.es/nil-ws-api/v1/texto/pictogramas"
+// This function runs if the http://localhost:5000/getData endpoint
+// is requested with a GET request
+app.get('/getData', cors(corsOptions), async (req, res) => {
+    const fetchOptions = {
+        method: 'GET'
+    }
+    const response = await fetch(requestEndpoint, fetchOptions);
+    const jsonResponse = await response.json();
+    res.json(jsonResponse);
+});
 
 app.post('/frase2picto', cors(corsOptions), async (req, res) => {
-	console.log(req.body.texto)
+	// console.log(req.body.texto)
+	// console.log(":(")
+
 	const fetchOptions = {
 		method: "post",
 		headers: {
@@ -38,5 +50,5 @@ app.post('/frase2picto', cors(corsOptions), async (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log('App listening at http://localhost:5000');
+    console.log('Example app listening at http://localhost:${PORT}');
 });

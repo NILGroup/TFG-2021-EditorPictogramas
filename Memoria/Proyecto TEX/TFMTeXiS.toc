@@ -87,18 +87,17 @@
 \contentsline {chapter}{\numberline {6}Evaluación}{85}{chapter.236}%
 \contentsline {section}{\numberline {6.1}Preparación de la evaluación}{85}{section.237}%
 \contentsline {section}{\numberline {6.2}Diseño de la evaluación}{86}{section.239}%
-\contentsline {section}{\numberline {6.3}Resultados de la evaluación}{89}{section.256}%
+\contentsline {section}{\numberline {6.3}Resultados de la evaluación}{88}{section.256}%
 \contentsline {subsection}{\numberline {6.3.1}Resultados del cuestionario ASQ}{89}{subsection.258}%
 \contentsline {subsection}{\numberline {6.3.2}Resultados del cuestionario SUS}{89}{subsection.263}%
 \contentsline {subsection}{\numberline {6.3.3}Observaciones de los usuarios}{89}{subsection.266}%
-\contentsline {section}{\numberline {6.4}Evaluación adicional}{96}{section.267}%
-\contentsline {section}{\numberline {6.5}Análisis de los resultados}{97}{section.268}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{99}{chapter.270}%
-\contentsline {section}{\numberline {7.1}Conclusiones}{99}{section.271}%
-\contentsline {section}{\numberline {7.2}Trabajo futuro}{100}{section.272}%
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{103}{chapter.273}%
+\contentsline {section}{\numberline {6.4}Análisis de los resultados}{96}{section.267}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{99}{chapter.269}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{99}{section.270}%
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{100}{section.271}%
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{103}{chapter.272}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {A}Título}{105}{appendix.274}%
+\contentsline {chapter}{\numberline {A}Título}{105}{appendix.273}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {B}Título}{107}{appendix.275}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{109}{appendix*.276}%
+\contentsline {chapter}{\numberline {B}Título}{107}{appendix.274}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{109}{appendix*.275}%

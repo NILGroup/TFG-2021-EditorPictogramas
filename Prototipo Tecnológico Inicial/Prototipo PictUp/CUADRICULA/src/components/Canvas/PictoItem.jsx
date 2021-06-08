@@ -8,7 +8,6 @@ import Rnd from 'react-rnd';
 import IconButton from '../Icon/IconButton';
 import './CanvasItem.css';
 import FormPicto from './Form/formPicto'
-import Explosion from './explosion.gif'
 
 import ReactModal from 'react-modal';
 
@@ -75,12 +74,11 @@ class PictoItem extends Component {
       borderColor: "white",
       borderWidth: "0",
 
-      conf: this.props.config,
-      seconds: 1
+      conf: this.props.config
 
     }
 
-    this. seconds = 0
+
     this.lockAspectRatio = true;
 
     // Only allow drag-resize from bottomRight
@@ -97,32 +95,6 @@ class PictoItem extends Component {
 
 
   }
-
-  componentDidMount() {
-    console.log("Hola")
-    this.myInterval = setInterval(() => {
-      this.setState(({ seconds }) => ({
-        seconds: seconds - 1
-      }))
-      if(this.state.seconds == 0) clearInterval(this.myInterval)
-      console.log(this.state.seconds)
-    }, 800)
-  }
-
-  renderBoom(){
-    if(this.state.seconds != 0)
-    return(
-      <img src={Explosion} alt="BOOM" />
-    )
-  }
-
-  startTimer() {
-
-    const diff = Date.now() - 5;
-
-  }
-
-
 
   increaseZIndex() {
     this.setState({ zIndex: this.state.zIndex + 1 });
@@ -377,10 +349,9 @@ class PictoItem extends Component {
   handlePlaySound() {
 
     var api = this.props.apiObject
-    var palabra = api.keywords[0].keyword
 
     if (api.keywords[0].hasLocution) {
-      var audio = new Audio("https://privateapi.arasaac.org/api/locutions/es/" + palabra);
+      var audio = new Audio("https://privateapi.arasaac.org/api/locutions/es/" + api.keywords[0].keyword);
       audio.play();
     }
     else {
@@ -428,14 +399,6 @@ class PictoItem extends Component {
   /** ---- Resizing element END ---- **/
 
   renderPicto() {
-
-    if(this.state.seconds != 0){
-          return(
-      <img src={Explosion} alt="BOOM" />
-    )
-    }
-
-
     if (this.state.conf.hasBorder) {
       return (
         <img style={{

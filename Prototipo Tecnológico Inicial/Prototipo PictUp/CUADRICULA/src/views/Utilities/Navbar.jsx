@@ -13,11 +13,11 @@ class Navbar extends Component {
             <nav className="NavbarItems">
                 <h1 className="navbar-logo" style={{ cursor: 'default', fontSize: '30px' }} >Pict Up! <img src={"./img/PictUpIcon.png"} style={{ marginTop: '-10px' }} height="50" width="50" /></h1>
 
-                <div className="menu-icon" title="Realiza el cuestionario">
+                <div className="menu-icon" title="Realiza el cuestionario" onClick={() => window.open("https://forms.gle/YxeVEscH32pqDsE4A", "_blank")}>
 
 
-                    <button className="btn btn-info" title="Realiza el cuestionario" style={{ marginRight: '10px', marginTop:'-10px'  }} onClick={() => window.open("https://forms.gle/LqUcfv5Go2TPq6Dx6", "_blank")}>
-                        <span className="fas fa-vote-yea"></span> ¡Ayúdanos completando el formulario!
+                    <button className="btn btn-info" title="Añadir el pictograma a mis listas de pictogramas" style={{ marginRight: '50px', marginTop:'-10px'  }} onClick={() => window.open("https://forms.gle/LqUcfv5Go2TPq6Dx6", "_blank")}>
+                        <span className="fas fa-vote-yea"></span> ¡Realizar el formulario!
                     </button>
                 </div>
 
