@@ -66,7 +66,7 @@ Los pictogramas pueden ser personalizados, como se puede ver en la Figura \ref{f
 Para probar el acceso a la API se creó un sencillo buscador de pictogramas utilizando el método \textit{bestSearch} para comprender el funcionamiento de la API y las posibilidades que ésta ofrece. Aunque inicialmente simplemente muestra el pictograma de una palabra introducida, durante el desarrollo añadimos la posibilidad de cambiar el color de pelo, tono de piel y otros atributos de los pictogramas.
 
 \section{React}
-
+\label{cap3:sec:react}
 React es una librería de Javascript pensada para desarrollar interfaces de usuario. Esta librería fue desarrollada por Facebook buscando la creación de interfaces de una manera sencilla y con un alto rendimiento. 
 React permite desarrollar tanto aplicaciones web como aplicaciones móviles de una manera ordenada y con menos líneas de código respecto a otros lenguajes como Javascript. El hecho de que React permita estructurar los distintos componentes de una aplicación ayuda tanto al desarrollo como mantenimiento de esta.
 Otra característica importante de React es que ya tiene implementadas muchas funcionalidades, por lo que puede ayudar a reducir el tiempo de desarrollo de la aplicación. Un ejemplo de esto es el hecho de tener las vistas asociadas a los datos, que permite que los datos mostrados se actualicen automáticamente sin necesidad de escribir nuevos fragmentos de código.
@@ -76,11 +76,11 @@ Respecto a otros Frameworks como Angular, vemos que React no ofrece todas las fu
 
 
 \subsection{Drag and Drop}
-
+\label{cap3:sec:draganddrop}
 React Drag and Drop\footnote{\url{https://react-dnd.github.io/react-dnd/about}} es una biblioteca que permite arrastrar componentes en React. Su principal uso en la aplicación es la recolocación de los componentes del tablero de manera cuadriculada. Esto permite colocar con precisión los elementos en el tablero, lo cual era un requisito indispensable para poder hacer tableros organizados. De otra manera podrían quedar algunos componentes unos pocos píxeles por encima de otros, dando un resultado sin alinear y poco profesional.
 
 \subsection{Prototipos}
-
+\label{cap3:sec:prototipos}
 Otro objetivo es el de la interacción de los componentes en una superficie cuadriculada. Tras experimentar con distintas bibliotecas de JavaScript como Interact JS \footnote{\url{https://interactjs.io/}} no obtuvimos el resultado esperado pues el desplazamiento de los objetos no era lo suficientemente preciso.
 
 React tenía la biblioteca Drag and Drop que permite desplazar los componentes. La principal diferencia entre Drag and Drop y Interact JS, es que al mover un elemento, “Interact JS”  deja unos píxeles de diferencia y “Drag and Drop.” permite mover objetos en intervalos definidos, como poder mover un objeto de 10 píxeles en 10 píxeles.

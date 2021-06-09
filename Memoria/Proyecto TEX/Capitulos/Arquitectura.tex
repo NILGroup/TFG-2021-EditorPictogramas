@@ -273,7 +273,7 @@ En caso de no contar con locución se ha usado \textit{SpeechSynthesisUtterance}
 
 
 \section{Traducir frase a pictogramas}
-
+\label{cap5:sec:traduccion}
 La herramienta de traducción de frase a pictograma se encuentra en la segunda pestaña que agrupa las herramientas para añadir pictogramas e imágenes, tal y como se puede ver en la Figura \ref{fig:traducirfraseinicial}. Cuenta con un ítem propio llamado FraseItem, que agrupa los pictogramas de la traducción para ser desplazados en bloque por la cuadrícula.
 
 La traducción de frase a pictogramas, como su nombre indica, ofrece una interfaz que permite al usuario escribir una frase y recibir la traducción en pictogramas. Nuevamente, en la Figura \ref{fig:traducirfraseinicial} se puede ver la interfaz inicial de la traducción a frase, muy similar a la vista en la búsqueda de picto en la Figura \ref{fig:buscarpicto2}. 
@@ -355,7 +355,7 @@ En la Figura \ref{fig:fraseitemmidificada} se puede ver un ejemplo de cómo qued
 
 
 \section{Añadir imagen al tablero}
-
+\label{cap5:sec:imagen}
 Añadir una imagen al tablero se encuentra en la tercera pestaña que agrupa todas las herramientas que añaden pictogramas o fotos a la cuadrícula. Como se puede ver en la Figura \ref{fig:cargarfotopestana}, su interfaz inicial consiste en un simple botón que carga una imagen del explorador de archivos del dispositivo. Está especificado que solo acepte archivos de tipo imagen, previniendo así posibles errores del usuario. 
 
 % TODO: \usepackage{graphicx} required
@@ -542,7 +542,7 @@ Para poder implementar este componente, en su estructura se guardará el texto q
 A diferencia de otros elementos como los pictogramas en los que el ancho y alto del ítem era proporcional, en el texto se permite ajustar ambas propiedades de manera independiente.
 
 \subsection{TextoItem}
-
+\label{cap5:sec:texto}
 Al añadir el texto a la cuadrícula, el ancho del ítem se ajustará al número de caracteres del texto. En la parte inferior del ítem como se ve en la Figura \ref{fig:fraseitem1} se encuentran tres botones, dos para reducir y aumentar el tamaño de la fuente del texto y otro para editar su contenido.
 
 % TODO: \usepackage{graphicx} required
@@ -580,7 +580,7 @@ Al pulsar sobre el icono del lápiz se desplegará el modal de edición de ítem
 
 
 \section{Iconos}
-
+\label{cap5:sec:iconos}
 La componente iconos permite añadir a la cuadrícula iconos y personalizarlos. Los iconos disponibles son: cuadrado, tick, barra y corazón, como se muestra en la Figura \ref{fig:herramientaitems}. La componente está formada por una estructura donde se guarda el tipo de icono, el color y la opacidad.
 
 % TODO: \usepackage{graphicx} required
