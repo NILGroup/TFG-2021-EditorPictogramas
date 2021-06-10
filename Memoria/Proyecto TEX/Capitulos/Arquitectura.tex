@@ -14,7 +14,7 @@ Una vez especificados las características y requisitos a implementar, se pudo e
 \section{Arquitectura}
 \label{cap5:arquitectura}
 
-La arquitectura de PictUp! puede distinguirse a dos niveles. A nivel interno se especificará la arquitectura de un componente de React, pues todas las ellos cuentan con un diseño similar. A nivel externo, se especificará cómo las distintas componentes desarrolladas interactúan entre ellas y se verá un esquema de la jerarquía de éstas. 
+La arquitectura de PictUp! puede distinguirse a dos niveles. A nivel interno se especificará la arquitectura de un componente de React, pues todos ellos cuentan con un diseño similar. A nivel externo, se especificará cómo las distintas componentes desarrolladas interactúan entre ellas y se verá un esquema de la jerarquía de éstas. 
 
 
 \subsection{Arquitectura interna}
@@ -25,7 +25,7 @@ Los componentes pueden tener variables fuera del objeto \texttt{state} si no se 
 
 El método \texttt{render()}\footnote{\url{https://es.reactjs.org/docs/rendering-elements.html }} se encarga de renderizar el html del componente. Dentro del render se podrán incluir los atributos que se hayan definido en el \texttt{state} u otros elementos como botones, selectores o campos de texto. 
 La característica principal que ofrece este método de React es que si se modifica un atributo del \texttt{state} del componente, automáticamente se mostrará en el navegador en nuevo valor que haya tomado. Otra característica que ofrece React es poder llamar desde el render a funciones externas dentro del componente que se encargan de devolver el fragmento html deseado. Esto sirve para organizar mejor el contenido y crear render condicionales, es decir, mostrar un contenido u otro en función de los valores que tomen un atributo del \texttt{state}.
-Además también se puede incluir dentro de la función render otros componentes de React, que pasará a ser la componente hija que puede recibir parámetros de entrada o salida mediante \texttt{props}. Las \texttt{props} son atributos de React que permiten enviar información entre componentes padres e hijos. Para acceder a los parámetros enviados desde la componente padre se hará utilizando \texttt{this.props}\footnote{\url{https://es.reactjs.org/docs/components-and-props.html }}.
+Además también se puede incluir dentro de la función render otros componentes de React, que pasará a ser el componente hija que puede recibir parámetros de entrada o salida mediante \texttt{props}. Las \texttt{props} son atributos de React que permiten enviar información entre componentes padres e hijos. Para acceder a los parámetros enviados desde el componente padre se hará utilizando \texttt{this.props}\footnote{\url{https://es.reactjs.org/docs/components-and-props.html }}.
 
 \subsection{Arquitectura externa}
 
@@ -45,7 +45,7 @@ Una vez vista la estructura de un componente, se puede ver en la Figura \ref{fig
 	
 	
 	\item \textbf{Barra de Herramientas}: en la zona izquierda de la aplicación se agrupan todas las herramientas disponibles. 
-	Esats son componentes que ofrecen una interfaz al usuario para añadir elementos a la cuadrícula. Algunas de estas herramientas cuentan con pantallas auxiliares en forma de modal, como es el caso de búsqueda de pictogramas o la función de descargar tablero. Cada una de las herramientas pueden retornar elementos con representación en la cuadrícula, los cuales serán denominados ítems. La información asociada a cada uno de estos ítems serán almacenados en el \texttt{state} de Main dependiendo de su tipo.
+	Estas son componentes que ofrecen una interfaz al usuario para añadir elementos a la cuadrícula. Algunas de estas herramientas cuentan con pantallas auxiliares en forma de modal, como es el caso de búsqueda de pictogramas o la función de descargar tablero. Cada una de las herramientas pueden retornar elementos con representación en la cuadrícula, los cuales serán denominados ítems. La información asociada a cada uno de estos ítems serán almacenados en el \texttt{state} de Main dependiendo de su tipo.
 	
 	\item \textbf{Tablero}: es el componente que mayor espacio abarca de la página, siendo la zona donde se desplazarán los elementos generados por las herramientas. El tablero se muestra en forma de cuadrícula. Sobre ésta se colocarán los ítems que tenga almacenados Main en su \texttt{state}.  Como se puede ver en la Figura \ref{fig:items} existen distintos tipos de ítem, como pictograma, texto o icono. Cada ítem está adecuado en función del tipo de contenido que se vaya a mostrar. Asimismo, los ítems cuentan con funcionalidades que les permiten cambiar sus propiedades. Por ejemplo, el que representa texto podrá modificar el tamaño de letra y contenido.  
 	
@@ -63,13 +63,13 @@ Una vez vista la estructura de un componente, se puede ver en la Figura \ref{fig
 \end{figure}
 	
 
-Para esquematizar cómo interactúan la distintas componentes, el Diagrama \ref{fig:diagramaarquitectura} representa la estructura interna de las componentes.
+Para esquematizar cómo interactúan la distintas componentes, la Figura \ref{fig:diagramaarquitectura} representa cómo se estructura la arquitectura externa.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{Imagenes/Bitmap/diagramaarquitectura}
-	\caption{Diagrama de las componentes de la aplicación.}
+	\caption{Diagrama de los componentes de la aplicación.}
 	\label{fig:diagramaarquitectura}
 \end{figure}
 
@@ -82,7 +82,7 @@ En esta sección se explicará el funcionamiento en detalle de la cuadrícula. P
 
 El empezar desde este proyecto facilitó el  tratamiento de eventos de desplazamiento (Drag and Drop), los cuales iban a ser de gran importancia para mover los distintos ítems de la aplicación. Además de gestionar estos eventos, cuenta con muchos parámetros que han sido modificados, como el ancho y alto inicial de cada ítem o la posibilidad de mantener la proporción de un ítem al ser redimensionado.
 
-El componente de cuadrícula o canvas es una cuadrícula de la cual se puede modificar su tamaño mediante la cantidad de filas y columnas y el intervalo en píxeles entre estas. El tamaño de la cuadrícula fue ajustado para que abarque el mayor ancho y alto posible teniendo en cuenta el espacio reservado para la barra de herramientas. Sobre esta componente canvas se colocarán otras componentes, que serán los ítems. 
+El componente de cuadrícula o canvas es una cuadrícula de la cual se puede modificar su tamaño mediante la cantidad de filas y columnas y el intervalo en píxeles entre estas. El tamaño de la cuadrícula fue ajustado para que abarque el mayor ancho y alto posible teniendo en cuenta el espacio reservado para la barra de herramientas. Sobre esta componente canvas se colocarán otros componentes, que serán los ítems. 
 
 Los ítems son elementos que se pueden colocar sobre la cuadrícula de la aplicación y permiten ser desplazados y redimensionados. Al haber distintos tipos de ítems cada uno de ellos mostrará el contenido de distintas maneras. Por ejemplo, los PictoItem tendrán en su interior una imagen del pictograma mientras que el TextoItem simplemente tendrá un texto. Dado que los ítems se encuentran dentro de la clase cuadrícula, reciben atributos tales como el intervalo de la cuadrícula. Esto permitirá a los ítems desplazarse en función de dicho intervalo, ayudando al usuario a mover y redimensionar los ítems con mayor precisión. Al existir distintos elementos que se pueden colocar en la cuadrícula (pictos, fotos, figuras, texto, etc), cada uno cuenta con su propio  ítem que los representa (PictoItem, FotoItem, FigureItem, etc).
 
@@ -98,7 +98,7 @@ Cada ítem cuenta con un renderizado y funcionalidades adecuadas para cada eleme
 \end{figure}
 
 
-Una vez explicado cómo funciona a nivel interno la aplicación, se procederá a explicar a ver el funcionamiento de las distintas herramientas y las posibilidades que ofrecen. En caso de que una herramienta cree un ítem en la cuadrícula, se explicarán sus opciones y posibilidades. Asimismo se especificarán las reglas de diseño utilizadas en cada una de ellas.
+Una vez explicado cómo funciona a nivel interno la aplicación, se procederá a explicar el funcionamiento de las distintas herramientas y las posibilidades que ofrecen. En caso de que una herramienta cree un ítem en la cuadrícula, se explicarán sus opciones y posibilidades. Asimismo se especificarán las reglas de diseño utilizadas en cada una de ellas (ver Sección \ref{cap5:reglasBusqueda}).
 
 
 
@@ -136,9 +136,9 @@ Respecto a las funciones que abarca el componente, se pueden distinguir tres tip
 
 Al pulsar sobre el icono de la lupa o pulsar intro se lanza la consulta a la API de ARASAAC por el método \texttt{bestSearch} mediante Fetch\footnote{\url{https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch}}. El fetching puede realizar y recibir peticiones en JavaScript de manera asíncrona de manera sencilla. De esta manera, hasta no recibir una respuesta en forma de JSON con la lista de pictogramas, no se enviará al método de renderización de pictogramas. 
 
-Cuando llegue dicha lista a este método, será cuando se use el preajuste para que la apariencia de los pictogramas sea de acuerdo a lo marcado por el usuario. En la Sección \ref{preajuste} se explica en detalle cómo se obtiene y modifica la URL que se muestra. Con la URL creada, se mostrarán los pictogramas devueltos por la API. El método de renderización añade a cada pictograma dos botones: añadir a la cuadrícula y guardar en una lista de pictos. En ambos casos se enviará el pictograma a la componente padre donde será tratado de maneras distintas. Respecto a cómo será tratado el pictograma al añadirlo a una lista se verá detalladamente en la Sección \ref{listapictos} (Lista de Pictos).
+Cuando llegue dicha lista a este método, será cuando se use el preajuste para que la apariencia de los pictogramas sea de acuerdo a lo marcado por el usuario. En la Sección \ref{preajuste} se explica en detalle cómo se obtiene y modifica la URL que se muestra. Con la URL creada, se mostrarán los pictogramas devueltos por la API. El método de renderización añade a cada pictograma dos botones: añadir a la cuadrícula y guardar en una lista de pictos. En ambos casos se enviará el pictograma a el componente padre donde será tratado de maneras distintas. Respecto a cómo será tratado el pictograma al añadirlo a una lista se verá detalladamente en la Sección \ref{listapictos} (Lista de Pictos).
 
-En caso de añadirlo a la cuadrícula, primero guardará el pictograma en el historial de pictos y posteriormente se enviará a la componente padre (dragOnCanvas).  Éste recibiría el pictograma que ha devuelto la API de ARASAAC junto a sus parámetros y el preajuste aplicado a dicho picto. Antes de ver el funcionamiento del nuevo ítem que aparecerá en la cuadrícula, es importante conocer el funcionamiento del preajuste y el historial.
+En caso de añadirlo a la cuadrícula, primero guardará el pictograma en el historial de pictos y posteriormente se enviará a el componente padre (dragOnCanvas).  Éste recibiría el pictograma que ha devuelto la API de ARASAAC junto a sus parámetros y el preajuste aplicado a dicho picto. Antes de ver el funcionamiento del nuevo ítem que aparecerá en la cuadrícula, es importante conocer el funcionamiento del preajuste y el historial.
 
 
 \subsection{Preajuste}
@@ -190,7 +190,7 @@ Respecto a la construcción de las URLs se realiza de la siguiente manera:
 	
 	\item Dichas opciones deben estar  en un orden concreto utilizando los valores obtenidos del preajuste y el pictograma a crear. Por ejemplo, si se va a crear la URL del  pictograma “avión”, los ajustes relacionados con el color de pelo o piel no se aplicarían, ya que el picto no lo permite.
 	 
-	\item Un resultado posible para \texttt{option} sería: \texttt{\_action-future\_hair-020100 \_skin-A65C17} Brevemente, cada etiqueta que se añade significa: \\ \texttt{\_action-future} que añade la flecha en la esquina superior derecha indicando futuro y \texttt{hair}, y \texttt{skin} van asociados a su color hexadecimal correspondiente obtenido del preajuste. Si la etiqueta de \texttt{hair} fuera antes que la de \texttt{skin}, la URL creada no funciona. De ahí la importancia del orden.
+	\item Un resultado posible para \texttt{option} sería: \texttt{\_action-future\_hair-020100 \_skin-A65C17}. El significado de cada etiqueta: \\ \texttt{\_action-future} añade la flecha en la esquina superior derecha indicando futuro y \texttt{hair}, y \texttt{skin} van asociados a su color hexadecimal correspondiente obtenido del preajuste. Si la etiqueta de \texttt{hair} fuera antes que la de \texttt{skin}, la URL creada no funciona. De ahí la importancia del orden.
 	
 	\item La URL creada se usa en cada pictograma mostrado en función de los preajustes, tal y como se puede observar en la Figura \ref{fig:buscarpictopreajuste}.
 	
@@ -336,6 +336,7 @@ En la Figura \ref{fig:fraseitemmidificada} se puede ver un ejemplo de cómo qued
 \end{figure}
 
 \subsection{Reglas de diseño de usabilidad}
+\label{cap5:reglasBusqueda}
  Las reglas de diseño utilizadas en esta funcionalidad han sido:
  
 \begin{itemize}
@@ -581,7 +582,7 @@ Al pulsar sobre el icono del lápiz se desplegará el modal de edición de ítem
 
 \section{Iconos}
 \label{cap5:sec:iconos}
-La componente iconos permite añadir a la cuadrícula iconos y personalizarlos. Los iconos disponibles son: cuadrado, tick, barra y corazón, como se muestra en la Figura \ref{fig:herramientaitems}. La componente está formada por una estructura donde se guarda el tipo de icono, el color y la opacidad.
+El componente icono permite añadir a la cuadrícula iconos y personalizarlos. Los iconos disponibles son: cuadrado, tick, barra y corazón, como se muestra en la Figura \ref{fig:herramientaitems}. El componente está formada por una estructura donde se guarda el tipo de icono, el color y la opacidad.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -671,15 +672,13 @@ NIL Web Service\footnote{\url{https://holstein.fdi.ucm.es/nil-ws-api/}} es una A
 
 Originalmente la traducción de pictogramas en esta aplicación fue creada específicamente para trabajar con esta API. No obstante también ha causado varios inconvenientes, relativos a los pictogramas que usa la API y los errores causados por CORS. 
 
-La API cuenta con una base de datos propia con una gran cantidad de pictogramas. Pero al traducir un texto a pictogramas, esta devuelve por cada palabra o lema, una lista de identificadores. En su mayoría dichos identificadores coinciden con los de los pictogramas de ARASAAC, pero existen otros que no. Estos pictogramas que no comparten identificador con los de ARASAAC suponen un problema, ya que no se puede obtener toda la información deseada, como por ejemplo el texto, audio y modificaciones. Es por ello que PictoItem se modificó para incluir estos pictogramas suprimiendo la posibilidad de personalizar o reproducir el audio.
+La API cuenta con una base de datos propia con una gran cantidad de pictogramas. Pero al traducir un texto a pictogramas, esta devuelve por cada palabra o lema, una lista de identificadores. En su mayoría dichos identificadores coinciden con los de los pictogramas de ARASAAC, pero existen otros que no. Estos pictogramas que no comparten identificador con los de ARASAAC suponen un problema, ya que no se puede obtener toda la información deseada, como por ejemplo el texto, audio y modificaciones. Es por ello que PictoItem se modificó para incluir estos pictogramas suprimiendo la posibilidad de personalizar o reproducir el audio. A continuación se especificará sobre el funcionamiento y problemática asociada a CORS.
 
-\subsection{CORS}
 
-Cross Origin Resource Sharing\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS}}  , es un mecanismo de cabeceras http que permite a un servidor dar permiso a otros dominios para cargar recursos del mismo. Por razones de seguridad los navegadores restringen las peticiones de dominio cruzado desde los scripts del navegador. 
+Cross Origin Resource Sharing\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS}}, es un mecanismo de cabeceras http que permite a un servidor dar permiso a otros dominios para cargar recursos del mismo. Por razones de seguridad los navegadores restringen las peticiones de dominio cruzado desde los scripts del navegador. 
 
 
 Como el servicio de traducción de NIL-WS-API sigue operativo pero descontinuado, no cuenta con la configuración CORS y por tanto no puede recibir peticiones POST de otras webs. Después de comprender el problema se estudió que la solución es crear un backend para PictUp!. Dicho backend está creado exclusivamente para resolver esta petición. El componente de traducción envía la petición al backend, el cual la resolverá gestionando los CORS. En la próxima Sección \ref{backend} se explicará cómo fue creado. 
-
 
 Después de crear y configurar el backend de manera local, y ver que el componente funcionaba sin complicaciones, apareció otro error con la biblioteca html2canvas\footnote{\url{https://html2canvas.hertzen.com/}}, encargada de crear una imagen a partir de la cuadrícula y sus ítems. Esto es debido a que las imágenes que retorna NIL-WS-API son un recurso externo y la biblioteca htm2canvas desconoce su fuente. Por ello al descargar la imagen del tablero estos pictogramas no aparecían representados dejando un hueco en blanco.
 

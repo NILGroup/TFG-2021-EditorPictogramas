@@ -75,6 +75,7 @@ constantes,guionado,Cascaras/bibliografia,config%
 \include{config}
 
 % Paquete de la plantilla
+\usepackage[hyphens]{url}
 \usepackage{TeXiS/TeXiS}
 
 % Incluimos el fichero con comandos de constantes
@@ -136,16 +137,19 @@ constantes,guionado,Cascaras/bibliografia,config%
 \pagestyle{fancy}
 \restauraCabecera
 
+\include{Capitulos/Introduccion}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Si el TFM se escribe en ingles, comentar las siguientes líneas 
 % porque no hace falta incluir nuevamente la Introducción en inglés
+\addtocounter{chapter}{-1} 
 \begin{otherlanguage}{english}
 \include{Capitulos/Introduction}
 \end{otherlanguage}
-\addtocounter{chapter}{-1} 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{Capitulos/Introduccion}
+
 \include{Capitulos/EstadoDeLaCuestion}
 \include{Capitulos/Tecnologías}
 \include{Capitulos/PictUp}
@@ -154,7 +158,6 @@ constantes,guionado,Cascaras/bibliografia,config%
 \include{Capitulos/Evaluación}
 %\include{Capitulos/Capitulo5}
 \include{Capitulos/ConclusionesTrabajoFuturo}
-\include{Capitulos/AportacionesIndividuales}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Si el TFM se escribe en inglés, comentar las siguientes líneas 
@@ -165,6 +168,7 @@ constantes,guionado,Cascaras/bibliografia,config%
 \end{otherlanguage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\include{Capitulos/AportacionesIndividuales}
 
 % Apéndices
 \appendix
