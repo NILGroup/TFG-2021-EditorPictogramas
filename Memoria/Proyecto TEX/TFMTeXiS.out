@@ -19,89 +19,89 @@
 \BOOKMARK [2][-]{subsection.32}{Sclera}{section.21}% 19
 \BOOKMARK [2][-]{subsection.34}{Mulberry Symbols}{section.21}% 20
 \BOOKMARK [2][-]{subsection.40}{Minspeak}{section.21}% 21
-\BOOKMARK [2][-]{subsection.45}{ARASAAC}{section.21}% 22
-\BOOKMARK [1][-]{section.52}{Aplicaciones basadas en pictogramas}{chapter.18}% 23
-\BOOKMARK [2][-]{subsection.57}{Pictoselector}{section.52}% 24
-\BOOKMARK [2][-]{subsection.62}{Editor ARASAAC}{section.52}% 25
-\BOOKMARK [2][-]{subsection.68}{Piktoplus}{section.52}% 26
-\BOOKMARK [2][-]{subsection.73}{Pictar}{section.52}% 27
-\BOOKMARK [2][-]{subsection.78}{PicTableros}{section.52}% 28
-\BOOKMARK [2][-]{subsection.82}{Symbo Talk}{section.52}% 29
-\BOOKMARK [2][-]{subsection.85}{LetMe Talk}{section.52}% 30
-\BOOKMARK [2][-]{subsection.88}{Jocomunico}{section.52}% 31
-\BOOKMARK [1][-]{section.91}{Comparativa de las herramientas analizadas}{chapter.18}% 32
-\BOOKMARK [0][-]{chapter.93}{Tecnolog\355as}{}% 33
-\BOOKMARK [1][-]{section.94}{Introducci\363n}{chapter.93}% 34
-\BOOKMARK [1][-]{section.96}{API Arasaac}{chapter.93}% 35
-\BOOKMARK [2][-]{subsection.100}{Prototipo API ARASAAC}{section.96}% 36
-\BOOKMARK [1][-]{section.101}{React}{chapter.93}% 37
-\BOOKMARK [2][-]{subsection.102}{Drag and Drop}{section.101}% 38
-\BOOKMARK [2][-]{subsection.104}{Prototipos}{section.101}% 39
-\BOOKMARK [1][-]{section.106}{JSZip}{chapter.93}% 40
-\BOOKMARK [1][-]{section.108}{Progressive Web Application}{chapter.93}% 41
-\BOOKMARK [0][-]{chapter.111}{Requisitos y dise\361o}{}% 42
-\BOOKMARK [1][-]{section.112}{Introducci\363n}{chapter.111}% 43
-\BOOKMARK [1][-]{section.113}{Dise\361o de la aplicaci\363n}{chapter.111}% 44
-\BOOKMARK [2][-]{subsection.114}{Prototipo realizado por Alfonso}{section.113}% 45
-\BOOKMARK [2][-]{subsection.123}{Prototipo realizado por Jorge}{section.113}% 46
-\BOOKMARK [1][-]{section.129}{Requisitos de la aplicaci\363n}{chapter.111}% 47
-\BOOKMARK [2][-]{subsection.130}{Herramientas}{section.129}% 48
-\BOOKMARK [2][-]{subsection.131}{Elementos}{section.129}% 49
-\BOOKMARK [1][-]{section.132}{Reglas de dise\361o}{chapter.111}% 50
-\BOOKMARK [0][-]{chapter.134}{PictUp! Arquitectura e implementaci\363n}{}% 51
-\BOOKMARK [1][-]{section.135}{Introducci\363n}{chapter.134}% 52
-\BOOKMARK [1][-]{section.136}{Arquitectura}{chapter.134}% 53
-\BOOKMARK [2][-]{subsection.137}{Arquitectura interna}{section.136}% 54
-\BOOKMARK [2][-]{subsection.142}{Arquitectura externa}{section.136}% 55
-\BOOKMARK [2][-]{subsection.146}{Cuadr\355cula}{section.136}% 56
-\BOOKMARK [1][-]{section.149}{Buscador de pictogramas}{chapter.134}% 57
-\BOOKMARK [2][-]{subsection.151}{B\372squeda}{section.149}% 58
-\BOOKMARK [2][-]{subsection.153}{Preajuste}{section.149}% 59
-\BOOKMARK [2][-]{subsection.160}{Historial de pictos}{section.149}% 60
-\BOOKMARK [2][-]{subsection.162}{PictoItem}{section.149}% 61
-\BOOKMARK [2][-]{subsection.169}{Reglas de dise\361o de usabilidad}{section.149}% 62
-\BOOKMARK [1][-]{section.170}{Traducir frase a pictogramas}{chapter.134}% 63
-\BOOKMARK [2][-]{subsection.173}{FraseItem}{section.170}% 64
-\BOOKMARK [2][-]{subsection.177}{Reglas de dise\361o de usabilidad}{section.170}% 65
-\BOOKMARK [1][-]{section.178}{A\361adir imagen al tablero}{chapter.134}% 66
-\BOOKMARK [2][-]{subsection.182}{PhotoItem}{section.178}% 67
-\BOOKMARK [2][-]{subsection.185}{Reglas de dise\361o de usabilidad}{section.178}% 68
-\BOOKMARK [1][-]{section.186}{Listas de pictogramas}{chapter.134}% 69
-\BOOKMARK [2][-]{subsection.187}{A\361adir y crear a una lista}{section.186}% 70
-\BOOKMARK [2][-]{subsection.191}{Gesti\363n de listas de pictogramas}{section.186}% 71
-\BOOKMARK [2][-]{subsection.193}{Reglas de dise\361o de usabilidad}{section.186}% 72
-\BOOKMARK [1][-]{section.194}{Texto}{chapter.134}% 73
-\BOOKMARK [2][-]{subsection.196}{TextoItem}{section.194}% 74
-\BOOKMARK [2][-]{subsection.199}{Reglas de dise\361o de usabilidad}{section.194}% 75
-\BOOKMARK [1][-]{section.200}{Iconos}{chapter.134}% 76
-\BOOKMARK [2][-]{subsection.205}{IconoItem}{section.200}% 77
-\BOOKMARK [2][-]{subsection.206}{Reglas de dise\361o de usabilidad}{section.200}% 78
-\BOOKMARK [1][-]{section.207}{Descargar Tablero}{chapter.134}% 79
-\BOOKMARK [1][-]{section.210}{Funcionalidades no implementadas}{chapter.134}% 80
-\BOOKMARK [2][-]{subsection.211}{Traducci\363n de frase}{section.210}% 81
-\BOOKMARK [2][-]{subsection.215}{Backend}{section.210}% 82
-\BOOKMARK [2][-]{subsection.219}{A\361adir imagen}{section.210}% 83
-\BOOKMARK [2][-]{subsection.223}{Subtableros y caj\363n de pictogramas}{section.210}% 84
-\BOOKMARK [1][-]{section.224}{Despliegue de la aplicaci\363n}{chapter.134}% 85
-\BOOKMARK [1][-]{section.231}{Control de versiones y organizaci\363n del desarrollo de PictUp!}{chapter.134}% 86
-\BOOKMARK [0][-]{chapter.233}{Evaluaci\363n}{}% 87
-\BOOKMARK [1][-]{section.234}{Preparaci\363n de la evaluaci\363n}{chapter.233}% 88
-\BOOKMARK [1][-]{section.236}{Dise\361o de la evaluaci\363n}{chapter.233}% 89
-\BOOKMARK [1][-]{section.253}{Resultados de la evaluaci\363n}{chapter.233}% 90
-\BOOKMARK [2][-]{subsection.255}{Resultados del cuestionario ASQ}{section.253}% 91
-\BOOKMARK [2][-]{subsection.260}{Resultados del cuestionario SUS}{section.253}% 92
-\BOOKMARK [2][-]{subsection.263}{Observaciones de los usuarios}{section.253}% 93
-\BOOKMARK [1][-]{section.264}{Evaluaci\363n adicional}{chapter.233}% 94
-\BOOKMARK [1][-]{section.265}{An\341lisis de los resultados}{chapter.233}% 95
-\BOOKMARK [0][-]{chapter.267}{Conclusiones y Trabajo Futuro}{}% 96
-\BOOKMARK [1][-]{section.268}{Conclusiones}{chapter.267}% 97
-\BOOKMARK [1][-]{section.269}{Trabajo futuro}{chapter.267}% 98
-\BOOKMARK [0][-]{chapter.270}{Conclusions and Future Work}{}% 99
-\BOOKMARK [1][-]{section.271}{Conclusions}{chapter.270}% 100
-\BOOKMARK [1][-]{section.272}{Future work}{chapter.270}% 101
-\BOOKMARK [0][-]{chapter.273}{Aportaciones individuales al proyecto}{}% 102
-\BOOKMARK [1][-]{section.274}{Alfonso Tercero L\363pez}{chapter.273}% 103
-\BOOKMARK [1][-]{section.275}{Jorge Garc\355a Cerros}{chapter.273}% 104
-\BOOKMARK [0][-]{appendix.276}{Formulario y pistas de la evaluaci\363n}{}% 105
-\BOOKMARK [0][-]{appendix*.300}{Bibliograf\355a}{}% 106
+\BOOKMARK [2][-]{subsection.44}{ARASAAC}{section.21}% 22
+\BOOKMARK [1][-]{section.51}{Aplicaciones basadas en pictogramas}{chapter.18}% 23
+\BOOKMARK [2][-]{subsection.56}{Pictoselector}{section.51}% 24
+\BOOKMARK [2][-]{subsection.61}{Editor ARASAAC}{section.51}% 25
+\BOOKMARK [2][-]{subsection.67}{Piktoplus}{section.51}% 26
+\BOOKMARK [2][-]{subsection.72}{Pictar}{section.51}% 27
+\BOOKMARK [2][-]{subsection.77}{PicTableros}{section.51}% 28
+\BOOKMARK [2][-]{subsection.81}{Symbo Talk}{section.51}% 29
+\BOOKMARK [2][-]{subsection.84}{LetMe Talk}{section.51}% 30
+\BOOKMARK [2][-]{subsection.87}{Jocomunico}{section.51}% 31
+\BOOKMARK [1][-]{section.90}{Comparativa de las herramientas analizadas}{chapter.18}% 32
+\BOOKMARK [0][-]{chapter.92}{Tecnolog\355as}{}% 33
+\BOOKMARK [1][-]{section.93}{Introducci\363n}{chapter.92}% 34
+\BOOKMARK [1][-]{section.95}{API Arasaac}{chapter.92}% 35
+\BOOKMARK [2][-]{subsection.99}{Prototipo API ARASAAC}{section.95}% 36
+\BOOKMARK [1][-]{section.100}{React}{chapter.92}% 37
+\BOOKMARK [2][-]{subsection.101}{Drag and Drop}{section.100}% 38
+\BOOKMARK [2][-]{subsection.103}{Prototipos}{section.100}% 39
+\BOOKMARK [1][-]{section.105}{JSZip}{chapter.92}% 40
+\BOOKMARK [1][-]{section.107}{Progressive Web Application}{chapter.92}% 41
+\BOOKMARK [0][-]{chapter.110}{Requisitos y dise\361o}{}% 42
+\BOOKMARK [1][-]{section.111}{Introducci\363n}{chapter.110}% 43
+\BOOKMARK [1][-]{section.112}{Dise\361o de la aplicaci\363n}{chapter.110}% 44
+\BOOKMARK [2][-]{subsection.113}{Prototipo realizado por Alfonso}{section.112}% 45
+\BOOKMARK [2][-]{subsection.122}{Prototipo realizado por Jorge}{section.112}% 46
+\BOOKMARK [1][-]{section.128}{Requisitos de la aplicaci\363n}{chapter.110}% 47
+\BOOKMARK [2][-]{subsection.129}{Herramientas}{section.128}% 48
+\BOOKMARK [2][-]{subsection.130}{Elementos}{section.128}% 49
+\BOOKMARK [1][-]{section.131}{Reglas de dise\361o}{chapter.110}% 50
+\BOOKMARK [0][-]{chapter.133}{PictUp! Arquitectura e implementaci\363n}{}% 51
+\BOOKMARK [1][-]{section.134}{Introducci\363n}{chapter.133}% 52
+\BOOKMARK [1][-]{section.135}{Arquitectura}{chapter.133}% 53
+\BOOKMARK [2][-]{subsection.136}{Arquitectura interna}{section.135}% 54
+\BOOKMARK [2][-]{subsection.141}{Arquitectura externa}{section.135}% 55
+\BOOKMARK [2][-]{subsection.145}{Cuadr\355cula}{section.135}% 56
+\BOOKMARK [1][-]{section.148}{Buscador de pictogramas}{chapter.133}% 57
+\BOOKMARK [2][-]{subsection.150}{B\372squeda}{section.148}% 58
+\BOOKMARK [2][-]{subsection.152}{Preajuste}{section.148}% 59
+\BOOKMARK [2][-]{subsection.159}{Historial de pictos}{section.148}% 60
+\BOOKMARK [2][-]{subsection.161}{PictoItem}{section.148}% 61
+\BOOKMARK [2][-]{subsection.168}{Reglas de dise\361o de usabilidad}{section.148}% 62
+\BOOKMARK [1][-]{section.169}{Traducir frase a pictogramas}{chapter.133}% 63
+\BOOKMARK [2][-]{subsection.172}{FraseItem}{section.169}% 64
+\BOOKMARK [2][-]{subsection.176}{Reglas de dise\361o de usabilidad}{section.169}% 65
+\BOOKMARK [1][-]{section.177}{A\361adir imagen al tablero}{chapter.133}% 66
+\BOOKMARK [2][-]{subsection.181}{PhotoItem}{section.177}% 67
+\BOOKMARK [2][-]{subsection.184}{Reglas de dise\361o de usabilidad}{section.177}% 68
+\BOOKMARK [1][-]{section.185}{Listas de pictogramas}{chapter.133}% 69
+\BOOKMARK [2][-]{subsection.186}{A\361adir y crear a una lista}{section.185}% 70
+\BOOKMARK [2][-]{subsection.190}{Gesti\363n de listas de pictogramas}{section.185}% 71
+\BOOKMARK [2][-]{subsection.192}{Reglas de dise\361o de usabilidad}{section.185}% 72
+\BOOKMARK [1][-]{section.193}{Texto}{chapter.133}% 73
+\BOOKMARK [2][-]{subsection.195}{TextoItem}{section.193}% 74
+\BOOKMARK [2][-]{subsection.198}{Reglas de dise\361o de usabilidad}{section.193}% 75
+\BOOKMARK [1][-]{section.199}{Iconos}{chapter.133}% 76
+\BOOKMARK [2][-]{subsection.204}{IconoItem}{section.199}% 77
+\BOOKMARK [2][-]{subsection.205}{Reglas de dise\361o de usabilidad}{section.199}% 78
+\BOOKMARK [1][-]{section.206}{Descargar Tablero}{chapter.133}% 79
+\BOOKMARK [1][-]{section.209}{Funcionalidades no implementadas}{chapter.133}% 80
+\BOOKMARK [2][-]{subsection.210}{Traducci\363n de frase}{section.209}% 81
+\BOOKMARK [2][-]{subsection.214}{Backend}{section.209}% 82
+\BOOKMARK [2][-]{subsection.218}{A\361adir imagen}{section.209}% 83
+\BOOKMARK [2][-]{subsection.222}{Subtableros y caj\363n de pictogramas}{section.209}% 84
+\BOOKMARK [1][-]{section.223}{Despliegue de la aplicaci\363n}{chapter.133}% 85
+\BOOKMARK [1][-]{section.230}{Control de versiones y organizaci\363n del desarrollo de PictUp!}{chapter.133}% 86
+\BOOKMARK [0][-]{chapter.232}{Evaluaci\363n}{}% 87
+\BOOKMARK [1][-]{section.233}{Preparaci\363n de la evaluaci\363n}{chapter.232}% 88
+\BOOKMARK [1][-]{section.235}{Dise\361o de la evaluaci\363n}{chapter.232}% 89
+\BOOKMARK [1][-]{section.252}{Resultados de la evaluaci\363n}{chapter.232}% 90
+\BOOKMARK [2][-]{subsection.254}{Resultados del cuestionario ASQ}{section.252}% 91
+\BOOKMARK [2][-]{subsection.259}{Resultados del cuestionario SUS}{section.252}% 92
+\BOOKMARK [2][-]{subsection.262}{Observaciones de los usuarios}{section.252}% 93
+\BOOKMARK [1][-]{section.263}{Evaluaci\363n adicional}{chapter.232}% 94
+\BOOKMARK [1][-]{section.264}{An\341lisis de los resultados}{chapter.232}% 95
+\BOOKMARK [0][-]{chapter.266}{Conclusiones y Trabajo Futuro}{}% 96
+\BOOKMARK [1][-]{section.267}{Conclusiones}{chapter.266}% 97
+\BOOKMARK [1][-]{section.268}{Trabajo futuro}{chapter.266}% 98
+\BOOKMARK [0][-]{chapter.269}{Conclusions and Future Work}{}% 99
+\BOOKMARK [1][-]{section.270}{Conclusions}{chapter.269}% 100
+\BOOKMARK [1][-]{section.271}{Future work}{chapter.269}% 101
+\BOOKMARK [0][-]{chapter.272}{Aportaciones individuales al proyecto}{}% 102
+\BOOKMARK [1][-]{section.273}{Alfonso Tercero L\363pez}{chapter.272}% 103
+\BOOKMARK [1][-]{section.274}{Jorge Garc\355a Cerros}{chapter.272}% 104
+\BOOKMARK [0][-]{appendix.275}{Formulario y pistas de la evaluaci\363n}{}% 105
+\BOOKMARK [0][-]{appendix*.299}{Bibliograf\355a}{}% 106
 \BOOKMARK [0][-]{fin.0}{Fin}{}% 107
