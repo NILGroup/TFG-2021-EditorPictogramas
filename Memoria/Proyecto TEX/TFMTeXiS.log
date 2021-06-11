@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.1)  10 JUN 2021 19:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.1)  11 JUN 2021 16:42
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -566,16 +566,15 @@ Package csquotes Info: Redefining alias 'default' -> 'spanish'.
  (TFMTeXiS.aux (Cascaras/cover.aux)
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
- (Cascaras/autorizacion.aux) (Cascaras/dedicatoria.aux) (Cascaras/agradecimient
-os.aux)
-(Cascaras/resumen.aux) (Cascaras/abstract.aux) (TeXiS/TeXiS_toc.aux)
-LaTeX Info: Redefining \. on input line 35.
-LaTeX Info: Redefining \% on input line 35.
-
-(Capitulos/Introduccion.aux) (Capitulos/Introduction.aux)
-(Capitulos/EstadoDeLaCuestion.aux)
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
+ (Cascaras/dedicatoria.aux)
+(Cascaras/agradecimientos.aux) (Cascaras/resumen.aux) (Cascaras/abstract.aux)
+(TeXiS/TeXiS_toc.aux)
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+ (Capitulos/Introduccion.aux) (Capitulos/Introduction.aux) (Capitulos/EstadoDeL
+aCuestion.aux)
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
  (Capitulos/Tecnologías.aux
 
 LaTeX Warning: Label `cap:introduccion' multiply defined.
@@ -593,10 +592,10 @@ LaTeX Warning: Label `cap1:sec:Motivacion' multiply defined.
 ) (Capitulos/Arquitectura.aux) (Capitulos/Evaluación.aux)
 (Capitulos/ConclusionesTrabajoFuturo.aux) (Capitulos/ConclusionsFutureWork.aux)
 (Capitulos/AportacionesIndividuales.aux)
-LaTeX Info: Redefining \. on input line 49.
-LaTeX Info: Redefining \% on input line 49.
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
  (Apendices/appendixA.aux)
-(Apendices/appendixB.aux) (Cascaras/bibliografia.aux) (Cascaras/fin.aux))
+(Cascaras/bibliografia.aux) (Cascaras/fin.aux))
 \openout1 = `TFMTeXiS.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
@@ -679,7 +678,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 \evensidemarginOriginal=\skip85
 \oddsidemarginOriginal=\skip86
 \longTitulo=\skip87
-<Imagenes/Vectorial/escudoUCM.pdf, id=427, 597.23125pt x 844.15375pt>
+<Imagenes/Vectorial/escudoUCM.pdf, id=423, 597.23125pt x 844.15375pt>
 File: Imagenes/Vectorial/escudoUCM.pdf Graphic file (type pdf)
 <use Imagenes/Vectorial/escudoUCM.pdf>
 Package pdftex.def Info: Imagenes/Vectorial/escudoUCM.pdf  used on input line 1
@@ -707,49 +706,41 @@ Package pdftex.def Info: Imagenes/Vectorial/escudoUCM.pdf  used on input line 1
 
 {C:/Users/Alfonso/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Imagenes/Ve
 ctorial/escudoUCM.pdf>] [2] [3])
-\openout2 = `Cascaras/autorizacion.aux'.
+\openout2 = `Cascaras/dedicatoria.aux'.
 
- (Cascaras/autorizacion.tex [4
+ (Cascaras/dedicatoria.tex [4
 
 
 
 ]) [5]
-\openout2 = `Cascaras/dedicatoria.aux'.
+\openout2 = `Cascaras/agradecimientos.aux'.
 
 
-(Cascaras/dedicatoria.tex [6
+(Cascaras/agradecimientos.tex [6
 
 
 
 ]) [7]
-\openout2 = `Cascaras/agradecimientos.aux'.
+\openout2 = `Cascaras/resumen.aux'.
 
- (Cascaras/agradecimientos.tex [8
+ (Cascaras/resumen.tex [8
 
 
 
 ]) [9]
-\openout2 = `Cascaras/resumen.aux'.
+\openout2 = `Cascaras/abstract.aux'.
 
 
-(Cascaras/resumen.tex [10
+(Cascaras/abstract.tex [10
 
 
 
 ]) [11]
-\openout2 = `Cascaras/abstract.aux'.
-
- (Cascaras/abstract.tex [12
-
-
-
-]) [13]
 LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
 \openout2 = `TeXiS/TeXiS_toc.aux'.
 
-
-(TeXiS/TeXiS_toc.tex [14
+ (TeXiS/TeXiS_toc.tex [12
 
 
 
@@ -759,51 +750,43 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 5.
+(Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 5.
+(Font)              <5> on input line 5.
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
- [15] [16]
+
+[13] [14]
 LaTeX Info: Redefining \. on input line 106.
 LaTeX Info: Redefining \% on input line 106.
- [17])
+)
 \tf@toc=\write6
 \openout6 = `TFMTeXiS.toc'.
 
- [18] (TFMTeXiS.lof
+ [15] [16
+
+] (TFMTeXiS.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
-
-[19
-
-]
+ [17]
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
- [20]
+ [18]
 LaTeX Info: Redefining \. on input line 95.
 LaTeX Info: Redefining \% on input line 95.
 )
 \tf@lof=\write7
 \openout7 = `TFMTeXiS.lof'.
 
- [21] [22
+ [19] [20
 
 ] (TFMTeXiS.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
-
-Overfull \hbox (1.09319pt too wide) in paragraph at lines 8--8
- [][] [][]\T1/cmr/m/n/10.95 Tabla com-par-a-tiva en-tre los dis-tin-tos ed-i-to
-res de tableros basa- 
- []
-
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 LaTeX Info: Redefining \. on input line 23.
@@ -812,7 +795,8 @@ LaTeX Info: Redefining \% on input line 23.
 \tf@lot=\write8
 \openout8 = `TFMTeXiS.lot'.
 
- [23]) [24
+ [21])
+[22
 
 
 ]
@@ -830,7 +814,7 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
  (E:\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-<Imagenes/Bitmap/tablerofisico.png, id=837, 441.90094pt x 323.70938pt>
+<Imagenes/Bitmap/tablerofisico.png, id=817, 441.90094pt x 323.70938pt>
 File: Imagenes/Bitmap/tablerofisico.png Graphic file (type png)
 <use Imagenes/Bitmap/tablerofisico.png>
 Package pdftex.def Info: Imagenes/Bitmap/tablerofisico.png  used on input line 
@@ -844,17 +828,16 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 65.
-LaTeX Info: Redefining \% on input line 65.
+LaTeX Info: Redefining \. on input line 69.
+LaTeX Info: Redefining \% on input line 69.
  [2 <./Imagenes/Bitmap/tablerofisico.png>])
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
  [3]
 \openout2 = `Capitulos/Introduction.aux'.
 
- (Capitulos/Introduction.tex [4
+ (Capitulos/Introduction.tex
+[4
 
 
 
@@ -868,11 +851,7 @@ Package pdftex.def Info: Imagenes/Bitmap/tablerofisico.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6])
-[7]
+[5] [6]) [7]
 LaTeX Info: Redefining \. on input line 148.
 LaTeX Info: Redefining \% on input line 148.
 \openout2 = `Capitulos/EstadoDeLaCuestion.aux'.
@@ -886,7 +865,7 @@ Cap\'itulo 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 16.
+(Font)              <6> on input line 16.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 6.
 (E:\MiKTeX\tex/latex/base\t1cmtt.fd
@@ -903,15 +882,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--31
 n2013 / arasaac / ZIPs / Modulo _
  []
 
-LaTeX Info: Redefining \. on input line 51.
-LaTeX Info: Redefining \% on input line 51.
-[10]
-<Imagenes/Bitmap/SPCcolores.jpg, id=903, 614.295pt x 582.175pt>
+<Imagenes/Bitmap/SPCcolores.jpg, id=872, 614.295pt x 582.175pt>
 File: Imagenes/Bitmap/SPCcolores.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/SPCcolores.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/SPCcolores.jpg  used on input line 61.
 
 (pdftex.def)             Requested size: 288.0011pt x 272.94716pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
@@ -919,87 +898,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
 LaTeX Info: Redefining \. on input line 71.
 LaTeX Info: Redefining \% on input line 71.
-[11 <./Imagenes/Bitmap/SPCcolores.jpg>]
-<Imagenes/Bitmap/BlissCharacters.png, id=912, 192.2382pt x 90.8193pt>
+[10]
+<Imagenes/Bitmap/BlissCharacters.png, id=888, 192.2382pt x 90.8193pt>
 File: Imagenes/Bitmap/BlissCharacters.png Graphic file (type png)
 <use Imagenes/Bitmap/BlissCharacters.png>
 Package pdftex.def Info: Imagenes/Bitmap/BlissCharacters.png  used on input lin
 e 74.
 (pdftex.def)             Requested size: 288.0011pt x 136.0734pt.
-<Imagenes/Bitmap/BlissWord.png, id=915, 92.9874pt x 69.861pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Imagenes/Bitmap/BlissWord.png, id=891, 92.9874pt x 69.861pt>
 File: Imagenes/Bitmap/BlissWord.png Graphic file (type png)
 <use Imagenes/Bitmap/BlissWord.png>
 Package pdftex.def Info: Imagenes/Bitmap/BlissWord.png  used on input line 83.
 (pdftex.def)             Requested size: 143.9978pt x 108.18745pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
- [12 <./Imagenes/Bitmap/BlissCharacters.png> <./Imagenes/Bitmap/BlissWord.png>]
-<Imagenes/Bitmap/Sclera.png, id=926, 446.66875pt x 289.08pt>
+[11 <./Imagenes/Bitmap/SPCcolores.jpg>]
+<Imagenes/Bitmap/Sclera.png, id=901, 446.66875pt x 289.08pt>
 File: Imagenes/Bitmap/Sclera.png Graphic file (type png)
 <use Imagenes/Bitmap/Sclera.png>
 Package pdftex.def Info: Imagenes/Bitmap/Sclera.png  used on input line 99.
 (pdftex.def)             Requested size: 178.66432pt x 115.62994pt.
-<Imagenes/Bitmap/Mulberry.png, id=930, 1284.8pt x 722.7pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+ [12 <./Imagenes/Bitmap/BlissCharacters.png> <./Imagenes/Bitmap/BlissWord.png> 
+<./Imagenes/Bitmap/Sclera.png>]
+<Imagenes/Bitmap/Mulberry.png, id=912, 1284.8pt x 722.7pt>
 File: Imagenes/Bitmap/Mulberry.png Graphic file (type png)
 <use Imagenes/Bitmap/Mulberry.png>
 Package pdftex.def Info: Imagenes/Bitmap/Mulberry.png  used on input line 112.
 (pdftex.def)             Requested size: 256.95544pt x 144.53743pt.
-LaTeX Info: Redefining \. on input line 119.
-LaTeX Info: Redefining \% on input line 119.
- [13 <./Imagenes/Bitmap/Sclera.png> <./Imagenes/Bitmap/Mulberry.png>]
-<Imagenes/Bitmap/Minspeak.jpg, id=950, 410.2828pt x 121.95563pt>
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+ [13 <./Imagenes/Bitmap/Mulberry.png>]
+<Imagenes/Bitmap/Minspeak.jpg, id=935, 410.2828pt x 121.95563pt>
 File: Imagenes/Bitmap/Minspeak.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/Minspeak.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/Minspeak.jpg  used on input line 134.
 (pdftex.def)             Requested size: 323.9978pt x 96.30666pt.
-<Imagenes/Bitmap/ChatBox.jpg, id=954, 642.4pt x 630.355pt>
+<Imagenes/Bitmap/ChatBox.jpg, id=939, 642.4pt x 630.355pt>
 File: Imagenes/Bitmap/ChatBox.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/ChatBox.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/ChatBox.jpg  used on input line 144.
 (pdftex.def)             Requested size: 143.9978pt x 141.29474pt.
-LaTeX Info: Redefining \. on input line 147.
-LaTeX Info: Redefining \% on input line 147.
- [14 <./Imagenes/Bitmap/Minspeak.jpg>]
-<Imagenes/Bitmap/Configuarción ARASAAC.png, id=969, 763.85374pt x 507.8975pt>
+
+Overfull \hbox (0.83551pt too wide) in paragraph at lines 153--156
+[]\T1/cmr/m/n/10 El por-tal Ara-go-n�s de Co-mu-ni-ca-ci�n Au-men-ta-ti-va y Al
+-ter-na-ti-va[][][] (\T1/cmr/m/it/10 ARA-SAAC\T1/cmr/m/n/10 )
+ []
+
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+[14 <./Imagenes/Bitmap/Minspeak.jpg> <./Imagenes/Bitmap/ChatBox.jpg>]
+<Imagenes/Bitmap/Configuarción ARASAAC.png, id=951, 763.85374pt x 507.8975pt>
 File: Imagenes/Bitmap/Configuarción ARASAAC.png Graphic file (type png)
 <use Imagenes/Bitmap/Configuarción ARASAAC.png>
 Package pdftex.def Info: Imagenes/Bitmap/Configuarción ARASAAC.png  used on in
 put line 163.
 (pdftex.def)             Requested size: 251.9989pt x 167.55244pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 170--170
 [][][][]$\T1/cmtt/m/n/9 https : / / www . ayudaleayudate . es / wp -[] content 
 / uploads / 2019 / 02 / Dossier -[]
  []
 
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
-[15 <./Imagenes/Bitmap/ChatBox.jpg>]
-<Imagenes/Bitmap/ejemplosdepictos.png, id=982, 1096.095pt x 517.935pt>
+<Imagenes/Bitmap/ejemplosdepictos.png, id=955, 1096.095pt x 517.935pt>
 File: Imagenes/Bitmap/ejemplosdepictos.png Graphic file (type png)
 <use Imagenes/Bitmap/ejemplosdepictos.png>
 Package pdftex.def Info: Imagenes/Bitmap/ejemplosdepictos.png  used on input li
 ne 178.
 (pdftex.def)             Requested size: 251.9989pt x 119.07512pt.
-<Imagenes/Bitmap/ARASAACPictos.png, id=984, 1371.1225pt x 770.88pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Imagenes/Bitmap/ARASAACPictos.png, id=957, 1371.1225pt x 770.88pt>
 File: Imagenes/Bitmap/ARASAACPictos.png Graphic file (type png)
 <use Imagenes/Bitmap/ARASAACPictos.png>
 Package pdftex.def Info: Imagenes/Bitmap/ARASAACPictos.png  used on input line 
 191.
 (pdftex.def)             Requested size: 251.9989pt x 141.66956pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 197.
-LaTeX Info: Redefining \% on input line 197.
-[16 <./Imagenes/Bitmap/Configuarción ARASAAC.png> <./Imagenes/Bitmap/ejemplosd
-epictos.png>]
-<Imagenes/Bitmap/EditoresPictogramas.jpg, id=991, 917.67844pt x 706.89093pt>
+LaTeX Info: Redefining \. on input line 198.
+LaTeX Info: Redefining \% on input line 198.
+[15 <./Imagenes/Bitmap/Configuarción ARASAAC.png>]
+<Imagenes/Bitmap/EditoresPictogramas.jpg, id=967, 917.67844pt x 706.89093pt>
 File: Imagenes/Bitmap/EditoresPictogramas.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/EditoresPictogramas.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/EditoresPictogramas.jpg  used on input
@@ -1021,36 +1014,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--211
 / 05 / tableros -[] de -[]
  []
 
-<Imagenes/Bitmap/Tablero.jpg, id=997, 400.49625pt x 308.15125pt>
+LaTeX Info: Redefining \. on input line 212.
+LaTeX Info: Redefining \% on input line 212.
+[16 <./Imagenes/Bitmap/ejemplosdepictos.png> <./Imagenes/Bitmap/ARASAACPictos.p
+ng>]
+<Imagenes/Bitmap/Tablero.jpg, id=985, 400.49625pt x 308.15125pt>
 File: Imagenes/Bitmap/Tablero.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/Tablero.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/Tablero.jpg  used on input line 216.
 (pdftex.def)             Requested size: 251.9989pt x 193.8965pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 LaTeX Info: Redefining \. on input line 222.
 LaTeX Info: Redefining \% on input line 222.
-[17 <./Imagenes/Bitmap/ARASAACPictos.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 231.
-LaTeX Info: Redefining \% on input line 231.
- [18 <./Imagenes/Bitmap/EditoresPictogramas.jpg> <./Imagenes/Bitmap/Tablero.jpg
+ [17 <./Imagenes/Bitmap/EditoresPictogramas.jpg> <./Imagenes/Bitmap/Tablero.jpg
 >]
-<Imagenes/Bitmap/Pictoselector Tablero.png, id=1014, 794.97pt x 445.665pt>
+<Imagenes/Bitmap/Pictoselector Tablero.png, id=1004, 794.97pt x 445.665pt>
 File: Imagenes/Bitmap/Pictoselector Tablero.png Graphic file (type png)
 <use Imagenes/Bitmap/Pictoselector Tablero.png>
 Package pdftex.def Info: Imagenes/Bitmap/Pictoselector Tablero.png  used on inp
 ut line 236.
 (pdftex.def)             Requested size: 251.9989pt x 141.26926pt.
-<Imagenes/Bitmap/Ribbon Pictoselector.png, id=1017, 477.785pt x 62.2325pt>
+<Imagenes/Bitmap/Ribbon Pictoselector.png, id=1007, 477.785pt x 62.2325pt>
 File: Imagenes/Bitmap/Ribbon Pictoselector.png Graphic file (type png)
 <use Imagenes/Bitmap/Ribbon Pictoselector.png>
 Package pdftex.def Info: Imagenes/Bitmap/Ribbon Pictoselector.png  used on inpu
 t line 246.
 (pdftex.def)             Requested size: 323.9978pt x 42.20073pt.
-<Imagenes/Bitmap/Editor y buscador de pictoselector.png, id=1018, 1185.42876pt 
+<Imagenes/Bitmap/Editor y buscador de pictoselector.png, id=1008, 1185.42876pt 
 x 521.95pt>
 File: Imagenes/Bitmap/Editor y buscador de pictoselector.png Graphic file (type
  png)
@@ -1062,11 +1051,11 @@ Package pdftex.def Info: Imagenes/Bitmap/Editor y buscador de pictoselector.png
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 261.
-LaTeX Info: Redefining \% on input line 261.
-[19 <./Imagenes/Bitmap/Pictoselector Tablero.png> <./Imagenes/Bitmap/Ribbon Pic
+LaTeX Info: Redefining \. on input line 260.
+LaTeX Info: Redefining \% on input line 260.
+[18 <./Imagenes/Bitmap/Pictoselector Tablero.png> <./Imagenes/Bitmap/Ribbon Pic
 toselector.png>]
-<Imagenes/Bitmap/Frase ARASAAC.png, id=1029, 551.05875pt x 101.37875pt>
+<Imagenes/Bitmap/Frase ARASAAC.png, id=1018, 551.05875pt x 101.37875pt>
 File: Imagenes/Bitmap/Frase ARASAAC.png Graphic file (type png)
 <use Imagenes/Bitmap/Frase ARASAAC.png>
 Package pdftex.def Info: Imagenes/Bitmap/Frase ARASAAC.png  used on input line 
@@ -1076,77 +1065,96 @@ Package pdftex.def Info: Imagenes/Bitmap/Frase ARASAAC.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 282.
-LaTeX Info: Redefining \% on input line 282.
-[20 <./Imagenes/Bitmap/Editor y buscador de pictoselector.png>]
-<Imagenes/Bitmap/HorarioARASAAC.png, id=1036, 796.47563pt x 216.05719pt>
+<Imagenes/Bitmap/HorarioARASAAC.png, id=1020, 796.47563pt x 216.05719pt>
 File: Imagenes/Bitmap/HorarioARASAAC.png Graphic file (type png)
 <use Imagenes/Bitmap/HorarioARASAAC.png>
 Package pdftex.def Info: Imagenes/Bitmap/HorarioARASAAC.png  used on input line
  286.
 (pdftex.def)             Requested size: 323.9978pt x 87.88838pt.
-<Imagenes/Bitmap/calendarioARASAAC.png, id=1038, 800.23969pt x 245.41687pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 293.
+LaTeX Info: Redefining \% on input line 293.
+[19 <./Imagenes/Bitmap/Editor y buscador de pictoselector.png>]
+<Imagenes/Bitmap/calendarioARASAAC.png, id=1027, 800.23969pt x 245.41687pt>
 File: Imagenes/Bitmap/calendarioARASAAC.png Graphic file (type png)
 <use Imagenes/Bitmap/calendarioARASAAC.png>
 Package pdftex.def Info: Imagenes/Bitmap/calendarioARASAAC.png  used on input l
 ine 297.
 (pdftex.def)             Requested size: 251.9989pt x 77.2805pt.
-<Imagenes/Bitmap/juegoARASAAC.png, id=1040, 391.4625pt x 456.95718pt>
+<Imagenes/Bitmap/juegoARASAAC.png, id=1029, 391.4625pt x 456.95718pt>
 File: Imagenes/Bitmap/juegoARASAAC.png Graphic file (type png)
 <use Imagenes/Bitmap/juegoARASAAC.png>
 Package pdftex.def Info: Imagenes/Bitmap/juegoARASAAC.png  used on input line 3
 10.
 (pdftex.def)             Requested size: 251.9989pt x 294.15988pt.
-LaTeX Info: Redefining \. on input line 313.
-LaTeX Info: Redefining \% on input line 313.
- [21 <./Imagenes/Bitmap/Frase ARASAAC.png> <./Imagenes/Bitmap/HorarioARASAAC.pn
-g> <./Imagenes/Bitmap/calendarioARASAAC.png>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 323--323
 [][][][]$\T1/cmtt/m/n/9 http : / / www . aulautista . com / 2013 / 12 / 05 / pi
 ktoplus -[] un -[] comunicador -[] android -[]
  []
 
-<Imagenes/Bitmap/Piktoplus1.png, id=1052, 401.5pt x 250.9375pt>
+LaTeX Info: Redefining \. on input line 324.
+LaTeX Info: Redefining \% on input line 324.
+[20 <./Imagenes/Bitmap/Frase ARASAAC.png> <./Imagenes/Bitmap/HorarioARASAAC.png
+> <./Imagenes/Bitmap/calendarioARASAAC.png>]
+<Imagenes/Bitmap/Piktoplus1.png, id=1043, 401.5pt x 250.9375pt>
 File: Imagenes/Bitmap/Piktoplus1.png Graphic file (type png)
 <use Imagenes/Bitmap/Piktoplus1.png>
 Package pdftex.def Info: Imagenes/Bitmap/Piktoplus1.png  used on input line 329
 .
 (pdftex.def)             Requested size: 180.0pt x 112.50346pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 LaTeX Info: Redefining \. on input line 335.
 LaTeX Info: Redefining \% on input line 335.
-[22 <./Imagenes/Bitmap/juegoARASAAC.png>]
-<Imagenes/Bitmap/Piktoplus2.png, id=1062, 401.5pt x 250.9375pt>
+ [21 <./Imagenes/Bitmap/juegoARASAAC.png> <./Imagenes/Bitmap/Piktoplus1.png>]
+<Imagenes/Bitmap/Piktoplus2.png, id=1052, 401.5pt x 250.9375pt>
 File: Imagenes/Bitmap/Piktoplus2.png Graphic file (type png)
 <use Imagenes/Bitmap/Piktoplus2.png>
 Package pdftex.def Info: Imagenes/Bitmap/Piktoplus2.png  used on input line 342
 .
 (pdftex.def)             Requested size: 180.0pt x 112.50346pt.
-LaTeX Info: Redefining \. on input line 359.
-LaTeX Info: Redefining \% on input line 359.
- [23 <./Imagenes/Bitmap/Piktoplus1.png> <./Imagenes/Bitmap/Piktoplus2.png>]
-<Imagenes/Bitmap/TraducirFrase.png, id=1074, 900.36375pt x 443.6575pt>
+<Imagenes/Bitmap/TraducirFrase.png, id=1058, 900.36375pt x 443.6575pt>
 File: Imagenes/Bitmap/TraducirFrase.png Graphic file (type png)
 <use Imagenes/Bitmap/TraducirFrase.png>
 Package pdftex.def Info: Imagenes/Bitmap/TraducirFrase.png  used on input line 
 363.
 (pdftex.def)             Requested size: 251.9989pt x 124.16908pt.
-<Imagenes/Bitmap/buscador.png, id=1077, 438.63875pt x 468.75125pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Imagenes/Bitmap/buscador.png, id=1061, 438.63875pt x 468.75125pt>
 File: Imagenes/Bitmap/buscador.png Graphic file (type png)
 <use Imagenes/Bitmap/buscador.png>
 Package pdftex.def Info: Imagenes/Bitmap/buscador.png  used on input line 373.
 (pdftex.def)             Requested size: 180.0pt x 192.3609pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Info: Redefining \. on input line 380.
 LaTeX Info: Redefining \% on input line 380.
- [24 <./Imagenes/Bitmap/TraducirFrase.png> <./Imagenes/Bitmap/buscador.png>]
-<Imagenes/Bitmap/editor.png, id=1083, 866.23625pt x 340.27126pt>
+[22 <./Imagenes/Bitmap/Piktoplus2.png>]
+<Imagenes/Bitmap/editor.png, id=1069, 866.23625pt x 340.27126pt>
 File: Imagenes/Bitmap/editor.png Graphic file (type png)
 <use Imagenes/Bitmap/editor.png>
 Package pdftex.def Info: Imagenes/Bitmap/editor.png  used on input line 384.
 (pdftex.def)             Requested size: 251.9989pt x 98.98766pt.
-<Imagenes/Bitmap/PictablerosPlantilla.png, id=1089, 664.73344pt x 610.53094pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 398.
+LaTeX Info: Redefining \% on input line 398.
+ [23 <./Imagenes/Bitmap/TraducirFrase.png> <./Imagenes/Bitmap/buscador.png>]
+<Imagenes/Bitmap/PictablerosPlantilla.png, id=1079, 664.73344pt x 610.53094pt>
 File: Imagenes/Bitmap/PictablerosPlantilla.png Graphic file (type png)
 <use Imagenes/Bitmap/PictablerosPlantilla.png>
 Package pdftex.def Info: Imagenes/Bitmap/PictablerosPlantilla.png  used on inpu
@@ -1156,41 +1164,49 @@ t line 405.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 412.
-LaTeX Info: Redefining \% on input line 412.
-[25 <./Imagenes/Bitmap/editor.png>]
-<Imagenes/Bitmap/tableroPicTableros.png, id=1098, 862.22125pt x 380.42125pt>
+<Imagenes/Bitmap/tableroPicTableros.png, id=1081, 862.22125pt x 380.42125pt>
 File: Imagenes/Bitmap/tableroPicTableros.png Graphic file (type png)
 <use Imagenes/Bitmap/tableroPicTableros.png>
 Package pdftex.def Info: Imagenes/Bitmap/tableroPicTableros.png  used on input 
 line 416.
 (pdftex.def)             Requested size: 251.9989pt x 111.18423pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 429.
-LaTeX Info: Redefining \% on input line 429.
- [26 <./Imagenes/Bitmap/PictablerosPlantilla.png> <./Imagenes/Bitmap/tableroPic
-Tableros.png>]
-<Imagenes/Bitmap/SymboTalk.png, id=1107, 1081.03876pt x 750.805pt>
+LaTeX Info: Redefining \. on input line 437.
+LaTeX Info: Redefining \% on input line 437.
+[24 <./Imagenes/Bitmap/editor.png>]
+<Imagenes/Bitmap/SymboTalk.png, id=1092, 1081.03876pt x 750.805pt>
 File: Imagenes/Bitmap/SymboTalk.png Graphic file (type png)
 <use Imagenes/Bitmap/SymboTalk.png>
 Package pdftex.def Info: Imagenes/Bitmap/SymboTalk.png  used on input line 444.
 
 (pdftex.def)             Requested size: 251.9989pt x 175.0186pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Info: Redefining \. on input line 449.
 LaTeX Info: Redefining \% on input line 449.
- [27 <./Imagenes/Bitmap/SymboTalk.png>]
-<Imagenes/Bitmap/LetMeTalk.png, id=1116, 931.48pt x 1390.19376pt>
+[25 <./Imagenes/Bitmap/PictablerosPlantilla.png> <./Imagenes/Bitmap/tableroPicT
+ableros.png>]
+<Imagenes/Bitmap/LetMeTalk.png, id=1101, 931.48pt x 1390.19376pt>
 File: Imagenes/Bitmap/LetMeTalk.png Graphic file (type png)
 <use Imagenes/Bitmap/LetMeTalk.png>
 Package pdftex.def Info: Imagenes/Bitmap/LetMeTalk.png  used on input line 459.
 
 (pdftex.def)             Requested size: 251.9989pt x 376.09978pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Info: Redefining \. on input line 464.
 LaTeX Info: Redefining \% on input line 464.
- [28 <./Imagenes/Bitmap/LetMeTalk.png>]
-<Imagenes/Bitmap/jocomunico.png, id=1125, 813.0375pt x 456.20438pt>
+[26 <./Imagenes/Bitmap/SymboTalk.png>]
+LaTeX Info: Redefining \. on input line 474.
+LaTeX Info: Redefining \% on input line 474.
+ [27 <./Imagenes/Bitmap/LetMeTalk.png>]
+<Imagenes/Bitmap/jocomunico.png, id=1116, 813.0375pt x 456.20438pt>
 File: Imagenes/Bitmap/jocomunico.png Graphic file (type png)
 <use Imagenes/Bitmap/jocomunico.png>
 Package pdftex.def Info: Imagenes/Bitmap/jocomunico.png  used on input line 479
@@ -1201,6 +1217,10 @@ Package pdftex.def Info: Imagenes/Bitmap/jocomunico.png  used on input line 479
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 491.
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 508.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 508.
 
 Overfull \hbox (9.89313pt too wide) in paragraph at lines 493--509
  [][] 
@@ -1208,26 +1228,30 @@ Overfull \hbox (9.89313pt too wide) in paragraph at lines 493--509
 
 LaTeX Info: Redefining \. on input line 513.
 LaTeX Info: Redefining \% on input line 513.
-[29 <./Imagenes/Bitmap/jocomunico.png>])
+[28 <./Imagenes/Bitmap/jocomunico.png>])
 LaTeX Info: Redefining \. on input line 153.
 LaTeX Info: Redefining \% on input line 153.
- [30]
+ [29]
 \openout2 = `Capitulos/Tecnologías.aux'.
 
  (Capitulos/Tecnologías.tex
-Cap\'itulo 3.
-[31
+[30
 
 
 
 ]
-<Imagenes/Bitmap/techComparacionBusquedas.png, id=1152, 462.528pt x 260.172pt>
+Cap\'itulo 3.
+<Imagenes/Bitmap/techComparacionBusquedas.png, id=1138, 462.528pt x 260.172pt>
 File: Imagenes/Bitmap/techComparacionBusquedas.png Graphic file (type png)
 <use Imagenes/Bitmap/techComparacionBusquedas.png>
 Package pdftex.def Info: Imagenes/Bitmap/techComparacionBusquedas.png  used on 
 input line 31.
 (pdftex.def)             Requested size: 288.0011pt x 162.00763pt.
-<Imagenes/Bitmap/coloresPicto.png, id=1154, 1112.65688pt x 664.73344pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31]
+<Imagenes/Bitmap/coloresPicto.png, id=1147, 1112.65688pt x 664.73344pt>
 File: Imagenes/Bitmap/coloresPicto.png Graphic file (type png)
 <use Imagenes/Bitmap/coloresPicto.png>
 Package pdftex.def Info: Imagenes/Bitmap/coloresPicto.png  used on input line 6
@@ -1237,14 +1261,16 @@ Package pdftex.def Info: Imagenes/Bitmap/coloresPicto.png  used on input line 6
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 67.
-LaTeX Info: Redefining \% on input line 67.
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
 [32 <./Imagenes/Bitmap/techComparacionBusquedas.png>]
-LaTeX Info: Redefining \. on input line 81.
-LaTeX Info: Redefining \% on input line 81.
+Underfull \vbox (badness 2435) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
  [33 <./Imagenes/Bitmap/coloresPicto.png>]
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
+LaTeX Info: Redefining \. on input line 119.
+LaTeX Info: Redefining \% on input line 119.
  [34])
 LaTeX Info: Redefining \. on input line 154.
 LaTeX Info: Redefining \% on input line 154.
@@ -1258,110 +1284,100 @@ LaTeX Info: Redefining \% on input line 154.
 ]
 Cap\'itulo 4.
 [37]
-<Imagenes/Bitmap/logInAlfonso.png, id=1201, 521.69907pt x 369.63094pt>
+<Imagenes/Bitmap/logInAlfonso.png, id=1194, 521.69907pt x 369.63094pt>
 File: Imagenes/Bitmap/logInAlfonso.png Graphic file (type png)
 <use Imagenes/Bitmap/logInAlfonso.png>
 Package pdftex.def Info: Imagenes/Bitmap/logInAlfonso.png  used on input line 5
 0.
 (pdftex.def)             Requested size: 251.9989pt x 178.5432pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 LaTeX Info: Redefining \. on input line 57.
 LaTeX Info: Redefining \% on input line 57.
-[38]
-<Imagenes/Bitmap/inicioAlfonso.jpg, id=1207, 2006.49625pt x 1420.30624pt>
+ [38 <./Imagenes/Bitmap/logInAlfonso.png>]
+<Imagenes/Bitmap/inicioAlfonso.jpg, id=1201, 2006.49625pt x 1420.30624pt>
 File: Imagenes/Bitmap/inicioAlfonso.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/inicioAlfonso.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/inicioAlfonso.jpg  used on input line 
 61.
 (pdftex.def)             Requested size: 251.9989pt x 178.36137pt.
-<Imagenes/Bitmap/DibujoLibreAlfon.jpg, id=1209, 677.53125pt x 379.4175pt>
+<Imagenes/Bitmap/DibujoLibreAlfon.jpg, id=1203, 677.53125pt x 379.4175pt>
 File: Imagenes/Bitmap/DibujoLibreAlfon.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/DibujoLibreAlfon.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/DibujoLibreAlfon.jpg  used on input li
 ne 72.
 (pdftex.def)             Requested size: 251.9989pt x 141.11752pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
-[39 <./Imagenes/Bitmap/logInAlfonso.png> <./Imagenes/Bitmap/inicioAlfonso.jpg>]
-<Imagenes/Bitmap/componenteCajon.jpg, id=1217, 1050.92625pt x 324.46219pt>
+ [39 <./Imagenes/Bitmap/inicioAlfonso.jpg> <./Imagenes/Bitmap/DibujoLibreAlfon.
+jpg>]
+<Imagenes/Bitmap/componenteCajon.jpg, id=1211, 1050.92625pt x 324.46219pt>
 File: Imagenes/Bitmap/componenteCajon.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/componenteCajon.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/componenteCajon.jpg  used on input lin
 e 86.
 (pdftex.def)             Requested size: 251.9989pt x 77.79825pt.
-LaTeX Info: Redefining \. on input line 93.
-LaTeX Info: Redefining \% on input line 93.
-[40 <./Imagenes/Bitmap/DibujoLibreAlfon.jpg> <./Imagenes/Bitmap/componenteCajon
-.jpg>]
-<Imagenes/Bitmap/cajonPictosGranja.jpg, id=1223, 2006.49625pt x 1420.30624pt>
+<Imagenes/Bitmap/cajonPictosGranja.jpg, id=1213, 2006.49625pt x 1420.30624pt>
 File: Imagenes/Bitmap/cajonPictosGranja.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/cajonPictosGranja.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/cajonPictosGranja.jpg  used on input l
 ine 98.
 (pdftex.def)             Requested size: 323.9978pt x 229.33417pt.
-<Imagenes/Bitmap/componenteEnla.jpg, id=1226, 539.01375pt x 310.15875pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Imagenes/Bitmap/componenteEnla.jpg, id=1216, 539.01375pt x 310.15875pt>
 File: Imagenes/Bitmap/componenteEnla.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/componenteEnla.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/componenteEnla.jpg  used on input line
  112.
 (pdftex.def)             Requested size: 251.9989pt x 145.00793pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 121.
-LaTeX Info: Redefining \% on input line 121.
-[41 <./Imagenes/Bitmap/cajonPictosGranja.jpg>]
-<Imagenes/Bitmap/Cuento.jpg, id=1232, 761.09344pt x 493.845pt>
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
+[40 <./Imagenes/Bitmap/componenteCajon.jpg>]
+<Imagenes/Bitmap/Cuento.jpg, id=1222, 761.09344pt x 493.845pt>
 File: Imagenes/Bitmap/Cuento.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/Cuento.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/Cuento.jpg  used on input line 125.
 (pdftex.def)             Requested size: 251.9989pt x 163.5119pt.
-<Imagenes/Bitmap/presentacionTableros.jpg, id=1234, 2006.49625pt x 1420.30624pt
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
+[41 <./Imagenes/Bitmap/cajonPictosGranja.jpg> <./Imagenes/Bitmap/componenteEnla
+.jpg>]
+<Imagenes/Bitmap/presentacionTableros.jpg, id=1228, 2006.49625pt x 1420.30624pt
 >
 File: Imagenes/Bitmap/presentacionTableros.jpg Graphic file (type jpg)
 <use Imagenes/Bitmap/presentacionTableros.jpg>
 Package pdftex.def Info: Imagenes/Bitmap/presentacionTableros.jpg  used on inpu
 t line 136.
 (pdftex.def)             Requested size: 251.9989pt x 178.36137pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 146.
-LaTeX Info: Redefining \% on input line 146.
- [42 <./Imagenes/Bitmap/componenteEnla.jpg> <./Imagenes/Bitmap/Cuento.jpg>]
-<Imagenes/Bitmap/inicioJorge.png, id=1240, 533.74406pt x 377.91188pt>
+<Imagenes/Bitmap/inicioJorge.png, id=1230, 533.74406pt x 377.91188pt>
 File: Imagenes/Bitmap/inicioJorge.png Graphic file (type png)
 <use Imagenes/Bitmap/inicioJorge.png>
 Package pdftex.def Info: Imagenes/Bitmap/inicioJorge.png  used on input line 15
 1.
 (pdftex.def)             Requested size: 251.9989pt x 178.4259pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Info: Redefining \. on input line 158.
 LaTeX Info: Redefining \% on input line 158.
- [43 <./Imagenes/Bitmap/presentacionTableros.jpg> <./Imagenes/Bitmap/inicioJorg
-e.png>]
-LaTeX Info: Redefining \. on input line 193.
-LaTeX Info: Redefining \% on input line 193.
-
-[44]
-<Imagenes/Bitmap/tablerosJorge.png, id=1252, 515.67656pt x 378.66469pt>
+[42 <./Imagenes/Bitmap/Cuento.jpg> <./Imagenes/Bitmap/presentacionTableros.jpg>
+]
+LaTeX Info: Redefining \. on input line 182.
+LaTeX Info: Redefining \% on input line 182.
+ [43 <./Imagenes/Bitmap/inicioJorge.png>]
+<Imagenes/Bitmap/tablerosJorge.png, id=1241, 515.67656pt x 378.66469pt>
 File: Imagenes/Bitmap/tablerosJorge.png Graphic file (type png)
 <use Imagenes/Bitmap/tablerosJorge.png>
 Package pdftex.def Info: Imagenes/Bitmap/tablerosJorge.png  used on input line 
 202.
 (pdftex.def)             Requested size: 251.9989pt x 185.04463pt.
-<Imagenes/Bitmap/normasJorge.png, id=1254, 410.2828pt x 299.61937pt>
+<Imagenes/Bitmap/normasJorge.png, id=1243, 410.2828pt x 299.61937pt>
 File: Imagenes/Bitmap/normasJorge.png Graphic file (type png)
 <use Imagenes/Bitmap/normasJorge.png>
 Package pdftex.def Info: Imagenes/Bitmap/normasJorge.png  used on input line 21
@@ -1371,19 +1387,22 @@ Package pdftex.def Info: Imagenes/Bitmap/normasJorge.png  used on input line 21
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 227.
-LaTeX Info: Redefining \% on input line 227.
-[45 <./Imagenes/Bitmap/tablerosJorge.png>]
-<Imagenes/Bitmap/juegosJorge.png, id=1261, 496.85625pt x 371.13657pt>
+LaTeX Info: Redefining \. on input line 226.
+LaTeX Info: Redefining \% on input line 226.
+[44 <./Imagenes/Bitmap/tablerosJorge.png>]
+<Imagenes/Bitmap/juegosJorge.png, id=1250, 496.85625pt x 371.13657pt>
 File: Imagenes/Bitmap/juegosJorge.png Graphic file (type png)
 <use Imagenes/Bitmap/juegosJorge.png>
 Package pdftex.def Info: Imagenes/Bitmap/juegosJorge.png  used on input line 23
 1.
 (pdftex.def)             Requested size: 251.9989pt x 188.23512pt.
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
- [46 <./Imagenes/Bitmap/normasJorge.png> <./Imagenes/Bitmap/juegosJorge.png>]
-<Imagenes/Bitmap/juegoJorge.png, id=1269, 505.89pt x 365.86688pt>
+
+Underfull \vbox (badness 1783) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 237.
+LaTeX Info: Redefining \% on input line 237.
+ [45 <./Imagenes/Bitmap/normasJorge.png> <./Imagenes/Bitmap/juegosJorge.png>]
+<Imagenes/Bitmap/juegoJorge.png, id=1259, 505.89pt x 365.86688pt>
 File: Imagenes/Bitmap/juegoJorge.png Graphic file (type png)
 <use Imagenes/Bitmap/juegoJorge.png>
 Package pdftex.def Info: Imagenes/Bitmap/juegoJorge.png  used on input line 246
@@ -1391,34 +1410,35 @@ Package pdftex.def Info: Imagenes/Bitmap/juegoJorge.png  used on input line 246
 (pdftex.def)             Requested size: 251.9989pt x 182.25189pt.
 LaTeX Info: Redefining \. on input line 261.
 LaTeX Info: Redefining \% on input line 261.
- [47 <./Imagenes/Bitmap/juegoJorge.png>]
-LaTeX Info: Redefining \. on input line 290.
-LaTeX Info: Redefining \% on input line 290.
+ [46 <./Imagenes/Bitmap/juegoJorge.png>]
+LaTeX Info: Redefining \. on input line 297.
+LaTeX Info: Redefining \% on input line 297.
+ [47]
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
  [48]
-LaTeX Info: Redefining \. on input line 311.
-LaTeX Info: Redefining \% on input line 311.
- [49]
 Underfull \hbox (badness 10000) in paragraph at lines 326--326
 [][][][]$\T1/cmtt/m/n/9 https : / / www . interaction -[] design . org / litera
 ture / article / shneiderman -[] s -[]
  []
 
-LaTeX Info: Redefining \. on input line 336.
-LaTeX Info: Redefining \% on input line 336.
-[50])
+)
 LaTeX Info: Redefining \. on input line 155.
 LaTeX Info: Redefining \% on input line 155.
- [51]
+ [49]
+LaTeX Info: Redefining \. on input line 155.
+LaTeX Info: Redefining \% on input line 155.
+ [50]
 \openout2 = `Capitulos/Arquitectura.aux'.
 
- (Capitulos/Arquitectura.tex [52
+ (Capitulos/Arquitectura.tex
+Cap\'itulo 5.
+[51
 
 
 
 ]
-Cap\'itulo 5.
-[53]
-<Imagenes/Bitmap/pantallaprincipal.png, id=1315, 1926.19624pt x 941.5175pt>
+<Imagenes/Bitmap/pantallaprincipal.png, id=1303, 1926.19624pt x 941.5175pt>
 File: Imagenes/Bitmap/pantallaprincipal.png Graphic file (type png)
 <use Imagenes/Bitmap/pantallaprincipal.png>
 Package pdftex.def Info: Imagenes/Bitmap/pantallaprincipal.png  used on input l
@@ -1428,92 +1448,90 @@ ine 37.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 49.
-LaTeX Info: Redefining \% on input line 49.
-[54]
-<Imagenes/Bitmap/items.png, id=1325, 844.15375pt x 310.15875pt>
+LaTeX Info: Redefining \. on input line 51.
+LaTeX Info: Redefining \% on input line 51.
+[52]
+<Imagenes/Bitmap/items.png, id=1311, 844.15375pt x 310.15875pt>
 File: Imagenes/Bitmap/items.png Graphic file (type png)
 <use Imagenes/Bitmap/items.png>
 Package pdftex.def Info: Imagenes/Bitmap/items.png  used on input line 60.
 (pdftex.def)             Requested size: 251.9989pt x 92.58926pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Imagenes/Bitmap/diagramaarquitectura.png, id=1327, 602.25pt x 447.6725pt>
+<Imagenes/Bitmap/diagramaarquitectura.png, id=1313, 602.25pt x 447.6725pt>
 File: Imagenes/Bitmap/diagramaarquitectura.png Graphic file (type png)
 <use Imagenes/Bitmap/diagramaarquitectura.png>
 Package pdftex.def Info: Imagenes/Bitmap/diagramaarquitectura.png  used on inpu
 t line 71.
 (pdftex.def)             Requested size: 360.0pt x 267.60825pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 81.
-LaTeX Info: Redefining \% on input line 81.
-[55 <./Imagenes/Bitmap/pantallaprincipal.png>]
-LaTeX Info: Redefining \. on input line 86.
-LaTeX Info: Redefining \% on input line 86.
- [56 <./Imagenes/Bitmap/items.png> <./Imagenes/Bitmap/diagramaarquitectura.png>
-]
-<Imagenes/Bitmap/botonesItem.png, id=1344, 1234.6125pt x 847.66687pt>
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
+[53 <./Imagenes/Bitmap/pantallaprincipal.png> <./Imagenes/Bitmap/items.png>]
+Underfull \vbox (badness 3861) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+ [54 <./Imagenes/Bitmap/diagramaarquitectura.png>]
+<Imagenes/Bitmap/botonesItem.png, id=1329, 1234.6125pt x 847.66687pt>
 File: Imagenes/Bitmap/botonesItem.png Graphic file (type png)
 <use Imagenes/Bitmap/botonesItem.png>
 Package pdftex.def Info: Imagenes/Bitmap/botonesItem.png  used on input line 95
 .
 (pdftex.def)             Requested size: 251.9989pt x 173.0097pt.
-
-Underfull \vbox (badness 1028) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 102.
-LaTeX Info: Redefining \% on input line 102.
- [57 <./Imagenes/Bitmap/botonesItem.png>]
-<Imagenes/Bitmap/buscarPicto2.png, id=1352, 610.28pt x 413.545pt>
+<Imagenes/Bitmap/buscarPicto2.png, id=1332, 610.28pt x 413.545pt>
 File: Imagenes/Bitmap/buscarPicto2.png Graphic file (type png)
 <use Imagenes/Bitmap/buscarPicto2.png>
 Package pdftex.def Info: Imagenes/Bitmap/buscarPicto2.png  used on input line 1
 17.
 (pdftex.def)             Requested size: 251.9989pt x 170.75978pt.
-LaTeX Info: Redefining \. on input line 133.
-LaTeX Info: Redefining \% on input line 133.
- [58 <./Imagenes/Bitmap/buscarPicto2.png>]
-LaTeX Info: Redefining \. on input line 149.
-LaTeX Info: Redefining \% on input line 149.
 
-[59]
-<Imagenes/Bitmap/modalPreajustePicto.png, id=1369, 499.8675pt x 283.0575pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+[55 <./Imagenes/Bitmap/botonesItem.png>]
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
+ [56 <./Imagenes/Bitmap/buscarPicto2.png>]
+Overfull \hbox (113.13336pt too wide) in paragraph at lines 147--148
+\T1/cmr/m/n/10 abor-dar-se. En un pri-mer lu-gar se po-dr�a po-ner sim-ple-men-
+te la URL https://api.arasaac.org/api/pictograms/
+ []
+
+<Imagenes/Bitmap/modalPreajustePicto.png, id=1350, 499.8675pt x 283.0575pt>
 File: Imagenes/Bitmap/modalPreajustePicto.png Graphic file (type png)
 <use Imagenes/Bitmap/modalPreajustePicto.png>
 Package pdftex.def Info: Imagenes/Bitmap/modalPreajustePicto.png  used on input
  line 174.
 (pdftex.def)             Requested size: 251.9989pt x 142.69887pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Overfull \hbox (0.81444pt too wide) in paragraph at lines 188--189
-[]\T1/cmr/m/n/10.95 Se par-te de la URL \T1/cmtt/m/n/10.95 https://static.arasa
-ac.org/pictograms/id/id
+LaTeX Info: Redefining \. on input line 188.
+LaTeX Info: Redefining \% on input line 188.
+[57]
+Overfull \hbox (45.4494pt too wide) in paragraph at lines 193--194
+[]\T1/cmr/m/n/10 Un re-sul-ta-do po-si-ble pa-ra \T1/cmtt/m/n/10 option \T1/cmr
+/m/n/10 se-r�a: \T1/cmtt/m/n/10 _action-future_hair-020100 _skin-A65C17\T1/cmr/
+m/n/10 .
  []
 
-LaTeX Info: Redefining \. on input line 191.
-LaTeX Info: Redefining \% on input line 191.
-[60]
-<Imagenes/Bitmap/buscarPictoPreajuste.png, id=1375, 462.528pt x 260.172pt>
+<Imagenes/Bitmap/buscarPictoPreajuste.png, id=1357, 462.528pt x 260.172pt>
 File: Imagenes/Bitmap/buscarPictoPreajuste.png Graphic file (type png)
 <use Imagenes/Bitmap/buscarPictoPreajuste.png>
 Package pdftex.def Info: Imagenes/Bitmap/buscarPictoPreajuste.png  used on inpu
 t line 204.
 (pdftex.def)             Requested size: 323.9978pt x 182.25809pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
-[61 <./Imagenes/Bitmap/modalPreajustePicto.png>]
-<Imagenes/Bitmap/pictoItemModificado.png, id=1390, 249.93375pt x 331.2375pt>
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
+[58 <./Imagenes/Bitmap/modalPreajustePicto.png>]
+<Imagenes/Bitmap/pictoItemModificado.png, id=1371, 249.93375pt x 331.2375pt>
 File: Imagenes/Bitmap/pictoItemModificado.png Graphic file (type png)
 <use Imagenes/Bitmap/pictoItemModificado.png>
 Package pdftex.def Info: Imagenes/Bitmap/pictoItemModificado.png  used on input
@@ -1523,112 +1541,122 @@ Package pdftex.def Info: Imagenes/Bitmap/pictoItemModificado.png  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
-[62 <./Imagenes/Bitmap/buscarPictoPreajuste.png>]
-<Imagenes/Bitmap/modalEditarPicto.png, id=1398, 750.805pt x 587.19376pt>
+<Imagenes/Bitmap/modalEditarPicto.png, id=1373, 750.805pt x 587.19376pt>
 File: Imagenes/Bitmap/modalEditarPicto.png Graphic file (type png)
 <use Imagenes/Bitmap/modalEditarPicto.png>
 Package pdftex.def Info: Imagenes/Bitmap/modalEditarPicto.png  used on input li
 ne 243.
 (pdftex.def)             Requested size: 251.9989pt x 197.08072pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 253--253
 [][][][]$\T1/cmtt/m/n/9 https : / / developer . mozilla . org / en -[] US / doc
 s / Web / API /
  []
 
+
+Underfull \vbox (badness 1019) has occurred while \output is active []
+
 LaTeX Info: Redefining \. on input line 254.
 LaTeX Info: Redefining \% on input line 254.
-[63 <./Imagenes/Bitmap/pictoItemModificado.png> <./Imagenes/Bitmap/modalEditarP
-icto.png>]
-LaTeX Info: Redefining \. on input line 269.
-LaTeX Info: Redefining \% on input line 269.
- [64]
-<Imagenes/Bitmap/traducirFraseInicial.png, id=1420, 608.2725pt x 99.37125pt>
+ [59 <./Imagenes/Bitmap/buscarPictoPreajuste.png>]
+LaTeX Info: Redefining \. on input line 254.
+LaTeX Info: Redefining \% on input line 254.
+ [60 <./Imagenes/Bitmap/pictoItemModificado.png> <./Imagenes/Bitmap/modalEditar
+Picto.png>]
+LaTeX Info: Redefining \. on input line 280.
+LaTeX Info: Redefining \% on input line 280.
+ [61]
+<Imagenes/Bitmap/traducirFraseInicial.png, id=1401, 608.2725pt x 99.37125pt>
 File: Imagenes/Bitmap/traducirFraseInicial.png Graphic file (type png)
 <use Imagenes/Bitmap/traducirFraseInicial.png>
 Package pdftex.def Info: Imagenes/Bitmap/traducirFraseInicial.png  used on inpu
 t line 284.
 (pdftex.def)             Requested size: 251.9989pt x 41.16702pt.
-<Imagenes/Bitmap/traduccionPicto.png, id=1425, 636.3775pt x 384.43625pt>
+<Imagenes/Bitmap/traduccionPicto.png, id=1406, 636.3775pt x 384.43625pt>
 File: Imagenes/Bitmap/traduccionPicto.png Graphic file (type png)
 <use Imagenes/Bitmap/traduccionPicto.png>
 Package pdftex.def Info: Imagenes/Bitmap/traduccionPicto.png  used on input lin
 e 299.
 (pdftex.def)             Requested size: 251.9989pt x 152.229pt.
 
+Underfull \vbox (badness 1199) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 305.
-LaTeX Info: Redefining \% on input line 305.
-[65 <./Imagenes/Bitmap/traducirFraseInicial.png>]
-<Imagenes/Bitmap/fraseItemOriginal.png, id=1432, 607.26875pt x 205.76875pt>
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
+ [62 <./Imagenes/Bitmap/traducirFraseInicial.png> <./Imagenes/Bitmap/traduccion
+Picto.png>]
+<Imagenes/Bitmap/fraseItemOriginal.png, id=1414, 607.26875pt x 205.76875pt>
 File: Imagenes/Bitmap/fraseItemOriginal.png Graphic file (type png)
 <use Imagenes/Bitmap/fraseItemOriginal.png>
 Package pdftex.def Info: Imagenes/Bitmap/fraseItemOriginal.png  used on input l
 ine 313.
 (pdftex.def)             Requested size: 251.9989pt x 85.38615pt.
-LaTeX Info: Redefining \. on input line 321.
-LaTeX Info: Redefining \% on input line 321.
- [66 <./Imagenes/Bitmap/traduccionPicto.png> <./Imagenes/Bitmap/fraseItemOrigin
-al.png>]
-<Imagenes/Bitmap/modalEditarFraseItem.png, id=1441, 697.60625pt x 516.93124pt>
+<Imagenes/Bitmap/modalEditarFraseItem.png, id=1417, 697.60625pt x 516.93124pt>
 File: Imagenes/Bitmap/modalEditarFraseItem.png Graphic file (type png)
 <use Imagenes/Bitmap/modalEditarFraseItem.png>
 Package pdftex.def Info: Imagenes/Bitmap/modalEditarFraseItem.png  used on inpu
 t line 325.
 (pdftex.def)             Requested size: 251.9989pt x 186.73401pt.
-<Imagenes/Bitmap/fraseItemMidificada.png, id=1442, 560.0925pt x 259.97125pt>
+<Imagenes/Bitmap/fraseItemMidificada.png, id=1418, 560.0925pt x 259.97125pt>
 File: Imagenes/Bitmap/fraseItemMidificada.png Graphic file (type png)
 <use Imagenes/Bitmap/fraseItemMidificada.png>
 Package pdftex.def Info: Imagenes/Bitmap/fraseItemMidificada.png  used on input
  line 333.
 (pdftex.def)             Requested size: 251.9989pt x 116.96614pt.
-LaTeX Info: Redefining \. on input line 346.
-LaTeX Info: Redefining \% on input line 346.
- [67 <./Imagenes/Bitmap/modalEditarFraseItem.png> <./Imagenes/Bitmap/fraseItemM
-idificada.png>]
-<Imagenes/Bitmap/cargarFotoPestaña.png, id=1451, 596.2275pt x 97.36375pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 343.
+LaTeX Info: Redefining \% on input line 343.
+[63 <./Imagenes/Bitmap/fraseItemOriginal.png> <./Imagenes/Bitmap/modalEditarFra
+seItem.png>]
+<Imagenes/Bitmap/cargarFotoPestaña.png, id=1427, 596.2275pt x 97.36375pt>
 File: Imagenes/Bitmap/cargarFotoPestaña.png Graphic file (type png)
 <use Imagenes/Bitmap/cargarFotoPestaña.png>
 Package pdftex.def Info: Imagenes/Bitmap/cargarFotoPestaña.png  used on input 
 line 365.
 (pdftex.def)             Requested size: 251.9989pt x 41.15099pt.
-<Imagenes/Bitmap/addPhotoItem.png, id=1453, 590.205pt x 543.02875pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 375.
+LaTeX Info: Redefining \% on input line 375.
+[64 <./Imagenes/Bitmap/fraseItemMidificada.png>]
+<Imagenes/Bitmap/addPhotoItem.png, id=1434, 590.205pt x 543.02875pt>
 File: Imagenes/Bitmap/addPhotoItem.png Graphic file (type png)
 <use Imagenes/Bitmap/addPhotoItem.png>
 Package pdftex.def Info: Imagenes/Bitmap/addPhotoItem.png  used on input line 3
 82.
 (pdftex.def)             Requested size: 251.9989pt x 231.84889pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 390.
-LaTeX Info: Redefining \% on input line 390.
-[68 <./Imagenes/Bitmap/cargarFotoPestaña.png>]
-<Imagenes/Bitmap/photoItemTexto.png, id=1463, 792.9625pt x 295.1025pt>
+LaTeX Info: Redefining \. on input line 401.
+LaTeX Info: Redefining \% on input line 401.
+ [65 <./Imagenes/Bitmap/cargarFotoPestaña.png> <./Imagenes/Bitmap/addPhotoItem
+.png>]
+<Imagenes/Bitmap/photoItemTexto.png, id=1446, 792.9625pt x 295.1025pt>
 File: Imagenes/Bitmap/photoItemTexto.png Graphic file (type png)
 <use Imagenes/Bitmap/photoItemTexto.png>
 Package pdftex.def Info: Imagenes/Bitmap/photoItemTexto.png  used on input line
  410.
 (pdftex.def)             Requested size: 251.9989pt x 93.7818pt.
-LaTeX Info: Redefining \. on input line 413.
-LaTeX Info: Redefining \% on input line 413.
- [69 <./Imagenes/Bitmap/addPhotoItem.png>]
-<Imagenes/Bitmap/photoItemError.png, id=1471, 196.48407pt x 186.6975pt>
+<Imagenes/Bitmap/photoItemError.png, id=1448, 196.48407pt x 186.6975pt>
 File: Imagenes/Bitmap/photoItemError.png Graphic file (type png)
 <use Imagenes/Bitmap/photoItemError.png>
 Package pdftex.def Info: Imagenes/Bitmap/photoItemError.png  used on input line
  421.
 (pdftex.def)             Requested size: 251.9989pt x 239.46481pt.
-LaTeX Info: Redefining \. on input line 431.
-LaTeX Info: Redefining \% on input line 431.
- [70 <./Imagenes/Bitmap/photoItemTexto.png> <./Imagenes/Bitmap/photoItemError.p
-ng>]
-<Imagenes/Bitmap/modalesColeccion.png, id=1480, 2007.5pt x 1003.75pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 447.
+LaTeX Info: Redefining \% on input line 447.
+[66 <./Imagenes/Bitmap/photoItemTexto.png>]
+<Imagenes/Bitmap/modalesColeccion.png, id=1456, 2007.5pt x 1003.75pt>
 File: Imagenes/Bitmap/modalesColeccion.png Graphic file (type png)
 <use Imagenes/Bitmap/modalesColeccion.png>
 Package pdftex.def Info: Imagenes/Bitmap/modalesColeccion.png  used on input li
@@ -1638,173 +1666,175 @@ ne 456.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 466.
-LaTeX Info: Redefining \% on input line 466.
-[71]
-<Imagenes/Bitmap/alertListaPicto.png, id=1486, 428.60126pt x 46.1725pt>
+LaTeX Info: Redefining \. on input line 463.
+LaTeX Info: Redefining \% on input line 463.
+[67 <./Imagenes/Bitmap/photoItemError.png>]
+<Imagenes/Bitmap/alertListaPicto.png, id=1463, 428.60126pt x 46.1725pt>
 File: Imagenes/Bitmap/alertListaPicto.png Graphic file (type png)
 <use Imagenes/Bitmap/alertListaPicto.png>
 Package pdftex.def Info: Imagenes/Bitmap/alertListaPicto.png  used on input lin
 e 471.
 (pdftex.def)             Requested size: 251.9989pt x 27.14711pt.
-<Imagenes/Bitmap/alertErrorListaPicto.png, id=1488, 439.6425pt x 51.19125pt>
+<Imagenes/Bitmap/alertErrorListaPicto.png, id=1465, 439.6425pt x 51.19125pt>
 File: Imagenes/Bitmap/alertErrorListaPicto.png Graphic file (type png)
 <use Imagenes/Bitmap/alertErrorListaPicto.png>
 Package pdftex.def Info: Imagenes/Bitmap/alertErrorListaPicto.png  used on inpu
 t line 482.
 (pdftex.def)             Requested size: 251.9989pt x 29.34178pt.
-LaTeX Info: Redefining \. on input line 497.
-LaTeX Info: Redefining \% on input line 497.
- [72 <./Imagenes/Bitmap/modalesColeccion.png> <./Imagenes/Bitmap/alertListaPict
+LaTeX Info: Redefining \. on input line 499.
+LaTeX Info: Redefining \% on input line 499.
+ [68 <./Imagenes/Bitmap/modalesColeccion.png> <./Imagenes/Bitmap/alertListaPict
 o.png> <./Imagenes/Bitmap/alertErrorListaPicto.png>]
-<Imagenes/Bitmap/lisaPictoSel.png, id=1497, 421.575pt x 385.44pt>
+<Imagenes/Bitmap/lisaPictoSel.png, id=1474, 421.575pt x 385.44pt>
 File: Imagenes/Bitmap/lisaPictoSel.png Graphic file (type png)
 <use Imagenes/Bitmap/lisaPictoSel.png>
 Package pdftex.def Info: Imagenes/Bitmap/lisaPictoSel.png  used on input line 5
 03.
 (pdftex.def)             Requested size: 251.9989pt x 230.40123pt.
-LaTeX Info: Redefining \. on input line 515.
-LaTeX Info: Redefining \% on input line 515.
- [73 <./Imagenes/Bitmap/lisaPictoSel.png>]
-<Imagenes/Bitmap/añadirTexto.png, id=1505, 393.47pt x 116.435pt>
+LaTeX Info: Redefining \. on input line 517.
+LaTeX Info: Redefining \% on input line 517.
+ [69 <./Imagenes/Bitmap/lisaPictoSel.png>]
+<Imagenes/Bitmap/añadirTexto.png, id=1482, 393.47pt x 116.435pt>
 File: Imagenes/Bitmap/añadirTexto.png Graphic file (type png)
 <use Imagenes/Bitmap/añadirTexto.png>
 Package pdftex.def Info: Imagenes/Bitmap/añadirTexto.png  used on input line 5
 35.
 (pdftex.def)             Requested size: 251.9989pt x 74.56966pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 2469) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 548.
-LaTeX Info: Redefining \% on input line 548.
- [74]
-<Imagenes/Bitmap/fraseItem1.png, id=1511, 323.2075pt x 106.3975pt>
+<Imagenes/Bitmap/fraseItem1.png, id=1484, 323.2075pt x 106.3975pt>
 File: Imagenes/Bitmap/fraseItem1.png Graphic file (type png)
 <use Imagenes/Bitmap/fraseItem1.png>
 Package pdftex.def Info: Imagenes/Bitmap/fraseItem1.png  used on input line 552
 .
 (pdftex.def)             Requested size: 251.9989pt x 82.95561pt.
-<Imagenes/Bitmap/modalEditarTexto.png, id=1513, 458.71375pt x 200.75pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 559.
+LaTeX Info: Redefining \% on input line 559.
+[70 <./Imagenes/Bitmap/añadirTexto.png>]
+<Imagenes/Bitmap/modalEditarTexto.png, id=1491, 458.71375pt x 200.75pt>
 File: Imagenes/Bitmap/modalEditarTexto.png Graphic file (type png)
 <use Imagenes/Bitmap/modalEditarTexto.png>
 Package pdftex.def Info: Imagenes/Bitmap/modalEditarTexto.png  used on input li
 ne 563.
 (pdftex.def)             Requested size: 251.9989pt x 110.28418pt.
-LaTeX Info: Redefining \. on input line 573.
-LaTeX Info: Redefining \% on input line 573.
-
-[75 <./Imagenes/Bitmap/añadirTexto.png> <./Imagenes/Bitmap/fraseItem1.png> <./
-Imagenes/Bitmap/modalEditarTexto.png>]
-<Imagenes/Bitmap/herramientaItems.png, id=1522, 540.0175pt x 60.225pt>
+LaTeX Info: Redefining \. on input line 579.
+LaTeX Info: Redefining \% on input line 579.
+ [71 <./Imagenes/Bitmap/fraseItem1.png> <./Imagenes/Bitmap/modalEditarTexto.png
+>]
+<Imagenes/Bitmap/herramientaItems.png, id=1499, 540.0175pt x 60.225pt>
 File: Imagenes/Bitmap/herramientaItems.png Graphic file (type png)
 <use Imagenes/Bitmap/herramientaItems.png>
 Package pdftex.def Info: Imagenes/Bitmap/herramientaItems.png  used on input li
 ne 590.
 (pdftex.def)             Requested size: 251.9989pt x 28.10358pt.
-LaTeX Info: Redefining \. on input line 601.
-LaTeX Info: Redefining \% on input line 601.
- [76 <./Imagenes/Bitmap/herramientaItems.png>]
-<Imagenes/Bitmap/ejemploPictoItem.png, id=1531, 881.2925pt x 434.62375pt>
+<Imagenes/Bitmap/ejemploPictoItem.png, id=1503, 881.2925pt x 434.62375pt>
 File: Imagenes/Bitmap/ejemploPictoItem.png Graphic file (type png)
 <use Imagenes/Bitmap/ejemploPictoItem.png>
 Package pdftex.def Info: Imagenes/Bitmap/ejemploPictoItem.png  used on input li
 ne 607.
 (pdftex.def)             Requested size: 251.9989pt x 124.27359pt.
-<Imagenes/Bitmap/modalPictoItem.png, id=1533, 464.73625pt x 220.825pt>
+LaTeX Info: Redefining \. on input line 614.
+LaTeX Info: Redefining \% on input line 614.
+ [72 <./Imagenes/Bitmap/herramientaItems.png> <./Imagenes/Bitmap/ejemploPictoIt
+em.png>]
+<Imagenes/Bitmap/modalPictoItem.png, id=1512, 464.73625pt x 220.825pt>
 File: Imagenes/Bitmap/modalPictoItem.png Graphic file (type png)
 <use Imagenes/Bitmap/modalPictoItem.png>
 Package pdftex.def Info: Imagenes/Bitmap/modalPictoItem.png  used on input line
  618.
 (pdftex.def)             Requested size: 251.9989pt x 119.73903pt.
-
-Underfull \vbox (badness 6775) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 626.
-LaTeX Info: Redefining \% on input line 626.
- [77 <./Imagenes/Bitmap/ejemploPictoItem.png> <./Imagenes/Bitmap/modalPictoItem
-.png>]
-LaTeX Info: Redefining \. on input line 647.
-LaTeX Info: Redefining \% on input line 647.
-
-[78]
-<Imagenes/Bitmap/modalDescargarTablero.png, id=1549, 545.03625pt x 281.05pt>
+LaTeX Info: Redefining \. on input line 636.
+LaTeX Info: Redefining \% on input line 636.
+ [73 <./Imagenes/Bitmap/modalPictoItem.png>]
+<Imagenes/Bitmap/modalDescargarTablero.png, id=1522, 545.03625pt x 281.05pt>
 File: Imagenes/Bitmap/modalDescargarTablero.png Graphic file (type png)
 <use Imagenes/Bitmap/modalDescargarTablero.png>
 Package pdftex.def Info: Imagenes/Bitmap/modalDescargarTablero.png  used on inp
 ut line 653.
 (pdftex.def)             Requested size: 251.9989pt x 129.94498pt.
-LaTeX Info: Redefining \. on input line 673.
-LaTeX Info: Redefining \% on input line 673.
- [79 <./Imagenes/Bitmap/modalDescargarTablero.png>]
+LaTeX Info: Redefining \. on input line 671.
+LaTeX Info: Redefining \% on input line 671.
+ [74 <./Imagenes/Bitmap/modalDescargarTablero.png>]
+Overfull \hbox (17.8523pt too wide) in paragraph at lines 683--684
+\T1/cmr/m/n/10 nen-te fun-cio-na-ba sin com-pli-ca-cio-nes, apa-re-ci� otro err
+or con la bi-blio-te-ca html2canvas[][][],
+ []
+
 LaTeX Info: Redefining \. on input line 691.
 LaTeX Info: Redefining \% on input line 691.
- [80]
-<Imagenes/Bitmap/diagramaConexiones.png, id=1578, 603.25375pt x 195.73125pt>
+[75]
+<Imagenes/Bitmap/diagramaConexiones.png, id=1551, 603.25375pt x 195.73125pt>
 File: Imagenes/Bitmap/diagramaConexiones.png Graphic file (type png)
 <use Imagenes/Bitmap/diagramaConexiones.png>
 Package pdftex.def Info: Imagenes/Bitmap/diagramaConexiones.png  used on input 
 line 696.
 (pdftex.def)             Requested size: 251.9989pt x 81.76155pt.
-LaTeX Info: Redefining \. on input line 717.
-LaTeX Info: Redefining \% on input line 717.
- [81 <./Imagenes/Bitmap/diagramaConexiones.png>]
-LaTeX Info: Redefining \. on input line 737.
-LaTeX Info: Redefining \% on input line 737.
- [82]
-<Imagenes/Bitmap/pwa.png, id=1613, 452.6511pt x 257.0403pt>
+LaTeX Info: Redefining \. on input line 719.
+LaTeX Info: Redefining \% on input line 719.
+ [76 <./Imagenes/Bitmap/diagramaConexiones.png>]
+<Imagenes/Bitmap/pwa.png, id=1576, 452.6511pt x 257.0403pt>
 File: Imagenes/Bitmap/pwa.png Graphic file (type png)
 <use Imagenes/Bitmap/pwa.png>
 Package pdftex.def Info: Imagenes/Bitmap/pwa.png  used on input line 741.
 (pdftex.def)             Requested size: 360.0pt x 204.43626pt.
-)
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 5519) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 752.
+LaTeX Info: Redefining \% on input line 752.
+ [77])
 LaTeX Info: Redefining \. on input line 156.
 LaTeX Info: Redefining \% on input line 156.
- [83 <./Imagenes/Bitmap/pwa.png>]
+
+[78 <./Imagenes/Bitmap/pwa.png>]
 \openout2 = `Capitulos/Evaluación.aux'.
 
+ (Capitulos/Evaluación.tex
+Cap\'itulo 6.
 
-(Capitulos/Evaluación.tex [84
+Underfull \vbox (badness 1968) has occurred while \output is active []
+
+ [79
 
 
 
 ]
-Cap\'itulo 6.
-[85]
-<Imagenes/Bitmap/evaluacionPista.png, id=1639, 461.47406pt x 240.14719pt>
+<Imagenes/Bitmap/evaluacionPista.png, id=1607, 461.47406pt x 240.14719pt>
 File: Imagenes/Bitmap/evaluacionPista.png Graphic file (type png)
 <use Imagenes/Bitmap/evaluacionPista.png>
 Package pdftex.def Info: Imagenes/Bitmap/evaluacionPista.png  used on input lin
 e 39.
 (pdftex.def)             Requested size: 288.0011pt x 149.87173pt.
-LaTeX Info: Redefining \. on input line 46.
-LaTeX Info: Redefining \% on input line 46.
- [86 <./Imagenes/Bitmap/evaluacionPista.png>]
+LaTeX Info: Redefining \. on input line 50.
+LaTeX Info: Redefining \% on input line 50.
+
+[80 <./Imagenes/Bitmap/evaluacionPista.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 57--57
 [][][][]$\T1/cmtt/m/n/9 https : / / help . qualaroo . com / hc / en -[] us / ar
 ticles / 360039070552 -[] After -[] Scenario -[]
  []
 
-LaTeX Info: Redefining \. on input line 66.
-LaTeX Info: Redefining \% on input line 66.
-[87]
+
 Underfull \hbox (badness 10000) in paragraph at lines 70--70
 [][][][]$\T1/cmtt/m/n/9 https : / / help . qualaroo . com / hc / en -[] us / ar
 ticles / 360039474571 -[] System -[]
  []
 
-
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
+[81]
 Underfull \hbox (badness 10000) in paragraph at lines 94--94
 [][][][]$\T1/cmtt/m/n/9 https : / / github . com / NILGroup / TFG -[] 2021 -[] 
 EditorPictogramas / blob / master /
  []
 
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
-[88]
+
 Underfull \hbox (badness 10000) in paragraph at lines 108--108
 []|\T1/cmr/m/n/10.95 Puntuaci�n
  []
@@ -1909,7 +1939,21 @@ Overfull \hbox (43.833pt too wide) in paragraph at lines 206--235
 [][] 
  []
 
-
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+[82]
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+ [83]
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+ [84]
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+ [85]
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+ [86]
 Underfull \hbox (badness 10000) in paragraph at lines 251--251
 []|\T1/cmr/m/n/10.95 Puntuaci�n
  []
@@ -1949,66 +1993,47 @@ Overfull \hbox (43.833pt too wide) in paragraph at lines 245--276
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 285.
-LaTeX Info: Redefining \% on input line 285.
-[89]
-LaTeX Info: Redefining \. on input line 285.
-LaTeX Info: Redefining \% on input line 285.
- [90]
-LaTeX Info: Redefining \. on input line 285.
-LaTeX Info: Redefining \% on input line 285.
- [91]
-LaTeX Info: Redefining \. on input line 285.
-LaTeX Info: Redefining \% on input line 285.
- [92]
-LaTeX Info: Redefining \. on input line 285.
-LaTeX Info: Redefining \% on input line 285.
- [93]
-LaTeX Info: Redefining \. on input line 285.
-LaTeX Info: Redefining \% on input line 285.
- [94]
-LaTeX Info: Redefining \. on input line 311.
-LaTeX Info: Redefining \% on input line 311.
- [95]
-LaTeX Info: Redefining \. on input line 329.
-LaTeX Info: Redefining \% on input line 329.
- [96]
-LaTeX Info: Redefining \. on input line 353.
-LaTeX Info: Redefining \% on input line 353.
- [97])
+LaTeX Info: Redefining \. on input line 305.
+LaTeX Info: Redefining \% on input line 305.
+[87]
+LaTeX Info: Redefining \. on input line 305.
+LaTeX Info: Redefining \% on input line 305.
+ [88]
+LaTeX Info: Redefining \. on input line 330.
+LaTeX Info: Redefining \% on input line 330.
+ [89]
+LaTeX Info: Redefining \. on input line 359.
+LaTeX Info: Redefining \% on input line 359.
+ [90])
 LaTeX Info: Redefining \. on input line 158.
 LaTeX Info: Redefining \% on input line 158.
- [98]
+ [91]
 \openout2 = `Capitulos/ConclusionesTrabajoFuturo.aux'.
 
-
-(Capitulos/ConclusionesTrabajoFuturo.tex
-Cap\'itulo 7.
-[99
+ (Capitulos/ConclusionesTrabajoFuturo.tex [92
 
 
 
 ]
-LaTeX Info: Redefining \. on input line 50.
-LaTeX Info: Redefining \% on input line 50.
- [100])
+Cap\'itulo 7.
+[93])
 LaTeX Info: Redefining \. on input line 160.
 LaTeX Info: Redefining \% on input line 160.
- [101]
+ [94]
 \openout2 = `Capitulos/ConclusionsFutureWork.aux'.
 
- (Capitulos/ConclusionsFutureWork.tex [102
+ (Capitulos/ConclusionsFutureWork.tex
+Chapter 7.
+) [95
 
 
 
 ]
-Chapter 7.
-) [103]
 LaTeX Info: Redefining \. on input line 168.
 LaTeX Info: Redefining \% on input line 168.
 \openout2 = `Capitulos/AportacionesIndividuales.aux'.
 
- (Capitulos/AportacionesIndividuales.tex [104
+ (Capitulos/AportacionesIndividuales.tex [96
 
 
 
@@ -2017,75 +2042,65 @@ Cap\'itulo 8.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [105]
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
+ [97]
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
 
-[106])
+[98])
 LaTeX Info: Redefining \. on input line 171.
 LaTeX Info: Redefining \% on input line 171.
- [107]
+ [99]
 \openout2 = `Apendices/appendixA.aux'.
 
- (Apendices/appendixA.tex [108
+ (Apendices/appendixA.tex [100
 
 
 
 ]
 Ap\'{e}ndice A.
-) [109]
-\openout2 = `Apendices/appendixB.aux'.
-
- (Apendices/appendixB.tex [110
-
-
-
-]
-Ap\'{e}ndice B.
-) [111] [112
+) [101] [102
 
 
 ]
 \openout2 = `Cascaras/bibliografia.aux'.
 
- (Cascaras/bibliografia.tex (TFMTeXiS.bbl)) [113
+ (Cascaras/bibliografia.tex (TFMTeXiS.bbl)) [103
 
 
 ]
 \openout2 = `Cascaras/fin.aux'.
 
 
-(Cascaras/fin.tex [114
+(Cascaras/fin.tex [104
 
 
-] [115])
+] [105])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
  (TFMTeXiS.aux (Cascaras/cover.aux)
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 
-(Cascaras/autorizacion.aux) (Cascaras/dedicatoria.aux)
-(Cascaras/agradecimientos.aux) (Cascaras/resumen.aux) (Cascaras/abstract.aux)
-(TeXiS/TeXiS_toc.aux)
-LaTeX Info: Redefining \. on input line 35.
-LaTeX Info: Redefining \% on input line 35.
- (Capitulos/Introduccion.aux) (Capitulos/Introduction.aux) (Capitulos/EstadoDeL
-aCuestion.aux)
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
- (Capitulos/Tecnologías.aux)
-(Capitulos/PictUp.aux) (Capitulos/Arquitectura.aux) (Capitulos/Evaluación.aux)
-(Capitulos/ConclusionesTrabajoFuturo.aux) (Capitulos/ConclusionsFutureWork.aux)
-(Capitulos/AportacionesIndividuales.aux)
-LaTeX Info: Redefining \. on input line 49.
-LaTeX Info: Redefining \% on input line 49.
- (Apendices/appendixA.aux)
-(Apendices/appendixB.aux) (Cascaras/bibliografia.aux) (Cascaras/fin.aux))
+(Cascaras/dedicatoria.aux) (Cascaras/agradecimientos.aux) (Cascaras/resumen.aux
+) (Cascaras/abstract.aux) (TeXiS/TeXiS_toc.aux)
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+ (Capitulos/Introduccion.aux)
+(Capitulos/Introduction.aux) (Capitulos/EstadoDeLaCuestion.aux)
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+
+(Capitulos/Tecnologías.aux) (Capitulos/PictUp.aux) (Capitulos/Arquitectura.aux
+) (Capitulos/Evaluación.aux) (Capitulos/ConclusionesTrabajoFuturo.aux)
+(Capitulos/ConclusionsFutureWork.aux) (Capitulos/AportacionesIndividuales.aux)
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+
+(Apendices/appendixA.aux) (Cascaras/bibliografia.aux) (Cascaras/fin.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
 Package rerunfilecheck Info: File `TFMTeXiS.out' has not changed.
-(rerunfilecheck)             Checksum: C912476210BFF0F10A83BA98DFB1E6E5;7225.
+(rerunfilecheck)             Checksum: CB4E31CCEBAEFCC6A4DCF171685C8581;7174.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2093,37 +2108,39 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 15115 strings out of 480790
- 245712 string characters out of 2913605
- 730354 words of memory out of 3000000
- 29932 multiletter control sequences out of 15000+200000
- 554605 words of font info for 62 fonts, out of 3000000 for 9000
+ 15082 strings out of 480790
+ 244883 string characters out of 2913605
+ 726354 words of memory out of 3000000
+ 29925 multiletter control sequences out of 15000+200000
+ 555967 words of font info for 64 fonts, out of 3000000 for 9000
  1380 hyphenation exceptions out of 8191
- 61i,15n,57p,1099b,761s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,15n,57p,1099b,732s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-tt1095.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecrm1000.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+cc1000.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ectt1000.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\ecxc1000.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfo
 ur/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Alfonso\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Alfonso\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk>{E:/MiKTeX/fonts/enc/
-dvips/base/8r.enc} <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecti1095.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\Alfonso\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Alfonso\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Alfonso\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Al
-fonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\
-Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.
+/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Alfonso\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Alfonso\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Alfonso\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Al
+fonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\
+Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.
+pk>{E:/MiKTeX/fonts/enc/dvips/base/8r.enc} <C:\Users\Alfonso\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Alfonso\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\Alfonso\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Al
+fonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\
+Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.
 pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
-cbx1440.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecbx2074.pk><E:/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MiKTeX/fo
-nts/type1/urw/times/utmr8a.pfb>
-Output written on TFMTeXiS.pdf (139 pages, 9452951 bytes).
+crm2488.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecbx1200.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecbx1440.pk> <C:\Users\Alfonso\AppData\Local\MiKTeX\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecbx2074.pk><E:/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.p
+fb><E:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on TFMTeXiS.pdf (127 pages, 9462398 bytes).
 PDF statistics:
- 2658 PDF objects out of 2984 (max. 8388607)
- 430 named destinations out of 1000 (max. 500000)
- 1239 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2665 PDF objects out of 2984 (max. 8388607)
+ 416 named destinations out of 1000 (max. 500000)
+ 1231 words of extra memory for PDF output out of 10000 (max. 10000000)
 
