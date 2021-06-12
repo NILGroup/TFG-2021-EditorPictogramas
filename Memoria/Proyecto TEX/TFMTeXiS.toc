@@ -76,35 +76,35 @@
 \contentsline {subsection}{\numberline {5.7.1}TextoItem}{68}{subsection.195}%
 \contentsline {subsection}{\numberline {5.7.2}Reglas de diseño de usabilidad}{69}{subsection.198}%
 \contentsline {section}{\numberline {5.8}Iconos}{70}{section.199}%
-\contentsline {subsection}{\numberline {5.8.1}IconoItem}{71}{subsection.204}%
+\contentsline {subsection}{\numberline {5.8.1}IconoItem}{70}{subsection.204}%
 \contentsline {subsection}{\numberline {5.8.2}Reglas de diseño de usabilidad}{71}{subsection.205}%
 \contentsline {section}{\numberline {5.9}Descargar Tablero}{72}{section.206}%
-\contentsline {section}{\numberline {5.10}Funcionalidades no implementadas}{72}{section.209}%
-\contentsline {subsection}{\numberline {5.10.1}Traducción de frase}{72}{subsection.210}%
-\contentsline {subsection}{\numberline {5.10.2}Backend}{73}{subsection.214}%
+\contentsline {section}{\numberline {5.10}Funcionalidades no implementadas}{73}{section.209}%
+\contentsline {subsection}{\numberline {5.10.1}Traducción de frase}{73}{subsection.210}%
+\contentsline {subsection}{\numberline {5.10.2}Backend}{74}{subsection.214}%
 \contentsline {subsection}{\numberline {5.10.3}Añadir imagen}{74}{subsection.218}%
 \contentsline {subsection}{\numberline {5.10.4}Subtableros y cajón de pictogramas}{75}{subsection.222}%
 \contentsline {section}{\numberline {5.11}Despliegue de la aplicación}{75}{section.223}%
 \contentsline {section}{\numberline {5.12}Control de versiones y organización del desarrollo de PictUp!}{76}{section.230}%
 \contentsline {chapter}{\numberline {6}Evaluación}{77}{chapter.232}%
 \contentsline {section}{\numberline {6.1}Preparación de la evaluación}{77}{section.233}%
-\contentsline {section}{\numberline {6.2}Diseño de la evaluación}{78}{section.235}%
+\contentsline {section}{\numberline {6.2}Diseño de la evaluación}{77}{section.235}%
 \contentsline {section}{\numberline {6.3}Resultados de la evaluación}{80}{section.252}%
 \contentsline {subsection}{\numberline {6.3.1}Resultados del cuestionario ASQ}{80}{subsection.254}%
-\contentsline {subsection}{\numberline {6.3.2}Resultados del cuestionario SUS}{85}{subsection.259}%
+\contentsline {subsection}{\numberline {6.3.2}Resultados del cuestionario SUS}{80}{subsection.259}%
 \contentsline {subsection}{\numberline {6.3.3}Observaciones de los usuarios}{85}{subsection.262}%
 \contentsline {section}{\numberline {6.4}Evaluación adicional}{87}{section.263}%
 \contentsline {section}{\numberline {6.5}Análisis de los resultados}{88}{section.264}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{91}{chapter.266}%
-\contentsline {section}{\numberline {7.1}Conclusiones}{91}{section.267}%
-\contentsline {section}{\numberline {7.2}Trabajo futuro}{92}{section.268}%
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{93}{chapter.269}%
-\contentsline {section}{\numberline {7.1}Conclusions}{93}{section.270}%
-\contentsline {section}{\numberline {7.2}Future work}{94}{section.271}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{89}{chapter.266}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{89}{section.267}%
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{90}{section.268}%
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{91}{chapter.269}%
+\contentsline {section}{\numberline {7.1}Conclusions}{91}{section.270}%
+\contentsline {section}{\numberline {7.2}Future work}{92}{section.271}%
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {8}Aportaciones individuales al proyecto}{95}{chapter.272}%
-\contentsline {section}{\numberline {8.1}Alfonso Tercero López}{95}{section.273}%
-\contentsline {section}{\numberline {8.2}Jorge García Cerros}{96}{section.274}%
+\contentsline {chapter}{\numberline {8}Aportaciones individuales al proyecto}{93}{chapter.272}%
+\contentsline {section}{\numberline {8.1}Alfonso Tercero López}{93}{section.273}%
+\contentsline {section}{\numberline {8.2}Jorge García Cerros}{94}{section.274}%
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {A}Formulario y pistas de la evaluación}{99}{appendix.275}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{117}{appendix*.299}%
+\contentsline {chapter}{\numberline {A}Formulario y pistas de la evaluación}{97}{appendix.275}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{115}{appendix*.299}%

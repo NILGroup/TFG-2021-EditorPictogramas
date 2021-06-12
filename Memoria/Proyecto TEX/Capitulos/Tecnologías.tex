@@ -1,13 +1,11 @@
 \chapter{Tecnologías}
-\label{cap:introduccion}
+
 
 %\chapterquote{}{}
 
-\begin{resumen}
-	En este capítulo se enumerarán las tecnologías utilizadas y su utilidad en el proyecto.
-\end{resumen}
-
-\label{cap1:sec:Motivacion}
+%\begin{resumen}
+%	En este capítulo se enumerarán las tecnologías utilizadas y su utilidad en el proyecto.
+%\end{resumen}
 
 
 \section{Introducción}
@@ -18,8 +16,8 @@ A continuación se describirán estas y otras tecnologías estudiadas de cara al
 
 \section{API Arasaac}
 \label{cap3:sec:apiarasaac}
-ARASAAC facilita la obtención de recursos pictográficos mediante su API\footnote{\url{https://arasaac.org/developers/api}}. Una API es una interfaz que reúne un conjunto de funciones y métodos, accesibles para otras aplicaciones. En el caso de la API de ARASAAC, esta está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia Creative Commons.
-Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los materiales  son actividades, calendarios o agendas creados por usuarios haciendo uso de los pictogramas de ARASAAC. Respecto a los pictogramas, los métodos que se han utilizado en este trabajo son:
+\textit{ARASAAC} facilita la obtención de recursos pictográficos mediante su API\footnote{\url{https://arasaac.org/developers/api}}. Una API es una interfaz que reúne un conjunto de funciones y métodos, accesibles para otras aplicaciones. En el caso de la API de ARASAAC, esta está exclusivamente disponible para aplicaciones no comerciales, tal y como indica su licencia \textit{Creative Commons}.
+Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los materiales son actividades, calendarios o agendas creados por usuarios haciendo uso de los pictogramas de \textit{ARASAAC}. Respecto a los pictogramas, los métodos que se han utilizado en este trabajo son:
 
 \begin{itemize}
 	\item \textbf{bestSearch}: recibe una palabra y retorna un único JSON con la información del pictograma que más se ajuste a la palabra.
@@ -33,7 +31,7 @@ Mediante los métodos de la API , podemos obtener materiales y pictogramas. Los 
 	 	\label{fig:compBusq}
 	 \end{figure}
 	
-	\item \textbf{idPictogram}: a partir del identificador de un pictograma, retorna la dirección de la imagen del pictograma asociado al identificador.    
+	\item \textbf{idPictogram}: a partir del identificador de un pictograma, retorna la dirección de la imagen del pictograma asociado al identificador. 
 \end{itemize}
 
 
@@ -54,7 +52,7 @@ Como se ha mencionado anteriormente, la API de ARASAAC retorna un objeto JSON qu
 	
 \end{itemize}
 
-Los pictogramas pueden ser personalizados, como se puede ver en la Figura \ref{fig:colorespicto}. La web cuenta con un mayor rango de opciones, como tachar un pictograma, añadir un marco o cambiar el color de fondo. Aunque la API es más limitada y cuenta con menos opciones, éstas son: cambiar el color de pelo y piel si el pictograma  lo permite, indicar plural, tiempo verbal y dejarlo en blanco y nego. Esta personalización no se obtiene directamente desde la API, sino que se ha de modificar una URL en función de los atributos modificados para que el pictograma aparezca de manera diferente. 
+Los pictogramas pueden ser personalizados, como se puede ver en la Figura \ref{fig:colorespicto}. La web cuenta con un mayor rango de opciones, como tachar un pictograma, añadir un marco o cambiar el color de fondo. Aunque la API es más limitada y cuenta con menos opciones, éstas son: cambiar el color de pelo y piel si el pictograma lo permite, indicar plural, tiempo verbal y dejarlo en blanco y nego. Esta personalización no se obtiene directamente desde la API, sino que se ha de modificar una URL en función de los atributos modificados para que el pictograma aparezca de manera diferente. 
 
 \begin{figure}[h!]
 	\centering
@@ -81,24 +79,23 @@ React Drag and Drop\footnote{\url{https://react-dnd.github.io/react-dnd/about}} 
 
 \subsection{Prototipos}
 \label{cap3:sec:prototipos}
-Otro objetivo es el de la interacción de los componentes en una superficie cuadriculada. Tras experimentar con distintas bibliotecas de JavaScript como Interact JS \footnote{\url{https://interactjs.io/}} no obtuvimos el resultado esperado pues el desplazamiento de los objetos no era lo suficientemente preciso.
+Otro objetivo es el de la interacción de los componentes en una superficie cuadriculada. Tras experimentar con distintas bibliotecas de JavaScript como Interact JS\footnote{\url{https://interactjs.io/}} no obtuvimos el resultado esperado pues el desplazamiento de los objetos no era lo suficientemente preciso.
 
-React tenía la biblioteca Drag and Drop que permite desplazar los componentes. La principal diferencia entre Drag and Drop y Interact JS, es que al mover un elemento, “Interact JS”  deja unos píxeles de diferencia y “Drag and Drop.” permite mover objetos en intervalos definidos, como poder mover un objeto de 10 píxeles en 10 píxeles.
+React tenía la biblioteca Drag and Drop que permite desplazar los componentes. La principal diferencia entre Drag and Drop y Interact JS, es que al mover un elemento, “Interact JS” deja unos píxeles de diferencia y “Drag and Drop.” permite mover objetos en intervalos definidos, como poder mover un objeto de 10 píxeles en 10 píxeles.
 
 \section{JSZip}
 \label{cap3:sec:jszip}
 JSZip\footnote{\url{https://stuk.github.io/jszip/}} es una biblioteca de Javascript que mediante una API permite crear y cargar archivos comprimidos en formato \textit{ZIP}. Será el método para importar y exportar elementos de la aplicación.
 \begin{itemize}
-	\item \textbf{Generar ZIP}: Crea un zip con todo lo que haya creado el usuario, como las fotos que haya subido, la posición de los pictogramas colocados y su información asociada.
-	\item \textbf{Cargar ZIP}: Al subir un ZIP, descomprime su contenido para poder cargar los elementos en la aplicación.
+	\item \textbf{Generar \textit{ZIP}}: Crea un \textit{ZIP} con todo lo que haya creado el usuario, como las fotos que haya subido, la posición de los pictogramas colocados y su información asociada.
+	\item \textbf{Cargar \textit{ZIP}}: Al subir un \textit{ZIP}, descomprime su contenido para poder cargar los elementos en la aplicación.
 \end{itemize}	
 
 
 \section{Progressive Web Application}
 \label{cap3:sec:pwa}
 
-Las aplicaciones web progresivas (PWA)\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}} son aplicaciones instalables en ordenador o dispositivos Android. Están a medio camino entre una aplicación nativa\footnote{\url{https://web.dev/what-are-pwas/}}  y una web, pues ofrecen más posibilidades que una web convencional y no requiere de instaladores o ser descargadas de tiendas de aplicaciones.
-    
+Las aplicaciones web progresivas (\textit{PWA})\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}} son aplicaciones instalables en ordenador o dispositivos Android. Están a medio camino entre una aplicación nativa\footnote{\url{https://web.dev/what-are-pwas/}} y una web, pues ofrecen más posibilidades que una web convencional y no requiere de instaladores o ser descargadas de tiendas de aplicaciones.
 Entre otras ventajas que se ofrecen:
 
 \begin{itemize}
@@ -115,7 +112,7 @@ Entre otras ventajas que se ofrecen:
 	
 \end{itemize}
 
-Actualmente las PWA son accesibles desde la gran mayoría de navegadores tanto de ordenador como móvil.
+Actualmente las \textit{PWA} son accesibles desde la gran mayoría de navegadores tanto de ordenador como móvil.
 
 
 

@@ -17,10 +17,10 @@ De ahora en adelante se referirá a la aplicación como PictUp!. El propósito d
 
 \begin{itemize}
 	
-	\item \textbf{Aplicación web gratuita}: la aplicación debe de ser gratuita y accesible desde el navegador web, Para ser potencialmente utilizada por mayor número de usuarios posibles.
+	\item \textbf{Aplicación web gratuita}: la aplicación debe de ser gratuita y accesible desde el navegador web, para ser potencialmente utilizada por mayor número de usuarios posibles.
 	\item \textbf{Personalización de pictograma}: la aplicación debe dar la posibilidad de personalizar los pictogramas para transmitir más información en un mismo picto, y si el pictograma lo permite que se asemeje a los rasgos físicos del usuario que utilice los pictogramas. De esta manera, se podrá sentir identificado por un pictograma fácilmente. 
 	\item \textbf{Pictogramas actualizados}: la base de datos debe de contar con los últimos pictogramas creados del sistema pictográfico utilizado. 
-	\item \textbf{Crear tableros con libertad y precisión}: la aplicación debe permitir desplazar con libertad los pictogramas en el tablero para que los usuarios puedan crear material con el diseño que deseen. Además de poder alinear los pictogramas de manera sencilla.  
+	\item \textbf{Crear tableros con libertad y precisión}: la aplicación debe permitir desplazar con libertad los pictogramas en el tablero para que los usuarios puedan crear material con el diseño que deseen. Además de poder alinear los pictogramas de manera sencilla.
 	\item \textbf{Utilizar fotografías como material}: algunos usuarios quieren complementar los tableros con imágenes propias que pueden ser más familiares a la persona que se beneficie del tablero. 
 	\item \textbf{Agilizar el proceso de búsqueda de pictogramas que sean usados de manera recurrente}: al crear material de manera recurrente puede ser útil contar con los pictogramas más usados para no repetir la misma búsqueda repetidamente. 
 	\item \textbf{Añadir interacción a los tableros}: la mayoría de las aplicaciones estudiadas son estáticas, es decir, no permiten una interacción adicional al usuario con el tablero. Algunas aplicaciones aprovechan dicho potencial como Piktoplus (Sección \ref{cap2:pkplus}) mediante los subtableros emergentes o Jocomunico (Sección \ref{cap2:jocomunico}) que permite reproducir la pronunciación del texto asociado a un pictograma.
@@ -42,13 +42,13 @@ Después de probar distintas tecnologías y estudiar la situación actual de los
 Teniendo en cuenta los requisitos de los usuarios, las aplicaciones existentes y el trabajo futuro de trabajos similares, empezamos a bocetar una primera idea del proyecto.
 
 
-En la Figura \ref{fig:loginalfonso} podemos ver el boceto de la pantalla de  inicio, la cual estaría compuesta por cuatro secciones bien diferenciadas. \textit{Creación de tablero libre} serviría para crear un tablero donde se pueden colocar pictogramas, texto o figuras. \textit{Creación de actividad} añadiría interacción a los tableros mediante la sucesión de los mismos. Más tarde profundizaremos en esas dos secciones.
+En la Figura \ref{fig:loginalfonso} podemos ver el boceto de la pantalla de inicio, la cual estaría compuesta por cuatro secciones bien diferenciadas. \textit{Creación de tablero libre} serviría para crear un tablero donde se pueden colocar pictogramas, texto o figuras. \textit{Creación de actividad} añadiría interacción a los tableros mediante la sucesión de los mismos. Más tarde profundizaremos en esas dos secciones.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/logInAlfonso}
-	\caption{Boceto de pantalla inicial}
+	\caption{Boceto de pantalla inicial.}
 	\label{fig:loginalfonso}
 \end{figure}
 
@@ -59,26 +59,26 @@ La sección de \textit{Social} tendría la función de compartir tableros, activ
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/inicioAlfonso}
-	\caption{Boceto pantalla de plantillas}
+	\caption{Boceto pantalla de plantillas.}
 	\label{fig:inicioalfonso}
 \end{figure}
 
 
- Si profundizamos en la \textit{Creación de un tablero libre} en la Figura \ref{fig:dibujolibrealfon}, podemos ver los componentes que se pueden colocar sobre el tablero. Éstos son los pictogramas, texto, figuras como flechas o rectángulos y la posibilidad de subir imágenes. También comenzamos a plantear la idea de almacenar colecciones de pictogramas, que almacenan distintos conjuntos de pictogramas que el usuario agrupa según su criterio. Por ejemplo, si un profesor tiene que crear varios tableros respecto a un tema, como “Animales de la granja”, puede ser útil tener una colección con los pictogramas de gallina, cabra, oveja, etc, agilizando el proceso de creación.
+ Si profundizamos en la \textit{Creación de un tablero libre} en la Figura \ref{fig:dibujolibrealfon}, podemos ver los componentes que se pueden colocar sobre el tablero. Estos son los pictogramas, texto, figuras como flechas o rectángulos y la posibilidad de subir imágenes. También comenzamos a plantear la idea de almacenar colecciones de pictogramas, que almacenan distintos conjuntos de pictogramas que el usuario agrupa según su criterio. Por ejemplo, si un profesor tiene que crear varios tableros respecto a un tema, como “Animales de la granja”, puede ser útil tener una colección con los pictogramas de gallina, cabra, oveja, etc, agilizando el proceso de creación.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/DibujoLibreAlfon}
-	\caption{Boceto pantalla de edición de tableros }
+	\caption{Boceto pantalla de edición de tableros.}
 	\label{fig:dibujolibrealfon}
 \end{figure}
 
-El apartado de \textit{Creación de actividad} no deja de ser una extensión de creación libre pero con más  componentes que permiten interacción con el usuario para crear distintos tipos de actividad. Estos componentes, que a partir de ahora denominaremos componentes interactivos, son:
+El apartado de \textit{Creación de actividad} no deja de ser una extensión de creación libre pero con más componentes que permiten interacción con el usuario para crear distintos tipos de actividad. Estos componentes, que a partir de ahora denominaremos componentes interactivos, son:
 
 \begin{itemize}
 	
-	\item \textbf{Cajón de pictgramas y espacio picto}: se trata de dos componentes que van ligados entre sí. En primer lugar está el \textit{cajón de picto}, que es un espacio al margen del tablero donde aparecen un conjunto de pictogramas, como se puede ver en la Figura \ref{fig:componentecajon}. Los elementos que aparecen en el cajón pueden  ser desplazados a un \textit{espacio picto}. Este componente es un hueco inicialmente vacío donde puede ser colocado un pictograma como se puede ver también en la Figura \ref{fig:componentecajon}. Ambos componentes son configurables, lo que permite establecer los pictogramas que aparecen en el \textit{cajón de pictogramas}, y los pictogramas que acepta el \textit{espacio picto}. Ambos elementos se beneficiarían de las colecciones, pues son conjuntos de pictogramas establecidos por el usuario.
+	\item \textbf{Cajón de pictgramas y espacio picto}: se trata de dos componentes que van ligados entre sí. En primer lugar está el \textit{cajón de picto}, que es un espacio al margen del tablero donde aparecen un conjunto de pictogramas, como se puede ver en la Figura \ref{fig:componentecajon}. Los elementos que aparecen en el cajón pueden ser desplazados a un \textit{espacio picto}. Este componente es un hueco inicialmente vacío donde puede ser colocado un pictograma como se puede ver también en la Figura \ref{fig:componentecajon}. Ambos componentes son configurables, lo que permite establecer los pictogramas que aparecen en el \textit{cajón de pictogramas}, y los pictogramas que acepta el \textit{espacio picto}. Ambos elementos se beneficiarían de las colecciones, pues son conjuntos de pictogramas establecidos por el usuario.
 	
 	% TODO: \usepackage{graphicx} required
 	\begin{figure}[h!]
@@ -89,28 +89,28 @@ El apartado de \textit{Creación de actividad} no deja de ser una extensión de 
 	\end{figure}
 	
 	
-	Por ejemplo, un cajón de pictogramas podría tener asignado varias colecciones de pictogramas para que aparezcan mezclados. Asimismo, en el \textit{espacio picto} podría ser configurado para únicamente aceptar pictogramas de una de las colecciones o un pictograma concreto. De esta manera podría ser construido con facilidad un ejercicio donde el usuario que interactúe con el tablero pueda arrastrar distintos pictogramas del cajón de pictos a un espacio picto. En la Figura \ref{fig:cajonpictosgranja} se ve el \textit{cajón de pictos} mostrando pictogramas que representan animales de la granja y la selva, junto a unos \textit{espacio pictos} donde colocar los pictos de cada tipo.  El objetivo es dar la máxima flexibilidad al usuario que cree una actividad.
+	Por ejemplo, un cajón de pictogramas podría tener asignado varias colecciones de pictogramas para que aparezcan mezclados. Asimismo, en el \textit{espacio picto} podría ser configurado para únicamente aceptar pictogramas de una de las colecciones o un pictograma concreto. De esta manera podría ser construido con facilidad un ejercicio donde el usuario que interactúe con el tablero pueda arrastrar distintos pictogramas del cajón de pictos a un espacio picto. En la Figura \ref{fig:cajonpictosgranja} se ve el \textit{cajón de pictos} mostrando pictogramas que representan animales de la granja y la selva, junto a unos \textit{espacio pictos} donde colocar los pictos de cada tipo. El objetivo es dar la máxima flexibilidad al usuario que cree una actividad.
 	
 	
 	% TODO: \usepackage{graphicx} required
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.9\linewidth]{Imagenes/Bitmap/cajonPictosGranja}
-		\caption{Boceto de actividad con cajón de pictos y hueco picto}
+		\caption{Boceto de actividad con cajón de pictos y hueco picto.}
 		\label{fig:cajonpictosgranja}
 	\end{figure}
 
 	\item \textbf{Subtablero}: el componente subtablero permite desplegar un tablero de pictogramas. Los pictogramas que componen dicho tablero pueden venir dados por una colección de pictogramas creada por el usuario o indicarse en el propio componente. Su finalidad es la de añadir más pictogramas en el mismo espacio y agilizar la comunicación. La idea ha sido rescatada de Piktoplus (Sección \ref{cap2:pkplus}) que también permitía crear subtableros.
 	
-	\item \textbf{Enlace}: permite ligar dos pictogramas diferentes. Está compuesto por dos “piezas” las cuales se asignan a dos pictogramas para ser enlazados. Su finalidad es la de crear actividades como “hacer parejas”.
+	\item \textbf{Enlace}: permite ligar dos pictogramas diferentes. Está compuesto por dos piezas las cuales se asignan a dos pictogramas para ser enlazados. Su finalidad es la de crear actividades como por ejemplo, juegos de hacer parejas con pictogramas.
 	
-	En la Figura \ref{fig:componenteenla} podemos ver el ejemplo del pictograma hueso y perro, a los cuales se les asignan la misma pieza identificada por un símbolo de pica con fondo verde. El motivo por el que  las piezas tienen una forma y color asociado facilita al usuario que cree la actividad identificar las piezas ya  ligadas. El usuario final al pulsar sobre los pictos permitirá hacer parejas y completar la actividad.
+	En la Figura \ref{fig:componenteenla} podemos ver el ejemplo del pictograma hueso y perro, a los cuales se les asignan la misma pieza identificada por un símbolo de pica con fondo verde. El motivo por el que las piezas tienen una forma y color asociado facilita al usuario que cree la actividad identificar las piezas ya ligadas. El usuario final al pulsar sobre los pictos permitirá hacer parejas y completar la actividad.
 	
 	% TODO: \usepackage{graphicx} required
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/componenteEnla}
-		\caption{Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura}
+		\caption{Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura.}
 		\label{fig:componenteenla}
 	\end{figure}
 
@@ -123,18 +123,18 @@ Con todos los tableros creados también es posible crear una actividad de mayor 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/Cuento}
-	\caption{Boceto de una escena de un cuanto, con pictogramas en la zona inferior y botones en los laterales para pasar o retroceder la escena o tablero}
+	\caption{Boceto de una escena de un cuanto, con pictogramas en la zona inferior y botones en los laterales para pasar o retroceder la escena o tablero.}
 	\label{fig:cuento}
 \end{figure}
 
 
-En la Figura \ref{fig:presentaciontableros} podemos ver cómo se compondrían este tipo de actividades, que resulta muy familiar a la construcción de una presentación de diapositivas.  
+En la Figura \ref{fig:presentaciontableros} podemos ver cómo se compondrían este tipo de actividades, que resulta muy familiar a la construcción de una presentación de diapositivas.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/presentacionTableros}
-	\caption{Boceto del compositor de actividades}
+	\caption{Boceto del compositor de actividades.}
 	\label{fig:presentaciontableros}
 \end{figure}
 
@@ -190,7 +190,7 @@ En el recuadro inferior tendríamos las siguientes opciones:
 	
 	En la zona de la derecha encontramos un tablero donde se insertaría todos los pictogramas, iconos, formas, imágenes y campos de texto. Todos los elementos que se inserten en el tablero podrán ser ampliados de tamaño pulsando sobre una de las esquinas del elemento.
 	
-	En la parte superior del tablero en sí tendríamos un botón llamado “\textit{Guardar como pdf}” que generaría un archivo con extensión pdf a partir del tablero inferior.
+	En la parte superior del tablero en sí tendríamos un botón llamado “\textit{Guardar como PDF}” que generaría un archivo con extensión PDF a partir del tablero inferior.
 	
 	Debajo de dicho tablero encontramos un botón que nos permitiría añadir un nuevo tablero con el que seguir trabajando.
 	
@@ -207,7 +207,7 @@ En el recuadro inferior tendríamos las siguientes opciones:
 	
 	
 
-	Respecto a las pantallas de normas y juegos son relativamente similares, ya que ambas en la parte de la izquierda cuentan con un apartado para la edición y a la derecha el tablero. Las únicas diferencias entre estas pantallas serían los botones que encontramos en el tablero para añadir una nueva norma o sección al cuento. Un ejemplo de la visualización de la pantalla de normas sería la Figura \ref{fig:normasjorge}. Ambas tienen un botón en la parte superior que ofrece la posibilidad de guardar como pdf lo que tenemos en el tablero.
+	Respecto a las pantallas de normas y juegos son relativamente similares, ya que ambas en la parte de la izquierda cuentan con un apartado para la edición y a la derecha el tablero. Las únicas diferencias entre estas pantallas serían los botones que encontramos en el tablero para añadir una nueva norma o sección al cuento. Un ejemplo de la visualización de la pantalla de normas sería la Figura \ref{fig:normasjorge}. Ambas tienen un botón en la parte superior que ofrece la posibilidad de guardar como PDF lo que tenemos en el tablero.
 	
 	% TODO: \usepackage{graphicx} required
 	\begin{figure}[h!]
@@ -257,7 +257,7 @@ Tras terminar ambos prototipos, se analizaron para contrastar ideas en común y 
 A grandes rasgos, se vio que el prototipo de Alfonso era menos rígido de cara a crear material. Esto es visible en la creación de reglas, cuento o actividades en el prototipo de Jorge, donde solo hay un único formato para cada tipo de material. Por ello se ha optado por ofrecer los componentes al usuario para que este cree el material según su criterio. Los componentes de creación de actividades vistas en el prototipo de Alfonso también ofrecían mayor libertad al crear actividades. 
 
 Un concepto en común entre ambos prototipos es la existencia de una barra de herramientas al lado izquierdo del tablero mediante la cual se añadirían los distintos elementos al tablero. Además, se estableció que debían existir dos tipos de componentes en la aplicación: herramientas y elementos.
-A continuación se detallarán las funcionalidades que deberían desempeñar estas componentes. El resto de ideas vistas en ambos prototipos sirvieron para crear una visión general de la posible aplicación, por lo que muchas de estas ideas no fueron desarrolladas.  
+A continuación se detallarán las funcionalidades que deberían desempeñar estas componentes. El resto de ideas vistas en ambos prototipos sirvieron para crear una visión general de la posible aplicación, por lo que muchas de estas ideas no fueron desarrolladas.
 
 \subsection{Herramientas}
 
@@ -293,30 +293,30 @@ Hemos considerado que un elemento es un componente que puede ser añadido al tab
 	
 	\item \textbf{Picto}: el elemento picto representa un pictograma junto a su nombre asociado. Cuenta con la opción de poder modificar algunas características del pictograma, como indicar un tiempo verbal. Si el pictograma muestra a una persona, también se puede cambiar el color de pelo y tono de piel.
 	
-	\item \textbf{Foto}: el elemento foto permite añadir imágenes tanto a partir de una URL como las que suba el propio usuario. Esta ha sido una de las características más demandadas por los usuarios. El permitir añadir fotos abre multitud de posibilidades, como la de poner fotos de la familia, mostrar localizaciones habituales como la cocina e identificar objetos personales que no se representan tan fielmente mediante un pictograma (por ejemplo un juguete específico o la portada de su  libro favorito). Esto facilita al usuario final relacionar conceptos al mostrar figuras que le sean familiares.
+	\item \textbf{Foto}: el elemento foto permite añadir imágenes tanto a partir de una URL como las que suba el propio usuario. Esta ha sido una de las características más demandadas por los usuarios. El permitir añadir fotos abre multitud de posibilidades, como la de poner fotos de la familia, mostrar localizaciones habituales como la cocina e identificar objetos personales que no se representan tan fielmente mediante un pictograma (por ejemplo un juguete específico o la portada de su libro favorito). Esto facilita al usuario final relacionar conceptos al mostrar figuras que le sean familiares.
 	
-	\item \textbf{Figuras}: las figuras sirven para ordenar, enfatizar o decorar el tablero. Por ejemplo,  una línea puede ser usada para dividir el espacio de trabajo en secciones, relacionar dos pictogramas o incluso marcar un espacio donde escribir una respuesta si se va a imprimir el tablero. Pese a la simplicidad de las figuras, sus posibilidades son muy amplias según  la creatividad de quien crea el tablero.
+	\item \textbf{Figuras}: las figuras sirven para ordenar, enfatizar o decorar el tablero. Por ejemplo, una línea puede ser usada para dividir el espacio de trabajo en secciones, relacionar dos pictogramas o incluso marcar un espacio donde escribir una respuesta si se va a imprimir el tablero. Pese a la simplicidad de las figuras, sus posibilidades son muy amplias según la creatividad de quien crea el tablero.
 	
-	\item \textbf{Campos de texto}: Los campos de texto podrán ser insertados en el tablero de la aplicación. Estos campos de texto podrán ser editados permitiendo cambiar el color del texto y aumentar la fuente.
+	\item \textbf{Campos de texto}: los campos de texto podrán ser insertados en el tablero de la aplicación. Estos campos de texto podrán ser editados permitiendo cambiar el color del texto y aumentar la fuente.
 		
 \end{itemize}
 
 Hay algunos elementos que tras el análisis de los prototipos decidimos que no iban a aportar lo suficiente en la aplicación o que incrementarían innecesariamente la complejidad. Estos elementos descartados fueron:
 
 \begin{itemize}
-	\item\textbf{Pantallas de normas y cuentos predefinidos}: El principal motivo es su falta de flexibilidad, es decir, que si la aplicación no permite crear un cuento o un listado de reglas con sus propias herramientas, tampoco permitirá crear otro tipo de material. Por ello nos hemos decantado por herramientas que ofrecieran más posibilidades al usuario. Otro motivo era que no todos los usuarios querrían por ejemplo que las normas aparecen de una misma manera, como si fuese un listado, por lo que es imprescindible ofrecer la mayor libertad posible al usuario.
+	\item\textbf{Pantallas de normas y cuentos predefinidos}: el principal motivo es su falta de flexibilidad, es decir, que si la aplicación no permite crear un cuento o un listado de reglas con sus propias herramientas, tampoco permitirá crear otro tipo de material. Por ello nos hemos decantado por herramientas que ofrecieran más posibilidades al usuario. Otro motivo era que no todos los usuarios querrían por ejemplo que las normas aparecen de una misma manera, como si fuese un listado, por lo que es imprescindible ofrecer la mayor libertad posible al usuario.
 	
 		
-	\item \textbf{Cajón de pictogramas}: El cajón de pictos es un apartado al margen del tablero donde aparecen un conjunto de pictogramas que el usuario debe mover a alguna posición. El hueco donde vayan los pictogramas que se encuentren en el cajón de pictogramas puede ser modificado y aceptar unos u otros. Esto puede ser utilizado como test sencillo de hacer y usar.
+	\item \textbf{Cajón de pictogramas}: el cajón de pictos es un apartado al margen del tablero donde aparecen un conjunto de pictogramas que el usuario debe mover a alguna posición. El hueco donde vayan los pictogramas que se encuentren en el cajón de pictogramas puede ser modificado y aceptar unos u otros. Esto puede ser utilizado como test sencillo de hacer y usar.
 	
-	\item \textbf{Subtablero}: El subtablero es un componente que a simple vista parece un pictograma pero, al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto es originario de Piktoplus pero actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
+	\item \textbf{Subtablero}: el subtablero es un componente que a simple vista parece un pictograma pero, al ser pulsado, despliega un tablero que contiene otros pictogramas. Este concepto es originario de Piktoplus pero actualmente no cuenta con soporte y puede ser de utilidad para añadir más pictogramas en el mismo espacio.
 	
-	\item \textbf{Plantillas}: Tras comentarlo en las reuniones, no se centró mucha atención en este apartado, pues ya estaba muy explorado por la aplicación Pictableros (Sección \ref{cap2:pictableros}).
+	\item \textbf{Plantillas}: tras comentarlo en las reuniones, no se centró mucha atención en este apartado, pues ya estaba muy explorado por la aplicación Pictableros (Sección \ref{cap2:pictableros}).
 	
-	\item \textbf{Log In}: El principal motivo de su descarte fue el no poder garantizar en un primer momento la total seguridad de los tableros creados.
+	\item \textbf{Log In}: el principal motivo de su descarte fue el no poder garantizar en un primer momento la total seguridad de los tableros creados.
 	Otra de las características del proyecto es la inclusión de imágenes que pudiera subir el usuario, con la responsabilidad añadida de estar manejando imágenes de menores de edad. Estos fueron los motivos por los que optamos por una modalidad sin necesidad de servidor, donde los documentos generados se guardan en el ordenador.
 	
-	\item \textbf{Selección de idioma}: Fue una idea descartada al principio del desarrollo, en vista de que la gran mayoría de las aplicaciones existentes ofrecían soporte en multitud de idiomas. Pero no se llevó a cabo para centrarnos en otros aspectos de mayor relevancia en el contexto del trabajo.
+	\item \textbf{Selección de idioma}: fue una idea descartada al principio del desarrollo, en vista de que la gran mayoría de las aplicaciones existentes ofrecían soporte en multitud de idiomas. Pero no se llevó a cabo para centrarnos en otros aspectos de mayor relevancia en el contexto del trabajo.
 	
 \end{itemize}
 
@@ -332,14 +332,14 @@ Para asegurar un correcto desarrollo de las distintas funcionalidades que se enc
 	
 	\item \textbf{Usabilidad universal}: ha de tenerse en cuenta que la aplicación la pueden utilizar distintos tipos de usuario. A los usuarios más avanzados se les ha de dar la oportunidad de utilizar funciones más complejas frente a los usuarios principiantes. 
 	
-	\item \textbf{Retroalimentación} informativa: se ha de informar a los usuarios en todo momento de las acciones realizadas de manera visual, por ejemplo mediante cuadros de diálogo.
+	\item \textbf{Retroalimentación informativa}: se ha de informar a los usuarios en todo momento de las acciones realizadas de manera visual, por ejemplo mediante cuadros de diálogo.
 	
-	\item \textbf{Diseñar diálogos para conducir la finalización}: las acciones que requieran de unas ciertas secuencias deberán estar bien organizadas para informar al usuario sobre el momento del proceso en el que se encuentra.  Es importante que tengan una etapa de comienzo, otra de desarrollo y por último una de finalización.
+	\item \textbf{Diseñar diálogos para conducir la finalización}: las acciones que requieran de unas ciertas secuencias deberán estar bien organizadas para informar al usuario sobre el momento del proceso en el que se encuentra. Es importante que tengan una etapa de comienzo, otra de desarrollo y por último una de finalización.
 	\item \textbf{Prevenir errores}: se ha de diseñar la interfaz de la aplicación de tal manera que los usuarios cometan el menor número de errores posible. Un ejemplo recurrente es deshabilitar botones o menús. En caso de que ocurra un error se deberá informar al usuario indicando el fallo y las posibles soluciones. 
 	
 	\item \textbf{Permitir deshacer acciones de forma fácil}: todas las acciones que se realicen en la aplicación deben de ser reversibles. Esto permite a los usuarios realizar acciones sin temor a no poder revertir los cambios realizados.
 	
-	\item \textbf{Maximizar la sensación de control}:  las acciones no deberían de superar los tres clics. No hay problema si el número es superior siempre y cuando el usuario sepa en todo momento las acciones que está realizando. 
+	\item \textbf{Maximizar la sensación de control}: las acciones no deberían de superar los tres clics. No hay problema si el número es superior siempre y cuando el usuario sepa en todo momento las acciones que está realizando. 
 	
 	\item \textbf{Reducir la carga de memoria a corto plazo}: es importante que la información que se muestre al usuario sea breve y concisa. Además también es importante agrupar todas aquellas funcionalidades similares para reducir la carga de memoria del usuario.
 	

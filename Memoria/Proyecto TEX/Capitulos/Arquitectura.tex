@@ -9,7 +9,7 @@
 
 \section{Introducción}
 
-Una vez especificados las características y requisitos a implementar, se pudo empezar a desarrollar la arquitectura de la aplicación y la implementación de dichas características. Desde un primer momento, se determinó que la aplicación tendrá una barra de herramientas donde se incluirán distintas funcionalidades como buscar pictogramas o realizar traducción de frases. Asimismo se incluirá una cuadrícula donde se podrán poner sobre ella los distintos elementos de los materiales pictográficos. El conjunto de estas funcionalidades permitirá crear tableros pictográficos. A continuación se explicará la jerarquía utilizada en la aplicación, las funcionalidades y los ítems disponibles. 
+Una vez especificados las características y requisitos a implementar, se pudo empezar a desarrollar la arquitectura de la aplicación y la implementación de dichas características. Desde un primer momento, se determinó que la aplicación tendrá una barra de herramientas donde se incluirán distintas funcionalidades como buscar pictogramas o realizar traducción de frases. También se incluirá una cuadrícula donde se podrán poner sobre ella los distintos elementos de los materiales pictográficos. El conjunto de estas funcionalidades permitirá crear tableros pictográficos. A continuación se explicará la jerarquía utilizada en la aplicación, las funcionalidades y los ítems disponibles. 
 
 \section{Arquitectura}
 \label{cap5:arquitectura}
@@ -29,14 +29,13 @@ Además también se puede incluir dentro de la función render otros componentes
 
 \subsection{Arquitectura externa}
 
-Una vez vista la estructura de un componente, se puede ver en la Figura \ref{fig:pantallaprincipal} la pantalla principal de PictUp!, la cual está compuesta por multitud de componentes. Estos son agrupados y gestionados mediante el componente Main. Como se puede ver en dicha Figura, se pueden distinguir varios apartados bien diferenciados: 
+Una vez vista la estructura de un componente, se puede ver en la Figura \ref{fig:pantallaprincipal} la pantalla principal de PictUp!, la cual está compuesta por multitud de componentes. Estos son agrupados y gestionados mediante el componente Main. Como se puede ver, se pueden distinguir varios apartados bien diferenciados en pantalla principal: 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{Imagenes/Bitmap/pantallaprincipal}
-	\caption{Vista inicial de PictUp!
-	}
+	\caption{Vista inicial de PictUp!.}
 	\label{fig:pantallaprincipal}
 \end{figure}
 
@@ -58,7 +57,7 @@ Una vez vista la estructura de un componente, se puede ver en la Figura \ref{fig
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/items}
-	\caption{Ejemplos de Ítems}
+	\caption{Ejemplos de Ítems.}
 	\label{fig:items}
 \end{figure}
 	
@@ -77,7 +76,7 @@ Para esquematizar cómo interactúan la distintas componentes, la Figura \ref{fi
 \subsection{Cuadrícula}
 \label{cap5:cuadricula}
 
-En esta sección se explicará el funcionamiento en detalle de la cuadrícula. Para facilitar la tarea de desplazar elementos en un espacio, el proyecto de la cuadrícula fue clonado del proyecto  \textit{dnd-a11y-patterns}\footnote{\url{https://github.com/salesforce-ux/dnd-a11y-patterns}} que contaba con componentes que permitían desplazarse de distintas maneras. Cuenta con una licencia BSD 3-Clause que permite libertad de modificación y distribución.
+En esta sección se explicará el funcionamiento en detalle de la cuadrícula. Para facilitar la tarea de desplazar elementos en un espacio, el proyecto de la cuadrícula fue clonado del proyecto  \textit{dnd-a11y-patterns}\footnote{\url{https://github.com/salesforce-ux/dnd-a11y-patterns}} que contaba con componentes que permitían desplazarse de distintas maneras. Cuenta con una licencia \textit{BSD 3-Clause} que permite libertad de modificación y distribución.
 
 
 El empezar desde este proyecto facilitó el  tratamiento de eventos de desplazamiento (Drag and Drop), los cuales iban a ser de gran importancia para mover los distintos ítems de la aplicación. Además de gestionar estos eventos, cuenta con muchos parámetros que han sido modificados, como el ancho y alto inicial de cada ítem o la posibilidad de mantener la proporción de un ítem al ser redimensionado.
@@ -115,7 +114,7 @@ El buscador de pictogramas es la herramienta que muestra los distintos pictogram
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/buscarPicto2}
-	\caption{Vista del componente de búsqueda de pictogramas}
+	\caption{Vista del componente de búsqueda de pictogramas.}
 	\label{fig:buscarpicto2}
 \end{figure}
 
@@ -144,15 +143,15 @@ En caso de añadirlo a la cuadrícula, primero guardará el pictograma en el his
 \subsection{Preajuste}
 \label{preajuste}
 
-La manera de obtener la dirección URL de una imagen tiene dos maneras de abordarse. En un primer lugar se podría poner simplemente la URL “https://api.arasaac.org/api/pictograms/” junto al identificador del pictograma. De esta manera simplemente se mostraría el pictograma pero perderíamos la valiosa posibilidad de editar un pictograma que ofrece ARASAAC.
+La manera de obtener la dirección URL de una imagen tiene dos maneras de abordarse. En un primer lugar se podría poner simplemente la URL “https:// api.arasaac.org/api/pictograms/” junto al identificador del pictograma. De esta manera simplemente se mostraría el pictograma pero perderíamos la valiosa posibilidad de editar un pictograma que ofrece ARASAAC.
 
 Para poder optar a las modificaciones, se ha de modificar la URL de una manera concreta. Desde la propia API se especifican los atributos modificables que se pueden aplicar a todos los pictogramas:  
 
 
 \begin{itemize}
-	\item \textbf{action}: Añade una flecha para indicar que una acción se da en el futuro o en el pasado.
-	\item \textbf{plural}: Añade un “+” en la esquina superior derecha.
-	\item \textbf{nocolor}: Muestra el pictograma en blanco y negro.
+	\item \textbf{action}: añade una flecha para indicar que una acción se da en el futuro o en el pasado.
+	\item \textbf{plural}: añade un “+” en la esquina superior derecha.
+	\item \textbf{nocolor}: muestra el pictograma en blanco y negro.
 	
 \end{itemize}
 
@@ -160,9 +159,9 @@ Existen otras dos modificaciones que solo son aplicables a los pictogramas cuyos
 
 
 \begin{itemize}
-	\item \textbf{hair}: Si un pictograma tiene pelo su color puede ser uno de entre seis colores posibles asociado a su valor hexadecimal: moreno, rubio, pelirrojo, etc.
+	\item \textbf{hair}: si un pictograma tiene pelo su color puede ser uno de entre seis colores posibles asociado a su valor hexadecimal: moreno, rubio, pelirrojo, etc.
 	
-	\item \textbf{skin}: Si el pictograma contiene una persona se puede modificar el tono de piel de entre cinco posibles, especificados mediante su valor hexadecimal.
+	\item \textbf{skin}: si el pictograma contiene una persona se puede modificar el tono de piel de entre cinco posibles, especificados mediante su valor hexadecimal.
 	
 \end{itemize}
 
@@ -190,7 +189,8 @@ Respecto a la construcción de las URLs se realiza de la siguiente manera:
 	
 	\item Dichas opciones deben estar  en un orden concreto utilizando los valores obtenidos del preajuste y el pictograma a crear. Por ejemplo, si se va a crear la URL del  pictograma “avión”, los ajustes relacionados con el color de pelo o piel no se aplicarían, ya que el picto no lo permite.
 	 
-	\item Un resultado posible para \texttt{option} sería: \texttt{\_action-future\_hair-020100 \_skin-A65C17}. El significado de cada etiqueta: \\ \texttt{\_action-future} añade la flecha en la esquina superior derecha indicando futuro y \texttt{hair}, y \texttt{skin} van asociados a su color hexadecimal correspondiente obtenido del preajuste. Si la etiqueta de \texttt{hair} fuera antes que la de \texttt{skin}, la URL creada no funciona. De ahí la importancia del orden.
+	\item Un resultado posible para \texttt{option} sería: \\
+	\texttt{\_action-future\_hair-020100\_skin-A65C17}. \\Respecto al significado de cada etiqueta: \texttt{\_action-future} añade la flecha en la esquina superior derecha indicando futuro y \texttt{hair}, y \texttt{skin} van asociados a su color hexadecimal correspondiente obtenido del preajuste. Si la etiqueta de \texttt{hair} fuera antes que la de \texttt{skin}, la URL creada no funciona. De ahí la importancia del orden.
 	
 	\item La URL creada se usa en cada pictograma mostrado en función de los preajustes, tal y como se puede observar en la Figura \ref{fig:buscarpictopreajuste}.
 	
@@ -202,7 +202,7 @@ Respecto a la construcción de las URLs se realiza de la siguiente manera:
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{Imagenes/Bitmap/buscarPictoPreajuste}
-	\caption{Ejemplos de tipos de distintas combinaciones de preajuste}
+	\caption{Ejemplos de tipos de distintas combinaciones de preajuste.}
 	\label{fig:buscarpictopreajuste}
 \end{figure}
 
@@ -218,7 +218,7 @@ Es importante destacar que al realizar las pruebas se puso un límite a los pict
 
 \subsection{PictoItem}
 
-PictoItem es el componente asignado para representar un pictograma en la cuadrícula. En la Figura \ref{fig:pictoitemmodificado} se puede ver su representación en el tablero: la mayor parte del componente lo abarca el pictograma, y debajo está su nombre. Las funcionalidades que tiene este PictoItem son la de editar el picto mediante el botón del lápiz y la de reproducir el sonido de su texto asociado mediante el botón \textit{play}. Respecto a su estructura interna, en su \texttt{state} almacena el objeto picto obtenido anteriormente de la API de ARASAAC, el preajuste asignado y \textit{flags} que indican si su modal de edición de  picto es visible o no. 
+PictoItem es el componente asignado para representar un pictograma en la cuadrícula. En la Figura \ref{fig:pictoitemmodificado} se puede ver su representación en el tablero: la mayor parte del componente lo abarca el pictograma, y debajo está su nombre. Las funcionalidades que tiene este PictoItem son la de editar el picto mediante el botón del lápiz y la de reproducir el sonido de su texto asociado mediante el botón \textit{play}. Respecto a su estructura interna, en su \texttt{state} almacena el objeto picto obtenido anteriormente de la API de ARASAAC, el preajuste asignado y \textit{flags} que indican si su modal de edición de  picto es visible o no. A continuación se detallarán las funcionalidades que ofrece  PictoItem.
 
 
 % TODO: \usepackage{graphicx} required
@@ -230,7 +230,7 @@ PictoItem es el componente asignado para representar un pictograma en la cuadrí
 \end{figure}
 
 
-A continuación se detallarán las funcionalidades que ofrece  PictoItem.
+
 
 
 \subsubsection{Editar Picto}
@@ -260,7 +260,7 @@ En caso de no contar con locución se ha usado \textit{SpeechSynthesisUtterance}
 	
 	También se utilizan los iconos de “+” para añadir el pictograma al tablero y el icono de la carpeta para añadir el pictograma a una nueva lista o a una ya creada.
 	
-	En PictoItem también se utilizan iconos que representarán distintas funcionalidades sobre el pictograma. Por ejemplo, en la esquina superior derecha hay una “x” para eliminar el pictograma y en la parte inferior iconos de un lápiz para editar el pictograma y un icono de un triángulo para reproducir la palabra. Algunos iconos como la “x” o el icono del lápiz también será utilizados por otros ítems y estarán en las mismas posiciones y harán funciones similares. Esto se hace para crear uniformidad y ayudar al usuario a familiarizarse con la aplicación.
+	En PictoItem también se utilizan iconos que representarán distintas funcionalidades sobre el pictograma. Por ejemplo, en la esquina superior derecha hay una “×” para eliminar el pictograma y en la parte inferior iconos de un lápiz para editar el pictograma y un icono de un triángulo para reproducir la palabra. Algunos iconos como la “×” o el icono del lápiz también será utilizados por otros ítems y estarán en las mismas posiciones y harán funciones similares. Esto se hace para crear uniformidad y ayudar al usuario a familiarizarse con la aplicación.
 	
 	
 	\item \textbf{Usabilidad universal}: el principio de usabilidad reconoce las necesidades de los distintos tipos de usuarios ya sean nuevos o expertos en la aplicación. Esto queda reflejado en el apartado de búsqueda de pictogramas con la opción de preajuste de pictogramas. Por ejemplo, un usuario en la aplicación añadiría un pictograma al tablero y después lo editaría, pero mediante el preajuste permite añadir varios pictogramas sin tener que editarlos individualmente.
@@ -291,13 +291,13 @@ La traducción es realizada mediante la API de ARASAAC. Aunque no cuenta con una
 
 
 El resultado de la traducción no está fijado a un pictograma concreto por palabra, sino que puede haber varios. Es por ello que se devuelven de un modo u otro varios pictogramas posibles por cada palabra de la frase.  En la Figura \ref{fig:traduccionpicto} se puede ver cómo la interfaz permite navegar entre los pictogramas alternativos mediante dos botones.
-Estos botones permiten avanzar y retroceder entre los pictogramas alternativos que se muestran por cada palabra. Por último destacar que el botón “Colocar al tablero” no se activa hasta que no hay una frase traducida, como se puede ver en las Figuras \ref{fig:traducirfraseinicial} y \ref{fig:traduccionpicto}. 
+Estos botones permiten avanzar y retroceder entre los pictogramas alternativos que se muestran por cada palabra. Por último, destacar que el botón “Colocar al tablero” no se activa hasta que no hay una frase traducida, como se puede ver en las Figuras \ref{fig:traducirfraseinicial} y \ref{fig:traduccionpicto}. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/traduccionPicto}
-	\caption{Resultado de la traducción de una frase}
+	\caption{Resultado de la traducción de una frase.}
 	\label{fig:traduccionpicto}
 \end{figure}
 
@@ -311,7 +311,7 @@ Como se puede ver en la Figura \ref{fig:fraseitemoriginal} este tipo de  ítem a
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/fraseItemOriginal}
-	\caption{Vista de FraseItem en la cuadrícula}
+	\caption{Vista de FraseItem en la cuadrícula.}
 	\label{fig:fraseitemoriginal}
 \end{figure}
 
@@ -323,7 +323,7 @@ En la Figura \ref{fig:fraseitemmidificada} se puede ver un ejemplo de cómo qued
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/modalEditarFraseItem}
-	\caption{Vista del modal de edición del FraseItem}
+	\caption{Vista del modal de edición del FraseItem.}
 	\label{fig:modaleditarfraseitem}
 \end{figure}
 
@@ -331,7 +331,7 @@ En la Figura \ref{fig:fraseitemmidificada} se puede ver un ejemplo de cómo qued
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/fraseItemMidificada}
-	\caption{FraseItem tras  aplicar los cambios}
+	\caption{FraseItem tras  aplicar los cambios.}
 	\label{fig:fraseitemmidificada}
 \end{figure}
 
@@ -363,7 +363,7 @@ Añadir una imagen al tablero se encuentra en la tercera pestaña que agrupa tod
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/cargarFotoPestaña}
-	\caption{Interfaz inicial al añadir una imagen al tablero}
+	\caption{Interfaz inicial al añadir una imagen al tablero.}
 	\label{fig:cargarfotopestana}
 \end{figure}
 
@@ -380,7 +380,7 @@ Al cargar la imagen correctamente, tal y como se puede ver en la Figura \ref{fig
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/addPhotoItem}
-	\caption{ Vista de la Interfaz al cargar una imagen}
+	\caption{ Vista de la Interfaz al cargar una imagen.}
 	\label{fig:addphotoitem}
 \end{figure}
 
@@ -408,7 +408,7 @@ Respecto al texto inferior, se puede ver en la Figura \ref{fig:photoitemtexto} q
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/photoItemTexto}
-	\caption{Ejemplod de PhotoItem con y sin texto}
+	\caption{Ejemplod de PhotoItem con y sin texto.}
 	\label{fig:photoitemtexto}
 \end{figure}
 
@@ -419,7 +419,7 @@ En la Figura \ref{fig:photoitemerror} se ejemplifica qué pasaría si en vez de 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/photoItemError}
-	\caption{Ejemplo de PhotoItemn si no se mantuviera la proporción según el tamaño de la imagen}
+	\caption{Ejemplo de PhotoItemn si no se mantuviera la proporción según el tamaño de la imagen.}
 	\label{fig:photoitemerror}
 \end{figure}
 
@@ -427,7 +427,7 @@ En la Figura \ref{fig:photoitemerror} se ejemplifica qué pasaría si en vez de 
 
  Las reglas de diseño utilizadas en esta funcionalidad han sido:
 \begin{itemize}
-	\item \textbf{Coherencia}: como en las otras herramientas, se hace uso de iconos para proporcionar al usuario una manera más simple y visual de la acción va a realizar. Un ejemplo de icono utilizado es el botón con el “+” para añadir la imagen al tablero. Al igual que en otros items como PictoItem o FraseItem el componente PhotoItem también tiene un icono “x” para poder ser eliminado del tablero.
+	\item \textbf{Coherencia}: como en las otras herramientas, se hace uso de iconos para proporcionar al usuario una manera más simple y visual de la acción va a realizar. Un ejemplo de icono utilizado es el botón con el “+” para añadir la imagen al tablero. Al igual que en otros items como PictoItem o FraseItem el componente PhotoItem también tiene un icono “×” para poder ser eliminado del tablero.
 	
 	\item \textbf{Retroalimentación informativa}: tras pulsar sobre el botón “Cargar foto” y seleccionar una imagen, se mostrará en la parte de abajo una previsualización de la imagen. Esto permite al usuario ver si la imagen seleccionada es la correcta.
 	También podemos ver que esta regla se cumple al pulsar sobre el botón con el icono “+”, el cual añadirá al tablero la imagen seleccionada.
@@ -454,7 +454,7 @@ Para crear una lista o añadir un pictograma a una lista existente, el usuario d
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/modalesColeccion}
-	\caption{Vistas del modal con ninguna lista y al menos una, respectivamente}
+	\caption{Vistas del modal con ninguna lista y al menos una, respectivamente.}
 	\label{fig:modalescoleccion}
 \end{figure}
 
@@ -469,7 +469,7 @@ Para informar al usuario de las acciones, tanto la de crear una nueva lista, com
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/alertListaPicto}
-		\caption{ Alerta tras añadir satisfactoriamente un pictograma a la lista}
+		\caption{Alerta tras añadir satisfactoriamente un pictograma a la lista.}
 		\label{fig:alertlistapicto}
 	\end{figure}
 	
@@ -480,7 +480,7 @@ Para informar al usuario de las acciones, tanto la de crear una nueva lista, com
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/alertErrorListaPicto}
-		\caption{Alerta de acción no permitida}
+		\caption{Alerta de acción no permitida.}
 		\label{fig:alerterrorlistapicto}
 	\end{figure}
 	
@@ -501,7 +501,7 @@ Por último, las listas existentes se encuentran en el apartado “Mis listas de
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/lisaPictoSel}
-	\caption{Vista de las listas de pictogramas}
+	\caption{Vista de las listas de pictogramas.}
 	\label{fig:lisapictosel}
 \end{figure}
 
@@ -523,7 +523,7 @@ Las reglas de diseño utilizadas en esta funcionalidad han sido:
 
 \section{Texto}
 
-Esta herramienta permite añadir un cuadro de texto a la cuadrícula. Como opciones de personalización de texto se ofrece la posibilidad al usuario de seleccionar una tipografía entre las seis posibles. Las tipografías elegidas son las más utilizadas dentro del ámbito educativo.
+Esta herramienta permite añadir un cuadro de texto a la cuadrícula. Como opciones de personalización de texto se ofrece la posibilidad al usuario de seleccionar una tipografía entre las seis posibles. Las tipografías elegidas son las más utilizadas dentro del ámbito educativo, se pueden ver algunos ejemplos de ellas en la Figura \ref{fig:fraseitem1}.
 
 Esta herramienta se puede encontrar en el apartado de “Personalización de tablero”, donde se podrán seleccionar distintas tipografías y escribir el texto que se va a añadir a la cuadrícula.
 
@@ -533,7 +533,7 @@ Como se puede ver en la Figura \ref{fig:anadirtexto} en la parte superior se pue
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/añadirTexto}
-	\caption{Vista de la selección de fuente y campo de texto}
+	\caption{Vista de la selección de fuente y campo de texto.}
 	\label{fig:anadirtexto}
 \end{figure}
 
@@ -549,19 +549,19 @@ Al añadir el texto a la cuadrícula, el ancho del ítem se ajustará al número
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/fraseItem1}
-	\caption{Representación del TextoItem en la cuadrícula}
+	\includegraphics[width=\linewidth]{Imagenes/Bitmap/fraseItem1}
+	\caption{Representación del TextoItem en la cuadrícula con las distintas tipografías disponibles.}
 	\label{fig:fraseitem1}
 \end{figure}
 
 
-Al pulsar sobre el icono del lápiz se desplegará el modal de edición de ítem. Como se ve en la Figura \ref{fig:modaleditartexto} cuenta con un campo donde se puede ver y editar el contenido actual del texto. Esto resultará muy útil para corregir errores ortográficos. Tras pulsar sobre el botón “Cambiar texto”, el ancho del ítem se ajustará de nuevo en función del nuevo número de caracteres.
+Al pulsar sobre el icono del lápiz se desplegará el modal de edición de ítem. Como se ve en la Figura \ref{fig:modaleditartexto}, cuenta con un campo donde se puede ver y editar el contenido actual del texto. Esto resultará muy útil para corregir errores ortográficos. Tras pulsar sobre el botón “Cambiar texto”, el ancho del ítem se ajustará de nuevo en función del nuevo número de caracteres.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/modalEditarTexto}
-	\caption{Vista del modal para editar un TextoItem}
+	\caption{Vista del modal para editar un TextoItem.}
 	\label{fig:modaleditartexto}
 \end{figure}
 
@@ -569,12 +569,12 @@ Al pulsar sobre el icono del lápiz se desplegará el modal de edición de ítem
 
  Las reglas de diseño utilizadas en esta funcionalidad han sido:
 \begin{itemize}
-	\item \textbf{Coherencia}:  un TextoItem añadido al tablero contará con múltiples botones, en la parte superior derecha tendrá una “x” para eliminar el texto del tablero y en la parte inferior dos iconos de unas lupas para ampliar o reducir la fuente del texto y un icono de un lápiz para poder editar el contenido.
+	\item \textbf{Coherencia}:  un TextoItem añadido al tablero contará con múltiples botones, en la parte superior derecha tendrá una “×” para eliminar el texto del tablero y en la parte inferior dos iconos de unas lupas para ampliar o reducir la fuente del texto y un icono de un lápiz para poder editar el contenido.
 	
-	\item \textbf{Retroalimentación informativa}: en el apartado de “Personalización del tablero” el usuario podrá seleccionar distintos tipos de fuentes de letras donde verá al instante un ejemplo de la fuente seleccionada. Además, cuando el usuario pulse sobre el botón de “+Texto” verá de manera instantánea el texto en el tablero de la aplicación. De esta manera se le informa al usuario de que la acción se ha realizado correctamente. También afecta a la acción de borrar el texto del tablero, ya que cuando el usuario pulse sobre el icono “x” automáticamente se borrará del tablero.
+	\item \textbf{Retroalimentación informativa}: en el apartado de “Personalización del tablero” el usuario podrá seleccionar distintos tipos de fuentes de letras donde verá al instante un ejemplo de la fuente seleccionada. Además, cuando el usuario pulse sobre el botón de “+Texto” verá de manera instantánea el texto en el tablero de la aplicación. De esta manera se le informa al usuario de que la acción se ha realizado correctamente. También afecta a la acción de borrar el texto del tablero, ya que cuando el usuario pulse sobre el icono “×” automáticamente se borrará del tablero.
 	
 	
-	\item \textbf{Permitir deshacer acciones de forma fácil}: en caso de haber añadido el texto al tablero con una falta de ortografía el usuario podrá editar el contenido del TextoItem pulsando sobre el icono del lápiz. También podrá eliminar el texto del tablero en caso de que haya sido añadido por error, para esto deberá pulsar sobre el icono “x” situado en la esquina superior derecha.
+	\item \textbf{Permitir deshacer acciones de forma fácil}: en caso de haber añadido el texto al tablero con una falta de ortografía el usuario podrá editar el contenido del TextoItem pulsando sobre el icono del lápiz. También podrá eliminar el texto del tablero en caso de que haya sido añadido por error, para esto deberá pulsar sobre el icono “×” situado en la esquina superior derecha.
 	
 \end{itemize}
 
@@ -588,29 +588,26 @@ El componente icono permite añadir a la cuadrícula iconos y personalizarlos. L
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/herramientaItems}
-	\caption{Vista de los botones que añaden iconos}
+	\caption{Vista de los botones que añaden iconos.}
 	\label{fig:herramientaitems}
 \end{figure}
 
 
 A la hora de mostrar los iconos en la cuadrícula hay que hacer una distinción entre el cuadrado y el resto de los iconos ya que la forma en la que se muestran es distinta.
 
-Para generar un cuadrado se hace uso de las formas geométricas básicas que ya están implementadas en SVG. Este lenguaje de marcas permite crear figuras geométricas y personalizar su aspecto. Para representar el cuadrado se ha de incluir la etiqueta \textit{<rect/>} (etiqueta para generar un cuadrado) y añadir las propiedades que queremos que tenga como por ejemplo altura, ancho, grosor de los bordes del cuadrado, color u opacidad.
+Para generar un cuadrado se hace uso de las formas geométricas básicas que ya están implementadas en \textit{SVG}. Este lenguaje de marcas permite crear figuras geométricas y personalizar su aspecto. Para representar el cuadrado se ha de incluir la etiqueta \textit{<rect/>} (etiqueta para generar un cuadrado) y añadir las propiedades que queremos que tenga como por ejemplo altura, ancho, grosor de los bordes del cuadrado, color u opacidad.
 
 Sin embargo, para el resto de los iconos se utilizan recursos obtenidos de FontAwesome\footnote{\url{https://fontawesome.com/}}. Este framework tiene implementado iconos vectoriales que al igual que con el cuadrado, permiten la personalización de los iconos respecto a el color, tamaño y opacidad. Para mostrarlos se deberá incluir la clase correspondiente de cada icono especificada en el apartado tipo de la estructura.
 
-En la Figura \ref{fig:ejemplopictoitem} se puede ver que estos iconos se pueden superponer a los pictogramas para realzar ideas.
+En la Figura \ref{fig:ejemplopictoitem} se puede ver que estos iconos se pueden superponer a los pictogramas para realzar ideas. Aunque la forma de visualizarlos se hace de manera distinta dependiendo del icono, todos ellos permiten editar ciertos aspectos. Es por ello por lo que se incluyó la funcionalidad de editar. Para poder editar un icono añadido a la cuadrícula tendremos que pulsar sobre el icono del lápiz, al pulsarlo aparecerá un modal, como el de la Figura \ref{fig:modalpictoitem} donde se podrá modificar el color y la opacidad del icono. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/ejemploPictoItem}
-	\caption{Ejemplo de uso de iconos sobre algunos pictogramas}
+	\caption{Ejemplo de uso de iconos sobre algunos pictogramas.}
 	\label{fig:ejemplopictoitem}
 \end{figure}
-
- 
-Aunque la forma de visualizarlos se hace de manera distinta dependiendo del icono, todos ellos permiten editar ciertos aspectos. Es por ello por lo que se incluyó la funcionalidad de editar. Para poder editar un icono añadido a la cuadrícula tendremos que pulsar sobre el icono del lápiz, al pulsarlo aparecerá un modal, como el de la Figura \ref{fig:modalpictoitem} donde se podrá modificar el color y la opacidad del icono.  
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
@@ -624,7 +621,7 @@ Aunque la forma de visualizarlos se hace de manera distinta dependiendo del icon
 
 Cuando un icono se añade al tablero de la aplicación este tendrá una opacidad y color por defecto. A los iconos corazón y barra tendrá por defecto el color rojo y una opacidad al 50\%, y el icono del tick tiene como color por defecto será el verde y una opacidad del 50\%. El hecho de que los iconos tengan por defecto esa opacidad es debido a que están planteados para estar superpuestos encima de los pictogramas, por lo que han de ser translúcidos para ver el pictograma que se encuentra debajo del icono. Por último, el icono del cuadrado por defecto será negro y la opacidad del 100\% ya que están planteados para ser opacos.
 
-En el IconoItem se incluyen dos botones, una “x” en la esquina superior derecha que sirve para eliminar el icono del tablero y un icono de un lápiz en la parte inferior que permite editar el icono. Para poder editar un icono añadido a la cuadrícula tendremos que pulsar sobre el icono del lápiz, al pulsarlo aparecerá un modal, como el de la Figura \ref{fig:modalpictoitem} donde se podrá modificar el color y la opacidad del icono.
+En el IconoItem se incluyen dos botones, una “×” en la esquina superior derecha que sirve para eliminar el icono del tablero y un icono de un lápiz en la parte inferior que permite editar el icono. Para poder editar un icono añadido a la cuadrícula tendremos que pulsar sobre el icono del lápiz, al pulsarlo aparecerá un modal, como el de la Figura \ref{fig:modalpictoitem} donde se podrá modificar el color y la opacidad del icono.
 
 \subsection{Reglas de diseño de usabilidad}
  Las reglas de diseño utilizadas en esta funcionalidad han sido:
@@ -650,8 +647,8 @@ Inicialmente se planteó la posibilidad de descargar estos tableros como PDF per
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/modalDescargarTablero}
-	\caption{Vista del modal para descargar tablero}
+	\includegraphics[width=\linewidth]{Imagenes/Bitmap/modalDescargarTablero}
+	\caption{Vista del modal para descargar tablero.}
 	\label{fig:modaldescargartablero}
 \end{figure}
 
@@ -670,15 +667,15 @@ Se trata de la funcionalidad más problemática pues se invirtieron varias seman
 
 NIL Web Service\footnote{\url{https://holstein.fdi.ucm.es/nil-ws-api/}} es una API que devuelve información relativa a palabras y textos orientada a resolver problemas de accesibilidad a través del lenguaje. Respecto al tratamiento de palabras, permite buscar sinónimos, antónimos, emociones de las palabras, etc. Para el tratamiento de textos, permite  traducir un texto a pictogramas, listar las emociones de un texto o resumir, entre otras funcionalidades. 
 
-Originalmente la traducción de pictogramas en esta aplicación fue creada específicamente para trabajar con esta API. No obstante también ha causado varios inconvenientes, relativos a los pictogramas que usa la API y los errores causados por CORS. 
+Originalmente la traducción de pictogramas en esta aplicación fue creada específicamente para trabajar con esta API. No obstante también ha causado varios inconvenientes, relativos a los pictogramas que usa la API y los errores causados por \textit{CORS}. 
 
-La API cuenta con una base de datos propia con una gran cantidad de pictogramas. Pero al traducir un texto a pictogramas, esta devuelve por cada palabra o lema, una lista de identificadores. En su mayoría dichos identificadores coinciden con los de los pictogramas de ARASAAC, pero existen otros que no. Estos pictogramas que no comparten identificador con los de ARASAAC suponen un problema, ya que no se puede obtener toda la información deseada, como por ejemplo el texto, audio y modificaciones. Es por ello que PictoItem se modificó para incluir estos pictogramas suprimiendo la posibilidad de personalizar o reproducir el audio. A continuación se especificará sobre el funcionamiento y problemática asociada a CORS.
+La API cuenta con una base de datos propia con una gran cantidad de pictogramas. Pero al traducir un texto a pictogramas, esta devuelve por cada palabra o lema, una lista de identificadores. En su mayoría dichos identificadores coinciden con los de los pictogramas de \textit{ARASAAC}, pero existen otros que no. Estos pictogramas que no comparten identificador con los de \textit{ARASAAC} suponen un problema, ya que no se puede obtener toda la información deseada, como por ejemplo el texto, audio y modificaciones. Es por ello que PictoItem se modificó para incluir estos pictogramas suprimiendo la posibilidad de personalizar o reproducir el audio. A continuación se especificará sobre el funcionamiento y problemática asociada a \textit{CORS}.
 
 
 Cross Origin Resource Sharing\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS}}, es un mecanismo de cabeceras http que permite a un servidor dar permiso a otros dominios para cargar recursos del mismo. Por razones de seguridad los navegadores restringen las peticiones de dominio cruzado desde los scripts del navegador. 
 
 
-Como el servicio de traducción de NIL-WS-API sigue operativo pero descontinuado, no cuenta con la configuración CORS y por tanto no puede recibir peticiones POST de otras webs. Después de comprender el problema se estudió que la solución es crear un backend para PictUp!. Dicho backend está creado exclusivamente para resolver esta petición. El componente de traducción envía la petición al backend, el cual la resolverá gestionando los CORS. En la próxima Sección \ref{backend} se explicará cómo fue creado. 
+Como el servicio de traducción de NIL-WS-API sigue operativo pero descontinuado, no cuenta con la configuración \textit{CORS} y por tanto no puede recibir peticiones \textit{POST} de otras webs. Después de comprender el problema se estudió que la solución es crear un backend para PictUp!. Dicho backend está creado exclusivamente para resolver esta petición. El componente de traducción envía la petición al backend, el cual la resolverá gestionando los \textit{CORS}. En la próxima Sección \ref{backend} se explicará cómo fue creado. 
 
 Después de crear y configurar el backend de manera local, y ver que el componente funcionaba sin complicaciones, apareció otro error con la biblioteca html2canvas\footnote{\url{https://html2canvas.hertzen.com/}}, encargada de crear una imagen a partir de la cuadrícula y sus ítems. Esto es debido a que las imágenes que retorna NIL-WS-API son un recurso externo y la biblioteca htm2canvas desconoce su fuente. Por ello al descargar la imagen del tablero estos pictogramas no aparecían representados dejando un hueco en blanco.
 
@@ -686,15 +683,15 @@ Después de crear y configurar el backend de manera local, y ver que el componen
 \subsection{Backend}
 \label{backend}
 
-El backend fue creado mediante Express\footnote{\url{http://expressjs.com/en/starter/installing.html}}. Se trata de un framework de Node.js que permite gestionar llamadas a API de manera sencilla. Express cuenta con una dependencia que gestiona los CORS\footnote{\url{https://www.npmjs.com/package/cors }}, la cual fue usada para realizar el método post a la API de NIL. 
+El backend fue creado mediante Express\footnote{\url{http://expressjs.com/en/starter/installing.html}}. Se trata de un framework de Node.js que permite gestionar llamadas a API de manera sencilla. Express cuenta con una dependencia que gestiona los \textit{CORS}\footnote{\url{https://www.npmjs.com/package/cors }}, la cual fue usada para realizar el método POST a NIL-WS-API. 
 
-Para esquematizar cómo se obtienen los pictogramas de la API de NIL, se puede ver en la Figura \ref{fig:diagramaconexiones} un diagrama de las llamadas que se realizan entre las aplicaciones. 
+Para esquematizar cómo se obtienen los pictogramas de NIL-WS-API, se puede ver en la Figura \ref{fig:diagramaconexiones} un diagrama de las llamadas que se realizan entre las aplicaciones. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Imagenes/Bitmap/diagramaConexiones}
-	\caption{Diagrama de conexiones entre aplicaciones para traducir una frase}
+	\caption{Diagrama de conexiones entre aplicaciones para traducir una frase.}
 	\label{fig:diagramaconexiones}
 \end{figure}
 
@@ -707,7 +704,7 @@ Después de varias semanas investigando todos estos problemas, finalmente se det
 \subsection{Añadir imagen}
 \label{cap5:addImageCut}
 
-Originalmente hubo dos aproximaciones sobre la inserción de imágenes. La primera consistía en poder cargar un archivo comprimido zip mediante la librería JSZip\footnote{\url{https://stuk.github.io/jszip/}} que contaba con funciones para descomprimir archivos. El objetivo era automatizar la colocación de imágenes sobre el tablero, mediante un zip que almacenara éstas junto a un documento con la información de cada una. Dicho documento incluiría el nombre, la posición y el tamaño de cada imagen colocada en la cuadrícula. Descomprimiendo dicho zip, las imágenes volverían a ser colocadas a la posición original.
+Originalmente hubo dos aproximaciones sobre la inserción de imágenes. La primera consistía en poder cargar un archivo comprimido \textit{ZIP} mediante la librería JSZip\footnote{\url{https://stuk.github.io/jszip/}} que contaba con funciones para descomprimir archivos. El objetivo era automatizar la colocación de imágenes sobre el tablero, mediante un \textit{ZIP} que almacenara éstas junto a un documento con la información de cada una. Dicho documento incluiría el nombre, la posición y el tamaño de cada imagen colocada en la cuadrícula. Descomprimiendo dicho \textit{ZIP}, las imágenes volverían a ser colocadas a la posición original.
 
 La otra aproximación ofrecía la posibilidad de conectarse mediante la API de Google Drive\footnote{\url{https://developers.google.com/drive/api/v3/about-sdk }} para que el usuario pudiese acceder a sus fotos almacenadas en su cuenta. 
 
@@ -715,7 +712,7 @@ Pese a haber dedicado varias semanas a cada una de estas opciones en proyectos i
 
 Hubo una última opción que se planteó: realizar un historial de imágenes cargadas muy similar al historial de pictogramas visto anteriormente. Sin embargo, LocalStorage apenas permitía unos pocos megabytes de almacenamiento. La alternativa a LocalStorage fue indexedDB. 
 
-IndexedDB\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API}}   es una API que permite almacenar información en el cliente, en este caso el ordenador del usuario. En ella se pueden crear bases de datos con la capacidad de almacenar archivos de gran tamaño como en este caso imágenes y fotos. Al final fue descartado por falta de tiempo, pero queda como trabajo futuro para ampliar la aplicación.
+IndexedDB\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API}} es una API que permite almacenar información en el cliente, en este caso el ordenador del usuario. En ella se pueden crear bases de datos con la capacidad de almacenar archivos de gran tamaño como en este caso imágenes y fotos. Al final fue descartado por falta de tiempo, pero queda como trabajo futuro para ampliar la aplicación.
 
 
 \subsection{Subtableros y cajón de pictogramas}
@@ -725,25 +722,21 @@ Los componentes que se plantearon inicialmente que ofrecían interacción con el
 \section{Despliegue de la aplicación}
 \label{cap5:despliegue}
 
-De cara al despliegue, React cuenta con el comando \texttt{npm build}\footnote{\url{https://create-react-app.dev/docs/production-build/}}, el cual crea un directorio \texttt{Build} dentro del proyecto que incluye todos los archivos js y css necesarios para hacer funcionar la aplicación. Para subir los archivos al contenedor ofrecido por la Universidad Complutense de Madrid, se utilizó la aplicación Bitvise\footnote{\url{https://www.bitvise.com/}}. Se trata de un programa que mediante una interfaz gráfica permite conectarse al contenedor mediante SSH y transferir los archivos con facilidad. 
+De cara al despliegue, React cuenta con el comando \texttt{npm build}\footnote{\url{https://create-react-app.dev/docs/production-build/}}, el cual crea un directorio \texttt{Build} dentro del proyecto que incluye todos los archivos js y css necesarios para hacer funcionar la aplicación. Para subir los archivos al contenedor ofrecido por la Universidad Complutense de Madrid, se utilizó la aplicación Bitvise\footnote{\url{https://www.bitvise.com/}}. Se trata de un programa que mediante una interfaz gráfica permite conectarse al contenedor mediante \textit{SSH} y transferir los archivos con facilidad. 
 
-Una vez subida la carpeta \texttt{Build} en al servidor, se instaló \texttt{}node.js y npm para hacer funcionar la aplicación de React. El despliegue de la aplicación se realizó mediante \texttt{serve}\footnote{\url{https://github.com/vercel/serve}}. Según la documentación de React\footnote{\url{https://create-react-app.dev/docs/deployment/}} se trata de la manera más sencilla de desplegar una aplicación compuesta por una única página estática tal y como es el caso. 
+Una vez subida la carpeta \texttt{Build} en al servidor, se instaló \texttt{}node.js y npm para hacer funcionar la aplicación de React. El despliegue de la aplicación se realizó mediante \texttt{serve}\footnote{\url{https://github.com/vercel/serve}}. Según la documentación de React\footnote{\url{https://create-react-app.dev/docs/deployment/}} se trata de la manera más sencilla de desplegar una aplicación compuesta por una única página estática tal y como es el caso. La aplicación final es accesible desde mediante la siguiente URL\footnote{\url{https://holstein.fdi.ucm.es/tfg/2021/pictup/}}.
 
-Mencionar que el servicio de traducción de pictogramas (Pictar), pese a encontrarse en el mismo servidor, al realizar una petición de traducción aunque no provocara un error de CORS visto anteriormente, tampoco retornaba ninguna respuesta. 
-
-La aplicación final es accesible desde mediante la siguiente URL\footnote{\url{https://holstein.fdi.ucm.es/tfg/2021/pictup/}}.
-
-Como se había mencionado anteriormente, la web cuenta con la opción de ser instalada ya que ha sido configurada para ser una PWA. En la Figura \ref{fig:pwa} podemos ver la instalación, el acceso directo y la vista de la aplicación en los distintos dispositivos. Tras probar la aplicación en distintos dispositivo se comprobó que la usabilidad se veía afectada en dispositivos con pantallas inferiores a siete pulgadas. Por eso se recomienda la utilización de PictUp! en ordenadores o tablets.
+La web cuenta con la opción de ser instalada ya que ha sido configurada para ser una \textit{PWA}. En la Figura \ref{fig:pwa} podemos ver la instalación, el acceso directo y la vista de la aplicación en los distintos dispositivos. Tras probar la aplicación en distintos dispositivo se comprobó que la usabilidad se veía afectada en dispositivos con pantallas inferiores a siete pulgadas. Por eso se recomienda la utilización de PictUp! en ordenadores o tablets.
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{Imagenes/Bitmap/pwa}
-	\caption{Esquema de instalación y uso de PWA. }
+	\caption{Esquema de instalación y uso de PWA.}
 	\label{fig:pwa}
 \end{figure}
 
-
+Por último mencionar que el servicio de traducción de pictogramas de  NIL-WS-API, pese a encontrarse en el mismo servidor, al realizar una petición de traducción aunque no provocara un error de \textit{CORS} visto anteriormente, tampoco retornaba ninguna respuesta.
 
 \section{Control de versiones y organización del desarrollo de PictUp!}
 \label{cap5:controlversiones}

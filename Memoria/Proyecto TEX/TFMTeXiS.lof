@@ -41,51 +41,51 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Comparación de los resultados con ambas búsquedas\relax }}{30}{figure.caption.97}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplo de cómo se puede modificar el color de pelo y tono de piel de un pictograma, entre otras opciones, en este caso desde la web de ARASAAC.\relax }}{31}{figure.caption.98}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Boceto de pantalla inicial\relax }}{36}{figure.caption.114}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Boceto pantalla de plantillas\relax }}{37}{figure.caption.115}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Boceto pantalla de edición de tableros \relax }}{37}{figure.caption.116}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Boceto de pantalla inicial.\relax }}{36}{figure.caption.114}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Boceto pantalla de plantillas.\relax }}{37}{figure.caption.115}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Boceto pantalla de edición de tableros.\relax }}{37}{figure.caption.116}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Boceto de las componentes canjón de picto y espacio picto.\relax }}{38}{figure.caption.117}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Boceto de actividad con cajón de pictos y hueco picto\relax }}{39}{figure.caption.118}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura\relax }}{39}{figure.caption.119}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Boceto de una escena de un cuanto, con pictogramas en la zona inferior y botones en los laterales para pasar o retroceder la escena o tablero\relax }}{40}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Boceto del compositor de actividades\relax }}{40}{figure.caption.121}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Boceto de actividad con cajón de pictos y hueco picto.\relax }}{39}{figure.caption.118}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Boceto de las piezas que enlazan dos pictogramas al compartir la misma figura.\relax }}{39}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Boceto de una escena de un cuanto, con pictogramas en la zona inferior y botones en los laterales para pasar o retroceder la escena o tablero.\relax }}{40}{figure.caption.120}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Boceto del compositor de actividades.\relax }}{40}{figure.caption.121}%
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Pantalla de inicio con botones que muestran las otras pantallas de la aplicación.\relax }}{41}{figure.caption.123}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Pantalla de configuración de tablero.\relax }}{42}{figure.caption.124}%
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Pantalla de configuración de normas.\relax }}{43}{figure.caption.125}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Pantalla de configuración de juego.\relax }}{43}{figure.caption.126}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Pantalla de configuración de juego.\relax }}{44}{figure.caption.126}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Pantalla de juego en ejecución.\relax }}{44}{figure.caption.127}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Vista inicial de PictUp! \relax }}{51}{figure.caption.142}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Ejemplos de Ítems\relax }}{51}{figure.caption.143}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Vista inicial de PictUp!.\relax }}{51}{figure.caption.142}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Ejemplos de Ítems.\relax }}{51}{figure.caption.143}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Diagrama de los componentes de la aplicación.\relax }}{52}{figure.caption.144}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Ejemplo de botones de redimensión y desplazamiento.\relax }}{53}{figure.caption.147}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Vista del componente de búsqueda de pictogramas\relax }}{54}{figure.caption.149}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Vista del componente de búsqueda de pictogramas.\relax }}{54}{figure.caption.149}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Vista del modal del preajuste de pictos con las opciones color de pelo rubio y piel morena marcadas.\relax }}{56}{figure.caption.153}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Ejemplos de tipos de distintas combinaciones de preajuste\relax }}{57}{figure.caption.158}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Ejemplos de tipos de distintas combinaciones de preajuste.\relax }}{57}{figure.caption.158}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Vista de un PictoItem en la cuadrícula con preajuste de pelo y piel. \relax }}{58}{figure.caption.162}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Vista de la interfaz del modal que muestra una edición de pictogramas con más opciones. En este caso, se ha seleccionado el tiempo futuro y el borde verde. \relax }}{58}{figure.caption.164}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Interfaz inicial Traducción frase a pictograma.\relax }}{60}{figure.caption.170}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Resultado de la traducción de una frase\relax }}{60}{figure.caption.171}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Vista de FraseItem en la cuadrícula\relax }}{61}{figure.caption.173}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista del modal de edición del FraseItem\relax }}{61}{figure.caption.174}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces FraseItem tras aplicar los cambios\relax }}{62}{figure.caption.175}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Interfaz inicial al añadir una imagen al tablero\relax }}{63}{figure.caption.178}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Vista de la Interfaz al cargar una imagen\relax }}{63}{figure.caption.179}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Ejemplod de PhotoItem con y sin texto\relax }}{64}{figure.caption.182}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Ejemplo de PhotoItemn si no se mantuviera la proporción según el tamaño de la imagen\relax }}{65}{figure.caption.183}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Vistas del modal con ninguna lista y al menos una, respectivamente\relax }}{66}{figure.caption.187}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Alerta tras añadir satisfactoriamente un pictograma a la lista\relax }}{66}{figure.caption.188}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Alerta de acción no permitida\relax }}{66}{figure.caption.189}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Vista de las listas de pictogramas\relax }}{67}{figure.caption.191}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Vista de la selección de fuente y campo de texto\relax }}{68}{figure.caption.194}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Representación del TextoItem en la cuadrícula\relax }}{69}{figure.caption.196}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Vista del modal para editar un TextoItem\relax }}{69}{figure.caption.197}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Vista de los botones que añaden iconos\relax }}{70}{figure.caption.200}%
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Ejemplo de uso de iconos sobre algunos pictogramas\relax }}{70}{figure.caption.202}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Resultado de la traducción de una frase.\relax }}{60}{figure.caption.171}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Vista de FraseItem en la cuadrícula.\relax }}{61}{figure.caption.173}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista del modal de edición del FraseItem.\relax }}{61}{figure.caption.174}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces FraseItem tras aplicar los cambios.\relax }}{62}{figure.caption.175}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Interfaz inicial al añadir una imagen al tablero.\relax }}{63}{figure.caption.178}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Vista de la Interfaz al cargar una imagen.\relax }}{63}{figure.caption.179}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Ejemplod de PhotoItem con y sin texto.\relax }}{64}{figure.caption.182}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Ejemplo de PhotoItemn si no se mantuviera la proporción según el tamaño de la imagen.\relax }}{65}{figure.caption.183}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Vistas del modal con ninguna lista y al menos una, respectivamente.\relax }}{66}{figure.caption.187}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Alerta tras añadir satisfactoriamente un pictograma a la lista.\relax }}{66}{figure.caption.188}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Alerta de acción no permitida.\relax }}{66}{figure.caption.189}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Vista de las listas de pictogramas.\relax }}{67}{figure.caption.191}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Vista de la selección de fuente y campo de texto.\relax }}{68}{figure.caption.194}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Representación del TextoItem en la cuadrícula con las distintas tipografías disponibles.\relax }}{69}{figure.caption.196}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Vista del modal para editar un TextoItem.\relax }}{69}{figure.caption.197}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Vista de los botones que añaden iconos.\relax }}{70}{figure.caption.200}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Ejemplo de uso de iconos sobre algunos pictogramas.\relax }}{71}{figure.caption.202}%
 \contentsline {figure}{\numberline {5.28}{\ignorespaces Vista del modal de edición de iconos.\relax }}{71}{figure.caption.203}%
-\contentsline {figure}{\numberline {5.29}{\ignorespaces Vista del modal para descargar tablero\relax }}{72}{figure.caption.208}%
-\contentsline {figure}{\numberline {5.30}{\ignorespaces Diagrama de conexiones entre aplicaciones para traducir una frase\relax }}{74}{figure.caption.217}%
-\contentsline {figure}{\numberline {5.31}{\ignorespaces Esquema de instalación y uso de PWA. \relax }}{76}{figure.caption.229}%
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Vista del modal para descargar tablero.\relax }}{72}{figure.caption.208}%
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Diagrama de conexiones entre aplicaciones para traducir una frase.\relax }}{74}{figure.caption.217}%
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Esquema de instalación y uso de PWA.\relax }}{76}{figure.caption.229}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de pista en el formulario: Buscar un pictograma. \relax }}{78}{figure.caption.236}%
 \addvspace {10\p@ }
@@ -94,26 +94,26 @@
 \addvspace {10\p@ }
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Introducción a la evaluación y consentimiento.\relax }}{99}{figure.caption.276}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Preguntas de carácter demográfico.\relax }}{100}{figure.caption.277}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Introducción a las tareas y acceso a la aplicación.\relax }}{101}{figure.caption.278}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Descripción de la Tarea 1, pistas y preguntas.\relax }}{102}{figure.caption.279}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Buscar pictograma.\relax }}{103}{figure.caption.280}%
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Añadir al tablero.\relax }}{103}{figure.caption.281}%
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Editar picto.\relax }}{104}{figure.caption.282}%
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Descripción de la Tarea 2, pistas y preguntas.\relax }}{105}{figure.caption.283}%
-\contentsline {figure}{\numberline {A.9}{\ignorespaces ¿Dónde crear una lista de pictogramas?\relax }}{106}{figure.caption.284}%
-\contentsline {figure}{\numberline {A.10}{\ignorespaces ¿Cómo crear y cómo añadir un pictograma a una lista?\relax }}{106}{figure.caption.285}%
-\contentsline {figure}{\numberline {A.11}{\ignorespaces ¿Dónde añadir un picto desde la lista?\relax }}{107}{figure.caption.286}%
-\contentsline {figure}{\numberline {A.12}{\ignorespaces Descripción de la Tarea 3, pistas y preguntas.\relax }}{108}{figure.caption.287}%
-\contentsline {figure}{\numberline {A.13}{\ignorespaces ¿Cómo traducir una frase a picto?\relax }}{109}{figure.caption.288}%
-\contentsline {figure}{\numberline {A.14}{\ignorespaces ¿Cómo cambiar un picto de la frase por otro alternativo?\relax }}{109}{figure.caption.289}%
-\contentsline {figure}{\numberline {A.15}{\ignorespaces ¿Cómo añadir la frase al tablero?\relax }}{109}{figure.caption.290}%
-\contentsline {figure}{\numberline {A.16}{\ignorespaces ¿Cómo ocultar un picto de la frase?\relax }}{110}{figure.caption.291}%
-\contentsline {figure}{\numberline {A.17}{\ignorespaces Descripción de la Tarea 4, pistas y preguntas.\relax }}{111}{figure.caption.292}%
-\contentsline {figure}{\numberline {A.18}{\ignorespaces ¿Cómo añadir una imágen con su texto?\relax }}{112}{figure.caption.293}%
-\contentsline {figure}{\numberline {A.19}{\ignorespaces ¿Cómo añadir un texto al tablero y seleccionar la fuente?\relax }}{112}{figure.caption.294}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Introducción a la evaluación y consentimiento.\relax }}{97}{figure.caption.276}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Preguntas de carácter demográfico.\relax }}{98}{figure.caption.277}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Introducción a las tareas y acceso a la aplicación.\relax }}{99}{figure.caption.278}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Descripción de la Tarea 1, pistas y preguntas.\relax }}{100}{figure.caption.279}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Buscar pictograma.\relax }}{101}{figure.caption.280}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Añadir al tablero.\relax }}{101}{figure.caption.281}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Editar picto.\relax }}{102}{figure.caption.282}%
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Descripción de la Tarea 2, pistas y preguntas.\relax }}{103}{figure.caption.283}%
+\contentsline {figure}{\numberline {A.9}{\ignorespaces ¿Dónde crear una lista de pictogramas?\relax }}{104}{figure.caption.284}%
+\contentsline {figure}{\numberline {A.10}{\ignorespaces ¿Cómo crear y cómo añadir un pictograma a una lista?\relax }}{104}{figure.caption.285}%
+\contentsline {figure}{\numberline {A.11}{\ignorespaces ¿Dónde añadir un picto desde la lista?\relax }}{105}{figure.caption.286}%
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Descripción de la Tarea 3, pistas y preguntas.\relax }}{106}{figure.caption.287}%
+\contentsline {figure}{\numberline {A.13}{\ignorespaces ¿Cómo traducir una frase a picto?\relax }}{107}{figure.caption.288}%
+\contentsline {figure}{\numberline {A.14}{\ignorespaces ¿Cómo cambiar un picto de la frase por otro alternativo?\relax }}{107}{figure.caption.289}%
+\contentsline {figure}{\numberline {A.15}{\ignorespaces ¿Cómo añadir la frase al tablero?\relax }}{108}{figure.caption.290}%
+\contentsline {figure}{\numberline {A.16}{\ignorespaces ¿Cómo ocultar un picto de la frase?\relax }}{109}{figure.caption.291}%
+\contentsline {figure}{\numberline {A.17}{\ignorespaces Descripción de la Tarea 4, pistas y preguntas.\relax }}{110}{figure.caption.292}%
+\contentsline {figure}{\numberline {A.18}{\ignorespaces ¿Cómo añadir una imágen con su texto?\relax }}{111}{figure.caption.293}%
+\contentsline {figure}{\numberline {A.19}{\ignorespaces ¿Cómo añadir un texto al tablero y seleccionar la fuente?\relax }}{111}{figure.caption.294}%
 \contentsline {figure}{\numberline {A.20}{\ignorespaces ¿Cómo añadir una figura?\relax }}{112}{figure.caption.295}%
-\contentsline {figure}{\numberline {A.21}{\ignorespaces Pregunats de respuesta abierta.\relax }}{113}{figure.caption.296}%
-\contentsline {figure}{\numberline {A.22}{\ignorespaces Cuestionario SUS, preguntas 1-5.\relax }}{114}{figure.caption.297}%
-\contentsline {figure}{\numberline {A.23}{\ignorespaces Cuestionario SUS, preguntas 6-10.\relax }}{115}{figure.caption.298}%
+\contentsline {figure}{\numberline {A.21}{\ignorespaces Pregunats de respuesta abierta.\relax }}{112}{figure.caption.296}%
+\contentsline {figure}{\numberline {A.22}{\ignorespaces Cuestionario SUS, preguntas 1-5.\relax }}{113}{figure.caption.297}%
+\contentsline {figure}{\numberline {A.23}{\ignorespaces Cuestionario SUS, preguntas 6-10.\relax }}{114}{figure.caption.298}%
