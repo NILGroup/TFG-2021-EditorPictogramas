@@ -8,7 +8,7 @@ import MainLayout from './layout/Main';
 
 import AllViews from './views/AllViews';
 import DemoView from './views/Demo';
-import {DragOnCanvasView} from './views/DragOnCanvas';
+import {DragOnCanvasView} from './views/Main';
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';

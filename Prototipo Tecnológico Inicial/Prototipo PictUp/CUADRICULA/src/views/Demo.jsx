@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, {Component} from 'react';
-import {DragOnCanvasExample} from './DragOnCanvas';
+import {DragOnCanvasExample} from './Main';
 
 class DemoView extends Component {
   constructor() {
