@@ -122,6 +122,14 @@ export class DragOnCanvasExample extends React.Component {
     this.setState({ showModalDownload: false });
   }
 
+  modalDeleteAllOpen = () => {
+    this.setState({ showModalDeleteAll: true });
+  }
+
+  modalDeleteAllClose = () => {
+    this.setState({ showModalDeleteAll: false });
+  }
+
   seleccionarCalidad = (e) => {
     this.calidad = e.target.value;
   }
@@ -300,6 +308,18 @@ export class DragOnCanvasExample extends React.Component {
 
     this.setState({
       photoArray: copyPostArray
+    })
+  }
+
+  cleanCanvas = () => {
+    this.setState({
+      pictoArray: [],
+      photoArray: [],
+      textArray: [],
+      lineArray: [],
+      figureArray: [],
+      fraseArray: [],
+      showModalDeleteAll: false 
     })
   }
 
@@ -774,8 +794,11 @@ export class DragOnCanvasExample extends React.Component {
 
     return (
 
+
+
       <div>
         <Navbar />
+
 
         <div className="container-fluid">
           <div className="row">
@@ -909,13 +932,47 @@ export class DragOnCanvasExample extends React.Component {
                           </div>
                         </div>
                       </ReactModal>
+
+                      <ReactModal
+                        isOpen={this.state.showModalDeleteAll}
+                        contentLabel="onRequestClose Example"
+                        onRequestClose={this.modalDeleteAllClose}
+                        className="Modal"
+                        ariaHideApp={false}
+                        style={modalStyles}
+                      >
+                        <div className="modal-dialog">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              <h5 className="modal-title" id="exampleModalLabel">¿Desea borrar el tablero?</h5>
+                              <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.modalDeleteAllClose}>
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div className="modal-body">
+                              <div className="container">
+                                <div className="modal-footer">
+                                  <button type="button" className="btn btn-outline-danger mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.cleanCanvas}><i className="fas fa-trash-alt"></i> Sí, Borrar tablero</button>
+                                  <button type="button" className="btn btn-outline-primary mr-auto ml-auto" style={{ alignSelf: 'center' }} data-bs-dismiss="modal" onClick={this.modalDeleteAllClose}><i className="fas fa-undo"></i> No, mantener tablero</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </ReactModal>
+
                     </div>
+
                     <hr style={{ margin: 10 }}></hr>
                     <div className="text-center">
                       <button className="btn btn-info ml-2" title="Descargar el tablero como imagen" onClick={this.modalDownloadOpen}>
                         <i className="fas fa-download"></i>
                         &nbsp; Descargar Tablero
-                    </button>
+                      </button>
+                      <button className="btn btn-danger ml-2" title="Descargar el tablero como imagen" onClick={this.modalDeleteAllOpen}>
+                        <i className="fas fa-trash-alt"></i>
+                        &nbsp; Borrar tablero
+                      </button>
                     </div>
                   </div>
                 </div>
